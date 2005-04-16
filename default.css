@@ -1,0 +1,320 @@
+body {
+    background-color: #eeeeee;
+    padding: 0px 10px 10px 10px;
+    margin: 0px;
+}
+
+body, div, p, td, li, a, h1, h2, h3, h4 {
+    font-family: sans-serif;
+    font-size: 10pt;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(100,10,10);
+}
+
+a:visited {
+    color: rgb(70,7,7);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    background-image: url(images/header.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 600px;
+    height: 210px;
+    margin: 0px;
+    top: 0px;
+    border: 0px solid green;
+}
+
+#page {
+    border: 0px dashed brown;
+    margin-right: 10%;
+    min-width: 650px;
+}
+
+#page h1 span {
+    display: none;
+}
+
+#irc_info {
+    font-size: 8pt;
+    text-align: right;
+    height: 45px;
+    margin-top: 120px;
+    margin-right: 4px;
+}
+
+#main_topleft {
+    border: 0px dashed green;
+    background-image: url(images/main_topleft.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+#main_rightrepeat {
+    margin-left: 98px;
+    background-image: url(images/main_rightrepeat.png);
+    background-position: right;
+    background-repeat: repeat-y;
+
+    /* A one pixel padding to make IE render correctly
+    (the underscore is a hack to make only IE 5-6 see it) */
+    _padding-bottom: 1px;
+}
+
+#main_topright {
+    background-image: url(images/main_topright.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+#main_bottomright {
+    background-image: url(images/main_bottomright.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+#main {
+    border: 0px dashed purple;
+    padding: 0px 4px 0px 0px;
+}
+
+#main .main_title_topright {
+    background-image: url(images/main_title_topright.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-color: #f2ebe7;
+    margin: 0px 0px 20px 1px;
+}
+
+#main .main_title_bottomright {
+    background-image: url(images/main_title_bottomright.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+    /* A one pixel padding to make IE render correctly
+    (the underscore is a hack to make only IE 5-6 see it) */
+    _padding-bottom: 1px;
+}
+
+#main .main_title_topleft {
+    background-image: url(images/main_title_topleft.png);
+    background-repeat: no-repeat;
+}
+
+#main h2 {
+    padding: 7px 7px 7px 107px;
+    margin: 0px;
+    color: #57565c;
+    font-size: 16pt;
+}
+
+#main h3 {
+    margin: 20px 0px 0px 0px;
+    font-weight: bold;
+    color: #3c3c3c;
+    border-bottom: 1px solid #9f9894;
+    font-size: 11pt;
+}
+
+#sidebar {
+    border: 0px dashed red;
+    float: right;
+    width: 170px;
+    padding-top: 2px;
+}
+
+#sidebar .section {
+    padding: 7px;
+}
+
+#sidebar .section h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 8pt;
+    margin: 0px 0px 50px 0px;
+    padding: 0px;
+    border-width: 0px;
+    color: #2f2e32;
+}
+
+#sidebar .section_topleft {
+    margin: 10px;
+    background-image: url(images/section_topleft.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-color: #cba083;
+
+    /* A one pixel padding to make IE render correctly
+    (the underscore is a hack to make only IE 5-6 see it) */
+    _padding-bottom: 1px;
+}
+
+#sidebar .section_bottomleft {
+    background-image: url(images/section_bottomleft.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+#sidebar .section_topright {
+    background-image: url(images/section_topright.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+#sidebar .section_bottomright {
+    background-image: url(images/section_bottomright.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+#sidebar .section ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#sidebar .section li {
+    list-style: none;
+    margin: 0px;
+}
+
+#sidebar .section li a {
+    display: block;
+    margin: 0px;
+    width: auto;
+    border: 1px solid #cba083;
+    text-decoration: none;
+    padding: 5px 5px 5px 20px;
+    margin: 0px;
+    color: black;
+    font-style: normal;
+}
+
+#sidebar .section li a:hover {
+    border: 1px solid #78584c;
+    background-color: #dbbba4;
+}
+
+#sidebar .banners {
+    text-align: center;
+    padding: 7px 7px 2px 7px;
+}
+
+#sidebar .banners img {
+    border-width: 0px;
+    margin-bottom: 5px;
+    vertical-align: text-bottom;
+}
+
+#contents_leftrepeat {
+    background-image: url(images/contents_leftrepeat.png);
+    background-repeat: repeat-y;
+    background-color: #e1d6cf;
+    margin: 0px 170px 0px 0px;
+}
+
+#contents_topleft {
+    background-image: url(images/contents_topleft.png);
+    background-repeat: no-repeat;
+    border: 0px dashed red;
+}
+
+#contents_bottomleft {
+    background-image: url(images/contents_bottomleft.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+#contents_rightrepeat {
+    background-image: url(images/contents_rightrepeat.png);
+    background-position: right;
+    background-repeat: repeat-y;
+}
+
+#contents_topright {
+    background-image: url(images/contents_topright.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+#contents_bottomright {
+    background-image: url(images/contents_bottomright.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+#contents {
+    padding: 12px 8px 175px 11px;
+    border: 0px solid blue;
+}
+
+#contents p, table {
+    margin: 15px 40px 15px 30px;
+}
+
+#contents ul {
+    margin: 15px 40px 15px 20px;
+}
+
+#contents table {
+    border-top: 1px solid #9f9894;
+    border-bottom: 1px solid #9f9894;
+}
+
+#contents td {
+    border-bottom: 1px dotted #9f9894;
+    padding: 3px 10px 3px 3px;
+}
+
+#contents tr.last td {
+    border-width: 0px;
+}
+
+#footer {
+    font-size: 8pt;
+    text-align: right;
+    padding: 5px;
+}
+
+.news {
+    margin-bottom: 30px;
+}
+
+.news_body {
+}
+
+.news_date {
+    font-style: italic;
+    float: right;
+    color: #57565c;
+}
+
+.news_author {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #57565c;
+    display: none;
+}
+
+.releases {
+    margin: 15px 40px 15px 30px;
+}
+
+.release {
+    background-color: #ede2da;
+    margin: 5px;
+    padding: 5px 5px 5px 15px;
+    -moz-border-radius: 10px;
+}
+
+.releases img {
+    vertical-align: middle;
+    margin-right: 5px;
+}

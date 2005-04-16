@@ -1,0 +1,52 @@
+<?php
+  include("includes/common.php");
+  placeHeader("Downloads");
+?>
+
+<h3>Current client release</h3>
+
+<div class="releases">
+<div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.11.2-win32.exe?download"><b>Windows installer</b> 0.0.11.2</a></div>
+<div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.11.2.tar.gz?download"><b>Source code</b> 0.0.11.2</a></div>
+<div class="release"><img src="images/ico-osx.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw0.0.11-mac.zip?download"><b>MacOS X package</b> 0.0.11</a> (broken)</div>
+<div class="release"><img src="images/ico-deb.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw_0.0.11.2_i386.deb?download"><b>Debian package</b> 0.0.11.2</a> (see below for repository)</div>
+</div>
+
+<p>For older versions please see our <a
+href="http://sourceforge.net/project/showfiles.php?group_id=106790">files
+page</a> on SourceForge. Note however that they are no longer supported and
+likely to no longer work.</p>
+
+<h3>CVS access</h3>
+
+<p>The latest version is always available from CVS, see the
+<a href="http://sourceforge.net/cvs/?group_id=106790">CVS instructions</a> at
+SourceForge. The client module is named <i>tmw</i>. For anonymouse users this
+means to use the command:<br/>
+<br/>
+<i>cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/themanaworld co -P tmw</i><br/>
+<br/>
+For more instructions you can also read our small guide on
+<a href="cvs-tutorial.txt">how to use CVS</a>. Use the CVS version only if
+you're interested in testing the latest changes.
+
+<h3>Debian repository</h3>
+
+<p>For convenience to Debian users, a Debian package repository has been set up
+here on SourceForge. The repository will also contain any dependencies of The
+Mana World that are not in the standard Debian repositories yet, which at the
+moment includes <a href="http://guichan.sourceforge.net/">Guichan</a>.  To use
+this repository, add the following two lines to your sources.list file:</p>
+
+<p><i>deb http://themanaworld.org/files/debrepo ./<br/>
+deb-src http://themanaworld.org/files/debrepo ./</i></p>
+
+<p>Then to install TMW do:</p>
+
+<p><b>apt-get update<br/>
+apt-get install tmw</b></p>
+
+
+<?php
+  placeFooter();
+?>
