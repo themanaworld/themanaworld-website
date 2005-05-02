@@ -195,6 +195,8 @@ h1 {
     margin: 0px;
     color: black;
     font-style: normal;
+    font-weight: bold;
+    color: #2f2e32;
 }
 
 #sidebar .section li a:hover {
