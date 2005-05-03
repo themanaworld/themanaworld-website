@@ -7,13 +7,13 @@ define('TMWWEBSITE', true);
 
 function placeHeader($page_title)
 {
-  echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+  echo "<?xml version=\"1.0\" encoding=\"ISO-8859-15\"?>\n";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 Strict//EN" "DTD/xhtml1-strict.dtd">
 <html>
  <head>
   <title>The Mana World</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15"/>
   <meta http-equiv="Content-Language" content="en"/>
   <link rel="icon" type="image/png" href="images/icon16.png"/>
   <meta name="description" content="The Mana World is a free MMORPG game for Linux, MacOS X and Windows"/>
