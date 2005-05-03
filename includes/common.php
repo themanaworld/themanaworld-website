@@ -72,17 +72,22 @@ function placeHeader($page_title)
           </div>
          </div>
 
+         <!--
          <div class="section_topleft">
           <div class="section_bottomleft">
            <div class="section_topright">
             <div class="section_bottomright">
              <div class="section">
               <h3>Server Status</h3>
+              <p style="font-size: 7pt;">
+              animesites.de
+              </p>
              </div>
             </div>
            </div>
           </div>
          </div>
+         -->
 
          <div class="section_topleft">
           <div class="section_bottomleft">

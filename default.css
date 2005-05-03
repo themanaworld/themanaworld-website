@@ -121,7 +121,16 @@ h1 {
     font-weight: bold;
     color: #3c3c3c;
     border-bottom: 1px solid #9f9894;
+    /*
+    border-right: 1px solid #9f9894;
+    border-top: 1px solid #f2e6df;
+    border-left: 1px solid #f2e6df;
+    */
     font-size: 11pt;
+    /*
+    background-color: #d1c7c0;
+    padding: 2px 5px 2px 5px;
+    */
 }
 
 #sidebar {
@@ -206,7 +215,7 @@ h1 {
 
 #sidebar .banners {
     text-align: center;
-    padding: 7px 7px 2px 7px;
+    padding: 13px 7px 8px 7px;
 }
 
 #sidebar .banners img {
@@ -296,13 +305,13 @@ h1 {
     font-style: italic;
     float: right;
     color: #57565c;
+    font-size: 8pt;
 }
 
 .news_author {
     font-size: 8pt;
-    font-weight: bold;
     color: #57565c;
-    display: none;
+    border-bottom: 1px solid #9f9894;
 }
 
 .releases {
