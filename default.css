@@ -329,3 +329,27 @@ h1 {
     vertical-align: middle;
     margin-right: 5px;
 }
+
+/* Gallery style */
+hr {
+    border-style: none;
+    height: 1px;
+    background-color: silver;
+    color: silver;
+}
+
+#pagenumbers {
+    text-align: center;
+    margin: 0px 1em 0px 1em;
+}
+
+#pictures a img {
+    border: 1px solid #c7b1a3;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    margin: 5px;
+}
+
+#pictures a:hover img {
+    border-color: #a88976;
+}

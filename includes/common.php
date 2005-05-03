@@ -65,7 +65,7 @@ function placeHeader($page_title)
             <div class="section_bottomright">
              <div class="section" style="text-align: center;">
               <a href="images/tmw-0.0.12-cave.png"><img src="images/tmw-0.0.12-cave-thumb.png" alt="screenshot" style="border: 1px solid #784f3f;"/></a>
-              <div style="text-align: center;"><a style="font-size: 7pt;" href="screenshots.php">more screenshots</a></div>
+              <div style="text-align: center;"><a style="font-size: 7pt;" href="gallery.php?dir=%2Fscreenshots">more screenshots</a></div>
              </div>
             </div>
            </div>
