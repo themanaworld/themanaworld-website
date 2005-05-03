@@ -1,0 +1,25 @@
+body {
+    background-color: #eeeeee;
+    padding: 10px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(100,10,10);
+}
+
+a:visited {
+    color: rgb(60,0,0);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.wiki_bottom {
+    border: 1px dotted #9f9894;
+    padding: 2px;
+    font-size: 8pt;
+    background-color: #d4c9c3;
+}

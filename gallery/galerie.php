@@ -85,7 +85,7 @@ $inline = false;
 
 /* Set the thumbnail background color, if you include() this script.
  */
-$bg = 'eeeeee';
+$bg = 'ffffff';
 
 /* ------------------------------------------------------------------------- */
 $words = array(
