@@ -53,7 +53,7 @@ $thumbdir = 'thumbs';
 
 /* Size of created thumbnails
  */
-$thumbsize = 150;
+$thumbsize = 133;
 
 /* Wether to show file names (true or false)
  */

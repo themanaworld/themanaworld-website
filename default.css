@@ -318,13 +318,6 @@ h1 {
 }
 
 /* Gallery style */
-hr {
-    border-style: none;
-    height: 1px;
-    background-color: silver;
-    color: silver;
-}
-
 #pagenumbers {
     text-align: center;
     margin: 0px 1em 0px 1em;

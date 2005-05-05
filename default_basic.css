@@ -2,6 +2,11 @@ body {
     background-color: #eeeeee;
     padding: 10px;
     margin: 0px;
+    font-family: sans-serif;
+}
+
+p, td, li {
+    font-size: 10pt;
 }
 
 a {
@@ -17,9 +22,23 @@ a:hover {
     text-decoration: underline;
 }
 
+.wiki_contents {
+    border: 1px solid #9f9894;
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+    background-color: #e1d6cf;
+}
+
 .wiki_bottom {
-    border: 1px dotted #9f9894;
+    border: 1px solid #9f9894;
     padding: 2px;
     font-size: 8pt;
     background-color: #d4c9c3;
+}
+
+hr {
+    border-style: none;
+    height: 1px;
+    background-color: silver;
+    color: silver;
 }
