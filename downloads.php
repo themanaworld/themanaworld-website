@@ -8,8 +8,9 @@
 <div class="releases">
 <div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.12-win32.exe?download"><b>Windows installer</b> 0.0.12</a></div>
 <div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.12.tar.gz?download"><b>Source code</b> 0.0.12</a></div>
-<div class="release"><img src="images/ico-osx.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw0.0.11-mac.zip?download"><b>MacOS X package</b> 0.0.11</a> (broken)</div>
-<div class="release"><img src="images/ico-deb.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw_0.0.11.2_i386.deb?download"><b>Debian package</b> 0.0.11.2</a> (see below for repository)</div>
+<div class="release"><img src="images/ico-osx.png"/> MacOS X package 0.0.11 (broken)</div>
+<div class="release"><img src="images/ico-deb.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw_0.0.12-1_i386.deb?download"><b>Debian package</b> 0.0.12</a> (see below for repository)</div>
+<div class="release"><img src="images/ico-gentoo.png"/> <a href="http://packagestest.gentoo.org/ebuilds/?tmw-0.0.12"><b>Gentoo eBuild</b> 0.0.12</div>
 </div>
 
 <p>For older versions please see our <a
