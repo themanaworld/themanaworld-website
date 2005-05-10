@@ -55,7 +55,7 @@ your information is inaccurate.</p>
 <td>Programmer</td>
 </tr>
 <tr>
-<td><a href="mailto:malastate at users.sourceforge.net">Jan-Fabian Humann</a></td>
+<td><a href="mailto:malastare at users.sourceforge.net">Jan-Fabian Humann</a> (Mra)</td>
 <td>Programmer</td>
 </tr>
 <tr>
