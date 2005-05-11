@@ -51,7 +51,7 @@ your information is inaccurate.</p>
 <td>Programmer</td>
 </tr>
 <tr>
-<td><a href="mailto:usiu at users.sourceforge.net">Usiu</a></td>
+<td><a href="mailto:usiu at users.sourceforge.net">Mateusz Kaduk</a></td>
 <td>Programmer</td>
 </tr>
 <tr>
