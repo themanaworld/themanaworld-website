@@ -37,7 +37,7 @@ you're interested in testing the latest changes.
 here on SourceForge. The repository will also contain any dependencies of The
 Mana World that are not in the standard Debian repositories yet, which at the
 moment includes <a href="http://guichan.sourceforge.net/">Guichan</a>.  To use
-this repository, add the following two line to your sources.list file:</p>
+this repository, add the following line to your sources.list file:</p>
 
 <p><i>deb http://themanaworld.org/files/debrepo ./</i></p>
 
