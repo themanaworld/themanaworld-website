@@ -6,11 +6,11 @@
 <h3>Current client release</h3>
 
 <div class="releases">
-<div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.13-win32.exe?download"><b>Windows installer</b> 0.0.13</a></div>
-<div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.13.tar.gz?download"><b>Source code</b> 0.0.13</a></div>
+<div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.14-win32.exe?download"><b>Windows installer</b> 0.0.14</a></div>
+<div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.14.tar.gz?download"><b>Source code</b> 0.0.14</a></div>
 <div class="release"><img src="images/ico-osx.png"/> MacOS X package 0.0.11 (broken)</div>
-<div class="release"><img src="images/ico-deb.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw_0.0.12-1_i386.deb?download">Debian package 0.0.12</a> (pending update, see below for repository)</div>
-<div class="release"><img src="images/ico-gentoo.png"/> <a href="http://packages.gentoo.org/packages/?category=games-rpg;name=tmw"><b>Gentoo eBuild</b></a></div>
+<div class="release"><img src="images/ico-deb.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw_0.0.13-3_i386.deb?download">Debian package 0.0.13</a> (pending update, see below for repository)</div>
+<div class="release"><img src="images/ico-gentoo.png"/> <a href="http://packages.gentoo.org/packages/?category=games-rpg;name=tmw">Gentoo eBuild</a></div>
 </div>
 
 <p>For older versions please see our <a
