@@ -6,11 +6,11 @@
 <h3>Current client release</h3>
 
 <div class="releases">
-<div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.14-win32.exe?download"><b>Windows installer</b> 0.0.14</a></div>
-<div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.14.tar.gz?download"><b>Source code</b> 0.0.14</a></div>
+<div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.15-win32.exe?download"><b>Windows installer</b> 0.0.15</a></div>
+<div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.15.tar.gz?download"><b>Source code</b> 0.0.15</a></div>
 <div class="release"><img src="images/ico-osx.png"/> MacOS X package 0.0.11 (broken)</div>
-<div class="release"><img src="images/ico-deb.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw_0.0.13-3_i386.deb?download">Debian package 0.0.13</a> (pending update, see below for repository)</div>
-<div class="release"><img src="images/ico-gentoo.png"/> <a href="http://packages.gentoo.org/packages/?category=games-rpg;name=tmw">Gentoo eBuild</a></div>
+<div class="release"><img src="images/ico-deb.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw_0.0.14.1-1_i386.deb?download">Debian package 0.0.14.1</a> (see below for repository)</div>
+<div class="release"><img src="images/ico-gentoo.png"/> <a href="http://packages.gentoo.org/packages/?category=games-rpg;name=tmw"><b>Gentoo eBuild</b></a></div>
 </div>
 
 <p>For older versions please see our <a
@@ -39,7 +39,10 @@ Mana World that are not in the standard Debian repositories yet, which at the
 moment includes <a href="http://guichan.sourceforge.net/">Guichan</a>.  To use
 this repository, add the following line to your sources.list file:</p>
 
-<p><i>deb http://themanaworld.org/files/debrepo ./</i></p>
+<p><i>
+deb http://bertram.ifrance.com ./<br/>
+deb-src http://bertram.ifrance.com ./
+</i></p>
 
 <p>Then to install TMW do:</p>
 
