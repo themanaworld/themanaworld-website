@@ -25,7 +25,7 @@ likely to no longer work.</p>
 SourceForge. The client module is named <i>tmw</i>. For anonymouse users this
 means to use the command:<br/>
 <br/>
-<i>cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/themanaworld co -P tmw</i><br/>
+<i>cvs -z3 -d:pserver:anonymous@cvs.themanaworld.org:/cvsroot/themanaworld co -P tmw</i><br/>
 <br/>
 For more instructions you can also read our small guide on
 <a href="cvs-tutorial.txt">how to use CVS</a>. Use the CVS version only if
