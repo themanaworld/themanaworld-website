@@ -67,11 +67,19 @@ your information is inaccurate.</p>
 <td>Programmer</td>
 </tr>
 <tr>
+<td><a href="mailto:irukard at users.sourceforge.net">Krzysztof Daszuta</a> (Irukard)</td>
+<td>Artist</td>
+</tr>
+<tr>
 <td><a href="mailto:talaroc at users.sourceforge.net">Talaroc</a></td>
 <td>Artist</td>
 </tr>
 <tr>
 <td>Clef</td>
+<td>Artist</td>
+</tr>
+<tr>
+<td><a href="mailto:f dot lindeijer at xs4all dot nl">Frode Lindeijer</a> (Modanung)</td>
 <td>Artist</td>
 </tr>
 <tr>

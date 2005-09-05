@@ -251,6 +251,7 @@ h1 {
 #contents {
     padding: 12px 8px 175px 11px;
     border: 0px solid blue;
+    line-height: 150%;
 }
 
 #contents p, table {

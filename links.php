@@ -22,6 +22,7 @@
 <li><a href="http://guichan.sourceforge.net/">Guichan</a> - GUI library</li>
 <li><a href="http://xmlsoft.org/">Libxml2</a> - XML parsing library</li>
 <li><a href="http://icculus.org/physfs/">PhysicsFS</a> - Archive filesystem library</li>
+<li><a href="http://www.zlib.net/">zlib</a> - Compression library</li>
 </ul>
 
 <h3>Localized websites</h3>
