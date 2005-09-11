@@ -316,6 +316,8 @@ h1 {
 .releases img {
     vertical-align: middle;
     margin-right: 5px;
+    width: 16px;
+    height: 16px;
 }
 
 /* Gallery style */
