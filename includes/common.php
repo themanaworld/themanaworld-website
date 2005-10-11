@@ -54,7 +54,7 @@ function placeHeader($page_title)
              <div class="section">
               <ul>
                <!-- No newlines after list items because IE 6 can't handle that properly -->
-               <li><a href="index.php">News</a></li><li><a href="about.php">About</a></li><li><a href="downloads.php">Downloads</a></li><li><a href="http://wiki.themanaworld.org/">Wiki</a></li><li><a href="phpBB2/">Forum</a></li><li><a href="links.php">Links</a></li></ul>
+               <li><a href="index.php">News</a></li><li><a href="about.php">About</a></li><li><a href="downloads.php">Downloads</a></li><li><a href="http://wiki.themanaworld.org/">Wiki</a></li><li><a href="http://forums.themanaworld.org/">Forum</a></li><li><a href="links.php">Links</a></li></ul>
              </div>
             </div>
            </div>
@@ -67,7 +67,7 @@ function placeHeader($page_title)
             <div class="section_bottomright">
              <div class="section" style="text-align: center;">
               <a href="images/tmw-0.0.12-cave.png"><img src="images/tmw-0.0.12-cave-thumb.png" alt="screenshot" style="border: 1px solid #784f3f;"/></a>
-              <div style="text-align: center;"><a style="font-size: 7pt;" href="gallery.php?dir=%2Fscreenshots">more screenshots</a></div>
+              <div style="text-align: center;"><a style="font-size: 7pt;" href="http://wiki.themanaworld.org/Screenshots">more screenshots</a></div>
              </div>
             </div>
            </div>
