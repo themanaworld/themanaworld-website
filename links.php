@@ -6,11 +6,13 @@
 <h3>Developer resources</h3>
 
 <ul>
-<li><a href="http://www.lindeijer.nl/flyspray/">Flyspray task tracking system</a></li>
-<li><a href="http://themanaworld.org/tmwdox/">Doxygen source documentation</a></li>
-<li><a href="http://themanaworld.org/statcvs/">CVS statistics</a></li>
 <li><a href="http://www.sourceforge.net/projects/themanaworld/">SouceForge project page</a></li>
-<li><a href="http://lists.sourceforge.net/lists/listinfo/themanaworld-commit">CVSspam commit mailing list</a></li>
+<li><a href="http://www.lindeijer.nl/flyspray/">Flyspray task tracking system</a></li>
+<li><a href="http://themanaworld.org/tmwdox/">Source documentation (client)</a></li>
+<li><a href="http://themanaworld.org/tmwservdox/">Source documentation (server)</a></li>
+<li><a href="http://themanaworld.org/statcvs/">CVS statistics</a></li>
+<li><a href="http://lists.sourceforge.net/lists/listinfo/themanaworld-commit">Mailing list: Commits (CVSspam)</a></li>
+<li><a href="http://lists.sourceforge.net/lists/listinfo/themanaworld-devel">Mailing list: Developers</a></li>
 </ul>
 
 <h3>Dependencies</h3>
@@ -19,16 +21,12 @@
 <li><a href="http://www.libsdl.org/">SDL</a> - Simple directmedia layer</li>
 <li><a href="http://www.libsdl.org/projects/SDL_image/">SDL_image</a> - Image loading library</li>
 <li><a href="http://www.libsdl.org/projects/SDL_mixer/">SDL_mixer</a> - Sound playback library</li>
+<li><a href="http://www.libsdl.org/projects/SDL_net/">SDL_net</a> - Networking library</li>
 <li><a href="http://guichan.sourceforge.net/">Guichan</a> - GUI library</li>
 <li><a href="http://xmlsoft.org/">Libxml2</a> - XML parsing library</li>
 <li><a href="http://icculus.org/physfs/">PhysicsFS</a> - Archive filesystem library</li>
 <li><a href="http://www.zlib.net/">zlib</a> - Compression library</li>
-</ul>
-
-<h3>Localized websites</h3>
-
-<ul>
-<li><a href="http://themanaworld.cjb.net/">Brazil support page</a></li>
+<li><a href="http://curl.haxx.se/libcurl/">libcurl</a> - File transfer library</li>
 </ul>
 
 <h3>Other related links</h3>
