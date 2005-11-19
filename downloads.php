@@ -9,9 +9,10 @@
 <div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.17-win32.exe?download"><b>Windows installer</b> 0.0.17</a></div>
 <div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.17.tar.gz?download"><b>Source code</b> 0.0.17</a></div>
 <div class="release"><img src="images/ico-osx.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.17-mac.dmg.zip?download"><b>MacOS X package</b> 0.0.17</a></div>
+<div class="release"><img src="images/ico-slackware.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.17-i686-1.tgz?download"><b>Slackware 10.2 package</b> 0.0.17</a></div>
 <div class="release"><img src="images/ico-deb.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw_0.0.16-1_i386.deb?download">Debian package 0.0.16</a> (see below for repository)</div>
 <div class="release"><img src="images/ico-deb.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-data_0.0.16-1_all.deb?download">Debian package 0.0.16 (data)</a></div>
-<div class="release"><img src="images/ico-gentoo.png"/> <a href="http://packages.gentoo.org/packages/?category=games-rpg;name=tmw">Gentoo eBuild</a></div>
+<div class="release"><img src="images/ico-gentoo.png"/> <a href="http://packages.gentoo.org/packages/?category=games-rpg;name=tmw"><b>Gentoo eBuild</b></a></div>
 </div>
 
 <p>For older versions please see our <a
@@ -49,6 +50,12 @@ deb-src http://bertram.ifrance.com ./
 
 <p><b>apt-get update<br/>
 apt-get install tmw</b></p>
+
+<p><i><b>Note:</b> This repository currently only works with Debian testing and
+unstable because it's compiled to use libCURL with OpenSSL 0.9.8. If you're on
+Debian stable or Ubuntu, you'll need take the 0.0.16 debs above or compile
+Guichan and TMW yourself (the Guichan deb on their website won't work with
+Breezy because of incompatible GCC versions).</i></p>
 
 <?php
   placeFooter();
