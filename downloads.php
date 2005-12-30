@@ -6,7 +6,7 @@
 <h3>Current client release</h3>
 
 <div class="releases">
-<div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.18-win32.exe?download"><b>Windows installer</b> 0.0.18</a></div>
+<div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.18.1-win32.exe?download"><b>Windows installer</b> 0.0.18.1</a></div>
 <div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.18.tar.gz?download"><b>Source code</b> 0.0.18</a></div>
 <div class="release"><img src="images/ico-osx.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.17-mac.dmg.zip?download"><b>MacOS X package</b> 0.0.17</a></div>
 <div class="release"><img src="images/ico-slackware.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.17-i686-1.tgz?download"><b>Slackware 10.2 package</b> 0.0.17</a></div>
