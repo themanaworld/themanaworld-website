@@ -20,17 +20,17 @@ href="http://sourceforge.net/project/showfiles.php?group_id=106790">files
 page</a> on SourceForge. Note however that they are no longer supported and
 likely to no longer work.</p>
 
-<h3>CVS access</h3>
+<h3>SVN access</h3>
 
-<p>The latest version is always available from CVS, see the
-<a href="http://sourceforge.net/cvs/?group_id=106790">CVS instructions</a> at
+<p>The latest version is always available from SVN, see the
+<a href="http://sourceforge.net/svn/?group_id=106790">SVN instructions</a> at
 SourceForge. The client module is named <i>tmw</i>. For anonymouse users this
 means to use the command:<br/>
 <br/>
-<i>cvs -z3 -d:pserver:anonymous@cvs.themanaworld.org:/cvsroot/themanaworld co -P tmw</i><br/>
+<i>svn co https://svn.sourceforge.net/svnroot/themanaworld/tmw/trunk tmw</i><br/>
 <br/>
 For more instructions you can also read our small guide on
-<a href="cvs-tutorial.txt">how to use CVS</a>. Use the CVS version only if
+<a href="svn-tutorial.txt">how to use SVN</a>. Use the SVN version only if
 you're interested in testing the latest changes.
 
 <h3>Debian repository</h3>
