@@ -20,12 +20,12 @@ href="http://sourceforge.net/project/showfiles.php?group_id=106790">files
 page</a> on SourceForge. Note however that they are no longer supported and
 likely to no longer work.</p>
 
-<h3>SVN access</h3>
+<h3>Subversion access</h3>
 
-<p>The latest version is always available from SVN, see the
-<a href="http://sourceforge.net/svn/?group_id=106790">SVN instructions</a> at
-SourceForge. The client module is named <i>tmw</i>. For anonymouse users this
-means to use the command:<br/>
+<p>The latest version is always available from Subversion, see the
+<a href="http://sourceforge.net/svn/?group_id=106790">Subversion instructions</a> at
+SourceForge. The client module is named <i>tmw</i>. For checking out the latest
+development version (trunk) of the client this means to use the command:<br/>
 <br/>
 <i>svn co https://svn.sourceforge.net/svnroot/themanaworld/tmw/trunk tmw</i><br/>
 <br/>

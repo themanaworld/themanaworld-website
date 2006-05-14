@@ -32,7 +32,7 @@
 <h3>Other related links</h3>
 
 <ul>
-<li><a href="http://tiled.rpgdx.net/">Tiled</a> - Tiled map editor</li>
+<li><a href="http://mapeditor.org/">Tiled</a> - Tiled map editor</li>
 <li><a href="http://eathena.deltaanime.net/">eAthena server</a> - Ragnarok Online Server Emulator</li>
 <li><a href="http://rpgdx.net">RPGDX</a> - RPG development community website</li>
 <li><a href="http://digilander.libero.it/eugeniofavalli">Final RPG</a> - Elven's Final RPG project</li>
