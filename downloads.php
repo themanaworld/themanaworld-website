@@ -9,7 +9,7 @@
 <div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.20-win32.exe?download"><b>Windows installer</b> 0.0.20</a></div>
 <div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.20.tar.gz?download"><b>Source code</b> 0.0.20</a></div>
 <div class="release"><img src="images/ico-osx.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.17-mac.dmg.zip?download">MacOS X package 0.0.17</a></div>
-<div class="release"><img src="images/ico-slackware.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.20-i686-1.tgz?download"><b>Slackware 10.2-current package</b> 0.0.12</a></div>
+<div class="release"><img src="images/ico-slackware.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.20-i686-1.tgz?download"><b>Slackware 10.2-current package</b> 0.0.20</a></div>
 <div class="release"><img src="images/ico-deb.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw_0.0.16-1_i386.deb?download">Debian package 0.0.16</a> (see below for repository)</div>
 <div class="release"><img src="images/ico-deb.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-data_0.0.16-1_all.deb?download">Debian package 0.0.16 (data)</a></div>
 <div class="release"><img src="images/ico-gentoo.png"/> <a href="http://packages.gentoo.org/packages/?category=games-rpg;name=tmw"><b>Gentoo eBuild</b></a></div>
