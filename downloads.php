@@ -6,10 +6,10 @@
 <h3>Current client release</h3>
 
 <div class="releases">
-<div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.20-win32.exe?download"><b>Windows installer</b> 0.0.20</a></div>
-<div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.20.tar.gz?download"><b>Source code</b> 0.0.20</a></div>
+<div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.21-win32.exe?download"><b>Windows installer</b> 0.0.21</a></div>
+<div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.21.tar.gz?download"><b>Source code</b> 0.0.21</a></div>
 <div class="release"><img src="images/ico-osx.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.20-mac.dmg?download"><b>MacOS X package</b> 0.0.20</a></div>
-<div class="release"><img src="images/ico-slackware.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.20-i686-1.tgz?download"><b>Slackware 10.2-current package</b> 0.0.20</a></div>
+<div class="release"><img src="images/ico-slackware.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.21-i686-1.tgz?download"><b>Slackware 10.2-current package</b> 0.0.21</a></div>
 <div class="release"><img src="images/ico-deb.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw_0.0.20-ubuntu2_i386.deb?download"><b>Ubuntu Dapper package</b> 0.0.20</a></div>
 <div class="release"><img src="images/ico-gentoo.png"/> <a href="http://packages.gentoo.org/packages/?category=games-rpg;name=tmw"><b>Gentoo eBuild</b></a></div>
 </div>
