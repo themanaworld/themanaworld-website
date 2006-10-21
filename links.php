@@ -29,6 +29,12 @@
 <li><a href="http://curl.haxx.se/libcurl/">libcurl</a> - File transfer library</li>
 </ul>
 
+<h3>Fansites</h3>
+
+<ul>
+<li><a href="http://www.tmwbrasil.kit.net/">Brazilian fansite</a></li>
+</ul>
+
 <h3>Other related links</h3>
 
 <ul>
