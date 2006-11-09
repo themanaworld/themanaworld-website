@@ -258,6 +258,11 @@ h1 {
     margin: 15px 40px 15px 30px;
 }
 
+#contents h4 {
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+
 #contents ul {
     margin: 15px 40px 15px 20px;
 }
