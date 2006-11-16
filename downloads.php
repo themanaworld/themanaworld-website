@@ -9,7 +9,7 @@
 <div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.21.1-win32.exe?download"><b>Windows installer</b> 0.0.21.1</a></div>
 <div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.21.1.tar.gz?download"><b>Source code</b> 0.0.21.1</a></div>
 <div class="release"><img src="images/ico-osx.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.20-mac.dmg?download"><b>MacOS X package</b> 0.0.20</a> (broken)</div>
-<div class="release"><img src="images/ico-slackware.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.21-i686-1.tgz?download"><b>Slackware 10.2-current package</b> 0.0.21</a></div>
+<div class="release"><img src="images/ico-slackware.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.21.1-i686-1.tgz?download"><b>Slackware 10.2-current package</b> 0.0.21.1</a></div>
 <div class="release"><img src="images/ico-deb.png"/> <a href="#repository"><b>Debian/Ubuntu repositories</b></a></div>
 <div class="release"><img src="images/ico-gentoo.png"/> <a href="http://packages.gentoo.org/packages/?category=games-rpg;name=tmw"><b>Gentoo eBuild</b></a></div>
 </div>
