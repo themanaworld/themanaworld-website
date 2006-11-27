@@ -85,7 +85,7 @@ HTML;
 
 
 $template_prev_next = <<<HTML
-<p style="text-align: center;">[prev-link]<< Previous[/prev-link] {pages} [next-link]Next >>[/next-link]</p>
+<p style="text-align: center;">[prev-link]&lt;&lt; Previous[/prev-link] {pages} [next-link]Next &gt;&gt;[/next-link]</p>
 HTML;
 $template_comments_prev_next = <<<HTML
 <p style="text-align: center;">[prev-link]<< Older[/prev-link] ({pages}) [next-link]Newest >>[/next-link]</p>

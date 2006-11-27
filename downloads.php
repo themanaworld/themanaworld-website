@@ -53,16 +53,10 @@ deb http://bertram.ifrance.com ./<br/>
 deb-src http://bertram.ifrance.com ./
 </i></p>
 
-<h4>Ubuntu Edgy</h4>
+<h4>Ubuntu Edgy (i386 and AMD-64)</h4>
 
 <p><i>
-deb http://bertram.ifrance.com/tmw-dapper ./
-</i></p>
-
-<h4>Ubuntu Edgy AMD-64</h4>
-
-<p><i>
-deb http://bertram.ifrance.com/tmw-edgy-amd64 ./
+deb http://bertram.ifrance.com/ tmw-edgy main
 </i></p>
 
 <p>Then to install TMW do:</p>
