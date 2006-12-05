@@ -26,12 +26,12 @@ likely to no longer work.</p>
 SourceForge. The client module is named <i>tmw</i>. For checking out the latest
 development version (trunk) of the client this means to use the command:</p>
 
-<p><i>svn co https://svn.sourceforge.net/svnroot/themanaworld/tmw/trunk tmw</i></p>
+<p><pre>svn co https://svn.sourceforge.net/svnroot/themanaworld/tmw/trunk tmw</pre></p>
 
 <p>For more instructions you can also read our small guide on
 <a href="svn-tutorial.txt">how to use SVN</a>. Use the SVN version only if
 you're interested in testing the latest changes.</p>
-<p clas="note">
+<p class="note">
 <b>Note:</b> Currently trunk development is based on our own server which can be
 found in the <i>tmwserv</i> module. If you're interested in the latest version
 able to connect to eAthena, check out the <i>0.0</i> branch.
@@ -46,18 +46,17 @@ have been set up by Bertram. The repositories also contain
 version isn't generally available yet. Choose the right repository for your
 system, and add the given line to your sources.list file:</p>
 
-<h4>Debian Testing</h4>
+<h4>Debian Unstable</h4>
 
-<p><i>
-deb http://bertram.ifrance.com ./<br/>
-deb-src http://bertram.ifrance.com ./
-</i></p>
+<p><pre>
+deb http://bertram.ifrance.com/ debian unstable
+</pre></p>
 
 <h4>Ubuntu Edgy (i386 and AMD-64)</h4>
 
-<p><i>
-deb http://bertram.ifrance.com/ tmw-edgy main
-</i></p>
+<p><pre>
+deb http://bertram.ifrance.com/ ubuntu edgy
+</pre></p>
 
 <p>Then to install TMW do:</p>
 

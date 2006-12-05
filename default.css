@@ -254,7 +254,7 @@ h1 {
     line-height: 150%;
 }
 
-#contents p, table {
+#contents p, table, pre {
     margin: 15px 40px 15px 30px;
 }
 
