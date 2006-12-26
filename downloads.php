@@ -6,10 +6,10 @@
 <h3>Current client release</h3>
 
 <div class="releases">
-<div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.21.1-win32.exe?download"><b>Windows installer</b> 0.0.21.1</a></div>
-<div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.21.1.tar.gz?download"><b>Source code</b> 0.0.21.1</a></div>
+<div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.22-win32.exe?download"><b>Windows installer</b> 0.0.22</a></div>
+<div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.22.tar.gz?download"><b>Source code</b> 0.0.22</a></div>
 <div class="release"><img src="images/ico-osx.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.20-mac.dmg?download"><b>MacOS X package</b> 0.0.20</a> (broken)</div>
-<div class="release"><img src="images/ico-slackware.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.21.1-i686-1.tgz?download"><b>Slackware 11.0/Current package</b> 0.0.21.1</a></div>
+<div class="release"><img src="images/ico-slackware.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.22-i686-1.tgz?download"><b>Slackware 11.0/Current package</b> 0.0.22</a></div>
 <div class="release"><img src="images/ico-deb.png"/> <a href="#repository"><b>Debian/Ubuntu repositories</b></a></div>
 <div class="release"><img src="images/ico-gentoo.png"/> <a href="http://packages.gentoo.org/packages/?category=games-rpg;name=tmw"><b>Gentoo eBuild</b></a></div>
 </div>
@@ -26,7 +26,9 @@ likely to no longer work.</p>
 SourceForge. The client module is named <i>tmw</i>. For checking out the latest
 development version (trunk) of the client this means to use the command:</p>
 
-<p><pre>svn co https://svn.sourceforge.net/svnroot/themanaworld/tmw/trunk tmw</pre></p>
+<pre>
+svn co https://svn.sourceforge.net/svnroot/themanaworld/tmw/trunk tmw
+</pre>
 
 <p>For more instructions you can also read our small guide on
 <a href="svn-tutorial.txt">how to use SVN</a>. Use the SVN version only if
@@ -48,15 +50,15 @@ system, and add the given line to your sources.list file:</p>
 
 <h4>Debian Unstable</h4>
 
-<p><pre>
+<pre>
 deb http://bertram.ifrance.com/ debian unstable
-</pre></p>
+</pre>
 
 <h4>Ubuntu Edgy (i386 and AMD-64)</h4>
 
-<p><pre>
+<pre>
 deb http://bertram.ifrance.com/ ubuntu edgy
-</pre></p>
+</pre>
 
 <p>Then to install TMW do:</p>
 
