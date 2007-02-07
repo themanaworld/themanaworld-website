@@ -25,7 +25,7 @@ online world.</p>
 <a href="http://sourceforge.net/project/memberlist.php?group_id=106790">
 member list</a>. On the wiki the
 <a href="http://wiki.themanaworld.org/index.php/Developers">Developers</a> page
-keeps track of the current contributors as well retired contributors.</p>
+keeps track of the current contributors as well as retired contributors.</p>
 
 <?php
   placeFooter();
