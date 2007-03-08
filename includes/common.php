@@ -99,7 +99,7 @@ function placeHeader($page_title)
              <div class="section banners">
               <a href="http://sourceforge.net">
                <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=106790&amp;type=1" alt="SourceForge.net"/></a><br />
-              <a href="http://nosoftwarepatents.com">
+              <a href="http://www.nosoftwarepatents.com">
                <img src="images/nswpat80x15.png" alt="No software patents"/></a><br />
               <a href="http://www.gnu.org/copyleft/gpl.html">
                <img src="images/gpl.png" alt="GPLed project"/></a><br />
