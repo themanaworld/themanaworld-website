@@ -55,7 +55,7 @@ function placeHeader($page_title)
              <div class="section">
               <ul>
                <!-- No newlines after list items because IE 6 can't handle that properly -->
-               <li><a href="index.php">News</a></li><li><a href="about.php">About</a></li><li><a href="downloads.php">Downloads</a></li><li><a href="http://wiki.themanaworld.org/">Wiki</a></li><li><a href="http://forums.themanaworld.org/">Forum</a></li><li><a href="links.php">Links</a></li></ul>
+               <li><a href="index.php">News</a></li><li><a href="about.php">About</a></li><li><a href="downloads.php">Downloads</a></li><li><a href="http://wiki.themanaworld.org/">Wiki</a></li><li><a href="http://forums.themanaworld.org/">Forum</a></li><li><a href="http://mantis.themanaworld.org/">Bug tracker</a></li><li><a href="links.php">Links</a></li></ul>
              </div>
             </div>
            </div>
@@ -108,6 +108,22 @@ function placeHeader($page_title)
            </div>
           </div>
          </div>
+
+         <div class="section_topleft">
+          <div class="section_bottomleft">
+           <div class="section_topright">
+            <div class="section_bottomright">
+             <div class="section banners">
+              Server status
+              <iframe src="http://server.themanaworld.org/status.php" width="130" height="30" frameborder="0" scrolling="no"></iframe>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+
+         <!-- This empty div fixes a rendering issue with IE 7 -->
+         <div></div>
 
         </div> <!-- /sidebar -->
 
