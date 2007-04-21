@@ -11,7 +11,7 @@
 <?php
 
   $number = 6;
-  include('cutenews/show_news.php');
+  include('includes/news.php');
 
   placeFooter();
 ?>

@@ -9,8 +9,8 @@ function placeHeader($page_title)
 {
   echo "<?xml version=\"1.0\" encoding=\"ISO-8859-15\"?>\n";
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
  <head>
   <title>The Mana World</title>
@@ -55,7 +55,7 @@ function placeHeader($page_title)
              <div class="section">
               <ul>
                <!-- No newlines after list items because IE 6 can't handle that properly -->
-               <li><a href="index.php">News</a></li><li><a href="about.php">About</a></li><li><a href="downloads.php">Downloads</a></li><li><a href="http://wiki.themanaworld.org/">Wiki</a></li><li><a href="http://forums.themanaworld.org/">Forum</a></li><li><a href="http://mantis.themanaworld.org/">Bug tracker</a></li><li><a href="links.php">Links</a></li></ul>
+               <li><a href="index.php">News</a></li><li><a href="about.php">About</a></li><li><a href="downloads.php">Downloads</a></li><li><a href="http://wiki.themanaworld.org/">Wiki</a></li><li><a href="http://forums.themanaworld.org/">Forums</a></li><li><a href="http://mantis.themanaworld.org/">Bug tracker</a></li><li><a href="links.php">Links</a></li></ul>
              </div>
             </div>
            </div>
