@@ -3,11 +3,18 @@
 // This code uses the "DOM XML" extension, which is only available with PHP 4.
 // Be sure to update it to use the "XML", "DOM" or "XMLReader" extensions when
 // SF upgrades to PHP 5.
+//
+// The news is cached locally using a cronjob which runs in the 9th minute of
+// every hour:
+//
+// 9 * * * * /home/groups/t/th/themanaworld/htdocs/includes/fetch-news.sh 
+//
 
-$feedurl = "http://sourceforge.net/export/rss2_projnews.php?group_id=106790&rss_fulltext=1";
+//$feedurl = "http://sourceforge.net/export/rss2_projnews.php?group_id=106790&rss_fulltext=1";
+$feedurl = "includes/rss2_projnews.cache";
 
 if (!$dom = domxml_open_file($feedurl)) {
-    echo "Error while fetching news feed.\n";
+    echo "Error while opening news feed.\n";
     exit;
 }
 
