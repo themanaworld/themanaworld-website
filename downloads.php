@@ -28,7 +28,7 @@ SourceForge. The client module is named <i>tmw</i>. For checking out the latest
 development version (trunk) of the client this means to use the command:</p>
 
 <pre>
-svn co https://svn.sourceforge.net/svnroot/themanaworld/tmw/trunk tmw
+svn co https://themanaworld.svn.sourceforge.net/svnroot/themanaworld/tmw/trunk tmw
 </pre>
 
 <p>For more instructions you can also read our small guide on
