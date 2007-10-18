@@ -317,6 +317,7 @@ h1 {
     background-color: #ede2da;
     margin: 5px;
     padding: 5px 5px 5px 15px;
+    white-space: nowrap;
     -moz-border-radius: 10px;
 }
 
