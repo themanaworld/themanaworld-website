@@ -12,7 +12,7 @@ below.
 
 If you're a Linux user just type
 
-svn co https://svn.sourceforge.net/svnroot/themanaworld/tmw/trunk tmw
+svn co https://themanaworld.svn.sourceforge.net/svnroot/themanaworld/tmw/trunk tmw
 
 If you're a Windows user, follow this brief guide:
 
@@ -20,8 +20,10 @@ If you're a Windows user, follow this brief guide:
     necessary.
  1. Go to the folder where you want your TMW SVN folder to be.
  2. Right click and choose SVN Checkout.
- 3. In the URL of repository field, write "https://svn.sourceforge.net/svnroot/themanaworld/tmw/trunk" without the quotation
-    marks.
+ 3. In the URL of repository field, write:
+ 
+      https://themanaworld.svn.sourceforge.net/svnroot/themanaworld/tmw/trunk
+
  4. Set the Revision to HEAD
  5. Press OK
  

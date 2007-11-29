@@ -14,7 +14,7 @@
 </td><td width="50%" style="border-width: 0px;">
 <div class="release"><img src="images/ico-deb.png"/> <a href="http://packages.debian.org/tmw"><b>Debian package</b></a></div>
 <div class="release"><img src="images/ico-ubuntu.png"/> <a href="http://packages.ubuntu.com/tmw"><b>Ubuntu 7.10 package</b></a></div>
-<div class="release"><img src="images/ico-gentoo.png"/> <a href="http://packages.gentoo.org/packages/?category=games-rpg;name=tmw"><b>Gentoo eBuild</b></a></div>
+<div class="release"><img src="images/ico-gentoo.png"/> <a href="http://packages.gentoo.org/package/games-rpg/tmw"><b>Gentoo eBuild</b></a></div>
 <div class="release"><img src="images/ico-fedora.png"/> <a href="http://fedoraproject.org/wiki/Games/manaworld"><b>Fedora package</b></a></div>
 </td></tr>
 </table>
@@ -22,7 +22,7 @@
 <p>For older versions please see our <a
 href="http://sourceforge.net/project/showfiles.php?group_id=106790">files
 page</a> on SourceForge. Note however that they are no longer supported and
-likely to no longer work.</p>
+likely to no longer work on our testing server.</p>
 
 <h3>Subversion access</h3>
 
