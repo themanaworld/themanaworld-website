@@ -24,6 +24,19 @@ href="http://sourceforge.net/project/showfiles.php?group_id=106790">files
 page</a> on SourceForge. Note however that they are no longer supported and
 likely to no longer work on our testing server.</p>
 
+<h3>Music</h3>
+
+<p>While the music is included with our installer for Windows, it is left out
+of most other releases because of its size. Download it here if the music is
+not available for your operating system or if you've compiled The Mana World
+manually.</p>
+
+<table cellspacing="0" cellpadding="0" border="0" style="border-width: 0px; margin-bottom: 0px; margin-top: 0px;">
+<tr><td style="border-width: 0px; padding-right: 10px;">
+<div class="release"><a href="http://prdownloads.sourceforge.net/themanaworld/tmwmusic-0.0.20.tar.gz?download"><b>The Mana World music</b> 0.0.20</a></div>
+</td></tr>
+</table>
+
 <h3>Subversion access</h3>
 
 <p>The latest version is always available from Subversion, see the
