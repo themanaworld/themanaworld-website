@@ -7,8 +7,7 @@
 
 <ul>
 <li><a href="http://www.sourceforge.net/projects/themanaworld/">SouceForge project page</a></li>
-<li><a href="http://themanaworld.org/tmwdox/">Source documentation (client)</a></li>
-<li><a href="http://themanaworld.org/tmwservdox/">Source documentation (server)</a></li>
+<li><a href="http://bjorn.platinum.linux.pl/tmw-docs/">Source code documentation</a></li>
 <li><a href="http://themanaworld.org/statcvs/">CVS statistics</a></li>
 <li><a href="http://lists.sourceforge.net/lists/listinfo/themanaworld-commit">Mailing list: Commits</a></li>
 <li><a href="http://lists.sourceforge.net/lists/listinfo/themanaworld-devel">Mailing list: Developers</a></li>
