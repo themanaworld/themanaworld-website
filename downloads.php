@@ -7,10 +7,10 @@
 
 <table cellspacing="0" cellpadding="0" border="0" style="border-width: 0px; margin-bottom: 0px;">
 <tr><td width="50%" style="border-width: 0px;">
-<div class="release"><img src="images/ico-win.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.24-win32.exe?download"><b>Windows installer</b> 0.0.24</a></div>
-<div class="release"><img src="images/ico-src.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.24.tar.gz?download"><b>Source code</b> 0.0.24</a></div>
-<div class="release"><img src="images/ico-osx.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.24-osx.dmg?download"><b>MacOS X package</b> 0.0.24</a></div>
-<div class="release"><img src="images/ico-slackware.png"/> <a href="http://prdownloads.sourceforge.net/themanaworld/tmw-0.0.24-i686-1.tgz?download"><b>Slackware 12.0 package</b> 0.0.24</a></div>
+<div class="release"><img src="images/ico-win.png"/> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.24-win32.exe"><b>Windows installer</b> 0.0.24</a></div>
+<div class="release"><img src="images/ico-src.png"/> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.24.tar.gz"><b>Source code</b> 0.0.24</a></div>
+<div class="release"><img src="images/ico-osx.png"/> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.24-osx.dmg"><b>MacOS X package</b> 0.0.24</a></div>
+<div class="release"><img src="images/ico-slackware.png"/> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.24-i686-1.tgz"><b>Slackware 12.0 package</b> 0.0.24</a></div>
 </td><td width="50%" style="border-width: 0px;">
 <div class="release"><img src="images/ico-deb.png"/> <a href="http://packages.debian.org/tmw"><b>Debian package</b></a></div>
 <div class="release"><img src="images/ico-ubuntu.png"/> <a href="http://packages.ubuntu.com/tmw"><b>Ubuntu 7.10 package</b></a></div>
@@ -33,7 +33,7 @@ manually.</p>
 
 <table cellspacing="0" cellpadding="0" border="0" style="border-width: 0px; margin-bottom: 0px; margin-top: 0px;">
 <tr><td style="border-width: 0px; padding-right: 10px;">
-<div class="release"><a href="http://prdownloads.sourceforge.net/themanaworld/tmwmusic-0.1.tar.gz?download"><b>The Mana World music</b> 0.1</a></div>
+<div class="release"><a href="http://downloads.sourceforge.net/themanaworld/tmwmusic-0.1.tar.gz"><b>The Mana World music</b> 0.1</a></div>
 </td></tr>
 </table>
 
