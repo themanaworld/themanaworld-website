@@ -33,7 +33,7 @@ manually.</p>
 
 <table cellspacing="0" cellpadding="0" border="0" style="border-width: 0px; margin-bottom: 0px; margin-top: 0px;">
 <tr><td style="border-width: 0px; padding-right: 10px;">
-<div class="release"><a href="http://downloads.sourceforge.net/themanaworld/tmwmusic-0.1.tar.gz"><b>The Mana World music</b> 0.1</a></div>
+<div class="release"><a href="http://downloads.sourceforge.net/themanaworld/tmwmusic-0.2.tar.gz"><b>The Mana World music</b> 0.2</a></div>
 </td></tr>
 </table>
 
