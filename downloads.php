@@ -10,7 +10,7 @@
 <div class="release"><img src="images/ico-win.png"/> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.25-win32.exe"><b>Windows installer</b> 0.0.25</a></div>
 <div class="release"><img src="images/ico-src.png"/> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.25.tar.gz"><b>Source code</b> 0.0.25</a></div>
 <div class="release"><img src="images/ico-osx.png"/> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.25-osx.dmg"><b>MacOS X package</b> 0.0.25</a></div>
-<div class="release"><img src="images/ico-slackware.png"/> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.24.1-i686-1.tgz"><b>Slackware 12.0 package</b> 0.0.24.1</a></div>
+<div class="release"><img src="images/ico-slackware.png"/> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.25-i686-1.tgz"><b>Slackware 12.0 package</b> 0.0.25</a></div>
 </td><td width="50%" style="border-width: 0px;">
 <div class="release"><img src="images/ico-deb.png"/> <a href="http://packages.debian.org/tmw"><b>Debian package</b></a></div>
 <div class="release"><img src="images/ico-ubuntu.png"/> <a href="http://packages.ubuntu.com/tmw"><b>Ubuntu package</b></a></div>
