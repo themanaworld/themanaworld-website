@@ -11,7 +11,7 @@
 <div class="release"><img src="images/ico-win.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.25-win32.exe"><b>Windows installer</b> 0.0.25</a></div>
 <div class="release"><img src="images/ico-osx.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.25-osx.dmg"><b>MacOS X package</b> 0.0.25</a></div>
 </td><td style="border-width: 0px;" width="50%">
-<div class="release"><img src="images/ico-src.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.25.tar.gz"><b>Source code</b> 0.0.25</a></div>
+<div class="release"><img src="images/ico-src.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.26.tar.gz"><b>Source code</b> 0.0.26</a></div>
 <div class="release"><img src="images/ico-slackware.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.25-i686-1.tgz"><b>Slackware 12.0 package</b> 0.0.25</a></div>
 </td></tr>
 </tbody></table>
