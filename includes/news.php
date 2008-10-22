@@ -11,41 +11,90 @@
 //
 
 //$feedurl = "http://sourceforge.net/export/rss2_projnews.php?group_id=106790&rss_fulltext=1";
+
 $feedurl = "includes/rss2_projnews.cache";
 
-if (!$dom = domxml_open_file($feedurl)) {
-    echo "Error while opening news feed.\n";
+$xml = new XMLReader();
+
+if (!$xml) {
+    echo "Error, no XMLReader.\n";
     exit;
 }
 
-$root = $dom->document_element();
-$rootchilds = $root->child_nodes();
+$xml->open($feedurl);
+xml_read_rss($xml);
+$xml->close();
 
-foreach ($rootchilds as $rootchild)
+function xml_read_rss($xml)
 {
-    if ($rootchild->tagname == "channel")
-    {
-        $channelchilds = $rootchild->child_nodes();
+    if ($xml->next("rss")) {
+	xml_read_channels($xml);
+    } else {
+	echo "Error, not an rss feed.";
+    }
+}
 
-        foreach ($channelchilds as $channelchild)
-        {
-            if ($channelchild->tagname == "item")
-            {
-                $itemchilds = $channelchild->child_nodes();
-                $newsdata = array();
+function xml_read_channels($xml)
+{
+    while ($xml->read()) {
+	switch ($xml->nodeType) {
+	case XMLReader::ELEMENT:
+	    if ($xml->name == "channel") {
+		xml_read_channel($xml);
+	    } else {
+		xml_read_unknown_element($xml);
+	    }
+	    break;
+	case XMLReader::END_ELEMENT:
+	    return;
+	}
+    }
+}
 
-                foreach ($itemchilds as $itemchild)
-                {
-                    if (strlen($itemchild->tagname) > 0)
-                    {
-                        $newsdata[$itemchild->tagname] =
-                            $itemchild->get_content();
-                    }
-                }
+function xml_read_channel($xml)
+{
+    while ($xml->read()) {
+	switch ($xml->nodeType) {
+	case XMLReader::ELEMENT:
+	    if ($xml->name == "item") {
+		xml_read_item($xml);
+	    } else {
+		xml_read_unknown_element($xml);
+	    }
+	    break;
+	case XMLReader::END_ELEMENT:
+	    return;
+	}
+    }
+}
 
-                print_news_item($newsdata);
-            }
-        }
+function xml_read_item($xml)
+{
+    $newsdata = array();
+
+    while ($xml->read()) {
+	switch ($xml->nodeType) {
+	case XMLReader::ELEMENT:
+	    $newsdata[$xml->name] = $xml->readString();
+	    xml_read_unknown_element($xml);
+	    break;
+	case XMLReader::END_ELEMENT:
+	    print_news_item($newsdata);
+	    return;
+	}
+    }
+}
+
+function xml_read_unknown_element($xml)
+{
+    while ($xml->read()) {
+	switch ($xml->nodeType) {
+	case XMLReader::ELEMENT:
+	    xml_read_unknown_element($xml);
+	    break;
+	case XMLReader::END_ELEMENT:
+	    return;
+	}
     }
 }
 
@@ -57,4 +106,5 @@ function print_news_item($newsdata)
     echo '<div class="news_body"><p>' . $newsdata['description'] . '</p></div>';
     echo '</div>';
 }
+
 ?>
