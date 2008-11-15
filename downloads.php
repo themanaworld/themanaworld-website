@@ -46,24 +46,27 @@ manually.</p>
 </td></tr>
 </table>
 
-<h3>Subversion access</h3>
+<h3>Development version</h3>
 
-<p>The latest version is always available from Subversion, see the
-<a href="http://sourceforge.net/svn/?group_id=106790">Subversion instructions</a> at
-SourceForge. The client module is named <i>tmw</i>. For checking out the latest
-development version (trunk) of the client this means to use the command:</p>
+<p>The latest versions of our projects are always available from their
+<a href="http://gitorious.org/search?q=category%3Athe-mana-world">Git
+repositories on Gitorious</a>. For checking out the latest development version
+of the client you can use the command:</p>
 
 <pre>
-svn co https://themanaworld.svn.sourceforge.net/svnroot/themanaworld/tmw/trunk tmw
+git clone git://gitorious.org/tmw/mainline.git tmw
 </pre>
 
-<p>For more instructions you can also read our small guide on
-<a href="svn-tutorial.txt">how to use SVN</a>. Use the SVN version only if
-you're interested in testing the latest changes.</p>
+<p>For more instructions and information about other projects like the server
+and the dynamic data, please check our
+<a href="http://wiki.themanaworld.org/index.php/Git_Repository">Git wiki
+page</a>.
+
 <p class="note">
-<b>Note:</b> Currently trunk development is based on our own server which can be
-found in the <i>tmwserv</i> module. If you're interested in the latest version
-able to connect to eAthena, check out the <i>0.0</i> branch.
+<b>Note:</b> Currently development on the master branch is based on our own
+server, <i>tmwserv</i>. If you're interested in the latest version
+of the client that is able to connect to eAthena, check out the <i>0.0</i>
+branch in the <i>tmw</i> Git repository.
 </p>
 <!--
 <a name="repository"></a>
