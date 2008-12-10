@@ -63,10 +63,11 @@ and the dynamic data, please check our
 page</a>.
 
 <p class="note">
-<b>Note:</b> Currently development on the master branch is based on our own
-server, <i>tmwserv</i>. If you're interested in the latest version
-of the client that is able to connect to eAthena, check out the <i>0.0</i>
-branch in the <i>tmw</i> Git repository.
+<b>Note:</b> The mainline git repository is based on our own server,
+<i>tmwserv</i>. If you're interested in the latest version of the client that
+is able to connect to eAthena, check out the
+<a href="http://gitorious.org/projects/tmw/repos/eathena">eathena
+repository</a> of the <i>tmw</i> project.
 </p>
 <!--
 <a name="repository"></a>
