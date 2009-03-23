@@ -62,13 +62,6 @@ and the dynamic data, please check our
 <a href="http://wiki.themanaworld.org/index.php/Git_Repository">Git wiki
 page</a>.
 
-<p class="note">
-<b>Note:</b> The mainline git repository is based on our own server,
-<i>tmwserv</i>. If you're interested in the latest version of the client that
-is able to connect to eAthena, check out the
-<a href="http://gitorious.org/projects/tmw/repos/eathena">eathena
-repository</a> of the <i>tmw</i> project.
-</p>
 <!--
 <a name="repository"></a>
 <h3>Ubuntu repository (out of date)</h3>
