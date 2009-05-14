@@ -9,7 +9,7 @@
 <table style="border-width: 0px; width: 600px; margin-bottom: 0px; margin-top: 0px;" border="0" cellpadding="0" cellspacing="0">
 <tbody><tr><td style="border-width: 0px;" width="50%">
 <div class="release"><img src="images/ico-win.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.29-win32.exe"><b>Windows installer</b> 0.0.29</a></div>
-<div class="release"><img src="images/ico-osx.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.28.1-with_music-osx.dmg"><b>MacOS X package</b> 0.0.28.1</a></div>
+<div class="release"><img src="images/ico-osx.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.29-osx.dmg"><b>MacOS X package</b> 0.0.29</a></div>
 </td><td style="border-width: 0px;" width="50%">
 <div class="release"><img src="images/ico-src.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.29.tar.gz"><b>Source code</b> 0.0.29</a></div>
 <div class="release"><img src="images/ico-slackware.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.26-i686-1.tgz"><b>Slackware 12.1 package</b> 0.0.26</a></div>
