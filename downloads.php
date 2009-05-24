@@ -33,6 +33,11 @@
 page</a> on SourceForge. Note however that they are no longer supported and
 likely to no longer work on our testing server.</p>
 
+<p>People who are still on Ubuntu Hardy (8.04) or Intrepid (8.10) can install a
+more recent version of The Mana World by adding the
+<a href="https://launchpad.net/~nail-nodomain/+archive/ppa">private package
+achive (PPA) of Tomas Kovacik</a>.</p>
+
 <h3>Music</h3>
 
 <p>While the music is included with our installer for Windows, it is left out
