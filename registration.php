@@ -4,9 +4,15 @@
 	$publickey = "6LexmAQAAAAAAJD-07K2pF5RvTfIdRrlE4lKbUZ2"; // you got this from the signup page
 	$privatekey = ":::";
 
-  	include("includes/common.php");
+	include("includes/common.php");
 	placeHeader("Registration");
 	$showform = true;
+
+	function check_chars($string)
+	{
+		return ctype_graph($string) && (strpos($string, '"') === FALSE);
+	}
+	$bad_string_desc = 'Only printable characters (except spaces and ") are allowed.';
   
 	if (isset($_POST['register']) && $_POST['register'] == "true")
 	{
@@ -14,7 +20,7 @@
 		if (!isset($_POST['username']) || strlen($_POST['username']) < 4)
 		{
 			$err = "Username is not given or too short!"; $showform = true;
-    }
+		}
 		else if (!isset($_POST['password1']) || strlen($_POST['password1']) < 4)
 		{
 			$err = "Password is not given or too short!"; $showform = true;
@@ -23,29 +29,27 @@
 		{
 			$err = "Password is not given or too short!"; $showform = true;
 		}
-    else if (!ctype_alnum($_POST['username']))
-    {
-      $err = 'Username contains invalid characters. Only alphanumeric characters are allowed.'; $showform = true;
-    }
-    else if (!ctype_alnum($_POST['password1']))
-    {
-      $err = 'Password contains invalid characters. Only alphanumeric characters are allowed.'; $showform = true;
-    }
+		else if (!check_chars($_POST['username']))
+		{
+		  $err = 'Username contains invalid characters. ' . $bad_string_desc; $showform = true;
+		}
+		else if (!check_chars($_POST['password1']))
+		{
+		  $err = 'Password contains invalid characters. ' . $bad_string_des; $showform = true;
+		}
 		else if ($_POST['password2'] != $_POST['password1'])
 		{
 			$err = "The given passwords don't match!"; $showform = true;
-    }
-    else if ($_POST['gender'] != 1 && $_POST['gender'] != 2)
-    {
-      $err = 'Please select your preferred gender.'; $showform = true;
-    }
+		}
+		else if ($_POST['gender'] != 1 && $_POST['gender'] != 2)
+		{
+		  $err = 'Please select your preferred gender.'; $showform = true;
+		}
 		else
 		{
 			// check captcha
-			$resp = recaptcha_check_answer ($privatekey,
-                                $_SERVER["REMOTE_ADDR"],
-                                $_POST["recaptcha_challenge_field"],
-                                $_POST["recaptcha_response_field"]);
+			$resp = recaptcha_check_answer ($privatekey, $_SERVER["REMOTE_ADDR"],
+			$_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
 
 			if (!$resp->is_valid)
 			{
@@ -53,31 +57,36 @@
 			}
 			else
 			{
-		        $username = escapeshellarg($_POST['username']);
-		        $password = escapeshellarg($_POST['password1']);
-		        $gender = ($_POST['gender'] == 1) ? "Male" : "Female";
- 
-    		    // create a new account
-		        $handle = popen('/home/eathena/webexec/makeaccount', "w");
-		        fputs($handle, "$username $gender $password");
-		        $retval = pclose($handle);
-		        
-		        if ($retval == 0)
-		        {
-	   				// everything was fine, create account
+				$username = escapeshellarg($_POST['username']);
+				$password = escapeshellarg($_POST['password1']);
+				$gender = ($_POST['gender'] == 1) ? "Male" : "Female";
+	
+				// create a new account
+				$handle = popen("/home/eathena/webexec/runladmin.sh add $username $gender $password", "r");
+				$retstr = fgets($handle);
+				$retval = pclose($handle);
+
+				if ($retstr === FALSE)
+				{
+					$err = "There was an unknown error while creating account.";
+					$showform = true;
+				}
+				else if (strpos($retstr, 'successfully created'))
+				{
+					// everything was fine, created account
 					$showform = false;
-		        }
-		        else
-		        {
-		        	$err = "There was an unknown error while creating account.";
-		        	$showform = true;
-		        }
+				}
+				else
+				{
+					$err = $retstr;
+					$showform = true;
+				}
 			}
 		}
 	}
   
-  	if ($showform)
-  	{
+	if ($showform)
+	{
   
 ?>
 
