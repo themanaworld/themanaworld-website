@@ -1,7 +1,7 @@
 <?php
 
 	require_once('recaptcha-php/recaptchalib.php');
-	$publickey = "..."; // you got this from the signup page
+	$publickey = "6LexmAQAAAAAAJD-07K2pF5RvTfIdRrlE4lKbUZ2"; // you got this from the signup page
 	$privatekey = ":::";
 
   	include("includes/common.php");
