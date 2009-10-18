@@ -10,11 +10,11 @@
   
 	if (isset($_POST['register']) && $_POST['register'] == "true")
 	{
-		// handle registration  	
+		// handle registration
 		if (!isset($_POST['username']) || strlen($_POST['username']) < 4)
 		{
 			$err = "Username is not given or too short!"; $showform = true;
-		}
+    }
 		else if (!isset($_POST['password1']) || strlen($_POST['password1']) < 4)
 		{
 			$err = "Password is not given or too short!"; $showform = true;
@@ -23,10 +23,22 @@
 		{
 			$err = "Password is not given or too short!"; $showform = true;
 		}
+    else if (!ctype_alnum($_POST['username']))
+    {
+      $err = 'Username contains invalid characters. Only alphanumeric characters are allowed.'; $showform = true;
+    }
+    else if (!ctype_alnum($_POST['password1']))
+    {
+      $err = 'Password contains invalid characters. Only alphanumeric characters are allowed.'; $showform = true;
+    }
 		else if ($_POST['password2'] != $_POST['password1'])
 		{
 			$err = "The given passwords don't match!"; $showform = true;
-		}
+    }
+    else if ($_POST['gender'] != 1 && $_POST['gender'] != 2)
+    {
+      $err = 'Please select your preferred gender.'; $showform = true;
+    }
 		else
 		{
 			// check captcha
@@ -35,21 +47,18 @@
                                 $_POST["recaptcha_challenge_field"],
                                 $_POST["recaptcha_response_field"]);
 
-			if (!$resp->is_valid) 
+			if (!$resp->is_valid)
 			{
-				$err = "The captcha was incorret!"; $showform = true;
+				$err = "The captcha was incorrect!"; $showform = true;
 			}
 			else
 			{
-		
 				// everything was fine, create account
 				$showform = false;
 				
 				// create a new account with ladmin here....
 			}
 		}
-		
-		
 	}
   
   	if ($showform)
@@ -80,6 +89,16 @@
 		<tr>
 			<td>Retype password:</td>
 			<td><input type="password" size="20" name="password2" /></td>
+		</tr>
+		<tr>
+			<td>Gender:</td>
+      <td>
+       <select name="gender">
+         <option value="0" selected></option>
+         <option value="1">Male</option>
+         <option value="2">Female</option>
+       </select>
+      </td>
 		</tr>
 		<tr>
 			<td colspan="2">
