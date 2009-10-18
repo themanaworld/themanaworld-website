@@ -53,10 +53,25 @@
 			}
 			else
 			{
-				// everything was fine, create account
-				$showform = false;
-				
-				// create a new account with ladmin here....
+		        $username = escapeshellarg($_POST['username']);
+		        $password = escapeshellarg($_POST['password1']);
+		        $gender = ($_POST['gender'] == 1) ? "Male" : "Female";
+ 
+    		    // create a new account
+		        $handle = popen('/home/eathena/webexec/makeaccount', "w");
+		        fputs($handle, "$username $gender $password");
+		        $retval = pclose($handle);
+		        
+		        if ($retval == 0)
+		        {
+	   				// everything was fine, create account
+					$showform = false;
+		        }
+		        else
+		        {
+		        	$err = "There was an unknown error while creating account.";
+		        	$showform = true;
+		        }
 			}
 		}
 	}
