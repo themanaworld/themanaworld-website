@@ -68,7 +68,7 @@ function placeHeader($page_title)
            <div class="section_topright">
             <div class="section_bottomright">
              <div class="section" style="text-align: center;">
-              <a href="http://wiki.themanaworld.org/index.php/Image:Tmw_0.0.20.png"><img src="images/screenshot-0.0.20-thumb.png" alt="screenshot" style="border: 1px solid #784f3f;"/></a>
+              <a href="http://wiki.themanaworld.org/index.php/Image:TMW_Screenshot_63.png"><img src="images/screenshot-thumb.png" alt="screenshot" style="border: 1px solid #784f3f;"/></a>
               <div style="text-align: center;"><a style="font-size: 7pt;" href="http://wiki.themanaworld.org/index.php/Screenshots">more screenshots</a></div>
              </div>
             </div>
