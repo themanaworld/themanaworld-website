@@ -4,10 +4,10 @@ require 'mysql'
 require 'net/smtp'
 
 $smtp_server       = 'localhost'
-$mail_from         = 'registration@themanaworld.org'
-$mail_from_name    = 'The ManaWorld team'
+$mail_from         = 'noreply@themanaworld.org'
+$mail_from_name    = 'The Mana World server'
 $mail_subject      = 'The Mana World Account registration'
-$mail_body_success = "Your account was created successfully. Have fun playing themanaworld.\n"
+$mail_body_success = "Your account was created successfully. Have fun playing The Mana World!\n"
 $mail_body_error   = "The was something wrong with the creation of your account.\n" + 
                      "Error message: "
 $mysql_hostname    = "localhost"
@@ -36,6 +36,7 @@ def send_mail(email, username, status, errm)
 	message = "From: #{$mail_from_name} <#{$mail_from}>\n" +
 		"To: #{username} <#{email}>\n" +
 		"Subject: #{$mail_subject}\n\n"
+	message << "Hello #{username},\n\n"
 
 	if status == :SUCCESS then
 		message << $mail_body_success
@@ -67,7 +68,7 @@ db.query("SELECT id, username, password, email, gender
 			if retval.include? retcode['message'] then
 				send_mail( email, username, retcode['status'], retcode['message'] )
 				db.query("UPDATE tmw_accounts SET STATE = #{retcode['final_state']} WHERE id = #{id}")
-			end 			
+			end
 		end
 	rescue
 		puts "ERROR occured"
