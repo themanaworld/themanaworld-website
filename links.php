@@ -6,7 +6,7 @@
 <h3>Developer resources</h3>
 
 <ul>
-<li><a href="http://www.sourceforge.net/projects/themanaworld/">SouceForge project page</a></li>
+<li><a href="http://sourceforge.net/projects/themanaworld/">SouceForge project page</a></li>
 <li><a href="http://platinum.edu.pl/~bjorn/tmw-docs/">Source code documentation</a></li>
 <li><a href="http://themanaworld.org/statcvs/">CVS statistics</a></li>
 <li><a href="http://lists.sourceforge.net/lists/listinfo/themanaworld-commit">Mailing list: Commits</a></li>
