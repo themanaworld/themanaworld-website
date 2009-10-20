@@ -18,7 +18,7 @@ important precaution.</p>
 <h3>Global The Mana World server (English)</h3>
 
 <p>Address: <b><tt>server.themanaworld.org</tt></b> (port 6901)<br/>
-<a href="http://server.themanaworld.org/">Online player list</a>, <a href="http://server.themanaworld.org/stats/">Statistics</a></p>
+<a href="http://server.themanaworld.org/">Online player list</a>, <a href="registration.php">Registration</a></p>
 
 <p>This is the official The Mana World server. The current client picks this as
 the default server. One thing to keep in mind is that since it's open to
