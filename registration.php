@@ -1,95 +1,76 @@
 <?php
 
+	require_once('includes/libs/libmysql.php');
+	require_once('includes/models/account.php');
 	require_once('recaptcha-php/recaptchalib.php');
-	$publickey = "6LexmAQAAAAAAJD-07K2pF5RvTfIdRrlE4lKbUZ2"; // you got this from the signup page
-	$privatekey = ":::";
+	
+	$publickey      = "6LexmAQAAAAAAJD-07K2pF5RvTfIdRrlE4lKbUZ2"; // you got this from the signup page
+	$privatekey     = ":::";
+	$enable_captcha = true;  // modify this in production
 
-	include("includes/common.php");
-	placeHeader("Registration");
 	$showform = true;
 
-	function check_chars($string)
-	{
-		return ctype_graph($string) && (strpos($string, '"') === FALSE);
-	}
-	$bad_string_desc = 'Only printable characters (except spaces and ") are allowed.';
-  
 	if (isset($_POST['register']) && $_POST['register'] == "true")
 	{
-		// handle registration
-		if (!isset($_POST['username']) || strlen($_POST['username']) < 4)
+		$showform = false;
+		$err = "";
+		$acc = new TMWAccount();
+		$acc->setUsername($_POST['username']);
+		$acc->setPassword($_POST['password1']);
+		$acc->setEMail($_POST['email']);
+		$acc->setGender($_POST['gender']);
+		
+		$val = $acc->validate();
+		if (is_array($val))
 		{
-			$err = "Username is not given or too short!"; $showform = true;
+			foreach( $val as $error)
+			{
+				$err .= $error . "<br />";
+			}
+			$showform = true;
 		}
-		else if (!isset($_POST['password1']) || strlen($_POST['password1']) < 4)
+		
+		if ($_POST['password2'] != $_POST['password1'])
 		{
-			$err = "Password is not given or too short!"; $showform = true;
+			$err .= "The given passwords don't match!"; $showform = true;
 		}
-		else if (!isset($_POST['password2']) || strlen($_POST['password2']) < 4)
+		
+		if (TMWAccount::existsUsername( $_POST['username'] ))
 		{
-			$err = "Password is not given or too short!"; $showform = true;
+			$err .= "The username is in use!"; $showform = true;
 		}
-		else if (!check_chars($_POST['username']))
-		{
-		  $err = 'Username contains invalid characters. ' . $bad_string_desc; $showform = true;
-		}
-		else if (!check_chars($_POST['password1']))
-		{
-		  $err = 'Password contains invalid characters. ' . $bad_string_des; $showform = true;
-		}
-		else if ($_POST['password2'] != $_POST['password1'])
-		{
-			$err = "The given passwords don't match!"; $showform = true;
-		}
-		else if ($_POST['gender'] != 1 && $_POST['gender'] != 2)
-		{
-		  $err = 'Please select your preferred gender.'; $showform = true;
-		}
-		else
+		
+		if ($enable_captcha)
 		{
 			// check captcha
 			$resp = recaptcha_check_answer ($privatekey, $_SERVER["REMOTE_ADDR"],
-			$_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
-
+				$_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
+		
 			if (!$resp->is_valid)
 			{
-				$err = "The captcha was incorrect!"; $showform = true;
+				$err .= "The captcha was incorrect!"; $showform = true;
 			}
-			else
-			{
-				$username = escapeshellarg($_POST['username']);
-				$password = escapeshellarg($_POST['password1']);
-				$gender = ($_POST['gender'] == 1) ? "Male" : "Female";
-	
-				// create a new account
-				$handle = popen("/home/eathena/webexec/runladmin.sh add $username $gender $password", "r");
-				$retstr = fgets($handle);
-				$retval = pclose($handle);
+		}
 
-				if ($retstr === FALSE)
-				{
-					$err = "There was an unknown error while creating account.";
-					$showform = true;
-				}
-				else if (strpos($retstr, 'successfully created'))
-				{
-					// everything was fine, created account
-					$showform = false;
-				}
-				else
-				{
-					$err = $retstr;
-					$showform = true;
-				}
+		if (!$showform)
+		{
+			// create the account
+			if (!$acc->storeAccount())
+			{
+				$err = "The was an unknown error while storing your new account";
+				$showform = true;
 			}
 		}
 	}
   
+	include("includes/common.php");
+	placeHeader("Registration");
+  
+  
 	if ($showform)
 	{
-  
+ 
 ?>
-
 <p>With this form you can register for a new account.</p>
 
 <form action="registration.php" method="post">
@@ -113,6 +94,10 @@
 		<tr>
 			<td>Retype password:</td>
 			<td><input type="password" size="20" name="password2" /></td>
+		</tr>
+		<tr>
+			<td>EMail:</td>
+			<td><input type="text" size="30" name="email" /></td>
 		</tr>
 		<tr>
 			<td>Gender:</td>
@@ -144,7 +129,7 @@
 	else
 	{
 	?>
-		<p>Your account has been created!</p>
+		<p>Your account has been created and was scheduled for creation! In a few minutes you should receive an email with verification of your new account.</p>
 	<?php }
 	placeFooter();
 ?>
