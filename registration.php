@@ -3,6 +3,8 @@
 	require_once('includes/libs/libmysql.php');
 	require_once('includes/models/account.php');
 	require_once('recaptcha-php/recaptchalib.php');
+
+	require_once('recaptcha-php/keys.php');
 	
 	$publickey      = "6LexmAQAAAAAAJD-07K2pF5RvTfIdRrlE4lKbUZ2"; // you got this from the signup page
 	$privatekey     = ":::";
