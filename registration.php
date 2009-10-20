@@ -71,7 +71,7 @@
 	{
  
 ?>
-<p>With this form you can register for a new account.</p>
+<p>With this form you can register for a new account. <i>Your email is not used to send spam, its only purpose is to be able to send you back whether account creation succeeded!</i></p>
 
 <form action="registration.php" method="post">
 
