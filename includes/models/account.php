@@ -49,8 +49,20 @@ class TMWAccount
 		if (strlen($this->username) < 4)
 			$errors[] = "Username is too short";
 			
+		if (strlen($this->username) >= 24)
+			$errors[] = "Username is too long";
+			
 		if (strlen($this->password) < 4)
 			$errors[] = "Password is too short";
+			
+		if (strlen($this->password) >= 24)
+			$errors[] = "Password is too long";
+			
+		if (strlen($this->email) < 4)
+			$errors[] = "EMail is too short";
+			
+		if (strlen($this->email) >= 40)
+			$errors[] = "EMail is too long";
 			
 		if (!check_chars($this->username))
 			$errors[] = 'Username contains invalid characters. ' . BAD_STRING_DESC;
