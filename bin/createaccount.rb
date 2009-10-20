@@ -10,6 +10,10 @@ $mail_subject      = 'The Mana World Account registration'
 $mail_body_success = "Your account was created successfully. Have fun playing themanaworld.\n"
 $mail_body_error   = "The was something wrong with the creation of your account.\n" + 
                      "Error message: "
+$mysql_hostname    = "localhost"
+$mysql_database    = "test"
+$mysql_username    = "test"
+$mysql_password    = "test123"                     
 $create_script     = "/path/to/script"
 
 ##############################################################################
@@ -46,7 +50,7 @@ end
 
 ##############################################################################
 
-db = Mysql::new("localhost", "test", "test123", "test")
+db = Mysql::new($mysql_hostname, $mysql_username, $mysql_password, $mysql_database)
 db.query("SELECT id, username, password, email, gender 
           FROM   tmw_accounts 
           WHERE  state = 0").each do |id, username, password, email, g|
