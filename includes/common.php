@@ -117,6 +117,7 @@ function placeHeader($page_title)
              <div class="section banners">
               Server status
               <iframe src="http://server.themanaworld.org/status.php" width="130" height="30" frameborder="0" scrolling="no"></iframe>
+              <a href="registration.php">Register new account</a>
              </div>
             </div>
            </div>
