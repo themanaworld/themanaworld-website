@@ -129,7 +129,7 @@
 	else
 	{
 	?>
-		<p>Your account has been created and was scheduled for creation! In a few minutes you should receive an email with verification of your new account.</p>
+		<p>Your was scheduled for creation! In a few minutes you should receive an email with verification of your new account.</p>
 	<?php }
 	placeFooter();
 ?>
