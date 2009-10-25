@@ -104,6 +104,8 @@ function placeHeader($page_title)
                <img src="images/nswpat80x15.png" alt="No software patents"/></a><br />
               <a href="http://www.gnu.org/copyleft/gpl.html">
                <img src="images/gpl.png" alt="GPLed project"/></a><br />
+              <a href="http://manasource.org">
+               <img src="images/manasource80x15.png" alt="ManaSource user"/></a><br />
              </div>
             </div>
            </div>
