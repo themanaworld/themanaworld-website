@@ -3,6 +3,8 @@
   placeHeader("Downloads");
 ?>
 
+<p>For the registration of new accounts please use the <a href="registration.php"> web form</a>. The registration from within the client is disabled.</p>
+
 <h3>Current client release</h3>
 
 <p>Official packages:</p>
@@ -22,6 +24,7 @@
 <div class="release"><img src="images/ico-deb.png"> <a href="http://packages.debian.org/tmw"><b>Debian package</b></a></div>
 <div class="release"><img src="images/ico-ubuntu.png"> <a href="http://packages.ubuntu.com/tmw"><b>Ubuntu package</b></a></div>
 <div class="release"><img src="images/ico-fedora.png"> <a href="http://fedoraproject.org/wiki/Games/manaworld"><b>Fedora package</b></a></div>
+<div class="release"><img src="images/ico-win.png"> <a href="http://portableapps.com/apps/games/the_mana_world_portable"><b>Windows Portable</b></a></div>
 </td><td style="border-width: 0px;" width="50%">
 <div class="release"><img src="images/ico-gentoo.png"> <a href="http://packages.gentoo.org/package/games-rpg/tmw"><b>Gentoo eBuild</b></a></div>
 <div class="release"><img src="images/ico-freebsd.png"> <a href="http://www.freshports.org/games/tmw/"><b>FreeBSD port</b></a></div>
