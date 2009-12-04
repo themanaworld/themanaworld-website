@@ -6,8 +6,6 @@
 
 	require_once('recaptcha-php/keys.php');
 	
-	$publickey      = "6LexmAQAAAAAAJD-07K2pF5RvTfIdRrlE4lKbUZ2"; // you got this from the signup page
-	$privatekey     = ":::";
 	$enable_captcha = true;  // modify this in production
 
 	$showform = true;

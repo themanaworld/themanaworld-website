@@ -29,9 +29,9 @@ function placeHeader($page_title)
   <div id="page">
 
    <div id="irc_info">
-    <a href="irc://irc.freenode.net/themanaworld" title="IRC">
+    <a href="irc://irc.themanaworld.org/themanaworld" title="IRC">
     #themanaworld<br />
-    irc.freenode.net
+    irc.themanaworld.org
     </a>
    </div>
 

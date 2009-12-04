@@ -3,9 +3,8 @@
   placeHeader("News");
 
 ?>
-<!--
-<div style="background-color: rgb(255,220,220); border: 1px solid rgb(240,150,150); padding: 5px; margin: 5px; -moz-border-radius: 10px;">
-<b>Notice:</b> As of 17th of January, the server moved from <i>animesites.de</i> to <i>server.themanaworld.org</i>. We thank Ultramichy for hosting us for so long at no cost. The server is now hosted on <a href="http://platinum.linux.pl">platinum.linux.pl</a>, a server which supports nonprofit initiatives.
+<!-- <div style="background-color: rgb(255,220,220); border: 1px solid rgb(240,150,150); padding: 5px; margin: 5px; -moz-border-radius: 10px;">
+<b>Notice:</b> New account creation disabled due to excessive abuse of this feature. If you want to sign up, contact thorbjorn or Jaxad0127 on IRC for now.
 </div>
 -->
 <?php
