@@ -34,6 +34,14 @@ languages are fine in party or private chat, of course).</p>
 understand Portugese). It features a custom world developed separately from
 the content on the global server, based on the same graphics.</p>
 
+<h3>UFB Mana World</h3>
+
+<p>Address: <b><tt>tmw.ufbteam.com</tt></b> (port 6901)<br/>
+<a href="http://tmw.ufbteam.com/manaworld/">Website</a></p>
+
+<p>A server hosted on a dedicated server in France. All languages are
+accepted in public. Some content is different from the official server.</p>
+
 <h3>More alternative servers</h3>
 
 <p>More servers can be found on the wiki <a href="http://wiki.themanaworld.org/index.php/Servers">Servers</a> page. You may also advertise your own server there!</p>
