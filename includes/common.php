@@ -136,8 +136,14 @@ function placeHeader($page_title)
                <param name="movie" value="http://widget.chipin.com/widget/id/6f60e4ccfafa4022"></param>
                <param name="allowScriptAccess" value="always"></param>
                <param name="wmode" value="transparent"></param>
-               <embed src="http://widget.chipin.com/widget/id/6f60e4ccfafa4022" flashVars="" type="application/x-shockwave-flash"
-                      allowScriptAccess="always" wmode="transparent" width="130" height="130"></embed>
+               <param name="event_title" value="Server%20RAM"></param>
+               <param name="event_desc" value="RAM%20for%20Platinum%20-%20TMW%20Server"></param>
+               <embed src="http://widget.chipin.com/widget/id/6f60e4ccfafa4022" 
+                      flashVars="event_title=Server%20RAM&event_desc=RAM%20for%20Platinum%20-%20TMW%20Server"
+                      type="application/x-shockwave-flash" 
+                      allowScriptAccess="always" 
+                      wmode="transparent" 
+                      width="130" height="130"></embed>
               </object>
              </div>
             </div>
