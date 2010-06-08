@@ -126,6 +126,25 @@ function placeHeader($page_title)
           </div>
          </div>
 
+         <div class="section_topleft">
+          <div class="section_bottomleft">
+           <div class="section_topright">
+            <div class="section_bottomright">
+             <div class="section banners">
+              Please help us!
+              <object width="130" height="130">
+               <param name="movie" value="http://widget.chipin.com/widget/id/6f60e4ccfafa4022"></param>
+               <param name="allowScriptAccess" value="always"></param>
+               <param name="wmode" value="transparent"></param>
+               <embed src="http://widget.chipin.com/widget/id/6f60e4ccfafa4022" flashVars="" type="application/x-shockwave-flash"
+                      allowScriptAccess="always" wmode="transparent" width="130" height="130"></embed>
+              </object>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+
          <!-- This empty div fixes a rendering issue with IE 7 -->
          <div></div>
 
