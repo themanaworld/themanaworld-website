@@ -126,31 +126,6 @@ function placeHeader($page_title)
           </div>
          </div>
 
-         <div class="section_topleft">
-          <div class="section_bottomleft">
-           <div class="section_topright">
-            <div class="section_bottomright">
-             <div class="section banners">
-              Please help us!
-              <object width="130" height="130">
-               <param name="movie" value="http://widget.chipin.com/widget/id/6f60e4ccfafa4022"></param>
-               <param name="allowScriptAccess" value="always"></param>
-               <param name="wmode" value="transparent"></param>
-               <param name="event_title" value="Server%20RAM"></param>
-               <param name="event_desc" value="RAM%20for%20Platinum%20-%20TMW%20Server"></param>
-               <embed src="http://widget.chipin.com/widget/id/6f60e4ccfafa4022" 
-                      flashVars="event_title=Server%20RAM&event_desc=RAM%20for%20Platinum%20-%20TMW%20Server"
-                      type="application/x-shockwave-flash" 
-                      allowScriptAccess="always" 
-                      wmode="transparent" 
-                      width="130" height="130"></embed>
-              </object>
-             </div>
-            </div>
-           </div>
-          </div>
-         </div>
-
          <!-- This empty div fixes a rendering issue with IE 7 -->
          <div></div>
 
