@@ -318,8 +318,7 @@ h1 {
     margin: 5px;
     padding: 5px 5px 5px 15px;
     white-space: nowrap;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
+    border-radius: 10px;
 }
 
 .releases img {

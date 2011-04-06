@@ -75,7 +75,7 @@
 <p><em>This system looks to be broken again. After submitting this form, wait five minutes and then try using the account. If it doesn't work, contact Freeyorp or Jaxad0127 on the forums or IRC. We can make it for you.</em></p>
 
 <p style="background-color: #ede2da; padding: 5px; border: 1px solid
-#9f9894; -moz-border-radius: 10px;"><i>Security warning:</i> Do not use the same username and password on
+#9f9894; border-radius: 10px;"><i>Security warning:</i> Do not use the same username and password on
 two different servers. The server admins can read all of them in clear text and
 nothing stops them from trying them on other servers. It happened a lot in the
 past that users of the official server got "hacked" because they ignored this
