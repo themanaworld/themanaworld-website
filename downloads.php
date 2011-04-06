@@ -3,8 +3,8 @@
   placeHeader("Downloads");
 ?>
 
-<div style="background-color: rgb(255,220,220); border: 1px solid rgb(240,150,150); padding: 5px; margin: 5px; -moz-border-radius: 10px;">
-For the registration of new accounts please use the <a href="registration.php"> web form</a>. The registration from within the client is disabled.
+<div style="background-color: rgb(255,220,220); border: 1px solid rgb(240,150,150); padding: 5px; margin: 5px; -moz-border-radius: 10px; -webkit-border-radius: 10px;">
+<b>Notice:</b> For the registration of new accounts please use the <a href="registration.php"> web form</a>. The registration from within the client is disabled.
 </div>
 
 <h3>Current client release</h3>
