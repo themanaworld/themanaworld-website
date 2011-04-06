@@ -4,7 +4,7 @@
 	require_once('recaptcha-php/recaptchalib.php');
 
 	require_once('recaptcha-php/keys.php');
-	
+
 	$enable_captcha = true;  // modify this in production
 
 	$showform = true;
@@ -18,7 +18,7 @@
 		$acc->setPassword($_POST['password1']);
 		$acc->setEMail($_POST['email']);
 		$acc->setGender($_POST['gender']);
-		
+
 		$val = $acc->validate();
 		if (is_array($val))
 		{
@@ -28,23 +28,23 @@
 			}
 			$showform = true;
 		}
-		
+
 		if ($_POST['password2'] != $_POST['password1'])
 		{
 			$err .= "The given passwords don't match!"; $showform = true;
 		}
-		
+
 		if (TMWAccount::existsUsername( $_POST['username'] ))
 		{
 			$err .= "The username is in use!"; $showform = true;
 		}
-		
+
 		if ($enable_captcha)
 		{
 			// check captcha
 			$resp = recaptcha_check_answer ($privatekey, $_SERVER["REMOTE_ADDR"],
 				$_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
-		
+
 			if (!$resp->is_valid)
 			{
 				$err .= "The captcha was incorrect!"; $showform = true;
@@ -61,18 +61,25 @@
 			}
 		}
 	}
-  
+
 	include("includes/common.php");
 	placeHeader("Registration");
-  
-  
+
+
 	if ($showform)
 	{
- 
+
 ?>
 <p>With this form you can register for a new account. <i>We will never give your email to someone else or send you spam! Its only purpose is to be able to send you back whether account creation succeeded.</i></p>
 
 <p><em>This system looks to be broken again. After submitting this form, wait five minutes and then try using the account. If it doesn't work, contact Freeyorp or Jaxad0127 on the forums or IRC. We can make it for you.</em></p>
+
+<p style="background-color: #ede2da; padding: 5px; border: 1px solid
+#9f9894; -moz-border-radius: 10px;"><i>Security warning:</i> Do not use the same username and password on
+two different servers. The server admins can read all of them in clear text and
+nothing stops them from trying them on other servers. It happened a lot in the
+past that users of the official server got "hacked" because they ignored this
+important precaution.</p>
 
 <form action="registration.php" method="post">
 
@@ -80,7 +87,7 @@
 	<table>
 		<?php if (isset($err))
 		{
-			echo "<tr><td colspan=\"2\" style=\"border: 1px solid red; color: red;\">" . 
+			echo "<tr><td colspan=\"2\" style=\"border: 1px solid red; color: red;\">" .
 				$err . "</td></tr>";
 		}
 		?>

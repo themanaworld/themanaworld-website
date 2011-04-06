@@ -58,13 +58,14 @@ manually.</p>
 
 <h3>Development version</h3>
 
-<p>The latest versions of our projects are always available from their
-<a href="http://gitorious.org/search?q=category%3Athe-mana-world">Git
-repositories on Gitorious</a>. For checking out the latest development version
-of the client you can use the command:</p>
+<p>The latest version of the client is developed as part of the
+<a href="http://manasource.org/">Mana project</a> and it available from the
+<a href="http://gitorious.org/mana">Git repositories on Gitorious</a>. For
+checking out the latest development version of the client you can use the
+command:</p>
 
 <pre>
-git clone git://gitorious.org/tmw/mainline.git tmw
+git clone git://gitorious.org/mana/mana.git mana
 </pre>
 
 <p>For more instructions and information about other projects like the server
@@ -72,26 +73,6 @@ and the dynamic data, please check our
 <a href="http://wiki.themanaworld.org/index.php/Git_Repository">Git wiki
 page</a>.
 
-<!--
-<a name="repository"></a>
-<h3>Ubuntu repository (out of date)</h3>
-
-<p>For convenience for Ubuntu users, a package repository
-has been set up by Bertram. The repository also contains
-<a href="http://guichan.sourceforge.net/">Guichan</a>, because its latest
-version isn't generally available yet.</p>
-
-<h4>Ubuntu Edgy (i386 and AMD-64)</h4>
-
-<pre>
-deb http://bertram.ifrance.com/ ubuntu edgy
-</pre>
-
-<p>Then to install TMW do:</p>
-
-<p><b>apt-get update<br/>
-apt-get install tmw</b></p>
--->
 <?php
   placeFooter();
 ?>

@@ -56,7 +56,7 @@ function placeHeader($page_title)
              <div class="section">
               <ul>
                <!-- No newlines after list items because IE 6 can't handle that properly -->
-               <li><a href="index.php">News</a></li><li><a href="about.php">About</a></li><li><a href="downloads.php">Downloads</a></li><li><a href="registration.php">Registration</a></li><li><a href="servers.php">Servers</a></li><li><a href="http://wiki.themanaworld.org/">Wiki</a></li><li><a href="http://forums.themanaworld.org/">Forums</a></li><li><a href="http://mantis.themanaworld.org/">Bug tracker</a></li><li><a href="links.php">Links</a></li></ul>
+               <li><a href="index.php">News</a></li><li><a href="about.php">About</a></li><li><a href="downloads.php">Downloads</a></li><li><a href="registration.php">Registration</a></li><li><a href="http://wiki.themanaworld.org/index.php/Servers">Servers</a></li><li><a href="http://wiki.themanaworld.org/">Wiki</a></li><li><a href="http://forums.themanaworld.org/">Forums</a></li><li><a href="http://mantis.themanaworld.org/">Bug tracker</a></li><li><a href="links.php">Links</a></li></ul>
              </div>
             </div>
            </div>

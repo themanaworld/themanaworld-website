@@ -7,9 +7,9 @@
 
 <ul>
 <li><a href="http://sourceforge.net/projects/themanaworld/">SouceForge project page</a></li>
-<li><a href="http://platinum.edu.pl/~bjorn/tmw-docs/">Source code documentation</a></li>
-<li><a href="http://themanaworld.org/statcvs/">CVS statistics</a></li>
-<li><a href="http://lists.sourceforge.net/lists/listinfo/themanaworld-commit">Mailing list: Commits</a></li>
+<li><a href="http://doc.manasource.org/">Mana client and server documentation</a></li>
+<li><a href="http://gitorious.org/+tmw-developers">GIT log</a></li>
+<!-- <li><a href="http://lists.sourceforge.net/lists/listinfo/themanaworld-commit">Mailing list: Commits</a></li> -->
 <li><a href="http://lists.sourceforge.net/lists/listinfo/themanaworld-devel">Mailing list: Developers</a></li>
 </ul>
 
@@ -26,20 +26,12 @@
 <li><a href="http://www.zlib.net/">zlib</a> - Compression library</li>
 <li><a href="http://curl.haxx.se/libcurl/">libcurl</a> - File transfer library</li>
 </ul>
-<!--
-<h3>Fansites</h3>
 
-<ul>
-<li><a href="http://www.tmwbrasil.kit.net/">Brazilian fansite</a></li>
-</ul>
--->
 <h3>Other related links</h3>
 
 <ul>
 <li><a href="http://mapeditor.org/">Tiled</a> - Tiled map editor</li>
-<li><a href="http://eathena.deltaanime.net/">eAthena server</a> - Ragnarok Online Server Emulator</li>
-<li><a href="http://rpgdx.net">RPGDX</a> - RPG development community website</li>
-<li><a href="http://digilander.libero.it/eugeniofavalli">Final RPG</a> - Elven's Final RPG project</li>
+<li><a href="http://www.eathena.ws/board/">eAthena server support board</a> - Ragnarok Online Server Emulator</li>
 </ul>
 
 <?php
