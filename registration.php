@@ -1,5 +1,4 @@
 <?php
-
 	require_once('includes/libs/libmysql.php');
 	require_once('includes/models/account.php');
 	require_once('recaptcha-php/recaptchalib.php');
@@ -72,6 +71,8 @@
  
 ?>
 <p>With this form you can register for a new account. <i>We will never give your email to someone else or send you spam! Its only purpose is to be able to send you back whether account creation succeeded.</i></p>
+
+<p><em>This system looks to be broken again. After submitting this form, wait five minutes and then try using the account. If it doesn't work, contact Freeyorp or Jaxad0127 on the forums or IRC. We can make it for you.</em></p>
 
 <form action="registration.php" method="post">
 
