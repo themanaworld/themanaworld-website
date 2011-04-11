@@ -44,10 +44,9 @@ achive (PPA) of Tomas Kovacik</a>.</p>
 
 <h3>Music</h3>
 
-<p>While the music is included with our installer for Windows, it is left out
-of most other releases because of its size. Download it here if the music is
-not available for your operating system or if you've compiled The Mana World
-manually.</p>
+<p>While the music is optionally downloadable when installing the Windows version,
+it is left out of most other releases because of its size. Download it here if the music is
+not available for your operating system or if you've compiled The Mana World manually.</p>
 
 <table cellspacing="0" cellpadding="0" border="0" style="border-width: 0px; margin-bottom: 0px; margin-top: 0px;">
 <tr><td style="border-width: 0px; padding-right: 10px;">

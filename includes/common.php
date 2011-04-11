@@ -169,7 +169,7 @@ function placeFooter()
    </div>
 
    <div id="footer">
-    &copy; 2004-2008 The Mana World Dev Team -
+    &copy; 2004-2011 The Mana World Dev Team -
     [<a href="http://validator.w3.org/check?uri=referer">xhtml</a>] [<a href="http://jigsaw.w3.org/css-validator/check/referer">css</a>]
    </div>
   </div> <!-- /page -->
