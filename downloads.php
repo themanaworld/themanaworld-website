@@ -15,7 +15,7 @@
 <div class="release"><img src="images/ico-win.png"> <a href="http://sourceforge.net/projects/themanaworld/files/The%20Mana%20World/0.5.2/tmw-0.5.2-win32.exe/download"><b>Windows installer</b> 0.5.2</a></div>
 <div class="release"><img src="images/ico-osx.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.29.1-osx.dmg"><b>MacOS X package</b> 0.0.29.1</a></div>
 </td><td style="border-width: 0px;" width="50%">
-<div class="release"><img src="images/ico-src.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.0.29.1.tar.gz"><b>Source code</b> 0.0.29.1</a></div>
+<div class="release"><img src="images/ico-src.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.5.2.tar.gz"><b>Source code</b> 0.5.2</a></div>
 </td></tr>
 </tbody></table>
 
