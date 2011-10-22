@@ -26,6 +26,7 @@ function placeHeader($page_title)
   </style>
  </head>
  <body>
+  <div style="margin-left: auto; margin-right: auto; max-width: 1350px;">
   <div id="page">
 
    <div id="irc_info">
@@ -155,6 +156,7 @@ function placeFooter()
     [<a href="http://validator.w3.org/check?uri=referer">xhtml</a>] [<a href="http://jigsaw.w3.org/css-validator/check/referer">css</a>]
    </div>
   </div> <!-- /page -->
+  </div>
 
   <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
   </script>
