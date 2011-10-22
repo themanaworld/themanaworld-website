@@ -57,18 +57,18 @@ not available for your operating system or if you've compiled The Mana World man
 <h3>Development version</h3>
 
 <p>The latest version of the client is developed as part of the
-<a href="http://manasource.org/">Mana project</a> and it available from the
-<a href="http://gitorious.org/mana">Git repositories on Gitorious</a>. For
+<a href="http://manasource.org/">Mana project</a> and is available from the
+<a href="http://github.com/mana">Git repositories on github</a>. For
 checking out the latest development version of the client you can use the
 command:</p>
 
 <pre>
-git clone git://gitorious.org/mana/mana.git mana
+git clone git://github.com/mana/mana.git
 </pre>
 
 <p>For more instructions and information about other projects like the server
 and the dynamic data, please check our
-<a href="http://wiki.themanaworld.org/index.php/Git_Repository">Git wiki
+<a href="http://wiki.themanaworld.org/index.php/Git_repository">Git wiki
 page</a>.
 
 <?php
