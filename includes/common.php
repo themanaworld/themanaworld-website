@@ -68,30 +68,12 @@ function placeHeader($page_title)
            <div class="section_topright">
             <div class="section_bottomright">
              <div class="section" style="text-align: center;">
-              <a href="http://wiki.themanaworld.org/index.php/Image:TMW_Screenshot_63.png"><img src="images/screenshot-thumb.png" alt="screenshot" style="border: 1px solid #784f3f;"/></a>
-              <div style="text-align: center;"><a style="font-size: 7pt;" href="http://wiki.themanaworld.org/index.php/Screenshots">more screenshots</a></div>
+              <a href="http://wiki.themanaworld.org/index.php/Screenshots"><img src="images/screenshot-thumb.png" alt="Screenshots" style="border: 1px solid #784f3f;"/></a>
              </div>
             </div>
            </div>
           </div>
          </div>
-
-         <!--
-         <div class="section_topleft">
-          <div class="section_bottomleft">
-           <div class="section_topright">
-            <div class="section_bottomright">
-             <div class="section">
-              <h3>Server Status</h3>
-              <p style="font-size: 7pt;">
-              animesites.de
-              </p>
-             </div>
-            </div>
-           </div>
-          </div>
-         </div>
-         -->
 
          <div class="section_topleft">
           <div class="section_bottomleft">
