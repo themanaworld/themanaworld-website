@@ -72,8 +72,6 @@
 ?>
 <p>With this form you can register for a new account. <i>We will never give your email to someone else or send you spam! Its only purpose is to be able to send you back whether account creation succeeded.</i></p>
 
-<p><em>This system looks to be broken again. After submitting this form, wait five minutes and then try using the account. If it doesn't work, contact Freeyorp or Jaxad0127 on the forums or IRC. We can make it for you.</em></p>
-
 <p style="background-color: #ede2da; padding: 5px; border: 1px solid
 #9f9894; border-radius: 10px;"><i>Security warning:</i> Do not use the same username and password on
 two different servers. The server admins can read all of them in clear text and
@@ -138,6 +136,9 @@ important precaution.</p>
 	{
 	?>
 		<p>Your account was scheduled for creation! In a few minutes you should receive an email with verification of your new account.</p>
+
+		<p><em>If the account doesn't work after five minutes, please contact Freeyorp on the forums or IRC. We can make it for you.</em></p>
+
 	<?php }
 	placeFooter();
 ?>
