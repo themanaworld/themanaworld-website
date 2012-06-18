@@ -137,7 +137,7 @@ important precaution.</p>
 	?>
 		<p>Your account was scheduled for creation! In a few minutes you should receive an email with verification of your new account.</p>
 
-		<p><em>If the account doesn't work after five minutes, please contact Freeyorp on the forums or IRC. We can make it for you.</em></p>
+		<p><em>If the account doesn't work after five minutes, please contact Freeyorp or Frost on the forums or IRC. We can make it for you.</em></p>
 
 	<?php }
 	placeFooter();
