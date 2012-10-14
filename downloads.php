@@ -43,7 +43,7 @@
 
 <table style="border-width: 0px; width: 600px; margin-bottom: 0px; margin-top: 0px;" border="0" cellpadding="0" cellspacing="0">
 <tbody><tr><td style="border-width: 0px;" width="50%">
-<div class="release"><img src="images/ico-src.png"> <b>Branding files</b> 2012-07-27</a></div>
+<div class="release"><img src="images/ico-src.png"> <a href="http://sourceforge.net/projects/themanaworld/files/tmw-branding/tmw-branding-20120727.tar.gz/download"><b>Branding files</b> 2012-07-27</a></div>
 </td></tr>
 </tbody></table>
 
