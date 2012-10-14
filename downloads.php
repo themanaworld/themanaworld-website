@@ -7,40 +7,49 @@
 <b>Notice:</b> For the registration of new accounts please use the <a href="registration.php"> web form</a>. The registration from within the client is disabled.
 </div>
 
-<h3>Current client release</h3>
+<h3>Official client</h3>
 
-<p>Official packages:</p>
+<p>The official client for playing The Mana World is the Mana client and is
+	developed as part of the <a href="http://manasource.org/">Mana project</a>.
+	The latest version of the client can be downloaded from there.</p>
+
+<h3>The Mana World packages</h3>
+
+<p>The Mana World packages are available for many platforms. These are based on
+	the Mana client, but have a different default skin and will show up
+	as "The Mana World" in the application menu.</p>
+
 <table style="border-width: 0px; width: 600px; margin-bottom: 0px; margin-top: 0px;" border="0" cellpadding="0" cellspacing="0">
 <tbody><tr><td style="border-width: 0px;" width="50%">
+
 <div class="release"><img src="images/ico-win.png"> <a href="http://sourceforge.net/projects/themanaworld/files/The%20Mana%20World/0.6.0/tmw-0.6.0-win32.exe/download"><b>Windows installer</b> 0.6.0</a></div>
 <div class="release"><img src="images/ico-osx.png"> <a href="http://server.themanaworld.org/mana-0.5.dmg"><b>MacOS X package</b> 0.5.0</a></div>
-</td><td style="border-width: 0px;" width="50%">
-<div class="release"><img src="images/ico-src.png"> <a href="http://downloads.sourceforge.net/themanaworld/tmw-0.5.2.tar.gz"><b>Source code</b> 0.5.2</a></div>
-</td></tr>
-</tbody></table>
-
-<p>Distribution packages and ports:</p>
-<table style="border-width: 0px; width: 600px; margin-bottom: 0px; margin-top: 0px;" border="0" cellpadding="0" cellspacing="0">
-<tbody><tr><td style="border-width: 0px;" width="50%">
 <div class="release"><img src="images/ico-deb.png"> <a href="http://packages.debian.org/tmw"><b>Debian package</b></a></div>
 <div class="release"><img src="images/ico-ubuntu.png"> <a href="http://packages.ubuntu.com/tmw"><b>Ubuntu package</b></a></div>
-<div class="release"><img src="images/ico-fedora.png"> <a href="http://fedoraproject.org/wiki/Games/manaworld"><b>Fedora package</b></a></div>
+<div class="release"><img src="images/ico-fedora.png"> <a href="https://apps.fedoraproject.org/packages/tmw"><b>Fedora package</b></a></div>
+
+</td><td style="border-width: 0px;" width="50%" valign="top">
+
 <div class="release"><img src="images/ico-win.png"> <a href="http://portableapps.com/apps/games/the_mana_world_portable"><b>Windows Portable</b></a></div>
-</td><td style="border-width: 0px;" width="50%">
-<div class="release"><img src="images/ico-gentoo.png"> <a href="http://packages.gentoo.org/package/games-rpg/mana"><b>Gentoo eBuild</b></a></div>
+<div class="release"><img src="images/ico-gentoo.png"> <a href="http://packages.gentoo.org/package/games-rpg/tmw"><b>Gentoo eBuild</b></a></div>
 <div class="release"><img src="images/ico-freebsd.png" width="16" height="16"> <a href="http://www.freshports.org/games/tmw/"><b>FreeBSD port</b></a></div>
 <div class="release"><img src="images/ico-openbsd.png" width="16" height="16"> <a href="http://openports.se/games/tmw"><b>OpenBSD port</b></a></div>
+
 </td></tr>
 </tbody></table>
 
-<p>For older versions please see our <a href="http://sourceforge.net/project/showfiles.php?group_id=106790">files
-page</a> on SourceForge. Note however that they are no longer supported and
-likely to no longer work on our testing server.</p>
+<p>For packagers (or for users who're interested), the branding files can be
+	downloaded separately:</p>
 
-<p>People who are still on Ubuntu Hardy (8.04) or Intrepid (8.10) can install a
-more recent version of The Mana World by adding the
-<a href="https://launchpad.net/~nail-nodomain/+archive/ppa">private package
-achive (PPA) of Tomas Kovacik</a>.</p>
+<table style="border-width: 0px; width: 600px; margin-bottom: 0px; margin-top: 0px;" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td style="border-width: 0px;" width="50%">
+<div class="release"><img src="images/ico-src.png"> <b>Branding files</b> 2012-07-27</a></div>
+</td></tr>
+</tbody></table>
+
+<p>For older versions please see our <a href="https://sourceforge.net/projects/themanaworld/files/">files
+page</a> on SourceForge. Note however that these releases are no longer supported and
+likely to no longer work with our server.</p>
 
 <h3>Music</h3>
 
