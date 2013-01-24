@@ -9,8 +9,11 @@
 -->
 <?php
 
+  echo file_get_contents('http://updates.themanaworld.org/news.html');
+  /*
   $number = 6;
   include('includes/news.php');
+   */
 
   placeFooter();
 ?>
