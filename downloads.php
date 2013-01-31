@@ -7,11 +7,17 @@
 <b>Notice:</b> For the registration of new accounts please use the <a href="registration.php"> web form</a>. The registration from within the client is disabled.
 </div>
 
-<h3>Official client</h3>
+<h3>ManaPlus client</h3>
+The recommended client is available <a href="http://manaplus.evolonline.org/">on this other website</a>.
 
-<p>The official client for playing The Mana World is the Mana client and is
+<h3>Mana client</h3>
+
+<p>The old official client for playing The Mana World is the Mana client and is
 	developed as part of the <a href="http://manasource.org/">Mana project</a>.
-	The latest version of the client can be downloaded from there.</p>
+        The latest version of the client can be downloaded from there.</p>
+
+<p>There will probably be no more releases of the Mana client that support this server. Use ManaPlus instead.
+</p>
 
 <h3>The Mana World packages</h3>
 
@@ -23,7 +29,7 @@
 <tbody><tr><td style="border-width: 0px;" width="50%">
 
 <div class="release"><img src="images/ico-win.png"> <a href="http://sourceforge.net/projects/themanaworld/files/The%20Mana%20World/0.6.0/tmw-0.6.0-win32.exe/download"><b>Windows installer</b> 0.6.0</a></div>
-<div class="release"><img src="images/ico-osx.png"> <a href="http://server.themanaworld.org/mana-0.5.dmg"><b>MacOS X package</b> 0.5.0</a></div>
+<div class="release"><img src="images/ico-osx.png"> <a href="http://server.themanaworld.org/mana-0.5.dmg"><b>MacOS X package</b> 0.5.0</a> (outdated, see forum)</div>
 <div class="release"><img src="images/ico-deb.png"> <a href="http://packages.debian.org/tmw"><b>Debian package</b></a></div>
 <div class="release"><img src="images/ico-ubuntu.png"> <a href="http://packages.ubuntu.com/tmw"><b>Ubuntu package</b></a></div>
 <div class="release"><img src="images/ico-fedora.png"> <a href="https://apps.fedoraproject.org/packages/tmw"><b>Fedora package</b></a></div>
@@ -53,15 +59,10 @@ likely to no longer work with our server.</p>
 
 <h3>Music</h3>
 
-<p>While the music is optionally downloadable when installing the Windows version,
-it is left out of most other releases because of its size. Download it here if the music is
-not available for your operating system or if you've compiled The Mana World manually.</p>
-
-<table cellspacing="0" cellpadding="0" border="0" style="border-width: 0px; margin-bottom: 0px; margin-top: 0px;">
-<tr><td style="border-width: 0px; padding-right: 10px;">
-<div class="release"><a href="http://downloads.sourceforge.net/themanaworld/tmwmusic-0.3.tar.gz"><b>The Mana World music</b> 0.3</a></div>
-</td></tr>
-</table>
+<p>We no longer recommend music be installed directly,
+as it easily becomes out-of-date.</p>
+<p>To enable music in the client, make sure that "Download Music" is checked
+in the Audio tab of the Setup window.</p>
 
 <h3>Development version</h3>
 
