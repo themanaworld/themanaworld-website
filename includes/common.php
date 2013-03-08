@@ -18,7 +18,6 @@ function placeHeader($page_title)
   <meta http-equiv="Content-Style-Type" content="text/css"/>
   <meta http-equiv="Content-Language" content="en"/>
   <link rel="icon" type="image/png" href="images/icon16.png"/>
-  <link href="http://sourceforge.net/export/rss2_projnews.php?group_id=106790&rss_fulltext=1" rel="alternate" type="application/rss+xml" title="RSS">
   <meta name="description" content="The Mana World is a free MMORPG game for Linux, MacOS X and Windows"/>
   <meta name="keywords" content="The Mana World, Mana, World, MMORPG, RPG, free, GPL"/>
   <meta name="author" content="The Mana World Dev Team"/>
@@ -31,10 +30,6 @@ function placeHeader($page_title)
   <div id="page">
 
    <div id="irc_info">
-    <a href="irc://irc.themanaworld.org/themanaworld" title="IRC">
-    #themanaworld<br />
-    irc.themanaworld.org
-    </a>
    </div>
 
    <div id="title">
@@ -57,8 +52,14 @@ function placeHeader($page_title)
             <div class="section_bottomright">
              <div class="section">
               <ul>
-               <!-- No newlines after list items because IE 6 can't handle that properly -->
-               <li><a href="registration.php">Registration</a></li><li><a href="downloads.php">Downloads</a></li><li><a href="index.php">News</a></li><li><a href="about.php">About</a></li><li><a href="http://wiki.themanaworld.org/index.php/Servers">Servers</a></li><li><a href="http://wiki.themanaworld.org/">Wiki</a></li><li><a href="http://forums.themanaworld.org/">Forums</a></li><li><a href="http://mantis.themanaworld.org/">Bug tracker</a></li><li><a href="links.php">Links</a></li></ul>
+               <li><a href="registration.php">Registration</a></li>
+               <li><a href="downloads.php">Downloads</a></li>
+               <li><a href="index.php">News</a></li>
+               <li><a href="about.php">About</a></li>
+               <li><a href="http://wiki.themanaworld.org/index.php/Servers">Servers</a></li>
+               <li><a href="http://wiki.themanaworld.org/">Wiki</a></li>
+               <li><a href="http://forums.themanaworld.org/">Forums</a></li>
+              </ul>
              </div>
             </div>
            </div>
@@ -81,15 +82,16 @@ function placeHeader($page_title)
           <div class="section_bottomleft">
            <div class="section_topright">
             <div class="section_bottomright">
-             <div class="section banners">
-              <a href="http://sourceforge.net">
-               <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=106790&amp;type=1" alt="SourceForge.net"/></a><br />
-              <a href="http://www.nosoftwarepatents.com">
-               <img src="images/nswpat80x15.png" alt="No software patents"/></a><br />
-              <a href="http://www.gnu.org/copyleft/gpl.html">
-               <img src="images/gpl.png" alt="GPLed project"/></a><br />
-              <a href="http://manasource.org">
-               <img src="images/manasource80x15.png" alt="ManaSource user"/></a><br />
+             <div class="section">
+              <ul>
+               <li><a href="https://webchat.freenode.net/?channels=#themanaworld">IRC</a></li>
+               <li><a href="https://plus.google.com/114523926767095095371">Google+</a></li>
+               <li><a href="https://www.facebook.com/themanaworld">Facebook</a></li>
+               <li><a href="https://github.com/themanaworld">Github</a></li>
+               <li><a href="https://trello.com/themanaworld">Trello</a></li>
+               <li><a href="http://sourceforge.net/projects/themanaworld/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=106790&amp;type=1" alt="SourceForge.net"/></a></li>
+               <li><a href="http://www.gnu.org/copyleft/gpl.html"><img src="images/gpl.png" alt="GPLed project"/></a></li>
+              </ul>
              </div>
             </div>
            </div>
