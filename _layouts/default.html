@@ -1,14 +1,4 @@
-<?php
-/* Main include file for TMW website, including header and footer
- * (c) 2005 Bjorn Lindeijer
- */
-
-define('TMWWEBSITE', true);
-
-function placeHeader($page_title)
-{
-  echo "<?xml version=\"1.0\" encoding=\"ISO-8859-15\"?>\n";
-?>
+<?xml version="1.0" encoding="ISO-8859-15" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -52,10 +42,10 @@ function placeHeader($page_title)
             <div class="section_bottomright">
              <div class="section">
               <ul>
-               <li><a href="registration.php">Registration</a></li>
-               <li><a href="downloads.php">Downloads</a></li>
-               <li><a href="index.php">News</a></li>
-               <li><a href="about.php">About</a></li>
+               <li><a href="http://server.themanaworld.org/registration.php">Registration</a></li>
+               <li><a href="{{ site.basepath }}/downloads.html">Downloads</a></li>
+               <li><a href="{{ site.basepath }}/index.html">News</a></li>
+               <li><a href="{{ site.basepath }}/about.html">About</a></li>
                <li><a href="http://wiki.themanaworld.org/index.php/Servers">Servers</a></li>
                <li><a href="http://wiki.themanaworld.org/">Wiki</a></li>
                <li><a href="http://forums.themanaworld.org/">Forums</a></li>
@@ -105,7 +95,7 @@ function placeHeader($page_title)
              <div class="section banners">
               Server status
               <iframe src="http://server.themanaworld.org/status.php" width="130" height="30" frameborder="0" scrolling="no"></iframe>
-              <a href="registration.php">Register new account</a>
+              <a href="http://server.themanaworld.org/registration.php">Register new account</a>
              </div>
             </div>
            </div>
@@ -128,16 +118,13 @@ function placeHeader($page_title)
                <div class="main_title_topright">
                 <div class="main_title_bottomright">
                  <div class="main_title_topleft">
-                  <h2><?=$page_title?></h2>
+                  <h2>{{ page.title }}</h2>
                  </div>
                 </div>
                </div>
-<?php
-}
 
-function placeFooter()
-{
-?>
+{{ content }}
+
                <div style="clear: both"></div>
 
               </div> <!-- /contents -->
@@ -169,7 +156,3 @@ function placeFooter()
   </script>
  </body>
 </html>
-<?php
-}
-
-?>
