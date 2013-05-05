@@ -8,16 +8,13 @@
 </div>
 
 <h3>ManaPlus client</h3>
-The recommended client is available <a href="http://manaplus.evolonline.org/">on this other website</a>.
+<p>The recommended client is available <a href="http://manaplus.evolonline.org/">on this other website</a>.</p>
 
 <h3>Mana client</h3>
 
-<p>The old official client for playing The Mana World is the Mana client and is
-	developed as part of the <a href="http://manasource.org/">Mana project</a>.
-        The latest version of the client can be downloaded from there.</p>
-
-<p>There will probably be no more releases of the Mana client that support this server. Use ManaPlus instead.
-</p>
+<p>The previous official client for playing The Mana World is the Mana client
+and is developed as part of the <a href="http://manasource.org/">Mana
+project</a>. The latest version of the client can be downloaded from there.</p>
 
 <h3>The Mana World packages</h3>
 
