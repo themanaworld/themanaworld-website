@@ -6,15 +6,7 @@
 <div style="background-color: rgb(255,220,220); border: 1px solid rgb(240,150,150); padding: 5px; margin: 5px; border-radius: 10px;">
 <b>Notice:</b> For the registration of new accounts please use the <a href="registration.php"> web form</a>. The registration from within the client is disabled.
 </div>
-
-<h3>ManaPlus client</h3>
-<p>The recommended client is available <a href="http://manaplus.evolonline.org/">on this other website</a>.</p>
-
-<h3>Mana client</h3>
-
-<p>The previous official client for playing The Mana World is the Mana client
-and is developed as part of the <a href="http://manasource.org/">Mana
-project</a>. The latest version of the client can be downloaded from there.</p>
+<p>Official client is ManaPlus</p>
 
 <h3>The Mana World packages</h3>
 
@@ -72,6 +64,17 @@ command:</p>
 <pre>
 git clone git://gitorious.org/manaplus/manaplus.git
 </pre>
+
+<p>About server code you can read <a href="http://wiki.themanaworld.org/index.php/How_to_Develop">wiki</a></p>
+
+<h3>ManaPlus client</h3>
+<p>The recommended client is available <a href="http://manaplus.evolonline.org/">ManaPlus website</a>.</p>
+
+<h3>Mana client</h3>
+
+<p>The previous official client for playing The Mana World is the Mana client
+and is developed as part of the <a href="http://manasource.org/">Mana
+project</a>. The latest version of the client can be downloaded from there.</p>
 
 <p>For more instructions and information about other projects like the server
 and the dynamic data, please check our
