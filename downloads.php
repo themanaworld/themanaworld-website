@@ -28,7 +28,7 @@ project</a>. The latest version of this client can be downloaded from there.</p>
 <div class="release"><img src="images/ico-win.png"> <a href="http://download.evolonline.org/manaplus/download/manaplus-win32.exe"><b>ManaPlus Windows installer</b></a></div>
 <div class="release"><img src="images/ico-osx.png"> <a href="http://download3.evolonline.org/manaplus/macosx/manaplus-lion.dmg"><b>ManaPlus MacOS X package (lion)</b></a></div>
 <div class="release"><img src="images/ico-osx.png"> <a href="http://download3.evolonline.org/manaplus/macosx/manaplus-snowleopard.dmg"><b>ManaPlus MacOS X package (snow leopard)</b></a></div>
-<div class="release"><img src="images/ico-win.png"> <a href="http://sourceforge.net/projects/themanaworld/files/The%20Mana%20World/0.6.0/tmw-0.6.0-win32.exe/download"><b>Mana Windows installer</b> 0.6.0</a></div>
+<div class="release"><img src="images/ico-win.png"> <a href="http://files.manasource.org/mana-0.6.1-win32.exe"><b>Mana Windows installer</b> 0.6.0</a></div>
 <div class="release"><img src="images/ico-deb.png"> <a href="http://packages.debian.org/tmw"><b>Debian package</b></a></div>
 <div class="release"><img src="images/ico-ubuntu.png"> <a href="http://packages.ubuntu.com/tmw"><b>Ubuntu package</b></a></div>
 <div class="release"><img src="images/ico-fedora.png"> <a href="https://apps.fedoraproject.org/packages/tmw"><b>Fedora package</b></a></div>
@@ -52,7 +52,7 @@ project</a>. The latest version of this client can be downloaded from there.</p>
 </td></tr>
 </tbody></table>
 
-<p>For older versions of Mana please see our <a href="https://sourceforge.net/projects/themanaworld/files/">files
+<p>For older versions please see our <a href="https://sourceforge.net/projects/themanaworld/files/">files
 page</a> on SourceForge. Note however that these releases are no longer supported and
 likely to no longer work with our server.</p>
 
