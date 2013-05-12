@@ -25,17 +25,18 @@ project</a>. The latest version of this client can be downloaded from there.</p>
 <table style="border-width: 0px; width: 600px; margin-bottom: 0px; margin-top: 0px;" border="0" cellpadding="0" cellspacing="0">
 <tbody><tr><td style="border-width: 0px;" width="50%">
 
-<div class="release"><img src="images/ico-win.png"> <a href="http://download.evolonline.org/manaplus/download/manaplus-win32.exe"><b>ManaPlus Windows installer</b></a></div>
+<div class="release"><img src="images/ico-win.png"> <a href="http://download.evolonline.org/manaplus/tmw/tmw-win32.exe"><b>Windows installer (ManaPlus)</b></a></div>
+<div class="release"><img src="images/ico-win.png"> <a href="http://sourceforge.net/projects/themanaworld/files/The%20Mana%20World/0.6.0/tmw-0.6.0-win32.exe/download"><b>Windows installer (Mana)</b> 0.6.0</a></div>
 <div class="release"><img src="images/ico-osx.png"> <a href="http://download3.evolonline.org/manaplus/macosx/manaplus-lion.dmg"><b>ManaPlus MacOS X package (lion)</b></a></div>
 <div class="release"><img src="images/ico-osx.png"> <a href="http://download3.evolonline.org/manaplus/macosx/manaplus-snowleopard.dmg"><b>ManaPlus MacOS X package (snow leopard)</b></a></div>
-<div class="release"><img src="images/ico-win.png"> <a href="http://files.manasource.org/mana-0.6.1-win32.exe"><b>Mana Windows installer</b> 0.6.0</a></div>
 <div class="release"><img src="images/ico-deb.png"> <a href="http://packages.debian.org/tmw"><b>Debian package</b></a></div>
 <div class="release"><img src="images/ico-ubuntu.png"> <a href="http://packages.ubuntu.com/tmw"><b>Ubuntu package</b></a></div>
 <div class="release"><img src="images/ico-fedora.png"> <a href="https://apps.fedoraproject.org/packages/tmw"><b>Fedora package</b></a></div>
 
 </td><td style="border-width: 0px;" width="50%" valign="top">
 
-<div class="release"><img src="images/ico-win.png"> <a href="http://portableapps.com/apps/games/the_mana_world_portable"><b>Windows Portable</b></a></div>
+<div class="release"><img src="images/ico-win.png"> <a href="http://portableapps.com/apps/games/the_mana_world_portable"><b>Windows Portable (Mana)</b></a></div>
+<div class="release"><img src="images/ico-win.png"> <a href="http://download.evolonline.org/manaplus/download/manaplus.apk"><b>Android App (ManaPlus)</b></a></div>
 <div class="release"><img src="images/ico-gentoo.png"> <a href="http://packages.gentoo.org/package/games-rpg/tmw"><b>Gentoo eBuild</b></a></div>
 <div class="release"><img src="images/ico-openbsd.png" width="16" height="16"> <a href="http://openports.se/games/manaplus"><b>OpenBSD port</b></a></div>
 <div class="release"><img src="images/ico-freebsd.png" width="16" height="16"> <a href="http://www.freshports.org/games/tmw/"><b>FreeBSD port</b></a></div>
