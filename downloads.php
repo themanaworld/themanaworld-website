@@ -36,7 +36,7 @@ project</a>. The latest version of this client can be downloaded from there.</p>
 </td><td style="border-width: 0px;" width="50%" valign="top">
 
 <div class="release"><img src="images/ico-win.png"> <a href="http://portableapps.com/apps/games/the_mana_world_portable"><b>Windows Portable (Mana)</b></a></div>
-<div class="release"><img src="images/ico-win.png"> <a href="http://download.evolonline.org/manaplus/download/manaplus.apk"><b>Android App (ManaPlus)</b></a></div>
+<div class="release"><img src="images/ico-android.png"> <a href="http://download.evolonline.org/manaplus/download/manaplus.apk"><b>Android App (ManaPlus)</b></a></div>
 <div class="release"><img src="images/ico-gentoo.png"> <a href="http://packages.gentoo.org/package/games-rpg/tmw"><b>Gentoo eBuild</b></a></div>
 <div class="release"><img src="images/ico-openbsd.png" width="16" height="16"> <a href="http://openports.se/games/manaplus"><b>OpenBSD port</b></a></div>
 <div class="release"><img src="images/ico-freebsd.png" width="16" height="16"> <a href="http://www.freshports.org/games/tmw/"><b>FreeBSD port</b></a></div>
