@@ -9,7 +9,9 @@
 -->
 <?php
 
-  echo file_get_contents('http://updates.themanaworld.org/news.html');
+  // this is a symlink, now that we're not on Platinum
+  echo file_get_contents('news.html');
+  // echo file_get_contents('http://updates.themanaworld.org/news.html');
   /*
   $number = 6;
   include('includes/news.php');
