@@ -89,7 +89,7 @@ function placeHeader($page_title)
                <li><a href="https://www.facebook.com/themanaworld">Facebook</a></li>
                <li><a href="https://github.com/themanaworld">Github</a></li>
                <li><a href="https://trello.com/themanaworld">Trello</a></li>
-               <li><a href="http://sourceforge.net/projects/themanaworld/"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=106790&amp;type=1" alt="SourceForge.net"/></a></li>
+               <li><a href="http://sourceforge.net/projects/themanaworld/"><img src="https://sflogo.sourceforge.net/sflogo.php?group_id=106790&amp;type=1" alt="SourceForge.net"/></a></li>
                <li><a href="http://www.gnu.org/copyleft/gpl.html"><img src="images/gpl.png" alt="GPLed project"/></a></li>
               </ul>
              </div>
@@ -104,7 +104,7 @@ function placeHeader($page_title)
             <div class="section_bottomright">
              <div class="section banners">
               Server status
-              <iframe src="http://server.themanaworld.org/status.php" width="130" height="30" frameborder="0" scrolling="no"></iframe>
+              <iframe src="https://server.themanaworld.org/status.php" width="130" height="30" frameborder="0" scrolling="no"></iframe>
               <a href="registration.php">Register new account</a>
              </div>
             </div>
@@ -161,7 +161,7 @@ function placeFooter()
   </div> <!-- /page -->
   </div>
 
-  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+  <script src="https://www.google-analytics.com/urchin.js" type="text/javascript">
   </script>
   <script type="text/javascript">
   _uacct = "UA-380618-3";
