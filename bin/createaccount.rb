@@ -68,6 +68,10 @@ db.query("SELECT id, username, password, email, gender
 			if retval.include? retcode['message'] then
 				send_mail( email, username, retcode['status'], retcode['message'] )
 				db.query("UPDATE tmw_accounts SET STATE = #{retcode['final_state']} WHERE id = #{id}")
+
+				if (retcode['status'] == :SUCCESS) then
+					db.query("UPDATE tmw_accounts SET password = '' WHERE id = #{id}")
+				end
 			end
 		end
 	rescue
