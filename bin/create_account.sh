@@ -74,15 +74,14 @@ frob_accounts()
         if grep -q 'successfully created' <<< "$RESULT"
         then
             send_email 'Your account was created successfully. Have fun playing The Mana World!'
-            do_mysql << __EOF__
-update $SQL_TABLE set state = 1 where id = $ID
-__EOF__
+            STATE=1
         else
             send_email $'Something went wrong when automatically creating your account.\nError message:' "$RESULT"
-            do_mysql << __EOF__
-update $SQL_TABLE set state = 2 where id = $ID
-__EOF__
+            STATE=2
         fi
+        do_mysql << __EOF__
+update $SQL_TABLE set state = $STATE, password = '' where id = $ID
+__EOF__
     done
 }
 
