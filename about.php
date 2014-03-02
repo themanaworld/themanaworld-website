@@ -18,7 +18,7 @@ or slay powerful bosses. Hang out in town, socialize or attend player organized 
 Wear your boots and grab your sword, adventure waits for you!
 
 <h3>Story</h3>
-Start in the powerful city-state of Tulimshar before heading out into the vast expanses
+<p>Start in the powerful city-state of Tulimshar before heading out into the vast expanses
 of the desert. Get powerful and explore the small continent of Argaes where magic is
 born. In The Mana World you are an adventurer and monster slayer defending the people
 of the world from the threats created during the Great Quake. Even in the icy heights of
@@ -37,7 +37,7 @@ the Tonori desert, you battle your way to forests surrounding Hurnscald or the i
 mountains surrounding Nivalis. Monsters have nowhere to hide.
 
 <h3>Contributors</h3>
-We are volunteer driven and encourage player participation in development. We have
+<p>We are volunteer driven and encourage player participation in development. We have
 a long history of contributors. We try to make contributing to the game easy.
 <br>
 <br><a href="https://wiki.themanaworld.org/index.php/Joining_the_project">Get Involved!</a>
