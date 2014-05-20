@@ -19,22 +19,13 @@ function placeHeader($page_title)
   <meta http-equiv="Content-Language" content="en"/>
   <link rel="icon" type="image/png" href="images/icon16.png"/>
   <meta name="description" content="The Mana World is a free MMORPG game for Linux, MacOS X and Windows"/>
-  <meta name="keywords" content="The Mana World, Mana, World, MMORPG, RPG, free, GPL, Open Source, Pixel Art, 2D, Create World, Learn Magic, Develop Skills, Software Development, MacOX, Windows, Linux, desktop, tablet"/>
+  <meta name="keywords" content="The Mana World, Mana, World, MMORPG, RPG, free, GPL, Open Source, Pixel Art, 2D, Software Development, MacOX, Windows, Linux, desktop, tablet"/>
   <meta name="author" content="The Mana World Dev Team"/>
   <style type="text/css">
    @import url("default.css");
   </style>
  </head>
  <body>
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5KTWGJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5KTWGJ');</script>
-<!-- End Google Tag Manager -->
   <div style="margin-left: auto; margin-right: auto; max-width: 1350px;">
   <div id="page">
 
@@ -169,6 +160,15 @@ function placeFooter()
    </div>
   </div> <!-- /page -->
   </div>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5KTWGJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5KTWGJ');</script>
+<!-- End Google Tag Manager -->
  </body>
 </html>
 <?php
