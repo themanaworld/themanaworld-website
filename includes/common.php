@@ -19,7 +19,7 @@ function placeHeader($page_title)
   <meta http-equiv="Content-Language" content="en"/>
   <link rel="icon" type="image/png" href="images/icon16.png"/>
   <meta name="description" content="The Mana World is a free MMORPG game for Linux, MacOS X and Windows"/>
-  <meta name="keywords" content="The Mana World, Mana, World, MMORPG, RPG, free, GPL"/>
+  <meta name="keywords" content="The Mana World, Mana, World, MMORPG, RPG, free, GPL, Open Source, Pixel Art, 2D, Create World, Learn Magic, Develop Skills, Software Development, MacOX, Windows, Linux, desktop, tablet"/>
   <meta name="author" content="The Mana World Dev Team"/>
   <style type="text/css">
    @import url("default.css");
