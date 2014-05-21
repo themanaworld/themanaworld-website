@@ -56,9 +56,9 @@ function placeHeader($page_title)
                <li><a href="downloads.php">Downloads</a></li>
                <li><a href="index.php">News</a></li>
                <li><a href="about.php">About</a></li>
-               <li><a href="http://wiki.themanaworld.org/index.php/Servers">Servers</a></li>
-               <li><a href="http://wiki.themanaworld.org/">Wiki</a></li>
-               <li><a href="http://forums.themanaworld.org/">Forums</a></li>
+               <li><a href="https://wiki.themanaworld.org/index.php/Servers">Servers</a></li>
+               <li><a href="https://wiki.themanaworld.org/">Wiki</a></li>
+               <li><a href="https://forums.themanaworld.org/">Forums</a></li>
               </ul>
              </div>
             </div>
@@ -71,7 +71,7 @@ function placeHeader($page_title)
            <div class="section_topright">
             <div class="section_bottomright">
              <div class="section" style="text-align: center;">
-              <a href="http://wiki.themanaworld.org/index.php/Screenshots"><img src="images/screenshot-thumb.png" alt="Screenshots" style="border: 1px solid #784f3f;"/></a>
+              <a href="http://www.themanaworld.org/wiki/index.php/Screenshots"><img src="images/screenshot-thumb.png" alt="Screenshots" style="border: 1px solid #784f3f;"/></a>
              </div>
             </div>
            </div>

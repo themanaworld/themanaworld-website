@@ -1,0 +1,9 @@
+User-agent: *
+disallow: /includes/
+disallow: /recaptcha-php/
+disallow: /sql/
+disallow: /bin/
+disallow: /news.html
+allow: /
+
+sitemap: /sitemap.xml
