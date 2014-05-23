@@ -8,3 +8,5 @@ disallow: /news.html
 allow: /
 
 sitemap: /sitemap.xml
+host: themanaworld.org
+host: www.themanaworld.org
