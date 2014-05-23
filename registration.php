@@ -61,13 +61,10 @@
 			}
 		}
 	}
-
-	include("includes/common.php");
-	placeHeader("Registration");
-
-
 	if ($showform)
 	{
+	    include("includes/common.php");
+    	placeHeader("Registration");
 
 ?>
 <p>With this form you can register for a new account. <i>We will never give your email to someone else or send you spam! Its only purpose is to be able to send you back whether account creation succeeded.</i></p>
@@ -131,15 +128,24 @@ important precaution.</p>
 
 <?php
 
+	placeFooter();
 	} // end of showform
 	else
 	{
-	?>
-		<p>Your account was scheduled for creation! In a few minutes you should receive an email with verification of your new account.</p>
+	include("includes/email.php");
+    $mail_to = $_POST['email'];
+    $boundary = uniqid('np');
+    $subject = "The Mana World Registration";
+    $headers = "From: Accounts <passwords@themanaworld.org>\r\nReply-To: Accounts <passwords@themanaworld.org>\r\n";
+    $data .= "== Account Created ==\n";
+    $data .= "  Welcome to The Mana World! Your account should now be enabled. If you have any problems with your login contact The Mana World via the Support (live) or Forums (maybe a delay) for help. Game tips & walkthroughs are available on the Wiki. Our Forums are a great place to ask for advice and discuss possible changes. News is available in the client or on the Home Site.
+        Godspeed Adventurer,
+            The Mana World\n";
+    $message = getEmailTemplate($data);
+    $headers .= $message[0];
 
-		<p><em>If the account doesn't work after five minutes, please ask for help on the forums or IRC. We can make it for you.</em></p>
+    mail($mail_to,$subject,$message[1],$headers);
 
-	<?php }
-	placeFooter();
+    header("Location: /thank_you.php");
+    }
 ?>
-

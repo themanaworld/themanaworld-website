@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://www.themanaworld.org</loc>
+<loc>https://www.themanaworld.org/</loc>
 <lastmod>2014-05-20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 <url>
-<loc>https://www.themanaworld.org/index.php</loc>
+<loc>https://www.themanaworld.org/news-feed.php</loc>
 <lastmod>2014-05-20</lastmod>
 <changefreq>daily</changefreq>
-<priority>1.0</priority>
+<priority>0.5</priority>
 </url>
 <url>
 <loc>https://www.themanaworld.org/registration.php</loc>
@@ -26,18 +26,6 @@
 </url>
 <url>
 <loc>https://www.themanaworld.org/about.php</loc>
-<lastmod>2014-05-20</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://forums.themanaworld.org/index.php</loc>
-<lastmod>2014-05-20</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://wiki.themanaworld.org/index.php/Main_Page</loc>
 <lastmod>2014-05-20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>

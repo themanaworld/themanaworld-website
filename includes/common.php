@@ -13,7 +13,7 @@ function placeHeader($page_title)
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head>
-  <title>The Mana World</title>
+  <title>The Mana World - <?php echo $page_title; ?></title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta http-equiv="Content-Style-Type" content="text/css"/>
   <meta http-equiv="Content-Language" content="en"/>
@@ -33,7 +33,7 @@ function placeHeader($page_title)
    </div>
 
    <div id="title">
-    <h1><span>The Mana World</span></h1>
+    <a href="/"><h1><span>The Mana World</span></h1></a>
    </div>
 
    <div id="main_topleft">
@@ -45,17 +45,17 @@ function placeHeader($page_title)
         <div style="clear: both;"></div>
 
         <div id="sidebar">
-
          <div class="section_topleft">
           <div class="section_bottomleft">
            <div class="section_topright">
             <div class="section_bottomright">
              <div class="section">
               <ul>
-               <li><a href="registration.php">Registration</a></li>
+               <li><a href="registration.php">Create Account</a></li>
                <li><a href="downloads.php">Downloads</a></li>
-               <li><a href="index.php">News</a></li>
+               <li><a href="news-feed.php">News</a></li>
                <li><a href="about.php">About</a></li>
+               <li><a href="https://webchat.freenode.net/?channels=#themanaworld">Support (IRC)</a></li>
                <li><a href="https://wiki.themanaworld.org/index.php/Servers">Servers</a></li>
                <li><a href="https://wiki.themanaworld.org/">Wiki</a></li>
                <li><a href="https://forums.themanaworld.org/">Forums</a></li>
@@ -65,26 +65,35 @@ function placeHeader($page_title)
            </div>
           </div>
          </div>
-
          <div class="section_topleft">
           <div class="section_bottomleft">
            <div class="section_topright">
             <div class="section_bottomright">
-             <div class="section" style="text-align: center;">
-              <a href="http://www.themanaworld.org/wiki/index.php/Screenshots"><img src="images/screenshot-thumb.png" alt="Screenshots" style="border: 1px solid #784f3f;"/></a>
+             <div class="section banners">
+              Server status
+              <iframe src="https://server.themanaworld.org/status.php" width="130" height="30" frameborder="0" scrolling="no"></iframe>
              </div>
             </div>
            </div>
           </div>
          </div>
-
+         <div class="section_topleft">
+          <div class="section_bottomleft">
+           <div class="section_topright">
+            <div class="section_bottomright">
+             <div class="section" style="text-align: center;">
+              <a href="http://wiki.themanaworld.org/index.php/Screenshots"><img src="images/screenshot-thumb.png" alt="Screenshots" style="border: 1px solid #784f3f;"/></a>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
          <div class="section_topleft">
           <div class="section_bottomleft">
            <div class="section_topright">
             <div class="section_bottomright">
              <div class="section">
               <ul>
-               <li><a href="https://webchat.freenode.net/?channels=#themanaworld">IRC</a></li>
                <li><a href="https://plus.google.com/114523926767095095371">Google+</a></li>
                <li><a href="https://www.facebook.com/themanaworld">Facebook</a></li>
                <li><a href="https://github.com/themanaworld">Github</a></li>
@@ -97,26 +106,9 @@ function placeHeader($page_title)
            </div>
           </div>
          </div>
-
-         <div class="section_topleft">
-          <div class="section_bottomleft">
-           <div class="section_topright">
-            <div class="section_bottomright">
-             <div class="section banners">
-              Server status
-              <iframe src="https://server.themanaworld.org/status.php" width="130" height="30" frameborder="0" scrolling="no"></iframe>
-              <a href="registration.php">Register new account</a>
-             </div>
-            </div>
-           </div>
-          </div>
-         </div>
-
          <!-- This empty div fixes a rendering issue with IE 7 -->
          <div></div>
-
         </div> <!-- /sidebar -->
-
         <div id="contents_leftrepeat">
          <div id="contents_topleft">
           <div id="contents_bottomleft">

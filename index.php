@@ -1,21 +1,16 @@
 <?php
-  include('includes/common.php');
-  placeHeader("News");
-
+include('includes/common.php');
+include('includes/news.php');
+placeHeader("Home");
 ?>
-<!-- <div style="background-color: rgb(255,220,220); border: 1px solid rgb(240,150,150); padding: 5px; margin: 5px; -moz-border-radius: 10px; -moz-border-radius: 10px;">
-<b>Notice:</b> New account creation disabled due to excessive abuse of this feature. If you want to sign up, contact thorbjorn or Jaxad0127 on IRC for now.
+<div>
+<h3>The Mana World Project</h3>
+<p style="font-size:14px;">The Mana World (TMW) is a serious effort to create an innovative free and open source MMORPG. TMW uses 2D graphics and aims to create a large and diverse interactive world. It is licensed under the GPL, making sure this game can't ever run away from you. <a class="more" href="/about.php">Read More >></a></p>
 </div>
--->
+<div>
+<h3>Recent News</h3>
+</div>
 <?php
-
-  // this is a symlink, now that we're not on Platinum
-  echo file_get_contents('news.html');
-  // echo file_get_contents('http://updates.themanaworld.org/news.html');
-  /*
-  $number = 6;
-  include('includes/news.php');
-   */
-
-  placeFooter();
+echo printNews(1);
+placeFooter();
 ?>
