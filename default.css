@@ -1,7 +1,27 @@
-@import url("default_basic.css");
-
 body {
-    padding-top: 0px;
+    background-color: #eeeeee;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(100,10,10);
+}
+
+a:visited {
+    color: rgb(60,0,0);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border-style: none;
+    height: 1px;
+    background-color: silver;
+    color: silver;
 }
 
 body, div, p, td, li, h1, h2, h3, h4 {
@@ -77,7 +97,7 @@ h1 {
     background-position: top right;
     background-repeat: no-repeat;
     background-color: #f2ebe7;
-    margin: 0px 0px 20px 1px;
+    margin: 0px 0px 20px -9px;
 }
 
 #main .main_title_bottomright {
@@ -112,7 +132,7 @@ h1 {
     border-top: 1px solid #f2e6df;
     border-left: 1px solid #f2e6df;
     */
-    font-size: 11pt;
+    font-size: 12pt;
     /*
     background-color: #d1c7c0;
     padding: 2px 5px 2px 5px;
@@ -181,6 +201,7 @@ h1 {
 }
 
 #sidebar .section li a {
+    font-size: 12px;
     display: block;
     margin: 0px;
     width: auto;
@@ -251,7 +272,7 @@ h1 {
 }
 
 #contents {
-    padding: 12px 8px 175px 11px;
+    padding: 12px 8px 175px 21px;
     border: 0px solid blue;
     line-height: 150%;
 }
