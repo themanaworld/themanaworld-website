@@ -7,6 +7,6 @@ disallow: /thank_you.php
 disallow: /news.html
 allow: /
 
-sitemap: /sitemap.xml
+sitemap: http://www.themanaworld.org/sitemap.xml
 host: themanaworld.org
 host: www.themanaworld.org
