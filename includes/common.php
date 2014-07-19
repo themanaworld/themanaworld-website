@@ -96,7 +96,7 @@ function placeHeader($page_title)
                <li><a href="https://www.facebook.com/themanaworld">Facebook</a></li>
                <li><a href="https://github.com/themanaworld">Github</a></li>
                <li><a href="https://trello.com/themanaworld">Trello</a></li>
-               <li><a href="http://sourceforge.net/projects/themanaworld/"><img src="https://sflogo.sourceforge.net/sflogo.php?group_id=106790&amp;type=1" alt="SourceForge.net"/></a></li>
+               <li><a href="http://www.spi-inc.org/projects/tmw/">SPI Associated Project</a></li>
                <li><a href="http://www.gnu.org/copyleft/gpl.html"><img src="images/gpl.png" alt="GPLed project"/></a></li>
                <li><a href="http://manaplus.org" target="_blank">ManaPlus</a></li>
                <li><a href="http://www.mapeditor.org/" target="_blank">Tiled</a></li>
