@@ -67,7 +67,11 @@
     	placeHeader("Registration");
 
 ?>
-<p>With this form you can register for a new account. <i>We will never give your email to someone else or send you spam! Its only purpose is to be able to send you back whether account creation succeeded.</i></p>
+<p>With this form you can register for a new account.</p>
+
+<p>Note that you also need to <a href="downloads.php">download Manaplus</a>, The Mana World's official client, and run it to log in and play.</p>
+
+<p><i>We will never give your email to someone else or send you spam! Its only purpose is to be able to send you back whether account creation succeeded. Also your email is important to send you a new password if you forgot yours (<a href="https://forums.themanaworld.org/viewtopic.php?f=3&t=17737">further information).</a></i></p>
 
 <p style="background-color: #ede2da; padding: 5px; border: 1px solid
 #9f9894; border-radius: 10px;"><i>Security warning:</i> Do not use the same username and password on
