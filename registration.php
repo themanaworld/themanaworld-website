@@ -148,7 +148,7 @@ important precaution.</p>
     $message = getEmailTemplate($data);
     $headers .= $message[0];
 
-    mail($mail_to,$subject,$message[1],$headers);
+    //mail($mail_to,$subject,$message[1],$headers);
 
     header("Location: /thank_you.php");
     }

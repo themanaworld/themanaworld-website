@@ -21,6 +21,7 @@ function placeHeader($page_title)
   <meta name="description" content="The Mana World is a free MMORPG game for Linux, MacOS X and Windows"/>
   <meta name="keywords" content="The Mana World, Mana, World, MMORPG, RPG, free, GPL, Open Source, Pixel Art, 2D, Software Development, MacOSX, Windows, Linux, desktop, tablet, Game, 16-bit, Retro, Fantasy, 8-bit, Indie, Game Development, Game Engine, Open Source MMORPG"/>
   <meta name="author" content="The Mana World Dev Team"/>
+  <meta name="globalsign-domain-verification" content="wfLgRJB6QP57zObNXrUNC-w-kN0x55jjXhQza9tnsx" />
   <link rel="stylesheet" type="text/css" href="default.css"/>
  </head>
  <body>
@@ -54,9 +55,10 @@ function placeHeader($page_title)
                <li><a href="news-feed.php">News</a></li>
                <li><a href="about.php">About</a></li>
                <li><a href="https://webchat.freenode.net/?channels=#themanaworld">Support (IRC)</a></li>
-               <li><a href="https://wiki.themanaworld.org/index.php/Servers">Servers</a></li>
                <li><a href="https://wiki.themanaworld.org/">Wiki</a></li>
                <li><a href="https://forums.themanaworld.org/">Forums</a></li>
+               <li><a href="https://wiki.themanaworld.org/index.php/FAQ">FAQ</a></li>
+               <li><a href="https://wiki.themanaworld.org/index.php/Servers">Servers</a></li>
               </ul>
              </div>
             </div>
