@@ -2,3 +2,5 @@
 /news.html
 # generated, I think
 /images/thumbs
+recaptcha-php/keys.php
+includes/conf/config.php

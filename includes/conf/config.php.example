@@ -1,0 +1,12 @@
+<?php
+// Where account registrations come from
+$accounts_email = 'valid_email';
+// Whether or not use captcha
+$enable_captcha = false;
+// LAdmin Password
+$account_pass = '<LadminPassword>';
+// Ladmin Server Name
+$ladmin_host = '<TMWLoginHost>';
+// Server Login Port
+$ladmin_port = '<TMWLoginPort>';
+?>
