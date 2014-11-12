@@ -1,5 +1,0 @@
-<?php
-	// Put the keys you got from the signup page
-	$publickey      = "";
-	$privatekey     = "";
-?>
