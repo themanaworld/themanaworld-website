@@ -66,9 +66,6 @@ frob_accounts()
     IFS=$'\t'
     while read ID USERNAME PASSWORD EMAIL GENDER
     do
-        if test "$GENDER" = '1'; then GENDER=M; fi
-        if test "$GENDER" = '2'; then GENDER=F; fi
-
         RESULT=$(cd $LADMIN_DIR; $LADMIN_BIN <<< "create $USERNAME $GENDER $EMAIL $PASSWORD" 2>&1)
         echo RESULT: "$RESULT"
         if grep -q 'successfully created' <<< "$RESULT"
