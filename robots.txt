@@ -22,6 +22,7 @@ allow: /index.php/Reporting_Bugs
 allow: /index.php/Servers
 allow: /robots.txt
 
+sitemap: http://themanaworld.org/sitemap.xml
 host: themanaworld.org
 sitemap: http://www.themanaworld.org/sitemap.xml
 host: www.themanaworld.org
