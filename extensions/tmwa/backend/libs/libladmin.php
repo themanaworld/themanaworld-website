@@ -1,6 +1,8 @@
 <?php
 /*
-phpLadmin by wushin AGPL
+phpLadmin
+author: wushin
+License: GPL 3
 */
 ob_implicit_flush();
 

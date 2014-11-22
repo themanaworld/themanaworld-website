@@ -10,7 +10,7 @@ $wgExtensionCredits['validextensionclass'][] = array(
     'url' => 'https://github.com/themanaworld/themanaworld-website', 
     'description' => 'Ladmin in Mediawiki',
     'version'  => 0.5,
-    'license-name' => "AGPL 3.0",
+    'license-name' => "GPL 3.0",
 );
 
 # Define were PHP files and i18n files are located

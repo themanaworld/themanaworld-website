@@ -1,6 +1,8 @@
 <?php
 /*
-dbLadmin by wushin AGPL
+dbLadmin
+author: wushin
+License: GPL 3
 */
 
 class dbLadmin {
