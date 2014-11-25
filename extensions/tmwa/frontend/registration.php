@@ -10,6 +10,7 @@ class GameAccountPage extends SpecialPage {
         $request = $this->getRequest();
         $output = $this->getOutput();
         $this->setHeaders();
+        $output->setRobotPolicy('index,nofollow');
         $output->addMeta('description', 'Create a Game Account for The Mana World');
         $output->addMeta('keywords', 'Create Account, free game account, online free game account, mmorpg account, account, sign up');
         global $wgTMWAccountLib;
