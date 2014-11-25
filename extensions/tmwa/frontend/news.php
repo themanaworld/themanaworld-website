@@ -9,6 +9,8 @@ class GameNewsPage extends SpecialPage {
         $request = $this->getRequest();
         $output = $this->getOutput();
         $this->setHeaders();
+        $output->addMeta('description', 'Game News for The Mana World');
+        $output->addMeta('keywords', 'news, game news, whats new, current release, new changes');
 
         $wikitext = self::printNews();
 
