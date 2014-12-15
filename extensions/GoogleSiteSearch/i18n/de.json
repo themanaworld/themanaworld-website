@@ -1,0 +1,11 @@
+{
+    "@metadata": {
+        "authors": [
+            "Metalhead64"
+        ]
+    },
+    "googlesitesearch-desc": "Fügt den Wiki-Suchergebnissen die Ergbnisse der [//www.google.com/cse/manage/all benutzerdefinierten Google-Websitesuche] hinzu",
+    "googlesitesearch-loading": "Lade …",
+    "googlesitesearch-google-results": "Ergebnisse der Google-Website",
+    "googlesitesearch-wiki-results": "Wikiergebnisse"
+}

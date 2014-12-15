@@ -1,0 +1,11 @@
+{
+    "@metadata": {
+        "authors": [
+            "Siebrand"
+        ]
+    },
+    "googlesitesearch-desc": "Voegt [//www.google.com/cse/manage/all Google CSE site search] toe aan de zoekresultaten van de wiki",
+    "googlesitesearch-loading": "Bezig met laden…",
+    "googlesitesearch-google-results": "Siteresultaten van Google",
+    "googlesitesearch-wiki-results": "Wikiresultaten"
+}

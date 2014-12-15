@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Metalhead64",
+            "Shirayuki"
+        ]
+    },
+    "googlesitesearch-desc": "{{desc|name=Google Site Search|url=http://www.mediawiki.org/wiki/Extension:GoogleSiteSearch}}\n\"Google CSE\" stands for \"Google Custom Search Engine\". Example: https://www.google.com/cse/home?cx=010768530259486146519:twowe4zclqy",
+    "googlesitesearch-loading": "Displayed before the Google CSE JavaScript replaces it with the actual search results.  Wiki markup is not allowed here; message will be converted to escaped HTML.\n{{Identical|Loading}}",
+    "googlesitesearch-google-results": "The title sub-header for the Google CSE (Custom Search Engine) results section.",
+    "googlesitesearch-wiki-results": "The title sub-header for the MediaWiki search results section."
+}

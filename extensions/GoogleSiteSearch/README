@@ -1,0 +1,11 @@
+GoogleSiteSearch
+Copyright (C) 2013 Ryan Finnie
+Adds Google CSE site search to wiki search results
+http://www.mediawiki.org/wiki/Extension:GoogleSiteSearch
+
+This extension takes advantage of MediaWiki 1.21's new search hooks to 
+add a Google Custom Search Engine before the wiki search results, or 
+(optionally) replace the search results altogether.
+
+For installation and usage instructions, please see:
+http://www.mediawiki.org/wiki/Extension:GoogleSiteSearch
