@@ -1,7 +1,12 @@
 User-agent: *
 disallow: /extensions/
 disallow: /config/
-disallow: /index.php/Special:Search
+disallow: /index.php?
+disallow: /index.php/Help
+disallow: /index.php/MediaWiki
+disallow: /index.php/Special:
+disallow: /index.php/Template
+disallow: /skins/
 allow: /index.php/Main_Page
 allow: /index.php/Dev:Main
 allow: /index.php/How_to_Develop
