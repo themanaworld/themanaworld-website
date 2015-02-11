@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": ["Kris Blair"]
+	},
+	"spoilers": "Spoilers",
+	"spoilers_description": "Etiqueta Spoiler - &lt;spoiler show=\"showMessage\" hide=\"hideMessage\"&gt;Texto en Spoiler&lt;/spoiler&gt;",
+	"spoilers_show_default": "Mostrar Spoiler",
+	"spoilers_hide_default": "Ocultar Spoiler"
+}

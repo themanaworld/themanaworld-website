@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": ["Kris Blair"]
+	},
+	"spoilers": "المفسدين",
+	"spoilers_description": "بطاقة المفسدين - &lt;spoiler show=\"showMessage\" hide=\"hideMessage\"&gt;انص المفسدين&lt;/spoiler&gt;",
+	"spoilers_show_default": "عرض المفسدين",
+	"spoilers_hide_default": "تجنب المفسدين"
+}
