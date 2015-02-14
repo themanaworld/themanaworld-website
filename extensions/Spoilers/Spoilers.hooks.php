@@ -35,7 +35,7 @@ class Spoilers {
 	static public function parseSpoilerTag( $input, array $args, Parser $parser, PPFrame $frame ) {
 		$out = $parser->getOutput();
 		$out->addModules( 'ext.spoilers' );
-		$renderedInput = $parser->recursiveTagParse( $input )
+		$renderedInput = $parser->recursiveTagParse( $input );
 		$output =	"<div class='spoilers'>
 						<div class='spoilers-button-container'>
 							<span class='spoilers-button'>
@@ -48,3 +48,4 @@ class Spoilers {
 		return $output;
 	}
 }
+?>

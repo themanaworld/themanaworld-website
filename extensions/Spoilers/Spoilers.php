@@ -40,3 +40,4 @@ $wgResourceModules['ext.spoilers'] = array (
 											);
 
 $wgHooks['ParserFirstCallInit'][]		= "Spoilers::onParserFirstCallInit";
+?>
