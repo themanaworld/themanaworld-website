@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Danny-w",
+			"Inkbug",
+			"Mbkv717",
+			"איתן96",
+			"תומר ט"
+		]
+	},
+	"chat": "צ'אט",
+	"chat-type-your-message": "הקלידו את הודעתכם",
+	"chat-type-your-private-message": "הקלידו את הודעתכם הפרטית",
+	"chat-no-other-users": "אין משתמשים אחרים בצ'אט",
+	"chat-not-allowed": "אין לך הרשאות לשוחח בצ'אט. יש לנסות להתחבר לחשבון.",
+	"chat-sounds": "נגן שמע",
+	"chat-flood": "אינך יכול לשלוח הודעות במהירות כזאת, נא המתן לפני שליחת ההודעה הבאה.",
+	"chat-just-now": "לפני זמן קצר",
+	"chat-a-minute-ago": "לפני דקה",
+	"chat-yesterday": "אתמול",
+	"chat-block": "חסום",
+	"chat-change-preferences": "שנה את העדפות הצ'אט שלך (מסך מלא וצלילים)",
+	"chat-sidebar-online": "משתמשים מחוברים בצ'אט:",
+	"chat-sidebar-join": "הצטרפות לצ'אט",
+	"log-name-chat": "יומן צ'אט",
+	"group-chatmod": "מנהלי הצ'אט",
+	"grouppage-chatmod": "{{ns:project}}:מנהלי הצ'אט",
+	"group-blockedfromchat": "המשתמשים נחסמו לצ'אט",
+	"grouppage-blockedfromchat": "{{ns:project}}:המשתמשים נחסמו לצ'אט",
+	"tog-chat-ping-mention": "השמע צליל בעת קבלת תזכיר",
+	"tog-chat-ping-pm": "השמע צליל בעת קבלת הודעה פרטית",
+	"tog-chat-ping-message": "השמע צליל בעת קבלת הודעה רגילה",
+	"prefs-chat": "צ'אט"
+}

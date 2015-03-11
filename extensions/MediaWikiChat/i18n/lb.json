@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"chat": "Chat",
+	"chat-type-your-message": "Tippt Äre Message",
+	"chat-type-your-private-message": "Tippt Äre private Message",
+	"chat-no-other-users": "Keng aner Benotzer am Chat",
+	"chat-blocked-from-chat": "Dir gouft an dësem Chat gespaart.",
+	"chat-not-allowed": "Dir däerft net chatten, probéiert Iech d'éischt anzeloggen.",
+	"chat-sounds": "Geräischer ofspillen",
+	"chat-flood": "Dir däerft Messagen net esou séier schécken, waart w.e.g. e bësse bis Dir der méi schéckt.",
+	"chat-too-long": "Dëse Message war ze laang, schéckt w.e.g. méi e kuerze Message.",
+	"chat-just-now": "grad elo",
+	"chat-a-minute-ago": "virun enger Minutt",
+	"chat-yesterday": "gëschter",
+	"chat-kick": "erausgeheien",
+	"chat-block": "spären",
+	"chat-youve-been-blocked": "Dir gouft {{GENDER:$2|vum}} $1 gespaart.",
+	"chat-you-blocked": "Dir hutt {{GENDER:$2|den |d'}}$1 gespaart",
+	"chat-you-unblocked": "Dir hutt dem {{GENDER:$2|seng}}$1 Spär opgehuewen.",
+	"chat-private-message": "klickt fir privat Messagen",
+	"chat-user-is-moderator": "Dëse Benotzer {{GENDER:$1|ass}} e Moderateur.",
+	"chat-change-preferences": "Ännert Är Chat-Astellungen (Fullscreen an Toun)",
+	"log-description-privatechat": "Privat Messagen déi iwwer MediaWikiChat verschéckt goufen",
+	"logentry-privatechat-send": "$1 fir $5: $4",
+	"group-blockedfromchat": "Benotzer déi fir den Chat gespaart sinn",
+	"right-mediawikichat-chat": "Special:Chat benotzen",
+	"prefs-chat": "Chat",
+	"chat-idle-hours": "Dëse Benotzer ass zanter {{PLURAL:$1|enger Stonn|$1 Stonnen}} net aktiv"
+}

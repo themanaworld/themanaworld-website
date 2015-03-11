@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"chat-you-blocked": "Tu è state {{GENDER:$2|bloccate}} $1.",
+	"chat-you-unblocked": "Tu è state {{GENDER:$2|sbloccate}} $1.",
+	"chat-left": "$1 è {{GENDER:$2|lassate}} a ciat."
+}

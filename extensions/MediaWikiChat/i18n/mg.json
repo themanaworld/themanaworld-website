@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jagwar"
+		]
+	},
+	"chat-sounds": "Hamoaka feo",
+	"chat-flood": "Tsy afaka mandefa hafatra haingana hoatr'izany ianao, andraso kely alohan'ny mandefa hafa.",
+	"chat-too-long": "Lava loatra ilay hafatra, mandefasa hafatra fohifohy kokoa azafady.",
+	"chat-change-preferences": "Hanova ny safidin'ny resaka mifantana",
+	"tog-chat-ping-message": "Hamoaka feo rehefa mahazo hafatra tsotra",
+	"prefs-chat": "Resaka"
+}

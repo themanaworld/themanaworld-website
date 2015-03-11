@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ashokjayanti",
+			"Chaduvari",
+			"Ravichandra",
+			"Veeven"
+		]
+	},
+	"chat-sounds": "శబ్దాలను వినిపించు",
+	"chat-flood": "అంత వేగంగా సందేశాలు పంపడం కుదరదు. మరిన్ని పంపేముందు కాస్త ఆగండి.",
+	"chat-just-now": "ఇప్పుడే",
+	"chat-a-minute-ago": "ఒక నిమిషం క్రితం",
+	"chat-yesterday": "నిన్న",
+	"chat-private-message": "అంతరంగిక సందేశం పంపడానికి నొక్కండి",
+	"chat-user-is-moderator": "ఈ వాడుకరి {{GENDER:$1|ఓ పరిశీలకుడు|ఓ పరిశీలకురాలు}}",
+	"chat-you-are-moderator": "మీరు {{GENDER:$1|ఓ పరిశీలకులు}}",
+	"chat-change-preferences": "మీ మాటామంతీ ప్రాధాన్యతలని మార్చుకోండి",
+	"tog-chat-ping-pm": "వ్యక్తిగత సందేశాలు వచ్చినప్పుడు ఓ శబ్దం చేయి.",
+	"tog-chat-ping-message": "సాధారణ సందేశాలు వచ్చినప్పుడు శబ్దం చేయి.",
+	"prefs-chat": "మాటామంతి"
+}

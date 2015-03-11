@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen",
+			"Skye Darcy",
+			"Withoutaname"
+		]
+	},
+	"chat-type-your-message": "Nhập tin nhắn của bạn",
+	"chat-type-your-private-message": "Nhập tin nhắn riêng của bạn",
+	"chat-no-other-users": "Không có người dùng khác trong phòng trò chuyện",
+	"chat-blocked-from-chat": "Bạn đã bị cấm không được vào phòng trò chuyện này.",
+	"chat-flood": "Bạn không thể gửi tin nhắn quá nhanh, xin vui lòng đợi trước khi gửi thêm.",
+	"chat-too-long": "Tin nhắn đó quá dài. Xin vui lòng gửi một tin nhắn ngắn hơn.",
+	"chat-just-now": "mới bây giờ",
+	"chat-a-minute-ago": "cách đây một phút",
+	"chat-yesterday": "hôm qua",
+	"chat-kick": "đá ra",
+	"chat-block": "cấm",
+	"chat-you-kicked": "Bạn {{GENDER:$2}}đá ra $1.",
+	"chat-kicked": "$1 {{GENDER:$3}}đá ra $2.",
+	"chat-youve-been-blocked": "$1 {{GENDER:$2}}cấm bạn.",
+	"chat-you-blocked": "Bạn {{GENDER:$2}}cấm $1.",
+	"chat-blocked": "$1 {{GENDER:$3}}cấm $2.",
+	"chat-you-unblocked": "Bạn {{GENDER:$2}}bỏ cấm $1.",
+	"chat-unblocked": "$1 {{GENDER:$3}}bỏ cấm $2.",
+	"chat-joined": "$1 {{GENDER:$2}}đi vào phòng trò chuyện.",
+	"chat-left": "$1 {{GENDER:$2}}bỏ phòng trò chuyện.",
+	"chat-private-message": "(tin nhắn riêng)",
+	"chat-user-is-moderator": "Thành viên này {{GENDER:$1}}là một quản trị viên.",
+	"chat-you-are-moderator": "Bạn {{GENDER:$1}}là quản trị viên.",
+	"chat-sidebar-join": "Vào phòng trò chuyện",
+	"logentry-chat-kick": "$1 {{GENDER:$1}}đá ra $4.",
+	"group-chatmod": "Quản trị viên của phòng trò chuyện",
+	"group-chatmod-member": "{{GENDER:$1}}quản trị viên của phòng trò chuyện",
+	"grouppage-chatmod": "{{ns:project}}:Quản trị viên của phòng trò chuyện",
+	"group-blockedfromchat": "Người dùng bị cấm không được trò chuyện",
+	"group-blockedfromchat-member": "{{GENDER:$1}}bị cấm không được trò chuyện",
+	"grouppage-blockedfromchat": "{{ns:project}}:Người dùng bị cấm không được trò chuyện"
+}

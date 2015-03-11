@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Imperadeiro98",
+			"SandroHc"
+		]
+	},
+	"chat-user-is-moderator": "Este utilizador {{GENDER:$1|é}} um moderador",
+	"chat-change-preferences": "Alterar as preferências de chat (ecrã inteiro e sons)",
+	"logentry-privatechat-send": "$1 para $5: $4",
+	"tog-chat-fullscreen": "Usar chat no modo ecrã inteiro (experimental)",
+	"tog-chat-ping-mention": "Tocar um som ao receber menções",
+	"tog-chat-ping-pm": "Tocar um som ao receber mensagens privadas",
+	"tog-chat-ping-message": "Tocar um som ao receber mensagens normais"
+}
