@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"StefanusRA"
+		]
+	},
+	"chat": "Dopokan",
+	"chat-blocked-from-chat": "Rika wis diblokir sekang dopokan kiye.",
+	"chat-a-minute-ago": "semenit kepungkur",
+	"chat-kick": "tendang",
+	"chat-kicked": "$1 {{GENDER:$3|ditendang}} $2",
+	"chat-user-is-moderator": "Pangganggo kiye {{GENDER:$1|kuwe}} moderator",
+	"chat-topic": "Sugeng rawuh nang dopokan {{SITENAME}}. ([[Special:Log/chat|log dopokan]])",
+	"log-name-chat": "Log dopokan"
+}

@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftab1995",
+			"Tauhid16"
+		]
+	},
+	"chat": "আড্ডা",
+	"chat-type-your-message": "আপনার বার্তা লিখুন",
+	"chat-type-your-private-message": "আপনার ব্যক্তিগত বার্তাটি লিখুন",
+	"chat-no-other-users": "আর কোনো ব্যবহারকারী আড্ডায় নেই",
+	"chat-blocked-from-chat": "আপনি এই আড্ডা থেকে অবরুদ্ধ।",
+	"chat-not-allowed": "আপনার বার্তা প্রেরণের অনুমতি নেই, প্রথমে প্রবেশ করার চেষ্টা করুন।",
+	"chat-just-now": "এইমাত্র",
+	"chat-a-minute-ago": "এক মিনিট আগে",
+	"chat-yesterday": "গতকাল",
+	"chat-kick": "পদাঘাত",
+	"chat-block": "অবরুদ্ধ",
+	"chat-youve-been-blocked": "আপনি $1-এর দ্বারা {{GENDER:$2|অবরুদ্ধ}} হয়েছেন।",
+	"chat-you-blocked": "আপনি $1কে {{GENDER:$2|অবরুদ্ধ}} করেছেন।",
+	"chat-blocked": "$1 $2 কে {{GENDER:$3|অবরুদ্ধ}} করেছে।",
+	"chat-unblocked": "$1 $2-কে {{GENDER:$3|অবরুদ্ধ}} করেছে।",
+	"chat-left": "$1 আড্ডা চেড়ে {{GENDER:$2|চলে}} গেছেন।",
+	"chat-private-message": "ব্যক্তিগত বার্তায় ক্লিক করুন",
+	"chat-topic": "আপনাকে {{SITENAME}} আড্ডায় স্বাগতম। ([[Special:Log/chat|আড্ডার লগ]])",
+	"chat-sidebar-online": "আড্ডায় অনলাইন ব্যবহারকারীগণ:",
+	"chat-sidebar-join": "আড্ডায় যোগ দিন",
+	"log-name-chat": "আড্ডার লগ",
+	"log-show-hide-privatechat": "আড্ডার লগ $1",
+	"group-chatmod": "আড্ডা নিয়ামকসমূহ",
+	"group-blockedfromchat": "ব্যবহারকারী আড্ডা থেকে অবরুদ্ধ",
+	"group-blockedfromchat-member": "{{GENDER:$1|আড্ডা থেকে অবরুদ্ধ}}",
+	"prefs-chat": "আড্ডা"
+}

@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Adithyavr",
+			"Siddhartha Ghai",
+			"Vivek Rai"
+		]
+	},
+	"chat-sounds": "ध्वनियाँ चलाएँ",
+	"chat-flood": "आप इतनी तेज़ी से सन्देश नहीं भेज सकते। कृपया प्रतीक्षा करें।",
+	"chat-too-long": "वह संदेश बहुत लंबा था, कृपया इससे छोटा संदेश भेजें।",
+	"chat-change-preferences": "अपनी चैट वरीयताएँ बदलें",
+	"tog-chat-ping-mention": "उल्लेख प्राप्त करने पर कोई ध्वनि चलाएँ",
+	"tog-chat-ping-pm": "निजी संदेश प्राप्त करने पर कोई ध्वनि चलाएँ",
+	"tog-chat-ping-message": "सामान्य संदेश प्राप्त करने पर कोई ध्वनि चलाएँ",
+	"prefs-chat": "चैट"
+}

@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"John Reid"
+		]
+	},
+	"chat-sounds": "Pley soonds",
+	"chat-flood": "Ye canna send messages that fast, please wait a while afore sendin oni mair.",
+	"chat-too-long": "That message wis ower lang, please send ae shorter message. (Or twa).",
+	"chat-private-message": "clap tae private message",
+	"chat-user-is-moderator": "This uiser {{GENDER:$1|is}} ae moderator",
+	"chat-you-are-moderator": "Ye {{GENDER:$1|ar}} ae moderater",
+	"chat-change-preferences": "Chynge yer tauk preeferances (fulscreen n soonds)",
+	"log-show-hide-chat": "$1 chat log",
+	"log-name-privatechat": "The preevate tauk log",
+	"log-description-privatechat": "Private messages sent bi MediaWikiChat",
+	"logentry-privatechat-send": "$1 til $5: $4",
+	"tog-chat-fullscreen": "Uise The tauk in the fulscreen mode (expereemental)",
+	"tog-chat-ping-mention": "Pley ae soond oan receevin mentions",
+	"tog-chat-ping-pm": "Pley ae soond oan receevin private messages",
+	"tog-chat-ping-message": "Pley ae soond oan receevin ordinair messages",
+	"tog-chat-ping-joinleave": "Pley ae soond whan uisers jyn or lea the tauk",
+	"prefs-chat": "The Tauk",
+	"chat-idle-minutes": "This uiser haes been idle fer {{PLURAL:$1|ae minute|$1 minutes}}",
+	"chat-idle-hours": "This uiser haes been idle fer {{PLURAL:$1|aen hoor|$1 hoors}}",
+	"chat-idle-more": "This uiser haes been idle fer ower 24 hoors",
+	"action-chat": "blether wi ither uisers",
+	"action-modchat": "moderate the blether",
+	"action-viewpmlog": "see the private blether messages log"
+}

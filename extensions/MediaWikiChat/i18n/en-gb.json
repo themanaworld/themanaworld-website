@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"SirComputer"
+		]
+	},
+	"chat": "Chat",
+	"chat-desc": "Provides a lightweight chat client and server",
+	"chat-type-your-message": "Type your message",
+	"chat-type-your-private-message": "Type your private message",
+	"chat-no-other-users": "No other users on chat"
+}

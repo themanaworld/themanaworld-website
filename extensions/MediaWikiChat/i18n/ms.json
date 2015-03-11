@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia"
+		]
+	},
+	"chat-not-allowed": "Anda tidak dibenarkan untuk bersembang. Cuba log masuk dahulu.",
+	"chat-youve-been-kicked": "Anda telah {{GENDER:$2|dihalau}} oleh $1. Muat semula halaman untuk bersembang.",
+	"chat-you-kicked": "Anda telah {{GENDER:$2|menghalau}} $1.",
+	"chat-kicked": "$1 telah {{GENDER:$3|menghalau}} $2.",
+	"chat-you-blocked": "Anda telah {{GENDER:$2|menyekat}} $1.",
+	"chat-blocked": "$1 telah {{GENDER:$3|menyekat}} $2.",
+	"chat-you-unblocked": "Anda telah {{GENDER:$2|menyahsekat}} $1.",
+	"chat-unblocked": "$1 telah {{GENDER:$3|menyahsekat}} $2.",
+	"chat-joined": "$1 telah {{GENDER:$2|menyertai}} ruang sembang.",
+	"chat-left": "$1 telah {{GENDER:$2|keluar}} dari ruang sembang.",
+	"chat-private-message": "klik untuk pesanan peribadi",
+	"chat-user-is-moderator": "Pengguna ini {{GENDER:$1|ialah}} seorang moderator",
+	"chat-you-are-moderator": "Anda {{GENDER:$1|adalah}} seorang moderator"
+}
