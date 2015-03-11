@@ -19,7 +19,6 @@ thumb_handler.php
 thumb.php
 wiki.phtml
 cache/
-extensions/*
 LocalSettings.php
 *.swp
 favicon.ico
