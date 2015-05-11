@@ -57,11 +57,11 @@ class TMWMail {
     <area  alt="Home Page" title="The Mana World" href="https://www.themanaworld.org/" shape="rect" coords="0,0,197,201" style="outline:none;" target="_self"     />
     <area  alt="Home Page" title="The Mana World" href="https://www.themanaworld.org/" shape="rect" coords="197,0,465,168" style="outline:none;" target="_self"     />
     <area  alt="Official Client Mana Plus" title="Official Client Mana Plus" href="http://manaplus.org" shape="rect" coords="465,0,640,168" style="outline:none;" target="_self"     />
-    <area  alt="The Mana World News" title="The Mana World News" href="https://www.themanaworld.org/index.php" shape="rect" coords="196,168,275,201" style="outline:none;" target="_self"     />
-    <area  alt="The Mana World Wiki" title="The Mana World Wiki" href="https://wiki.themanaworld.org/index.php/Main_Page" shape="rect" coords="274,168,375,201" style="outline:none;" target="_self"     />
+    <area  alt="The Mana World News" title="The Mana World News" href="https://www.themanaworld.org/index.php/Special:GameNews" shape="rect" coords="196,168,275,201" style="outline:none;" target="_self"     />
+    <area  alt="The Mana World Wiki" title="The Mana World Wiki" href="https://www.themanaworld.org" shape="rect" coords="274,168,375,201" style="outline:none;" target="_self"     />
     <area  alt="The Mana World Forums" title="The Mana World Forums" href="https://forums.themanaworld.org/" shape="rect" coords="372,168,490,201" style="outline:none;" target="_self"     />
     <area  alt="The Mana World Support (IRC)" title="The Mana World Support (IRC)" href="https://webchat.freenode.net/?channels=#themanaworld" shape="rect" coords="488,168,640,201" style="outline:none;" target="_self"     />
-    <area  alt="About The Mana World" title="About The Mana World" href="https://www.themanaworld.org/about.php" shape="rect" coords="0,201,84,272" style="outline:none;" target="_self"     />
+    <area  alt="About The Mana World" title="About The Mana World" href="http://www.spi-inc.org/projects/tmw/" shape="rect" coords="0,201,84,272" style="outline:none;" target="_self"     />
     <area  alt="Creative Commons" title="Creative Commons" href="http://creativecommons.org/" shape="rect" coords="84,201,121,272" style="outline:none;" target="_self"     />
     <area  alt="GNU General Public License" title="GNU General Public License " href="http://www.gnu.org/copyleft/gpl.html" shape="rect" coords="121,201,155,272" style="outline:none;" target="_self"     />
     <area  alt="Open Source Initiative" title="Open Source Initiative" href="http://opensource.org/" shape="rect" coords="155,202,189,272" style="outline:none;" target="_self"     />
