@@ -16,4 +16,14 @@ $specialPageAliases = array(
             'The Mana World News'
         )
     ),
+
+    /** Spanish (Español) */
+    'es' => array(
+        'GameAccountPage' => array(
+            'Cuenta en The Mana World'
+        ),
+        'GameNewsPage'    => array(
+            'Noticias de The Mana World'
+        )
+    ),
 );
