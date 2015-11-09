@@ -72,7 +72,7 @@ class GameAccountPage extends SpecialPage {
                   <tr><td>Password:</td><td><input type="password" size="20" name="password1" /></td></tr>
                   <tr><td>Retype password:</td><td><input type="password" size="20" name="password2" /></td></tr>
                   <tr><td>EMail:</td><td><input type="text" size="30" name="email" /></td></tr>
-                  <tr><td>Gender:</td>
+                  <tr><td>Character\'s Gender:</td>
                   <td>
                      <select name="gender">
                        <option value="0" selected></option>
