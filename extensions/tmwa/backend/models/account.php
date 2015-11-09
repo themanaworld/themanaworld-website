@@ -3,6 +3,7 @@ class TMWAccount
 {
     const GENDER_MALE   = 'M';
     const GENDER_FEMALE = 'F';
+    const GENDER_NEUTRAL = 'N';
     const BAD_STRING_DESC = 'Only alphanumeric characters are allowed.';
 
     private $errors;
@@ -71,9 +72,10 @@ class TMWAccount
         }
 
         if ($this->gender != self::GENDER_MALE &&
-            $this->gender != self::GENDER_FEMALE )
+            $this->gender != self::GENDER_FEMALE &&
+            $this->gender != self::GENDER_NEUTRAL)
         {
-            $errors[] = 'Gender has to be Male or Female!'; 
+            $errors[] = 'Gender has to be picked!'; 
         }
 
         if (!filter_var($this->email, FILTER_VALIDATE_EMAIL))
