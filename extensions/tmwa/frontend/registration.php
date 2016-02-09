@@ -34,7 +34,7 @@ class GameAccountPage extends SpecialPage {
             $acc->setPassword1($request->getText('password1'));
             $acc->setPassword2($request->getText('password2'));
             $acc->setEMail($request->getText('email'));
-            $acc->setGender($request->getText('gender'));
+            $acc->setGender('N');
 
             $this->err = $acc->validate();
             global $wgCaptchaClass;
@@ -72,7 +72,7 @@ class GameAccountPage extends SpecialPage {
                   <tr><td>Password:</td><td><input type="password" size="20" name="password1" /></td></tr>
                   <tr><td>Retype password:</td><td><input type="password" size="20" name="password2" /></td></tr>
                   <tr><td>EMail:</td><td><input type="text" size="30" name="email" /></td></tr>
-                  <tr><td>Character\'s Gender:</td>
+                  <!-- tr><td>Character\'s Gender:</td>
                   <td>
                      <select name="gender">
                        <option value="0" selected></option>
@@ -80,7 +80,7 @@ class GameAccountPage extends SpecialPage {
                        <option value="F">Female</option>
                      </select>
                   </td>
-                  </tr><tr><td colspan="2">';
+                  </tr --><tr><td colspan="2">';
 		global $wgCaptchaClass, $wgConfirmAccountCaptchas;
         if ($wgConfirmAccountCaptchas) {
             $captcha = new $wgCaptchaClass;
