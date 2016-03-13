@@ -11,7 +11,7 @@ class TMWAccountUIHooks {
 		$context = RequestContext::getMain();
 		# Add a link to GameAccount from UserLogin
 		if ( !$context->getUser()->isAllowed( 'createaccount' ) ) {
-			$template->set( 'header', wfMsgExt( 'gameaccount-loginnotice', 'parse' ) );
+			$template->set( 'header', wfMessage( 'gameaccount-loginnotice')->parse());
 		}
 		return true;
 	}
@@ -23,9 +23,9 @@ class TMWAccountUIHooks {
 	 */
 	public static function setRequestLoginLinks( array &$personal_urls, &$title ) {
 		if ( isset( $personal_urls['anonlogin'] ) ) {
-			$personal_urls['anonlogin']['text'] = wfMsg( 'nav-login-createaccount' );
+			$personal_urls['anonlogin']['text'] = wfMessage( 'nav-login-createaccount' );
 		} elseif ( isset( $personal_urls['login'] ) ) {
-			$personal_urls['login']['text'] = wfMsg( 'nav-login-createaccount' );
+			$personal_urls['login']['text'] = wfMessage( 'nav-login-createaccount' );
 		}
 		return true;
 	}
@@ -51,7 +51,7 @@ class TMWAccountUIHooks {
         if ( $count > 0 ) {
             $out->prependHtml( // parsemag for PLURAL
                 '<div id="mw-tmwaccount-msg" class="plainlinks mw-tmwaccount-bar">' .
-                $out->parse( wfMsgExt( 'tmwaccount-newrequests', 'parsemag', $count ), false ) .
+                $out->parse( wfMessage( 'tmwaccount-newrequests', $count )->text(), false ) .
                 '</div>'
             );
         }

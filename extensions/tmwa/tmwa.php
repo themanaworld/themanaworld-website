@@ -18,7 +18,7 @@ require( dirname( __FILE__ ) . '/TMWAccount.setup.php' );
 TMWAccountSetup::defineSourcePaths( $wgAutoloadClasses, $wgExtensionMessagesFiles );
 
 # Actually register special pages
-TMWAccountUISetup::defineSpecialPages( $wgSpecialPages, $wgSpecialPageGroups );
+TMWAccountUISetup::defineSpecialPages( $wgSpecialPages );
 
 # UI-related hook handlers
 TMWAccountUISetup::defineHookHandlers( $wgHooks );
