@@ -2,22 +2,7 @@
 /news.html
 # generated from a base wiki install
 /images/
-api.php
-img_auth.php
-includes
-index.php
-languages
-load.php
-maintenance
-opensearch_desc.php
-profileinfo.php
-redirect.php
-redirect.phtml
-resources
 skins
-thumb_handler.php
-thumb.php
-wiki.phtml
 cache/
 LocalSettings.php
 *.swp
