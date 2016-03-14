@@ -51,7 +51,8 @@
 				"assets/scripts/foundation/foundation.placeholder.js",
 				"assets/scripts/foundation/foundation.forms.js",
 				"assets/scripts/foundation/foundation.alerts.js",
-				"assets/scripts/foreground.js"
+				"assets/scripts/foreground.js",
+				"assets/scripts/tmw.js"
 			]
 		}
 	},
