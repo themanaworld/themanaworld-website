@@ -8,3 +8,5 @@ LocalSettings.php
 *.swp
 favicon.ico
 config.php
+composer.lock
+composer.json
