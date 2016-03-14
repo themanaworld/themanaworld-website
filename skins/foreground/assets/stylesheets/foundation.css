@@ -10,7 +10,7 @@ body {
   font-size: 100%; }
 
 body {
-  background: white;
+  background: #eeeeee;
   color: #222222;
   padding: 0;
   margin: 0;
@@ -2612,7 +2612,7 @@ form.custom {
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
-  background: #111111; }
+  background: #CBA083; }
   .contain-to-grid .top-bar {
     margin-bottom: 0; }
 
@@ -2628,8 +2628,8 @@ form.custom {
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: #111111;
-  margin-bottom: 1.875em; }
+  background: #CBA083;
+  margin-bottom: .5em; }
   .top-bar ul {
     margin-bottom: 0;
     list-style: none; }
@@ -2699,7 +2699,7 @@ form.custom {
     height: auto;
     background: transparent; }
     .top-bar.expanded .title-area {
-      background: #111111; }
+      background: #CBA083; }
     .top-bar.expanded .toggle-topbar a {
       color: #888888; }
       .top-bar.expanded .toggle-topbar a span {
@@ -2717,7 +2717,7 @@ form.custom {
     width: 100%;
     height: auto;
     display: block;
-    background: #222222;
+    background: #CBA083;
     font-size: 16px;
     margin: 0; }
   .top-bar-section .divider,
@@ -2735,9 +2735,9 @@ form.custom {
     padding-left: 15px;
     font-size: 0.8125em;
     font-weight: bold;
-    background: #222222; }
+    background: #CBA083; }
     .top-bar-section ul li > a.hover {
-      background: #090909;
+      background: #CBA083;
       color: white; }
     .top-bar-section ul li > a.button {
       background: #2ba6cb;
@@ -2757,7 +2757,7 @@ form.custom {
       .top-bar-section ul li > a.button.alert.hover {
         background: #970b0e; }
   .top-bar-section ul li.active > a {
-    background: #090909;
+    background: #CBA083;
     color: white; }
   .top-bar-section .has-form {
     padding: 15px; }
@@ -2815,7 +2815,7 @@ form.custom {
 
 @media only screen and (min-width: 86em) {
   .top-bar {
-    background: #111111;
+    background: #CBA083;
     *zoom: 1;
     overflow: visible; }
     .top-bar:before, .top-bar:after {
@@ -2838,7 +2838,7 @@ form.custom {
       position: relative;
       top: 8px; }
     .top-bar.expanded {
-      background: #111111; }
+      background: #CBA083; }
 
   .contain-to-grid .top-bar {
     max-width: 75em;
@@ -2860,7 +2860,7 @@ form.custom {
     .top-bar-section li a:not(.button) {
       padding: 0 15px;
       line-height: 45px;
-      background: #111111; }
+      background: #CBA083; }
       .top-bar-section li a:not(.button).hover {
         background: black; }
     .top-bar-section .has-dropdown > a {
@@ -2896,10 +2896,10 @@ form.custom {
         line-height: 1;
         white-space: nowrap;
         padding: 7px 15px;
-        background: #1e1e1e; }
+        background: #CBA083; }
       .top-bar-section .dropdown li label {
         white-space: nowrap;
-        background: #1e1e1e; }
+        background: #CBA083; }
       .top-bar-section .dropdown li .dropdown {
         left: 100%;
         top: 0; }
@@ -2912,7 +2912,7 @@ form.custom {
       height: 45px;
       width: 0px; }
     .top-bar-section .has-form {
-      background: #111111;
+      background: #CBA083;
       padding: 0 15px;
       height: 45px; }
     .top-bar-section ul.right li .dropdown {
@@ -3369,7 +3369,7 @@ form.custom {
     margin-right: 10px; }
 
 .clearing-blackout {
-  background: #111111;
+  background: #CBA083;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -3403,7 +3403,7 @@ form.custom {
   margin-bottom: 0;
   text-align: center;
   bottom: 0;
-  background: #111111;
+  background: #CBA083;
   width: 100%;
   padding: 10px 30px;
   position: absolute;
@@ -3464,7 +3464,7 @@ form.custom {
     opacity: 0.5; }
 
   .clearing-assembled .clearing-container .carousel {
-    background: #111111;
+    background: #CBA083;
     height: 150px;
     margin-top: 5px; }
     .clearing-assembled .clearing-container .carousel > ul {
@@ -3501,7 +3501,7 @@ form.custom {
         .clearing-assembled .clearing-container .carousel > ul li.visible {
           opacity: 1; }
   .clearing-assembled .clearing-container .visible-img {
-    background: #111111;
+    background: #CBA083;
     overflow: hidden;
     height: 75%; }
 

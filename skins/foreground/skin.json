@@ -32,7 +32,8 @@
 				"assets/stylesheets/foreground.css",
 				"assets/stylesheets/foreground-print.css",
 				"assets/stylesheets/jquery.autocomplete.css",
-				"assets/stylesheets/responsive-tables.css"
+				"assets/stylesheets/responsive-tables.css",
+				"assets/stylesheets/tmw-custom.css"
 			]
 		},
 		"skins.foreground.js": {

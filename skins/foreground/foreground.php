@@ -52,7 +52,8 @@ $wgResourceModules['skins.foreground.styles'] = array(
 		'foreground/assets/stylesheets/foreground.css',
 		'foreground/assets/stylesheets/foreground-print.css',
 		'foreground/assets/stylesheets/jquery.autocomplete.css',
-		'foreground/assets/stylesheets/responsive-tables.css'
+		'foreground/assets/stylesheets/responsive-tables.css',
+        'foreground/assets/stylesheets/tmw-custom.css'
 	),
 	'remoteBasePath' => &$GLOBALS['wgStylePath'],
 	'localBasePath'  => &$GLOBALS['wgStyleDirectory']
