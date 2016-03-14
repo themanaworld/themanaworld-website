@@ -2,7 +2,6 @@
 /news.html
 # generated from a base wiki install
 /images/
-skins
 cache/
 LocalSettings.php
 *.swp
