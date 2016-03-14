@@ -48,8 +48,23 @@ $wgAuth = new TMWAuth();
 
 Depends:
 * Webserver, php, mysql
-* [Mediawiki](http://www.mediawiki.org/wiki/)
-* [ConfirmEdit](http://www.mediawiki.org/wiki/Extension:ConfirmEdit) `Bundled with Mediawiki 1.18`
-* [ConfirmAccount](http://www.mediawiki.org/wiki/Extension:ConfirmAccount)
+* [Mediawiki](https://github.com/wikimedia/mediawiki.git)
+* [Mediawiki-extensions](https://github.com/wikimedia/mediawiki-extensions.git)
+** Extensions TMW uses
+** ConfirmEdit
+** ReCaptchaNoCaptcha
+** ConfirmAccount
+** Renameuser
+** ParserFunctions
+** Cite
+** WikiEditor
+** SyntaxHighlight_GeSHi
+** ImageMap
+** googleAnalytics
+** WikiArticleFeeds
+** MetaKeywordsTag
+** MetaDescriptionTag
+** tmwa
+** GoogleSiteSearch
+** Spoilers
 * [ReCaptchaEnabled](https://www.google.com/recaptcha/intro/index.html)
-

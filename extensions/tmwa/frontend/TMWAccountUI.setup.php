@@ -26,10 +26,8 @@ class TMWAccountUISetup {
 	 * @param $groups Array $wgSpecialPageGroups (assoc array of special page groups)
 	 * @return void
 	 */
-	public static function defineSpecialPages( array &$pages, array &$groups ) {
+	public static function defineSpecialPages( array &$pages ) {
 		$pages['GameAccount'] = 'GameAccountPage';
-		$groups['GameAccount'] = 'login';
 		$pages['GameNews'] = 'GameNewsPage';
-		$groups['GameNews'] = 'changes';
 	}
 }

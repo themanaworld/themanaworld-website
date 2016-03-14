@@ -84,7 +84,7 @@ class GameAccountPage extends SpecialPage {
 		global $wgCaptchaClass, $wgConfirmAccountCaptchas;
         if ($wgConfirmAccountCaptchas) {
             $captcha = new $wgCaptchaClass;
-            $form .= $captcha->getForm();
+            $form .= $captcha->getForm($output);
         }
         $form .= '</td></tr><tr>
                   <td colspan="2" style="text-align:right">
