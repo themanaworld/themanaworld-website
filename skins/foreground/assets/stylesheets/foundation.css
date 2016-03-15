@@ -2722,8 +2722,6 @@ form.custom {
     margin: 0; }
   .top-bar-section .divider,
   .top-bar-section [role="separator"] {
-    border-bottom: solid 1px #2b2b2b;
-    border-top: solid 1px black;
     clear: both;
     height: 1px;
     width: 100%; }
@@ -2906,8 +2904,8 @@ form.custom {
     .top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
       border-bottom: none;
       border-top: none;
-      border-right: solid 1px #2b2b2b;
-      border-left: solid 1px black;
+      border-right: solid 1px #CBA083;
+      border-left: solid 1px #CBA083;
       clear: none;
       height: 45px;
       width: 0px; }
