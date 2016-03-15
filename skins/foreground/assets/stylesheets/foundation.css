@@ -2809,13 +2809,13 @@ form.custom {
       font-size: 0.625em; }
 
 .top-bar-js-breakpoint {
-  width: 86em !important;
+  width: 86.75em !important;
   visibility: hidden; }
 
 .js-generated {
   display: block; }
 
-@media only screen and (min-width: 86em) {
+@media only screen and (min-width: 86.75em) {
   .top-bar {
     background: #CBA083;
     *zoom: 1;
