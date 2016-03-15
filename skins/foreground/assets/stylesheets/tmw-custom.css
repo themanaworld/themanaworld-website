@@ -18,12 +18,21 @@ li.divider, li.divider.show-for-small {
     float: none;
 }
 
+div#catlinks {
+    background-color: #f2ebe7;
+    border: 1px solid black;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin-top: 5px;
+    padding-left: 30px;
+}
+
 div#content {
     padding: 10px;
     border: 1px solid black;
     -moz-border-radius: 15px;
     border-radius: 15px;
-    background-color: white;
+    background-color: #F1D0BA;
 }
 
 h2#firstHeading {
@@ -43,6 +52,7 @@ div#bodyContent.mw-bodytext {
     border: 1px solid black;
     -moz-border-radius: 15px;
     border-radius: 15px;
+    background-color: white;
 }
 
 li#p-server_status.has-dropdown.active {
@@ -50,7 +60,7 @@ li#p-server_status.has-dropdown.active {
 }
 
 .dropdown li:hover a {
-    background: maroon;
+    background: #AB7958;
 }
 
 input[type="submit"], button, .button, .multipleTemplateAdder {

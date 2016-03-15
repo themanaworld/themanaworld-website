@@ -2887,13 +2887,16 @@ form.custom {
     .top-bar-section .dropdown {
       left: 0;
       top: auto;
-      background: transparent;
+      border: 1px solid black;
+      border-radius: 15px;
+      background: #CBA083;
       min-width: 100%; }
       .top-bar-section .dropdown li a {
         color: white;
         line-height: 1;
         white-space: nowrap;
         padding: 7px 15px;
+        border-radius: 15px;
         background: #CBA083; }
       .top-bar-section .dropdown li label {
         white-space: nowrap;
@@ -3630,8 +3633,8 @@ kbd {
   position: relative;
   padding: 0.1875em 0.625em 0.25em;
   font-size: 0.875em;
-  background-color: #2ba6cb;
-  color: white; }
+  background-color: #f2ebe7;
+  color: #2ba6cb; }
   .label.radius {
     -webkit-border-radius: 3px;
     border-radius: 3px; }
