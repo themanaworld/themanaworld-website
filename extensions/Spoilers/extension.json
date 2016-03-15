@@ -1,0 +1,43 @@
+{
+	"name": "Spoilers",
+	"version": "1.4",
+	"author": [
+		"Tim \"Telshin\" Aldridge",
+		"Kris (cblair91)"
+	],
+	"descriptionmsg": "spoilers_description",
+	"license-name": "LGPLv3",
+	"type": "specialpage",
+	"MessagesDirs": {
+		"Spoilers": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"Spoilers": "Spoilers.i18n.php"
+	},
+	"AutoloadClasses": {
+		"Spoilers": "Spoilers.hooks.php"
+	},
+	"ResourceModules": {
+		"ext.spoilers": {
+			"styles": [
+				"css/spoilers.css"
+			],
+			"scripts": [
+				"js/spoilers.js"
+			],
+			"dependencies": []
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "/",
+		"remoteExtPath": "Spoilers"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"Spoilers::onParserFirstCallInit"
+		]
+	},
+	"manifest_version": 1
+}

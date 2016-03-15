@@ -5,10 +5,17 @@ Mediawiki extension that allows for spoiler tags that will hide a block of text.
 
 Installation
 ------------
-To install this extension, add the follwoing lines to the end of the LocalSettings.php file:
+To install this extension, add the following lines to the end of the LocalSettings.php file:
 ```
 //Spoilers
 require("$IP/extensions/Spoilers/Spoilers.php");
+```
+
+Or, if you are using MediaWiki 1.25+
+
+```
+//Spoilers
+wfLoadExtension('Spoilers');
 ```
 
 Usage Example

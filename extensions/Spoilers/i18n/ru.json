@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": ["Tim Aldridge"]
+	},
+	"spoilers": "Spoilers",
+	"spoilers_description": "Тег спойлера - &lt;spoiler show=\"showMessage\" hide=\"hideMessage\"&gt;Скрытый текст&lt;/spoiler&gt;",
+	"spoilers_show_default": "Показать спойлер",
+	"spoilers_hide_default": "Скрыть спойлер"
+}

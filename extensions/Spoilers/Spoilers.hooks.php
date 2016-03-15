@@ -33,19 +33,19 @@ class Spoilers {
 	 * @return	string	HTML
 	 */
 	static public function parseSpoilerTag( $input, array $args, Parser $parser, PPFrame $frame ) {
-		$out = $parser->getOutput();
-		$out->addModules( 'ext.spoilers' );
-		$renderedInput = $parser->recursiveTagParse( $input );
-		$output =	"<div class='spoilers'>
+		$parser->getOutput()->addModules('ext.spoilers');
+		$renderedInput = $parser->recursiveTagParse( $input, $frame );
+		$showText =	isset($args['show']) ? htmlentities( $args['show'], ENT_QUOTES) : wfMessage('spoilers_show_default' )->text();
+		$hideText =	isset($args['hide']) ? htmlentities( $args['hide'], ENT_QUOTES ) : wfMessage('spoilers_hide_default')->text();
+		$output =	"<p class='spoilers'>
 						<div class='spoilers-button-container'>
 							<span class='spoilers-button'>
-								<span class='spoilers-show'>" . ( $args['show'] ? htmlentities( $args['show'], ENT_QUOTES) : wfMessage('spoilers_show_default' )->text() ) . "</span>
-								<span class='spoilers-hide' style='display:none;'>" . ( $args['hide'] ? htmlentities( $args['hide'], ENT_QUOTES ) : wfMessage('spoilers_hide_default')->text() ) . "</span>
+								<span class='spoilers-show'>{$showText}</span>
+								<span class='spoilers-hide'>{$hideText}</span>
 							</span>
 						</div>
-						<div class='spoilers-body' style='display:none;'>{$renderedInput}</div>
-					</div>";
+						<ul class='spoilers-body'>{$renderedInput}</ul>
+					</p>";
 		return $output;
 	}
 }
-?>

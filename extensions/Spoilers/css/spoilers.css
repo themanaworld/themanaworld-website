@@ -1,25 +1,31 @@
-div.spoilers-body {
-    border: 1px dashed #000;
-    background-color: #EEE;
-    padding: 3px;
+.spoilers-body {
+	display: none;
 }
 
 .spoilers-button-container {
-    padding: 1px 0;
+	padding: 1px 0;
 }
 
 .spoilers-button {
-    background-color: #AAA;
-    background-repeat: no-repeat;
-    background-image: -webkit-linear-gradient(top, #EEE, #AAA);
-    background-image: -moz-linear-gradient(top, #EEE, #AAA);
-    background-image: linear-gradient(to bottom, #EEE, #AAA);
-    border: 1px solid #999;
-    border-radius: 5px;
-    padding: 3px 10px;
-    transition: 0.1s background-position linear;
+	background: #AAA;
+	background: -moz-linear-gradient(top, #EEE, #AAA);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, #EEE), color-stop(100%, #AAA));
+	background: -webkit-linear-gradient(top, #EEE, #AAA);
+	background: -o-linear-gradient(top, #EEE, #AAA);
+	background: -ms-liner-gradient(top, #EEE, #AAA);
+	background: linear-gradient(to bottom, #EEE, #AAA);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EEE', endColorstr='#AAA',GradientType=0 );
+	border: 1px solid #999;
+	border-radius: 5px;
+	padding: 3px 10px;
+	transition: 0.1s background-position linear;
 }
 
 .spoilers-button:hover {
-    background-position: 0 -6px;
+	background-position: 0 -6px;
+	cursor: pointer;
+}
+
+.spoilers-hide {
+	display: none;
 }
