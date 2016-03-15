@@ -34,10 +34,15 @@ h2#firstHeading {
     border: 1px solid black;
     -moz-border-radius: 15px;
     border-radius: 15px;
+    line-height: 1.25em;
 }
 
 div#bodyContent.mw-bodytext {
     margin-top:10px;
+    padding: 5px;
+    border: 1px solid black;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
 }
 
 li#p-server_status.has-dropdown.active {
