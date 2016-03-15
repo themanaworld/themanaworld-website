@@ -8,7 +8,7 @@ p {
 
 a.label:hover,
 a.label:focus {
-  color: white;
+  color: #2795b6;
 }
 
 a.label.new { background-color: #d0d0d0; }

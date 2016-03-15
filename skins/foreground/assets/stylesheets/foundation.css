@@ -2695,6 +2695,10 @@ form.custom {
           height: 0;
           -webkit-box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
           box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
+  .top-bar-section ul li.active.hover > a {
+    background: #AB7958;
+    border-radius: 15px;
+    color: white; }
   .top-bar.expanded {
     height: auto;
     background: transparent; }
@@ -2861,6 +2865,9 @@ form.custom {
       background: #CBA083; }
       .top-bar-section li a:not(.button).hover {
         background: black; }
+    .top-bar-section ul li.active.hover > a {
+      background: #CBA083;
+      color: white; }
     .top-bar-section .has-dropdown > a {
       padding-right: 35px !important; }
       .top-bar-section .has-dropdown > a:after {
@@ -3624,16 +3631,12 @@ kbd {
 
 /* Labels */
 .label {
-  font-weight: bold;
   text-align: center;
   text-decoration: none;
   line-height: 1;
   white-space: nowrap;
   display: inline-block;
   position: relative;
-  padding: 0.1875em 0.625em 0.25em;
-  font-size: 0.875em;
-  background-color: #f2ebe7;
   color: #2ba6cb; }
   .label.radius {
     -webkit-border-radius: 3px;
