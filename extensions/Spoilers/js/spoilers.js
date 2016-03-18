@@ -4,7 +4,7 @@
 	function init() {
 		$('.spoilers-button').show();
 		$('.spoilers-button').click(function() {
-			$(this).parents('.spoilers').children('.spoilers-body').toggle();
+			$('.spoilers-body').toggle();
 			$(this).children().toggle();
 		});
 	}
