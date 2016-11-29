@@ -40,6 +40,7 @@ class TMWAccountSetup {
 		# Ladmin Class
 		$classes['phpLadmin'] = "$backendDir/libs/libladmin.php";
 		$classes['dbLadmin'] = "$backendDir/libs/libladmin-db.php";
+		$classes['dbadmin'] = "$backendDir/libs/libdb.php";
 
         # TMW to Wiki Auth / Accounts Modules
         $classes['TMWAuth'] = "$backendDir/libs/libtmwauth.php";

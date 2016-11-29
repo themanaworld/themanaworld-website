@@ -34,7 +34,7 @@ class GameAccountPage extends SpecialPage {
             $acc->setPassword1($request->getText('password1'));
             $acc->setPassword2($request->getText('password2'));
             $acc->setEMail($request->getText('email'));
-            $acc->setGender('N');
+            $acc->setGender('F');
 
             $this->err = $acc->validate();
             global $wgCaptchaClass;

@@ -9,7 +9,7 @@ $wgExtensionCredits['validextensionclass'][] = array(
     'author' => 'wushin', 
     'url' => 'https://github.com/themanaworld/themanaworld-website', 
     'description' => 'Ladmin in Mediawiki',
-    'version'  => 0.5,
+    'version'  => 0.6,
     'license-name' => "GPL 3.0",
 );
 
