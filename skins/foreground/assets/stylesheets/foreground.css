@@ -75,7 +75,7 @@ h2 span {
 }
 
 h2.title {
-  margin-bottom: 0.1em;
+  margin-bottom: 0em;
 }
 
 h3#tagline {
@@ -114,8 +114,10 @@ div.small-9.columns textarea {
 }
 
 footer.row {
-  margin-top: 2em;
-  color: grey;
+  background-image: url(../images/border_y.jpg), url(../images/border_y.jpg);
+  background-position: left, right;
+  background-repeat: repeat-y;
+  background-color: #151515;
 }
 
 div {
