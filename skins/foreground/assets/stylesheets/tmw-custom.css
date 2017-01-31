@@ -20,39 +20,70 @@ li.divider, li.divider.show-for-small {
 
 div#catlinks {
     background-color: #f2ebe7;
-    border: 1px solid black;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    margin-top: 5px;
+    margin: 10px;
     padding-left: 30px;
 }
 
 div#content {
-    padding: 10px;
-    border: 1px solid black;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    background-color: #F1D0BA;
+    padding: 0px 15px 10px 15px;
+    background: url(../images/border_y.jpg) repeat-y,
+    url(../images/border_y.jpg) repeat-y,
+    url(../images/background_leftmenu.png) repeat;
+    background-position: left, right, top left;
+    background-color: #151515;
+}
+
+div#footer {
+  padding-left: 2em;
+  padding-right: 2em;
+  color: #a9905f;
+}
+
+div#footer a {
+  color: #8b6c52;
+  text-decoration: underline;
+}
+
+div#footer a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+div#content a {
+    color: #473529;
+}
+
+div#content a:hover {
+    color: #473529;
+    border-bottom: 1px black dotted;
 }
 
 h2#firstHeading {
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
-    background-color: #f2ebe7;
-    padding-left: 50px;
-    border: 1px solid black;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    line-height: 1.25em;
+    background: url(../images/horizontal-left.png) no-repeat,
+    url(../images/horizontal-right.png) no-repeat,
+    url(../images/border_x.png) repeat-x,
+    url(../images/header_background.png) no-repeat;
+    background-position: 0% 111%, 100% 111%, 100% 108%, 0% 100%;
+    background-size: auto, auto, auto, cover;
+    padding: 10px 0px 20px 50px;
+    line-height: 2em;
+    color: #ffdd9b;
+}
+
+div#contentSub {
+    background: url(../images/horizontal-left.png) no-repeat,
+    url(../images/horizontal-right.png) no-repeat,
+    url(../images/border_x.png) repeat-x;
+    background-position: 0% 290%, 100% 290%, 0% -900%;
+    height: 1em;
 }
 
 div#bodyContent.mw-bodytext {
-    margin-top:10px;
-    padding: 5px;
-    border: 1px solid black;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    background-color: white;
+    background-color: #d3b378;
+    background-image: url(../images/background_article.png);
+    margin:10px;
+    padding: 15px;
 }
 
 li#p-server_status.has-dropdown.active {
@@ -60,7 +91,15 @@ li#p-server_status.has-dropdown.active {
 }
 
 .dropdown li:hover a {
-    background: #AB7958;
+    background: black url(../images/button_rollover.png) no-repeat;
+}
+
+@media only screen and (min-width: 86.75em) {
+  .dropdown li:hover a {
+    background: black;
+    background-image: url(../images/button_rollover.png);
+    background-size: 100% 100%;
+  }
 }
 
 input[type="submit"], button, .button, .multipleTemplateAdder {
@@ -72,4 +111,8 @@ input[type="submit"], button, .button, .multipleTemplateAdder {
 form#searchform.mw-search {
     margin-bottom: 10px;
     white-space: nowrap;
+}
+
+body.page-Main_Page div#navwrapper {
+/*    display: none;*/
 }
