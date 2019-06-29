@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
              <div class="section">
               <ul>
                <li><a href="registration.php">Create Account</a></li>
-               <li><a href="downloads.php">Downloads</a></li>
+               <li><a href="https://wiki.themanaworld.org/index.php/Downloads">Downloads</a></li>
                <li><a href="news-feed.php">News</a></li>
                <li><a href="about.php">About</a></li>
                <li><a href="/recover">Account Recovery</a></li>
