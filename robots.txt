@@ -1,10 +1,7 @@
 User-agent: *
 disallow: /includes/
-disallow: /recaptcha-php/
-disallow: /sql/
-disallow: /bin/
-disallow: /thank_you.php
 disallow: /news.html
+disallow: /api/
 allow: /
 
 sitemap: http://www.themanaworld.org/sitemap.xml

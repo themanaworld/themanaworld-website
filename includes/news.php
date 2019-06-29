@@ -11,6 +11,7 @@ function printNews($num='all') {
             $content .= $buffer;
             if (preg_match('/<\/div>/',$buffer)) {
                 $count++;
+                $content .= "<br>";
             }
             if ($count == $num && $num != 'all') {
                 $content .= '<div class="read-more"><a class="more" href="/news-feed.php">More News >></a></div>';

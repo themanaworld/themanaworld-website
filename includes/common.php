@@ -13,6 +13,13 @@ function placeHeader($page_title)
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5KTWGJ');</script>
+<!-- End Google Tag Manager -->
   <title>The Mana World - <?php echo $page_title; ?></title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta http-equiv="Content-Style-Type" content="text/css"/>
@@ -54,11 +61,10 @@ function placeHeader($page_title)
                <li><a href="downloads.php">Downloads</a></li>
                <li><a href="news-feed.php">News</a></li>
                <li><a href="about.php">About</a></li>
-               <li><a href="https://webchat.freenode.net/?channels=#themanaworld">Support (IRC)</a></li>
+               <li><a href="/recover">Account Recovery</a></li>
                <li><a href="https://wiki.themanaworld.org/">Wiki</a></li>
                <li><a href="https://forums.themanaworld.org/">Forums</a></li>
                <li><a href="https://wiki.themanaworld.org/index.php/FAQ">FAQ</a></li>
-               <li><a href="https://wiki.themanaworld.org/index.php/Servers">Servers</a></li>
               </ul>
              </div>
             </div>
@@ -71,7 +77,26 @@ function placeHeader($page_title)
             <div class="section_bottomright">
              <div class="section banners">
               Server status
-              <iframe src="https://server.themanaworld.org/status.php" width="130" height="30" frameborder="0" scrolling="no"></iframe>
+              <a class="tmwa-status" href="https://server.themanaworld.org" target="_blank">Online</a>
+              <script>
+                (() => {
+                    const status_node = document.querySelector(".tmwa-status");
+                    const tmwa_poll = () =>
+                        fetch("/api/tmwa/server")
+                        .then(data => data.json())
+                        .then(data => {
+                            if (data.serverStatus === "Online") {
+                                status_node.innerText = `${data.serverStatus}: (${data.playersOnline} players)`;
+                                status_node.classList.remove("offline");
+                            } else {
+                                status_node.innerText = "Offline";
+                                status_node.classList.add("offline");
+                            }
+                            setTimeout(tmwa_poll, 8000);
+                        });
+                    tmwa_poll();
+                })();
+              </script>
              </div>
             </div>
            </div>
@@ -153,16 +178,9 @@ function placeFooter()
    </div>
   </div> <!-- /page -->
   </div>
-<!-- Google Tag Manager -->
+ </body>
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5KTWGJ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5KTWGJ');</script>
-<!-- End Google Tag Manager -->
- </body>
 </html>
 <?php
 }

@@ -234,6 +234,21 @@ h1 {
     vertical-align: text-bottom;
 }
 
+.tmwa-status, .tmwa-status:visited {
+    display: block;
+    color: green;
+    font-family: sans-serif;
+    /*font-size: 9px;*/
+    padding-top: 9px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.tmwa-status.offline, .tmwa-status.offline:visited {
+    color: red;
+}
+
 #contents_leftrepeat {
     background-image: url(images/contents_leftrepeat.png);
     background-repeat: repeat-y;
