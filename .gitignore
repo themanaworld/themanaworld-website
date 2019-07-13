@@ -1,9 +1,27 @@
-# symlink to the update server
-/news.html
-# generated, I think
-/images/thumbs
-/news.rss
+.DS_Store
+node_modules
+dist
+hint-report
+src/assets/news.json
 
-# part of another repo
-/register
-/recover
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# domain validation files
+public/BingSiteAuth.xml
+public/google*.html
