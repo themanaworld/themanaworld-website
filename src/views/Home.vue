@@ -3,7 +3,7 @@
 		<h1>The Mana World Project</h1>
 		<p>The Mana World (TMW) is a serious effort to create an innovative free and open source MMORPG. TMW uses 2D graphics and aims to create a large and diverse interactive world. It is licensed under the GPL, making sure this game can't ever run away from you.</p>
 		<div class="read-more">
-			<a href="#">Read More >></a>
+			<router-link :to="{ name: 'about' }">Read More >></router-link>
 		</div>
 
 		<h1>Recent News</h1>
