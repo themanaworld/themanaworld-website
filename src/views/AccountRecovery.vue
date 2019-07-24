@@ -150,9 +150,13 @@ export default class Recovery extends Vue {
 	recaptcha_key = process.env.VUE_APP_RECAPTCHA;
 
 	async mounted () {
-		if (Reflect.has(this.$route.params, "emailToken")) {
-			let token = this.$route.params.emailToken;
+		let token = document.location.hash.slice(1);
 
+		if (Reflect.has(this.$route.params, "emailToken")) {
+			token = this.$route.params.emailToken;
+		}
+
+		if (token.length > 1) {
 			if (/^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$/i.test(token)) {
 				this.emailToken = token;
 				this.step = 4;
