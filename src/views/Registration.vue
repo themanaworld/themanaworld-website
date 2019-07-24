@@ -10,6 +10,12 @@
 			<h1>reCAPTCHA could not be loaded</h1>
 			This page requires reCAPTCHA but something prevents it from loading.
 			If you are using an ad blocker or tracker blocker please whitelist this page and refresh to continue.
+
+			<h1>Registering without reCAPTCHA</h1>
+			If you would rather not use reCAPTCHA, you may register by contacting us by email.<br>
+			We will create a new account for you and associate it with the email address that you used to contact us.
+			<br><br>
+			<address>sysadmin@themanaworld.org</address>
 		</div>
 
 		<!-- XXX: do we want to add the game rules here? -->
