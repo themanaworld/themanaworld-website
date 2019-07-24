@@ -14,9 +14,12 @@
 <style scoped>
 .news .entry {
 	margin-bottom: 1em;
+	hyphens: auto;
 
 	&:nth-of-type(1n + 2) {
-		margin-top: 2em;
+		margin-top: 3em;
+		padding-top: 1em;
+		border-top: solid 0.4ex rgba(0, 0, 0, 0.1);
 	}
 
 	& > a {
@@ -30,7 +33,7 @@
 	}
 
 	& .body {
-		margin-top: 5px;
+		margin-top: 1ex;
 
 		& :any-link {
 			color: inherit;

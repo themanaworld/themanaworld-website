@@ -77,6 +77,7 @@
 			min-width: 890px;
 			padding-bottom: 200px;
 			border-radius: 15px 0 0 15px;
+			text-align: justify;
 		}
 	}
 }
