@@ -15,6 +15,9 @@
 			<span>Server Status</span>
 			<ServerStatus class="status"/>
 		</div>
+		<div class="screenshots">
+			<a href="https://wiki.themanaworld.org/index.php/Screenshots"></a>
+		</div>
 		<ul>
 			<span>Source Code</span>
 			<li><a href="https://github.com/themanaworld">The Mana World</a></li>
@@ -86,6 +89,17 @@
 
 		&:hover {
 			background: rgba(255,255,255,0.4);
+		}
+	}
+
+	& .screenshots {
+		& a, & a:visited {
+			background: url(../assets/screenshot-thumb.png) no-repeat center center #CBA083;
+			border: 1px solid #784f3f;
+			margin: 5px auto;
+			padding: 0;
+			width: 133px;
+			height: 100px;
 		}
 	}
 }
