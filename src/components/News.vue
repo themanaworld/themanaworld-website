@@ -61,6 +61,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import newsEntries from "@/assets/news.json";
 
 interface NewsEntry {
 	id: string;
@@ -74,9 +75,14 @@ interface NewsEntry {
 export default class News extends Vue {
 	@Prop({ default: Infinity }) private count!: number;
 	@Prop({ default: 0 }) private from!: number;
-	private entries: NewsEntry[] = [];
+	private entries: NewsEntry[] = (newsEntries as NewsEntry[]).slice(this.from, this.count);
 
 	mounted () {
+		if (!process.env.VUE_APP_NEWS_JSON || !process.env.VUE_APP_NEWS_JSON.startsWith("https")) {
+			// TODO: allow arbitrary paths (no hardcoded news.json)
+			return;
+		}
+
 		// restore from cache while we're loading a fresh copy
 		if (Reflect.has(self, "localStorage")) {
 			let newsCache = localStorage.getItem("newsCache");
