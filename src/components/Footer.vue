@@ -1,6 +1,6 @@
 <template>
 	<footer class="footer">
-		&copy; 2004&mdash;{{ year }} The Mana World
+		&copy; 2004&ndash;{{ year }} The Mana World
 	</footer>
 </template>
 
