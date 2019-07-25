@@ -30,6 +30,7 @@
 		background: #E1D6CF;
 		padding: 15px 15px 30px 15px;
 		border-radius: 15px 15px 0 0;
+		text-align: justify;
 
 		& h1 {
 			margin: 20px 0 0 0 0;
@@ -41,10 +42,6 @@
 			&:nth-of-type(1n + 2) {
 				margin-top: 2em;
 			}
-		}
-
-		& p {
-			margin: 0px 40px 5px 30px;
 		}
 	}
 
@@ -81,7 +78,10 @@
 			min-width: 890px;
 			padding-bottom: 200px;
 			border-radius: 15px 0 0 15px;
-			text-align: justify;
+
+			& p {
+				margin: 0px 40px 5px 30px;
+			}
 		}
 	}
 }
