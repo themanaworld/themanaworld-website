@@ -1,20 +1,20 @@
 <template>
 	<main class="registration">
 		<h1>Account creation</h1>
-		Welcome to The Mana World! With this form you can register for a new game account.<br>
-		Please note that you will also need to down and install ManaPlus, our official game client.
-		<br><br>
+		<p>Welcome to The Mana World! With this form you can register for a new game account.</p>
+		<p>Please note that you will also need to down and install ManaPlus, our official game client.</p>
+		<br>
 		<button v-if="!step" @click="start">Begin!</button>
 
 		<div v-if="step == -1">
 			<h1>reCAPTCHA could not be loaded</h1>
-			This page requires reCAPTCHA but something prevents it from loading.
-			If you are using an ad blocker or tracker blocker please whitelist this page and refresh to continue.
+			<p>This page requires reCAPTCHA but something prevents it from loading.
+			If you are using an ad blocker or tracker blocker please whitelist this page and refresh to continue.</p>
 
 			<h1>Registering without reCAPTCHA</h1>
-			If you would rather not use reCAPTCHA, you may register by contacting us by email.<br>
-			We will create a new account for you and associate it with the email address that you used to contact us.
-			<br><br>
+			<p>If you would rather not use reCAPTCHA, you may register by contacting us by email.</p>
+			<p>We will create a new account for you and associate it with the email address that you used to contact us.</p>
+			<br>
 			<address>sysadmin@themanaworld.org</address>
 		</div>
 
@@ -22,9 +22,9 @@
 
 		<div v-if="step == 1">
 			<h1>Email address</h1>
-			We will never give your email address to someone else or send you spam.
-			Providing an email address is entirely optional but it is the only way to request a password reset, should you loose access to your account.
-			If you did not provide an email address you will be unable to perform password resets.
+			<p>We will never give your email address to someone else or send you spam.</p>
+			<p>Providing an email address is entirely optional but it is the only way to request a password reset, should you loose access to your account.
+			If you did not provide an email address you will be unable to perform password resets.</p>
 			<form @submit.prevent="checkEmail">
 				<label for="email">Enter your email (optional):</label>
 				<input v-model="user.email" type="email" maxlength="39" id="email" ref="email" placeholder="your@email.com">
@@ -34,12 +34,12 @@
 
 		<div v-if="step == 2">
 			<h1>Username</h1>
-			Your username is used to log in to the game server. It is never shared with other players: only you see this name.
+			<p>Your username is used to log in to the game server. It is never shared with other players: only you see this name.</p>
 			<p>It must contain between 4 and 23 characters. Letters and numbers only.</p>
 
 			<div class="error taken" v-if="taken">
 				<h2>Username taken</h2>
-				Please choose another username.
+				<p>Please choose another username.</p>
 			</div>
 
 			<form @submit.prevent="checkUser">
@@ -51,7 +51,7 @@
 
 		<div v-if="step == 3">
 			<h1>Password</h1>
-			Please choose a hard-to-guess password.
+			<p>Please choose a hard-to-guess password.</p>
 			<p>It must contain between 8 and 23 characters. Letters and numbers only. Case-sensitive.</p>
 
 			<div v-if="exposed" class="exposed">
@@ -93,10 +93,10 @@
 
 		<div v-if="step == 5">
 			<h1>Thank you</h1>
-			Your account has been successfully created.
+			<p>Your account has been successfully created.</p>
 
 			<h1>Next steps</h1>
-			To start playing, <a href="https://wiki.themanaworld.org/index.php/Downloads">download ManaPlus</a> and select the server <i>The Mana World</i>
+			<p>To start playing, <a href="https://wiki.themanaworld.org/index.php/Downloads">download ManaPlus</a> and select the server <i>The Mana World</i>.</p>
 		</div>
 
 		<div class="g-recaptcha" id="recaptcha-container"

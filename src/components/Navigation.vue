@@ -73,7 +73,7 @@
 			padding: 1ch;
 
 			&:hover, &.router-link-exact-active, &.custom-active {
-				background: rgba(255,255,255,0.4);
+				background-color: rgba(255,255,255,0.4);
 				border: solid 1px #2f2e32;
 				font-weight: bold;
 			}
@@ -101,7 +101,7 @@
 		border-radius: 0 0 5px 5px;
 
 		&:hover {
-			background: rgba(255,255,255,0.4);
+			background-color: rgba(255,255,255,0.4);
 		}
 	}
 
@@ -113,6 +113,10 @@
 			padding: 0;
 			width: 133px;
 			height: 100px;
+
+			&:hover {
+				opacity: 0.8;
+			}
 		}
 	}
 }

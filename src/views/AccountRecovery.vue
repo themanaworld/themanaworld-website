@@ -2,24 +2,24 @@
 	<main>
 		<div v-if="step == 1">
 			<h1>Account Recovery</h1>
-			Use this form if you forgot your username or password.
-			If it matches any account we have on file you will receive a message containing the list of your account usernames
-			along with a password reset link, should you wish to reset your password.
+			<p>Use this form if you forgot your username or password.</p>
+			<p>If it matches any account we have on file you will receive a message containing the list of your account usernames
+			along with a password reset link, should you wish to reset your password.</p>
 		</div>
 
 		<div v-if="step == -1">
 			<h1>reCAPTCHA could not be loaded</h1>
-			This page requires reCAPTCHA but something prevents it from loading.
-			If you are using an ad blocker or tracker blocker please whitelist this page and refresh to continue.
+			<p>This page requires reCAPTCHA but something prevents it from loading.
+			If you are using an ad blocker or tracker blocker please whitelist this page and refresh to continue.</p>
 		</div>
 
 		<div v-if="step == 1">
 			<h1>Email address</h1>
-			The email address that was used to register your account(s).
+			<p>The email address that was used to register your account(s).</p>
 
 			<div class="error notFound" v-if="notFound">
 				<h2>Not found</h2>
-				We were not able to find any accounts associated with this email address.
+				<p>We were not able to find any accounts associated with this email address.</p>
 			</div>
 
 			<form @submit.prevent="checkEmail">
@@ -38,34 +38,34 @@
 
 		<div v-if="step == 3">
 			<h1>Recovery process started</h1>
-			An email was sent with the list of your accounts.
+			<p>An email was sent with the list of your accounts.</p>
 
 			<h1>Next steps</h1>
-			If you wish to reset the password of your accounts, click the provided link in the email you received.<br>
-			This link is only valid once: if you wish to reset more than one password you will have to repeat the process.
+			<p>If you wish to reset the password of your accounts, click the provided link in the email you received.</p>
+			<p>This link is only valid once: if you wish to reset more than one password you will have to repeat the process.</p>
 
 			<br><br><br>
 			<h1>Can't find the account you were looking for?</h1>
-			Double-check the email address you entered; You might have used a different address when you created the account or you might have omitted to provide an email address.
+			<p>Double-check the email address you entered; You might have used a different address when you created the account or you might have omitted to provide an email address.</p>
 
 			<h1>Still need help?</h1>
-			Feel free to <router-link :to="{ name: 'support' }">contact us</router-link> for further assistance.
+			<p>Feel free to <router-link :to="{ name: 'support' }">contact us</router-link> for further assistance.</p>
 		</div>
 
 		<!-- PART TWO: -->
 
 		<div v-if="step == -2">
 			<h1>Expired link</h1>
-			This password reset link has expired or is invalid.<br>
-			Keep in mind that emailed links are only valid for 60 minutes.
+			<p>This password reset link has expired or is invalid.</p>
+			<p>Keep in mind that emailed links are only valid for 60 minutes.</p>
 
 			<h1>Start over</h1>
-			You may try again in 5 minutes: <router-link :to="{ name: 'support' }">account recovery</router-link>
+			<p>You may try again in 5 minutes: <router-link :to="{ name: 'support' }">account recovery</router-link></p>
 		</div>
 
 		<div v-if="step == 4">
 			<h1>Username</h1>
-			Your password reset link is <em>only</em> valid for account usernames listed in the email that was sent to you.
+			<p>Your password reset link is <em>only</em> valid for account usernames listed in the email that was sent to you.</p>
 
 			<form @submit.prevent="checkUser">
 				<label for="user">Enter a username:</label>
@@ -76,7 +76,7 @@
 
 		<div v-if="step == 5">
 			<h1>Password</h1>
-			Please choose a new, hard-to-guess password.
+			<p>Please choose a new, hard-to-guess password.</p>
 			<p>It must contain between 8 and 23 characters. Letters and numbers only. Case-sensitive.</p>
 
 			<div v-if="exposed" class="exposed">
@@ -115,10 +115,10 @@
 
 		<div v-if="step == 7">
 			<h1>The deed is done</h1>
-			The password of account <q>{{user.name}}</q> has been reset.
+			<p>The password of account <q>{{user.name}}</q> has been reset.</p>
 
 			<h1>Next steps</h1>
-			To start playing, <a href="https://wiki.themanaworld.org/index.php/Downloads">download ManaPlus</a> and select the server <i>The Mana World</i>
+			<p>To start playing, <a href="https://wiki.themanaworld.org/index.php/Downloads">download ManaPlus</a> and select the server <i>The Mana World</i>.</p>
 		</div>
 
 		<div class="g-recaptcha" id="recaptcha-container"

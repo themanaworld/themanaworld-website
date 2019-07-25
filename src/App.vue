@@ -42,13 +42,17 @@
 				margin-top: 2em;
 			}
 		}
+
+		& p {
+			margin: 0px 40px 5px 30px;
+		}
 	}
 
 	& > .footer {
 		grid-area: footer;
 	}
 
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: sans-serif;
 	color: #2c3e50;
 
 	width: 100%;

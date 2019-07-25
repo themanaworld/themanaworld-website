@@ -30,6 +30,7 @@
 
 	& > .date {
 		float: right;
+		color: #0000FF;
 	}
 
 	& .body {
