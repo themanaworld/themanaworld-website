@@ -15,12 +15,11 @@
 */
 
 @font-face {
-	font-family: "CarterSubset";
-	src: url("https://gumi.ca/CarterSubset.eot");
-	src: local("@"),
-		url("https://gumi.ca/CarterSubset.woff2") format("woff2"),
-		url("https://gumi.ca/CarterSubset.woff") format("woff"),
-		url("https://gumi.ca/CarterSubset.ttf") format("truetype");
+	font-family: "Albertus TMW";
+	src: url("../assets/fonts/AlbertusTMW.eot");
+	src: url("../assets/fonts/AlbertusTMW.woff2") format("woff2"),
+		url("../assets/fonts/AlbertusTMW.woff") format("woff"),
+		url("../assets/fonts/AlbertusTMW.ttf") format("truetype");
 }
 
 .logo {
@@ -28,10 +27,10 @@
 	background: url(../assets/logo.svg) no-repeat left top; /* FIXME: the -small logo is fugly */
 	background-size: 12vw 12vw;
 	padding: 2vw 0 0 12vw;
-	font-family: "CarterSubset", cursive;
+	font-family: "Albertus TMW", cursive;
 	font-display: fallback;
 	font-size: 7vw;
-	text-shadow: 0.03ch 0.06ch #070905;
+	text-shadow: 0.05ch 0.09ch #070905;
 	color: #34B039;
 	height: 11vw;
 	cursor: pointer;
@@ -44,18 +43,17 @@
 @media (min-width: 800px) {
 	.logo {
 		background-image: url(../assets/logo.svg);
-		background-size: 100px 100px;
-		padding: 22px 0 0 105px;
-		font-size: 3em;
-		letter-spacing: 1px;
-		height: 90px;
+		background-size: 120px 120px;
+		padding: 30px 0 0 125px;
+		font-size: 4em;
+		height: 100px;
 		margin-top: 20px;
 		position: relative;
 
 		& span:first-of-type {
 			position: absolute;
-			left: 105px;
-			top: 4px;
+			left: 125px;
+			top: 0;
 			font-size: 0.6em;
 		}
 
@@ -63,11 +61,10 @@
 			display: inline;
 			position: absolute;
 			font-family: Helvetica;
-			font-size: 0.3em;
-			letter-spacing: -0.8px;
-			font-weight: lighter;
-			top: 73px;
-			left: 108px;
+			font-size: 0.2em;
+			letter-spacing: 2px;
+			top: 99px;
+			left: 128px;
 			text-shadow: none;
 			color: #616260;
 			font-style: oblique;

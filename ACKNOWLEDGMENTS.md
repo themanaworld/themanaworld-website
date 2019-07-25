@@ -8,6 +8,7 @@ This website is built with the following third-party projects:
 - [PostCSS] (Evil Martians)
 - [Chai.js] (Jake Luer)
 - [Mocha]
+- [Albertus] (Berthold Wolpe, Miles Inc, Hewlett-Packard, ElseWare)
 
 
 [TypeScript]: http://www.typescriptlang.org/
@@ -18,3 +19,4 @@ This website is built with the following third-party projects:
 [PostCSS]: https://postcss.org/
 [Chai.js]: https://www.chaijs.com/
 [Mocha]: https://mochajs.org/
+[Albertus]: https://github.com/greyscalepress/font-specimens/tree/master/fonts/encore_des_fontes_manu/A028
