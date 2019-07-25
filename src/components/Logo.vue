@@ -7,13 +7,6 @@
 </template>
 
 <style scoped>
-/*
- XXX: I couldn't find the font usued in the original PNG logo so I used something
-      similar-ish
-
-@import url('https://fonts.googleapis.com/css?family=Carter+One&display=swap');
-*/
-
 @font-face {
 	font-family: "Albertus TMW";
 	src: url("../assets/fonts/AlbertusTMW.eot");
@@ -27,14 +20,15 @@
 	background: url(../assets/logo.svg) no-repeat left top; /* FIXME: the -small logo is fugly */
 	background-size: 12vw 12vw;
 	padding: 2vw 0 0 12vw;
-	font-family: "Albertus TMW", cursive;
-	font-display: fallback;
+	font-family: "Albertus TMW", "Arial Black", "Times New Roman", fantasy;
+	font-display: swap;
 	font-size: 7vw;
-	text-shadow: 0.05ch 0.09ch #070905;
+	text-shadow: 0.03ch 0.07ch #070905;
 	color: #34B039;
 	height: 11vw;
 	cursor: pointer;
 	z-index: 200;
+	max-width: calc(90% - 15vw);
 
 	& span:last-of-type {
 		display: none;
@@ -50,6 +44,7 @@
 		height: 100px;
 		margin-top: 20px;
 		position: relative;
+		text-shadow: 0.05ch 0.09ch #070905;
 
 		& span:first-of-type {
 			position: absolute;
@@ -75,10 +70,16 @@
 
 @media (max-width: 300px) {
 	.logo {
-		background: url(../assets/logo-extrasmall.svg) no-repeat left top;
+		background-image: url(../assets/logo-extrasmall.svg);
 		background-size: 12vw 12vw;
 		font-weight: bold;
 		text-shadow: none;
+	}
+}
+
+@media (min-width: 1100px) {
+	.logo {
+		max-width: 100%;
 	}
 }
 </style>
