@@ -1,5 +1,6 @@
 <template>
-	<nav class="nav">
+	<nav class="nav" id="nav">
+		<a href="#nav" class="hamburger"></a>
 		<ul>
 			<li><router-link :class="{ 'custom-active': isHome }" :to="{ name: 'home' }">Home</router-link></li>
 			<li><router-link :to="{ name: 'registration' }">Create Account</router-link></li>
@@ -10,7 +11,6 @@
 			<li><a href="https://wiki.themanaworld.org/">Wiki</a></li>
 			<li><a href="https://forums.themanaworld.org/">Forums</a></li>
 		</ul>
-		<!-- TODO: we want a server status component: https://api.themanaworld.org/api/tmwa/server -->
 		<div class="server">
 			<span>Server Status</span>
 			<ServerStatus class="status"/>
@@ -36,24 +36,16 @@
 	padding: 15px;
 	font-size: 14px;
 
-	& span {
-		text-align: center;
-		display: block;
-		padding: 5px;
-		border-bottom: solid 1px #2f2e32;
-	}
-
-	& a, & a:visited {
-		color: #2f2e32;
+	& .hamburger {
+		position: absolute;
+		top: 0.4vw;
+		right: 2vw;
+		font-size: 8vw;
 		text-decoration: none;
-		display: block;
-		border: solid 1px #CBA083;
-		padding: 1ch;
+		color: gray(50);
 
-		&:hover, &.router-link-exact-active, &.custom-active {
-			background: rgba(255,255,255,0.4);
-			border: solid 1px #2f2e32;
-			font-weight: bold;
+		&::before {
+			content: "☰";
 		}
 	}
 
@@ -65,6 +57,27 @@
 		border: solid 1px #2f2e32;
 		list-style: none;
 		margin-bottom: 13px;
+
+		& span {
+			text-align: center;
+			display: block;
+			padding: 5px;
+			border-bottom: solid 1px #2f2e32;
+		}
+
+		& a, & a:visited {
+			color: #2f2e32;
+			text-decoration: none;
+			display: block;
+			border: solid 1px #CBA083;
+			padding: 1ch;
+
+			&:hover, &.router-link-exact-active, &.custom-active {
+				background: rgba(255,255,255,0.4);
+				border: solid 1px #2f2e32;
+				font-weight: bold;
+			}
+		}
 	}
 
 	& ul li {
@@ -107,6 +120,20 @@
 @media (min-width: 1100px) {
 	.nav {
 		border-radius: 0 15px 15px 0;
+
+		& .hamburger {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: 460px) {
+	.nav {
+		& .hamburger {
+			top: 1vw;
+			right: 2vw;
+			font-size: calc(1rem + 3vw);
+		}
 	}
 }
 </style>
