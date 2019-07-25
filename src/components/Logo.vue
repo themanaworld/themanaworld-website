@@ -34,6 +34,7 @@
 	color: #34B039;
 	height: 11vw;
 	cursor: pointer;
+	z-index: 200;
 
 	& span:last-of-type {
 		display: none;

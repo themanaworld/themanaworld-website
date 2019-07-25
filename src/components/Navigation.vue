@@ -43,6 +43,8 @@
 		font-size: 8vw;
 		text-decoration: none;
 		color: gray(50);
+		z-index: 300;
+		display: block;
 
 		&::before {
 			content: "☰";
@@ -134,7 +136,7 @@
 @media (min-width: 460px) {
 	.nav {
 		& .hamburger {
-			top: 1vw;
+			top: 3vw;
 			right: 2vw;
 			font-size: calc(1rem + 3vw);
 		}

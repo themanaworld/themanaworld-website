@@ -17,6 +17,8 @@
 }
 
 #app {
+	z-index: 100;
+
 	& > .nav {
 		grid-area: side;
 	}
