@@ -1,6 +1,6 @@
 <template>
 	<router-link tag="div" :to="{ name: 'home' }" class="logo">
-		The Mana World
+		<span>The </span>Mana World
 		<!--<span>Feel the mana power growing inside you</span>-->
 		<span>A free open source 2D MMORPG in development</span>
 	</router-link>
@@ -36,7 +36,7 @@
 	height: 11vw;
 	cursor: pointer;
 
-	& span {
+	& span:last-of-type {
 		display: none;
 	}
 }
@@ -45,18 +45,29 @@
 	.logo {
 		background-image: url(../assets/logo.svg);
 		background-size: 100px 100px;
-		padding: 10px 0 0 100px;
+		padding: 22px 0 0 105px;
 		font-size: 3em;
-		height: 100px;
+		letter-spacing: 1px;
+		height: 90px;
+		margin-top: 20px;
 		position: relative;
 
-		& span {
+		& span:first-of-type {
+			position: absolute;
+			left: 105px;
+			top: 4px;
+			font-size: 0.6em;
+		}
+
+		& span:last-of-type {
 			display: inline;
 			position: absolute;
 			font-family: Helvetica;
 			font-size: 0.3em;
-			top: 72px;
-			left: 110px;
+			letter-spacing: -0.8px;
+			font-weight: lighter;
+			top: 73px;
+			left: 108px;
 			text-shadow: none;
 			color: #616260;
 			font-style: oblique;
