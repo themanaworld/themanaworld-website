@@ -63,7 +63,7 @@ router.afterEach((to, from) => {
 	// scroll to the title if we're below it
 	if (mainTitle) {
 		mainTitle.scrollIntoView({
-			block: "nearest",
+			block: "nearest", // FIXME: weird behaviour in firefox!
 			inline: "nearest",
 			behavior: "smooth",
 		});

@@ -10,15 +10,26 @@
 /*
  XXX: I couldn't find the font usued in the original PNG logo so I used something
       similar-ish
-*/
+
 @import url('https://fonts.googleapis.com/css?family=Carter+One&display=swap');
+*/
+
+@font-face {
+	font-family: "CarterSubset";
+	src: url("https://gumi.ca/CarterSubset.eot");
+	src: local("@"),
+		url("https://gumi.ca/CarterSubset.woff2") format("woff2"),
+		url("https://gumi.ca/CarterSubset.woff") format("woff"),
+		url("https://gumi.ca/CarterSubset.ttf") format("truetype");
+}
 
 .logo {
 	/* this is all relative because our mobile site has to be responsive */
 	background: url(../assets/logo.svg) no-repeat left top; /* FIXME: the -small logo is fugly */
 	background-size: 12vw 12vw;
 	padding: 2vw 0 0 12vw;
-	font-family: 'Carter One', cursive;
+	font-family: "CarterSubset", cursive;
+	font-display: fallback;
 	font-size: 7vw;
 	text-shadow: 0.03ch 0.06ch #070905;
 	color: #34B039;
