@@ -10,7 +10,6 @@
 @font-face {
 	font-family: "Albertus TMW";
 	font-display: swap;
-	src: url("../assets/fonts/AlbertusTMW.eot");
 	src: url("../assets/fonts/AlbertusTMW.woff2") format("woff2"),
 		url("../assets/fonts/AlbertusTMW.woff") format("woff"),
 		url("../assets/fonts/AlbertusTMW.ttf") format("truetype");

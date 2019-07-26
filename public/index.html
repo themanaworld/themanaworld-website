@@ -2,8 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="description" content="The Mana World is a free MMORPG game for Linux, MacOS and Windows"/>
 		<link rel="icon" href="<%= BASE_URL %>favicon.ico">
 		<title><%= VUE_APP_TITLE %></title>
 	</head>
@@ -13,5 +13,15 @@
 		</noscript>
 		<div id="app"></div>
 		<!-- built files will be auto injected -->
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=<%= VUE_APP_ANALYTICS %>"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', '<%= VUE_APP_ANALYTICS %>');
+		</script>
 	</body>
 </html>

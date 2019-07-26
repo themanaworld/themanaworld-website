@@ -109,7 +109,7 @@
 
 	& .screenshots {
 		& a, & a:visited {
-			background: url(../assets/screenshot-thumb.png) no-repeat center center #CBA083;
+			background: url(../assets/screenshot-thumb.webp) no-repeat center center #CBA083;
 			border: 1px solid #784f3f;
 			margin: 5px auto;
 			padding: 0;
