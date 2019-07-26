@@ -13,13 +13,33 @@
 
 <style scoped>
 .news .entry {
-	margin-bottom: 1em;
+	margin-bottom: 0;
+	padding-bottom: 1em;
 	hyphens: auto;
 
+	&:not(:last-of-type) {
+		padding-bottom: 3em;
+	}
+
 	&:nth-of-type(1n + 2) {
-		margin-top: 3em;
 		padding-top: 1em;
 		border-top: solid 0.4ex rgba(0, 0, 0, 0.1);
+	}
+
+	&:first-child:not(:only-child) {
+		padding-top: 1em;
+		border-top: solid 0.4ex transparent;
+	}
+
+	&:nth-of-type(1n + 2), &:not(:only-child) {
+		&:hover, &:target {
+			border-color: #0000FF;
+			background-color: rgba(220,220,220,0.5);
+
+			& > .date, & > a {
+				color: #0000FF;
+			}
+		}
 	}
 
 	& > a {
@@ -30,7 +50,6 @@
 
 	& > .date {
 		float: right;
-		color: #0000FF;
 	}
 
 	& .body {
