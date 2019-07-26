@@ -8,18 +8,28 @@ module.exports = {
 	configureWebpack: {
 		plugins: [
 			new CompressionPlugin({
-				filename: '[path].br[query]',
-				algorithm: 'brotliCompress',
+				filename: "[path].br[query]",
+				algorithm: "brotliCompress",
 				test: /\.(js|css|html|svg|ico|png|webp|ttf|woff|woff2)$/,
 				compressionOptions: { level: 11 },
-				threshold: 10240,
-				minRatio: 0.8,
-				deleteOriginalAssets: false,
+				minRatio: 0.9,
 			}),
 			new CompressionPlugin({
+				filename: "[path].gz[query]",
 				compressionOptions: {
 					numiterations: 15,
 				},
+				minRatio: 0.9,
+				algorithm (input, compressionOptions, callback) {
+					return zopfli.gzip(input, compressionOptions, callback);
+				},
+			}),
+			new CompressionPlugin({
+				filename: "[path].zopfli[query]",
+				compressionOptions: {
+					numiterations: 15,
+				},
+				minRatio: 0.9,
 				algorithm (input, compressionOptions, callback) {
 					return zopfli.gzip(input, compressionOptions, callback);
 				},
