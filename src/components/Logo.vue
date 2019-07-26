@@ -9,6 +9,7 @@
 <style scoped>
 @font-face {
 	font-family: "Albertus TMW";
+	font-display: swap;
 	src: url("../assets/fonts/AlbertusTMW.eot");
 	src: url("../assets/fonts/AlbertusTMW.woff2") format("woff2"),
 		url("../assets/fonts/AlbertusTMW.woff") format("woff"),
@@ -21,7 +22,6 @@
 	background-size: 12vw 12vw;
 	padding: 2vw 0 0 12vw;
 	font-family: "Albertus TMW", "Arial Black", "Times New Roman", fantasy;
-	font-display: swap;
 	font-size: 7vw;
 	text-shadow: 0.03ch 0.07ch #070905;
 	color: #34B039;
@@ -45,6 +45,10 @@
 		margin-top: 20px;
 		position: relative;
 		text-shadow: 0.05ch 0.09ch #070905;
+
+		&::selection {
+			text-shadow: none;
+		}
 
 		& span:first-of-type {
 			position: absolute;

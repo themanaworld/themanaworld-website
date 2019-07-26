@@ -61,6 +61,13 @@
 		}
 	}
 }
+
+@media (min-width: 1100px) {
+	.news .entry {
+		padding-left: 30px;
+		padding-right: 40px;
+	}
+}
 </style>
 
 <script lang="ts">
