@@ -1,30 +1,34 @@
 <template>
 	<nav class="nav" id="nav">
-		<a href="#nav" class="hamburger"></a>
-		<ul>
-			<li><router-link :class="{ 'custom-active': isHome }" :to="{ name: 'home' }">Home</router-link></li>
-			<li><router-link :to="{ name: 'registration' }">Create Account</router-link></li>
-			<li><a href="https://wiki.themanaworld.org/index.php/Downloads">Download</a></li>
-			<li><router-link :to="{ name: 'about' }">About</router-link></li>
-			<li><a href="https://wiki.themanaworld.org/index.php/FAQ">FAQ</a></li> <!-- we might want to put FAQ under About, or put About on the wiki -->
-			<li><router-link :class="{ 'custom-active': isSupport }" :to="{ name: 'support' }">Support</router-link></li>
-			<li><a href="https://wiki.themanaworld.org/">Wiki</a></li>
-			<li><a href="https://forums.themanaworld.org/">Forums</a></li>
-		</ul>
+		<a href="#nav" class="hamburger">☰</a>
+		<div>
+			<ul>
+				<li><router-link :class="{ 'custom-active': isHome }" :to="{ name: 'home' }">Home</router-link></li>
+				<li><router-link :to="{ name: 'registration' }">Create Account</router-link></li>
+				<li><a href="https://wiki.themanaworld.org/index.php/Downloads">Download</a></li>
+				<li><router-link :to="{ name: 'about' }">About</router-link></li>
+				<li><a href="https://wiki.themanaworld.org/index.php/FAQ">FAQ</a></li> <!-- we might want to put FAQ under About, or put About on the wiki -->
+				<li><router-link :class="{ 'custom-active': isSupport }" :to="{ name: 'support' }">Support</router-link></li>
+				<li><a href="https://wiki.themanaworld.org/">Wiki</a></li>
+				<li><a href="https://forums.themanaworld.org/">Forums</a></li>
+			</ul>
+		</div>
 		<div class="server">
 			<span>Server Status</span>
 			<ServerStatus class="status"/>
 		</div>
 		<div class="screenshots">
-			<a href="https://wiki.themanaworld.org/index.php/Screenshots"></a>
+			<a href="https://wiki.themanaworld.org/index.php/Screenshots">Screenshots</a>
 		</div>
-		<ul>
+		<div>
 			<span>Source Code</span>
-			<li><a href="https://github.com/themanaworld">The Mana World</a></li>
-			<li><a href="https://gitlab.com/evol">Evol Online</a></li>
-			<li><a href="https://gitlab.com/manaplus">ManaPlus</a></li>
-			<li><a href="https://github.com/bjorn/tiled">Tiled</a></li>
-		</ul>
+			<ul>
+				<li><a href="https://github.com/themanaworld">The Mana World</a></li>
+				<li><a href="https://gitlab.com/evol">Evol Online</a></li>
+				<li><a href="https://gitlab.com/manaplus">ManaPlus</a></li>
+				<li><a href="https://github.com/bjorn/tiled">Tiled</a></li>
+			</ul>
+		</div>
 	</nav>
 </template>
 
@@ -45,20 +49,34 @@
 		color: gray(50);
 		z-index: 300;
 		display: block;
-
-		&::before {
-			content: "☰";
-		}
 	}
 
-	& ul, & div {
+	& div {
 		background: #CBA083;
-		margin: 0px;
-		padding: 0px;
+		margin: 0;
+		padding: 0;
 		border-radius: 5px;
 		border: solid 1px #2f2e32;
-		list-style: none;
 		margin-bottom: 13px;
+
+		& ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			& li {
+				margin-left: 0.8ch;
+				margin-right: 0.8ch;
+
+				&:first-of-type {
+					margin-top: 0.8ch;
+				}
+
+				&:last-of-type {
+					margin-bottom: 0.8ch;
+				}
+			}
+		}
 
 		& span {
 			text-align: center;
@@ -82,20 +100,6 @@
 		}
 	}
 
-	& ul li {
-		margin-left: 0.8ch;
-		margin-right: 0.8ch;
-
-		&:first-of-type {
-			margin-top: 0.8ch;
-		}
-
-		&:last-of-type {
-			margin-bottom: 0.8ch;
-		}
-	}
-
-
 	& .server > .status {
 		text-align: center;
 		font-weight: bolder;
@@ -115,6 +119,7 @@
 			padding: 0;
 			width: 133px;
 			height: 100px;
+			color: rgba(0, 0, 0, 0);
 
 			&:hover {
 				opacity: 0.8;

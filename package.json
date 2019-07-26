@@ -1,6 +1,9 @@
 {
   "name": "themanaworld-website",
   "version": "5.0.0",
+  "engines": {
+    "node": ">=11.7.0"
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -19,6 +22,7 @@
     "vue-script2": "^2.1.0"
   },
   "devDependencies": {
+    "@gfx/zopfli": "^1.0.14",
     "@hint/configuration-web-recommended": "^6.2.2",
     "@types/chai": "^4.1.0",
     "@types/mocha": "^5.2.4",
@@ -27,6 +31,7 @@
     "@vue/cli-service": "^3.9.3",
     "@vue/test-utils": "1.0.0-beta.29",
     "chai": "^4.1.2",
+    "compression-webpack-plugin": "^3.0.0",
     "hint": "^5.0.2",
     "postcss-preset-env": "^6.7.0",
     "typescript": "^3.5.3",

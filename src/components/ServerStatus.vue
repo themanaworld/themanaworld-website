@@ -1,7 +1,7 @@
 <template>
 	<aside>
-		<a v-if="Online && Players" target="_blank" href="https://server.themanaworld.org">Online: {{Players}} players</a>
-		<a v-if="Online && !Players" target="_blank" href="https://server.themanaworld.org">Online</a>
+		<a v-if="Online && Players" target="_blank" rel="noopener" href="https://server.themanaworld.org">Online: {{Players}} players</a>
+		<a v-if="Online && !Players" target="_blank" rel="noopener" href="https://server.themanaworld.org">Online</a>
 		<a v-if="!Online" class="offline" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ILVfzx5Pe-A">Offline</a>
 	</aside>
 </template>
@@ -9,6 +9,7 @@
 <style scoped>
 aside :any-link {
 	text-decoration: none;
+	text-shadow: 0 0 1ch #e1d6cf;
 	color: green;
 	display: block;
 	padding: 8px;
