@@ -29,6 +29,10 @@
 	z-index: 200;
 	max-width: calc(90% - 15vw);
 
+	&::selection {
+		text-shadow: none;
+	}
+
 	& span:last-of-type {
 		display: none;
 	}
@@ -43,11 +47,6 @@
 		height: 100px;
 		margin-top: 20px;
 		position: relative;
-		text-shadow: 0.05ch 0.09ch #070905;
-
-		&::selection {
-			text-shadow: none;
-		}
 
 		& span:first-of-type {
 			position: absolute;
