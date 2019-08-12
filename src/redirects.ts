@@ -23,6 +23,10 @@ const redirects = [
 			self.location.href = "https://wiki.themanaworld.org/index.php/Downloads";
 		}
 	},
+	{
+		path: "/recover",
+		redirect: { name: "support" },
+	},
 ];
 
 export default redirects;
