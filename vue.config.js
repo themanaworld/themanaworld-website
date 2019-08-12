@@ -6,7 +6,7 @@ module.exports = {
 	//integrity: true, // enable SRI in script/style tags
 	parallel: true,
 	configureWebpack: {
-		plugins: [
+		plugins: process.env.NODE_ENV === "production" ? [
 			new CompressionPlugin({
 				filename: "[path].br[query]",
 				algorithm: "brotliCompress",
@@ -34,6 +34,6 @@ module.exports = {
 					return zopfli.gzip(input, compressionOptions, callback);
 				},
 			}),
-		],
+		]: [],
 	}
 }

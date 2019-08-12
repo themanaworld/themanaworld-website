@@ -53,14 +53,11 @@
 	}
 
 	& .body {
-		margin-top: 1ex;
+		margin-top: 2ex;
 
-		& > br {
-			margin-bottom: 1em;
-		}
-
-		& b {
+		&::v-deep > b {
 			display: block;
+			margin-bottom: 1ex;
 		}
 
 		& :any-link {
@@ -80,7 +77,7 @@
 
 	& q {
 		color: #009000;
-		margin-top: 0.5em;
+		margin-top: 2ex;
 		display: inline-block;
 
 		&::before {
@@ -115,9 +112,17 @@ export default class News extends Vue {
 	@Prop({ default: 0 }) private from!: number;
 	private entries: NewsEntry[] = (newsEntries as NewsEntry[]).slice(this.from, this.count);
 
+	beautify () {
+		this.entries.forEach(entry => {
+			// FIXME: weird Vue bug
+			entry.html = entry.html.replace(/<br\/>/g,"<br></br>");
+		});
+	}
+
 	mounted () {
 		if (!process.env.VUE_APP_NEWS_JSON || !process.env.VUE_APP_NEWS_JSON.startsWith("https")) {
 			// TODO: allow arbitrary paths (no hardcoded news.json)
+			this.beautify();
 			return;
 		}
 
@@ -127,6 +132,7 @@ export default class News extends Vue {
 
 			if (newsCache !== null) {
 				this.entries = (JSON.parse(newsCache) as NewsEntry[]).slice(this.from, this.count);
+				this.beautify();
 			}
 		}
 
@@ -139,6 +145,7 @@ export default class News extends Vue {
 		.then(data => data.json())
 		.then(data => {
 			this.entries = (data as NewsEntry[]).slice(this.from, this.count);
+			this.beautify();
 
 			if (Reflect.has(self, "localStorage")) {
 				localStorage.setItem("newsCache", JSON.stringify(data));
