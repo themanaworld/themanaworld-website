@@ -55,6 +55,14 @@
 	& .body {
 		margin-top: 1ex;
 
+		& > br {
+			margin-bottom: 1em;
+		}
+
+		& b {
+			display: block;
+		}
+
 		& :any-link {
 			color: inherit;
 			text-decoration: none;
