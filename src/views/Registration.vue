@@ -15,7 +15,7 @@
 			<p>If you would rather not use reCAPTCHA, you may register by contacting us by email.</p>
 			<p>We will create a new account for you and associate it with the email address that you used to contact us.</p>
 			<br>
-			<address>sysadmin@themanaworld.org</address>
+			<address>registration@themanaworld.org</address>
 		</div>
 
 		<!-- XXX: do we want to add the game rules here? -->
