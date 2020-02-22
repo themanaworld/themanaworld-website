@@ -2,7 +2,7 @@
 	<main class="registration">
 		<h1>Account creation</h1>
 		<p>Welcome to The Mana World! With this form you can register for a new game account.</p>
-		<p>Please note that you will also need to down and install ManaPlus, our official game client.</p>
+		<p>Please note that you will also need to download and install <a href="https://wiki.themanaworld.org/index.php/Downloads" target="_blank">ManaPlus</a>, our official game client.</p>
 		<br>
 		<button v-if="!step" @click="start">Begin!</button>
 
