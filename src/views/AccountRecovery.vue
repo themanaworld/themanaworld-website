@@ -237,6 +237,10 @@ export default class Recovery extends Vue {
 			case 408:
 				this.step = -2;
 				break;
+			case 425:
+				self.alert("An email has already been sent.\nPlease check your inbox and wait before you try again.");
+				document.location.reload();
+				break;
 			case 429:
 				self.alert("Too many requests.\nPlease try again later");
 				document.location.reload();
