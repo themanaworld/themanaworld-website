@@ -19,7 +19,7 @@
 		<h1>Technical contacts</h1>
 		Legal inquiries: <address>legal@themanaworld.org</address>
 		DMCA takedown requests: <address>legal@themanaworld.org</address>
-		GDPR requests: <address>legal@themanaworld.org</address>
+		GDPR requests: <address>data@themanaworld.org</address>
 		Security disclosures:
 		<address>
 			security@themanaworld.org
