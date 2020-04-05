@@ -4,6 +4,9 @@
 		<p>Welcome to The Mana World! With this form you can register for a new game account.</p>
 		<p>Please note that you will also need to download and install <a href="https://wiki.themanaworld.org/index.php/Downloads" target="_blank">ManaPlus</a>, our official game client.</p>
 		<br>
+		<div style="background-color: #FFAAAA; text-align: center; border: 1px solid #BB5555; margin-bottom: 10px; text-color: white;">
+		<b>The apocalypse is upon us.</b> Due the Doomsday Event, during event times, powerful monsters may be found in otherwise safe areas, and sometimes even inside towns. <a href="https://forums.themanaworld.org/viewtopic.php?p=160290#p160290">Read more details here &#xffeb;</a>
+		</div>
 		<button v-if="!step" @click="start">Begin!</button>
 
 		<div v-if="step == -1">
