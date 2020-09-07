@@ -52,8 +52,8 @@ export default class ServerStatus extends Vue {
 				localStorage.setItem("serverOnline", this.Online ? "true": "false");
 			}
 		} catch (err) {
-			// API unreachable (assume it's online anyway)
-			this.Online = true;
+			// API unreachable (assume it's offline as you cannot register)
+			this.Online = false;
 		}
 
 		setTimeout(this.getStatus, 8000);
