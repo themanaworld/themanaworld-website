@@ -1,12 +1,12 @@
-# themanaworld-website
+# themanaworld-website:-
 The website of The Mana World, built with Vue and Vue-Cli.
 
-## Project setup
+## Project setup:-
 ```
 npm install
 ```
 
-### Customize configuration
+### Customize configuration:-
 The app can be configured with environment variables. See [Dotenv] for further info.
 
 
