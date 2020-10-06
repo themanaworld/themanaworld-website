@@ -1,16 +1,46 @@
 <template>
 	<main>
-		<div v-if="step == 1">
+		<div v-if="nextStep != 4">
 			<h1>Account Recovery</h1>
 			<p>Use this form if you forgot your username or password.</p>
 			<p>If it matches any account we have on file you will receive a message containing the list of your account usernames
 			along with a password reset link, should you wish to reset your password.</p>
 		</div>
 
+		<div v-if="step == -3">
+			<h1>reCAPTCHA privacy notice</h1>
+			<p>This page uses Google reCAPTCHA. By continuing, you agree to use reCAPTCHA, which may register tracking cookies in your browser.</p>
+			<p>You may review the Google Privacy Policy at <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.</p>
+
+			<button @click="start">I understand and wish to proceed</button>
+			<br><br>
+
+			<h1>Proceeding without reCAPTCHA</h1>
+			<p>If you would rather not use reCAPTCHA, you may recover your account by contacting us by email.</p>
+			<br>
+			<address>support@themanaworld.org</address>
+		</div>
+
+		<div v-if="step == -4">
+			<h1>Loading...</h1>
+			<p>Please wait while reCAPTCHA is loading...</p>
+			<br><br>
+
+			<h1>Proceeding without reCAPTCHA</h1>
+			<p>If you would rather not use reCAPTCHA, you may recover your account by contacting us by email.</p>
+			<br>
+			<address>support@themanaworld.org</address>
+		</div>
+
 		<div v-if="step == -1">
 			<h1>reCAPTCHA could not be loaded</h1>
 			<p>This page requires reCAPTCHA but something prevents it from loading.
 			If you are using an ad blocker or tracker blocker please whitelist this page and refresh to continue.</p>
+
+			<h1>Proceeding without reCAPTCHA</h1>
+			<p>If you would rather not use reCAPTCHA, you may recover your account by contacting us by email.</p>
+			<br>
+			<address>support@themanaworld.org</address>
 		</div>
 
 		<div v-if="step == 1">
@@ -125,17 +155,17 @@
 			:data-sitekey="recaptcha_key"
 			data-size="invisible">
 		</div>
-
-		<script2 src="https://www.google.com/recaptcha/api.js" unload="Reflect.deleteProperty(self, 'grecaptcha')"/>
 	</main>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator"
+import VS2 from "vue-script2"
 
 @Component
 export default class Recovery extends Vue {
-	step = 1; // no Begin button here
+	step = -3; // ask to use reCAPTCHA
+	nextStep = 1; // first step after reCAPTCHA confirmation
 	notFound = false; // no accounts found
 	visible = false; // password is visible
 	exposed = false; // password has been breached
@@ -159,20 +189,52 @@ export default class Recovery extends Vue {
 		if (token.length > 1) {
 			if (/^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$/i.test(token)) {
 				this.emailToken = token;
-				this.step = 4;
+				this.nextStep = 4; // with token: enter username to reset
 			} else {
-				this.step = -2;
+				this.step = -2; // invalid token
+				return;
 			}
 		}
 
 		// already loaded (user returned to this page)
 		if (Reflect.has(self, "grecaptcha")) {
+			if (this.step == -3) {
+				this.step = this.nextStep;
+			}
+
 			await this.$nextTick();
 			(self as any).grecaptcha.render("recaptcha-container", {
 				sitekey: process.env.VUE_APP_RECAPTCHA,
 				size: "invisible",
 			});
 			(self as any).grecaptcha.reset();
+
+			if (this.step == 1) {
+				(this.$refs.email as any).focus();
+			} else if (this.step == 4) {
+				(this.$refs.user as any).focus();
+			}
+		}
+	}
+
+	async start () {
+		(self as any).onRecaptchaLoad = async () => {
+			this.step = this.nextStep;
+			await this.$nextTick();
+
+			if (this.step == 1) {
+				(this.$refs.email as any).focus();
+			} else if (this.step == 4) {
+				(this.$refs.user as any).focus();
+			}
+		};
+
+		if (Reflect.has(self, "grecaptcha")) {
+			(self as any).onRecaptchaLoad();
+		} else {
+			// load reCAPTCHA
+			VS2.load("https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad")
+			.catch(() => this.step = -1);
 		}
 	}
 

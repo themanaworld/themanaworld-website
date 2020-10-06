@@ -4,10 +4,37 @@
 		<p>Welcome to The Mana World! With this form you can register for a new game account.</p>
 		<p>Please note that you will also need to download and install <a href="https://wiki.themanaworld.org/index.php/Downloads" target="_blank">ManaPlus</a>, our official game client.</p>
 		<br>
-		<div style="background-color: #FFAAAA; text-align: center; border: 1px solid #BB5555; margin-bottom: 10px; text-color: white;">
-		<b>The apocalypse is upon us.</b> Due the Doomsday Event, during event times, powerful monsters may be found in otherwise safe areas, and sometimes even inside towns. <a href="https://forums.themanaworld.org/viewtopic.php?p=160290#p160290">Read more details here &#xffeb;</a>
+		<div class="specialEvent">
+			<b>The apocalypse is upon us.</b> Due the Doomsday Event, during event times, powerful monsters may be found in otherwise safe areas, and sometimes even inside towns. <a href="https://forums.themanaworld.org/viewtopic.php?p=160290#p160290">Read more details here &#xffeb;</a>
 		</div>
-		<button v-if="!step" @click="start">Begin!</button>
+		<button v-if="!step" @click="isRecaptchaAccepted ? start() : step = -2">Begin!</button>
+
+		<div v-if="step == -2">
+			<h1>reCAPTCHA privacy notice</h1>
+			<p>This page uses Google reCAPTCHA. By continuing, you agree to use reCAPTCHA, which may register tracking cookies in your browser.</p>
+			<p>You may review the Google Privacy Policy at <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.</p>
+
+			<button @click="start">I understand and wish to proceed</button>
+			<br><br>
+
+			<h1>Registering without reCAPTCHA</h1>
+			<p>If you would rather not use reCAPTCHA, you may register by contacting us by email.</p>
+			<p>We will create a new account for you and associate it with the email address that you used to contact us.</p>
+			<br>
+			<address>registration@themanaworld.org</address>
+		</div>
+
+		<div v-if="step == -3">
+			<h1>Loading...</h1>
+			<p>Please wait while reCAPTCHA is loading...</p>
+			<br><br>
+
+			<h1>Registering without reCAPTCHA</h1>
+			<p>If you would rather not use reCAPTCHA, you may register by contacting us by email.</p>
+			<p>We will create a new account for you and associate it with the email address that you used to contact us.</p>
+			<br>
+			<address>registration@themanaworld.org</address>
+		</div>
 
 		<div v-if="step == -1">
 			<h1>reCAPTCHA could not be loaded</h1>
@@ -106,19 +133,25 @@
 			:data-sitekey="recaptcha_key"
 			data-size="invisible">
 		</div>
-
-		<script2 src="https://www.google.com/recaptcha/api.js" unload="Reflect.deleteProperty(self, 'grecaptcha')"/>
 	</main>
 </template>
 
 <script lang="ts">
 import Vue from "vue"
 import Component from "vue-class-component"
+import VS2 from "vue-script2"
 
 @Component({
 	beforeRouteLeave: (to, from, next) => {
 		next();
-	}
+	},
+
+	computed: {
+		isRecaptchaAccepted () {
+			// the user already agreed to use reCAPTCHA (loaded)
+			return Reflect.has(self, 'grecaptcha');
+		}
+	},
 })
 export default class Registration extends Vue {
 	step = 0;
@@ -147,9 +180,19 @@ export default class Registration extends Vue {
 	}
 
 	async start () {
-		this.step = Reflect.has(self, "grecaptcha") ? 1 : -1;
-		await this.$nextTick();
-		(this.$refs.email as any).focus();
+		(self as any).onRecaptchaLoad = async () => {
+			this.step = 1;
+			await this.$nextTick();
+			(this.$refs.email as any).focus();
+		};
+
+		if (Reflect.has(self, "grecaptcha")) {
+			(self as any).onRecaptchaLoad();
+		} else {
+			// load reCAPTCHA
+			VS2.load("https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad")
+			.catch(() => this.step = -1);
+		}
 	}
 
 	async checkEmail () {
@@ -294,6 +337,15 @@ export default class Registration extends Vue {
 <style scoped>
 form {
 	margin-top: 20px;
+}
+
+.specialEvent {
+	background-color: #FFAAAA;
+	text-align: center;
+	border: 3px outset #843732;
+	margin-bottom: 10px;
+	padding: 5px;
+	color: #843732;
 }
 
 .registration {
