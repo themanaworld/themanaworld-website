@@ -1,5 +1,6 @@
 {
     "extends": [
         "web-recommended"
-    ]
+	],
+	"connector": "jsdom"
 }

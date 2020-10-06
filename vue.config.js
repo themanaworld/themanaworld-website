@@ -1,21 +1,22 @@
 // see https://cli.vuejs.org/config
 const CompressionPlugin = require("compression-webpack-plugin");
 const zopfli = require("@gfx/zopfli");
+const zlib = require("zlib");
 
 module.exports = {
 	//integrity: true, // enable SRI in script/style tags
 	parallel: true,
 	configureWebpack: {
-		plugins: process.env.NODE_ENV === "production" ? [
+		plugins: process.env.NODE_ENV === "production" && Reflect.has(zlib, "brotliCompress") ? [
 			new CompressionPlugin({
-				filename: "[path].br[query]",
+				filename: "[file].br[query]",
 				algorithm: "brotliCompress",
 				test: /\.(js|css|html|svg|ico|png|webp|ttf|woff|woff2)$/,
 				compressionOptions: { level: 11 },
 				minRatio: 0.9,
 			}),
 			new CompressionPlugin({
-				filename: "[path].gz[query]",
+				filename: "[file].gz[query]",
 				compressionOptions: {
 					numiterations: 15,
 				},
@@ -25,7 +26,7 @@ module.exports = {
 				},
 			}),
 			new CompressionPlugin({
-				filename: "[path].zopfli[query]",
+				filename: "[file].zopfli[query]",
 				compressionOptions: {
 					numiterations: 15,
 				},
