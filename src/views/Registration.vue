@@ -5,7 +5,7 @@
 		<p>Please note that you will also need to download and install <a href="https://wiki.themanaworld.org/index.php/Downloads" target="_blank">ManaPlus</a>, our official game client.</p>
 		<br>
 		<div class="specialEvent">
-			<b>The apocalypse is upon us.</b> Due the Doomsday Event, whole towns may vanish from the map temporaly. <a href="https://forums.themanaworld.org/viewtopic.php?p=161550#p161550">Read more details here &#xffeb;</a>
+			<b>The apocalypse is upon us.</b> Due the Doomsday Event, whole towns may vanish from the map temporarily. <a href="https://forums.themanaworld.org/viewtopic.php?p=161550#p161550">Read more details here &#xffeb;</a>
 		</div>
 		<button v-if="!step" @click="isRecaptchaAccepted ? start() : step = -2">Begin!</button>
 
