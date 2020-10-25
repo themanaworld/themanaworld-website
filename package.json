@@ -6,10 +6,10 @@
   },
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --modern",
-    "build:dev": "vue-cli-service build --mode development",
-    "test:unit": "vue-cli-service test:unit",
+    "serve": "npx vue-cli-service serve",
+    "build": "npx vue-cli-service build --modern",
+    "build:dev": "npx vue-cli-service build --mode development",
+    "test:unit": "npx vue-cli-service test:unit",
     "test:accessibility": "npm run webhint",
     "webhint": "npx hint -c ./.hintrc http://127.0.0.1:8080/"
   },
