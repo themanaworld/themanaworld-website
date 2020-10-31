@@ -6,10 +6,10 @@
   },
   "private": true,
   "scripts": {
-    "serve": "npx @vue/cli-service serve",
-    "build": "npx @vue/cli-service build --modern",
-    "build:dev": "npx @vue/cli-service build --mode development",
-    "test:unit": "npx @vue/cli-service test:unit",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --modern",
+    "build:dev": "vue-cli-service build --mode development",
+    "test:unit": "vue-cli-service test:unit",
     "test:accessibility": "npm run webhint",
     "webhint": "npx hint -c ./.hintrc http://127.0.0.1:8080/"
   },
@@ -19,22 +19,22 @@
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0",
     "vue-router": "^3.1.2",
-    "vue-script2": "^2.1.0"
-  },
-  "devDependencies": {
+    "vue-script2": "^2.1.0",
     "@gfx/zopfli": "^1.0.14",
-    "@hint/configuration-web-recommended": "^8.0.7",
-    "@types/chai": "^4.2.0",
-    "@types/mocha": "^5.2.4",
     "@vue/cli-plugin-typescript": "^4.5.6",
-    "@vue/cli-plugin-unit-mocha": "^4.5.6",
     "@vue/cli-service": "^4.5.6",
-    "@vue/test-utils": "1.0.0-beta.29",
-    "chai": "^4.1.2",
     "compression-webpack-plugin": "^6.0.2",
-    "hint": "^6.1.0",
     "postcss-preset-env": "^6.7.0",
     "typescript": "^3.5.3",
     "vue-template-compiler": "^2.6.12"
+  },
+  "devDependencies": {
+    "@hint/configuration-web-recommended": "^8.0.7",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": "^5.2.4",
+    "@vue/cli-plugin-unit-mocha": "^4.5.6",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "chai": "^4.1.2",
+    "hint": "^6.1.0"
   }
 }
