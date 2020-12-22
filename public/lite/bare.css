@@ -1,0 +1,8 @@
+.nojs {
+	margin: 2em;
+	border: solid 3px orange;
+	padding: 1em;
+	background: beige;
+	color: darkblue;
+	contain: content;
+}
