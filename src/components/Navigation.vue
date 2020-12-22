@@ -58,7 +58,7 @@
 		border-radius: 5px;
 		border: solid 1px #2f2e32;
 		margin-bottom: 13px;
-		min-width: 17ch;
+		min-width: max(160px, 17ch);
 
 		& ul {
 			list-style: none;
