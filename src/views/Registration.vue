@@ -57,7 +57,7 @@
 			If you did not provide an email address you will be unable to perform password resets.</p>
 			<form @submit.prevent="checkEmail">
 				<label for="email">Enter your email (optional):</label>
-				<input v-model="user.email" type="email" maxlength="39" id="email" ref="email" placeholder="your@email.com">
+				<input v-model="user.email" type="email" maxlength="39" id="email" ref="_email" placeholder="your@email.com">
 				<button type="submit">Next step &rarr;</button>
 			</form>
 		</div>
@@ -74,7 +74,7 @@
 
 			<form @submit.prevent="checkUser">
 				<label for="user">Choose a username:</label>
-				<input @input="taken = false" v-model="user.name" type="text" id="user" ref="user" placeholder="type your username here" minlength="4" maxlength="23" pattern="^[a-zA-Z0-9]{4,23}$" title="4-23 characters, alphanumeric" required>
+				<input @input="taken = false" v-model="user.name" type="text" id="user" ref="_user" placeholder="type your username here" minlength="4" maxlength="23" pattern="^[a-zA-Z0-9]{4,23}$" title="4-23 characters, alphanumeric" required>
 				<button type="submit" v-if="user.name">Next step &rarr;</button>
 			</form>
 		</div>
@@ -93,12 +93,12 @@
 			<form @submit.prevent="checkPassword">
 				<div class="pass-box">
 					<label for="password">Choose a unique password:</label>
-					<input v-model="user.pwd" :type="visible ? 'text' : 'password'" id="password" ref="password" placeholder="type your password here" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" required>
+					<input v-model="user.pwd" :type="visible ? 'text' : 'password'" id="password" ref="_password" placeholder="type your password here" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" required>
 					<span @click="visible = !visible"></span>
 				</div>
 				<div class="pass-box">
 					<label for="password2">Confirm your password:</label>
-					<input v-model="user.pwd2" :type="visible ? 'text' : 'password'" id="password2" ref="password2" placeholder="type your password again" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" required>
+					<input v-model="user.pwd2" :type="visible ? 'text' : 'password'" id="password2" ref="_password2" placeholder="type your password again" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" required>
 					<span @click="visible = !visible"></span>
 				</div>
 				<button type="submit" v-if="user.pwd && user.pwd === user.pwd2">Next step &rarr;</button>
@@ -181,7 +181,7 @@ export default class Registration extends Vue {
 			await reCAPTCHA.load();
 			this.step = 1;
 			await this.$nextTick();
-			(this.$refs.email as HTMLInputElement).focus();
+			(this.$refs._email as HTMLInputElement).focus();
 		} catch (err) {
 			this.step = -1
 		}
@@ -190,14 +190,14 @@ export default class Registration extends Vue {
 	async checkEmail () {
 		this.step = 2;
 		await this.$nextTick();
-		(this.$refs.user as HTMLInputElement).focus();
+		(this.$refs._user as HTMLInputElement).focus();
 	}
 
 	async checkUser () {
 		// TODO: check here whether the username is taken
 		this.step = 3;
 		await this.$nextTick();
-		(this.$refs.password as HTMLInputElement).focus();
+		(this.$refs._password as HTMLInputElement).focus();
 	}
 
 	// TODO: this is not compatible with Edge! we must polyfill
@@ -245,7 +245,7 @@ export default class Registration extends Vue {
 
 			this.exposed = true;
 			await this.$nextTick();
-			(this.$refs.password as HTMLInputElement).focus();
+			(this.$refs._password as HTMLInputElement).focus();
 		} else {
 			this.exposed = false;
 			this.step = 4;
@@ -303,7 +303,7 @@ export default class Registration extends Vue {
 				this.taken = true;
 				this.step = 2;
 				await this.$nextTick();
-				(this.$refs.user as HTMLInputElement).focus();
+				(this.$refs._user as HTMLInputElement).focus();
 				break;
 			case 429:
 				self.alert("Too many requests.\nPlease try again later");

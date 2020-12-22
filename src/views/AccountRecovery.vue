@@ -54,7 +54,7 @@
 
 			<form @submit.prevent="checkEmail">
 				<label for="email">Enter your email address:</label>
-				<input @input="notFound = false" v-model="user.email" type="email" maxlength="39" id="email" ref="email" placeholder="you@mail.com" required>
+				<input @input="notFound = false" v-model="user.email" type="email" maxlength="39" id="email" ref="_email" placeholder="you@mail.com" required>
 				<button type="submit">Next step &rarr;</button>
 			</form>
 		</div>
@@ -99,7 +99,7 @@
 
 			<form @submit.prevent="checkUser">
 				<label for="user">Enter a username:</label>
-				<input v-model="user.name" type="text" id="user" ref="user" placeholder="type your username here" minlength="4" maxlength="23" pattern="^[a-zA-Z0-9]{4,23}$" title="4-23 characters, alphanumeric" required>
+				<input v-model="user.name" type="text" id="user" ref="_user" placeholder="type your username here" minlength="4" maxlength="23" pattern="^[a-zA-Z0-9]{4,23}$" title="4-23 characters, alphanumeric" required>
 				<button type="submit" v-if="user.name.length >= 4">Next step &rarr;</button>
 			</form>
 		</div>
@@ -118,12 +118,12 @@
 			<form @submit.prevent="checkPassword">
 				<div class="pass-box">
 					<label for="password">Choose a unique password:</label>
-					<input v-model="user.pwd" :type="visible ? 'text' : 'password'" id="password" ref="password" placeholder="type your password here" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" required>
+					<input v-model="user.pwd" :type="visible ? 'text' : 'password'" id="password" ref="_password" placeholder="type your password here" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" required>
 					<span @click="visible = !visible"></span>
 				</div>
 				<div class="pass-box">
 					<label for="password2">Confirm your password:</label>
-					<input v-model="user.pwd2" :type="visible ? 'text' : 'password'" id="password2" ref="password2" placeholder="type your password again" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" required>
+					<input v-model="user.pwd2" :type="visible ? 'text' : 'password'" id="password2" ref="_password2" placeholder="type your password again" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" required>
 					<span @click="visible = !visible"></span>
 				</div>
 				<button type="submit" v-if="user.pwd && user.pwd === user.pwd2">Next step &rarr;</button>
@@ -214,9 +214,9 @@ export default class Recovery extends Vue {
 			reCAPTCHA.instance.reset();
 
 			if (this.step == 1) {
-				(this.$refs.email as HTMLInputElement).focus();
+				(this.$refs._email as HTMLInputElement).focus();
 			} else if (this.step == 4) {
-				(this.$refs.user as HTMLInputElement).focus();
+				(this.$refs._user as HTMLInputElement).focus();
 			}
 		}
 	}
@@ -230,9 +230,9 @@ export default class Recovery extends Vue {
 			await this.$nextTick();
 
 			if (this.step == 1) {
-				(this.$refs.email as HTMLInputElement).focus();
+				(this.$refs._email as HTMLInputElement).focus();
 			} else if (this.step == 4) {
-				(this.$refs.user as HTMLInputElement).focus();
+				(this.$refs._user as HTMLInputElement).focus();
 			}
 		} catch (err) {
 			this.step = -1
@@ -295,7 +295,7 @@ export default class Recovery extends Vue {
 				this.step = 1;
 				reCAPTCHA.instance.reset();
 				await this.$nextTick();
-				(this.$refs.email as HTMLInputElement).focus();
+				(this.$refs._email as HTMLInputElement).focus();
 				break;
 			case 408:
 				this.step = -2;
@@ -327,7 +327,7 @@ export default class Recovery extends Vue {
 		// TODO: check if the token is valid for this username
 		this.step = reCAPTCHA.isReady ? 5 : -1;
 		await this.$nextTick();
-		(this.$refs.password as HTMLInputElement).focus();
+		(this.$refs._password as HTMLInputElement).focus();
 	}
 
 	// TODO: this is not compatible with Edge! we must polyfill
@@ -375,7 +375,7 @@ export default class Recovery extends Vue {
 
 			this.exposed = true;
 			await this.$nextTick();
-			(this.$refs.password as HTMLInputElement).focus();
+			(this.$refs._password as HTMLInputElement).focus();
 		} else {
 			this.exposed = false;
 			this.step = 6;
