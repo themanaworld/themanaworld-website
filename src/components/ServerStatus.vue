@@ -1,8 +1,8 @@
 <template>
 	<aside>
-		<a v-if="Online && Players" target="_blank" rel="noopener" href="https://server.themanaworld.org">Online: {{Players}} players</a>
-		<a v-if="Online && !Players" target="_blank" rel="noopener" href="https://server.themanaworld.org">Online</a>
-		<a v-if="!Online" class="offline" target="_blank" rel="noopener" href="https://www.youtube-nocookie.com/embed/ILVfzx5Pe-A?autoplay=1&amp;modestbranding=1">Offline</a>
+		<a v-if="Online && Players" title="View List" aria-label="view list of online players" target="_blank" rel="noopener" href="https://server.themanaworld.org">Online: {{Players}} players</a>
+		<a v-if="Online && !Players" title="View List" aria-label="view list of online players" target="_blank" rel="noopener" href="https://server.themanaworld.org">Online</a>
+		<a v-if="!Online" class="offline" title="???" aria-label="open a YouTube video" target="_blank" rel="noopener" href="https://www.youtube-nocookie.com/embed/ILVfzx5Pe-A?autoplay=1&amp;modestbranding=1">Offline</a>
 	</aside>
 </template>
 

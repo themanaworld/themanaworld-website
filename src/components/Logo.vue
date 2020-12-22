@@ -1,5 +1,5 @@
 <template>
-	<router-link tag="div" :to="{ name: 'home' }" class="logo">
+	<router-link tag="div" :to="{ name: 'home' }" class="logo" title="Go to home page" aria-label="go back to the home page">
 		<span>The </span>Mana World
 		<!--<span>Feel the mana power growing inside you</span>-->
 		<span>A free open source 2D MMORPG in development</span>
