@@ -159,10 +159,10 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator"
-import VS2 from "vue-script2"
+import { Options, Vue } from "vue-class-component";
+import reCAPTCHA from "@/reCAPTCHA";
 
-@Component
+@Options({})
 export default class Recovery extends Vue {
 	step = -3; // ask to use reCAPTCHA
 	nextStep = 1; // first step after reCAPTCHA confirmation
@@ -180,10 +180,14 @@ export default class Recovery extends Vue {
 	recaptcha_key = process.env.VUE_APP_RECAPTCHA;
 
 	async mounted () {
-		let token = document.location.hash.slice(1);
+		let token: string = document.location.hash.slice(1) as string;
 
 		if (Reflect.has(this.$route.params, "emailToken")) {
-			token = this.$route.params.emailToken;
+			token = this.$route.params.emailToken as string;
+		}
+
+		if (token.startsWith("/")) {
+			token = token.slice(1);
 		}
 
 		if (token.length > 1) {
@@ -197,49 +201,46 @@ export default class Recovery extends Vue {
 		}
 
 		// already loaded (user returned to this page)
-		if (Reflect.has(self, "grecaptcha")) {
+		if (reCAPTCHA.isReady) {
 			if (this.step == -3) {
 				this.step = this.nextStep;
 			}
 
 			await this.$nextTick();
-			(self as any).grecaptcha.render("recaptcha-container", {
+			reCAPTCHA.instance.render("recaptcha-container", {
 				sitekey: process.env.VUE_APP_RECAPTCHA,
 				size: "invisible",
 			});
-			(self as any).grecaptcha.reset();
+			reCAPTCHA.instance.reset();
 
 			if (this.step == 1) {
-				(this.$refs.email as any).focus();
+				(this.$refs.email as HTMLInputElement).focus();
 			} else if (this.step == 4) {
-				(this.$refs.user as any).focus();
+				(this.$refs.user as HTMLInputElement).focus();
 			}
 		}
 	}
 
 	async start () {
-		(self as any).onRecaptchaLoad = async () => {
+		this.step = -4;
+
+		try {
+			await reCAPTCHA.load();
 			this.step = this.nextStep;
 			await this.$nextTick();
 
 			if (this.step == 1) {
-				(this.$refs.email as any).focus();
+				(this.$refs.email as HTMLInputElement).focus();
 			} else if (this.step == 4) {
-				(this.$refs.user as any).focus();
+				(this.$refs.user as HTMLInputElement).focus();
 			}
-		};
-
-		if (Reflect.has(self, "grecaptcha")) {
-			(self as any).onRecaptchaLoad();
-		} else {
-			// load reCAPTCHA
-			VS2.load("https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad")
-			.catch(() => this.step = -1);
+		} catch (err) {
+			this.step = -1
 		}
 	}
 
 	async checkEmail () {
-		this.step = Reflect.has(self, "grecaptcha") ? 2 : -1;
+		this.step = reCAPTCHA.isReady ? 2 : -1;
 		// XXX: any actual checks needed here?
 	}
 
@@ -248,11 +249,11 @@ export default class Recovery extends Vue {
 	}
 
 	async confirm () {
-		(self as any).grecaptcha.execute();
-		let token: string = "";
+		reCAPTCHA.instance.execute();
+		let token = "";
 
 		// the recaptcha API doesn't play nice with Vue
-		while (!(token = (self as any).grecaptcha.getResponse())) {
+		while (!(token = reCAPTCHA.instance.getResponse())) {
 			await this.sleep(1000);
 		}
 
@@ -272,10 +273,10 @@ export default class Recovery extends Vue {
 			}),
 		});
 
-		const raw_response = await fetch(req);
-		const response: string = await raw_response.text();
+		const rawResponse = await fetch(req);
+		//const response: string = await rawResponse.text();
 
-		switch (raw_response.status) {
+		switch (rawResponse.status) {
 			// TODO: don't use alerts: embed the error message on the page
 			case 200:
 			case 201:
@@ -292,9 +293,9 @@ export default class Recovery extends Vue {
 			case 404:
 				this.notFound = true;
 				this.step = 1;
-				(self as any).grecaptcha.reset();
+				reCAPTCHA.instance.reset();
 				await this.$nextTick();
-				(this.$refs.email as any).focus();
+				(this.$refs.email as HTMLInputElement).focus();
 				break;
 			case 408:
 				this.step = -2;
@@ -316,7 +317,7 @@ export default class Recovery extends Vue {
 				document.location.reload();
 				break;
 			default:
-				self.alert(`Unknown error: ${raw_response.status}`);
+				self.alert(`Unknown error: ${rawResponse.status}`);
 				document.location.reload();
 				break;
 		}
@@ -324,9 +325,9 @@ export default class Recovery extends Vue {
 
 	async checkUser () {
 		// TODO: check if the token is valid for this username
-		this.step = Reflect.has(self, "grecaptcha") ? 5 : -1;
+		this.step = reCAPTCHA.isReady ? 5 : -1;
 		await this.$nextTick();
-		(this.$refs.password as any).focus();
+		(this.$refs.password as HTMLInputElement).focus();
 	}
 
 	// TODO: this is not compatible with Edge! we must polyfill
@@ -347,22 +348,22 @@ export default class Recovery extends Vue {
 	}
 
 	async checkPassword () {
-		const full_hash = await this.sha1(this.user.pwd);
-		const hash_prefix = full_hash.substring(0, 5);
-		const hash_suffix = full_hash.substring(5);
+		const fullHash = await this.sha1(this.user.pwd);
+		const hashPrefix = fullHash.substring(0, 5);
+		const hashSuffix = fullHash.substring(5);
 
-		const req = new Request(`https://api.pwnedpasswords.com/range/${hash_prefix}`, {
+		const req = new Request(`https://api.pwnedpasswords.com/range/${hashPrefix}`, {
 			mode: "cors",
 			cache: "force-cache",
 			referrer: "no-referrer",
 		});
 
-		const raw_response = await fetch(req);
-		const response: string = await raw_response.text();
+		const rawResponse = await fetch(req);
+		const response: string = await rawResponse.text();
 
 		const found = response.split("\n").some(h => {
-			const [hs, times] = h.split(":");
-			return hash_suffix.toUpperCase() === hs.toUpperCase();
+			const [hs,] = h.split(":");
+			return hashSuffix.toUpperCase() === hs.toUpperCase();
 		});
 
 		if (found) {
@@ -374,7 +375,7 @@ export default class Recovery extends Vue {
 
 			this.exposed = true;
 			await this.$nextTick();
-			(this.$refs.password as any).focus();
+			(this.$refs.password as HTMLInputElement).focus();
 		} else {
 			this.exposed = false;
 			this.step = 6;
@@ -382,11 +383,11 @@ export default class Recovery extends Vue {
 	}
 
 	async confirm2 () {
-		(self as any).grecaptcha.execute();
-		let token: string = "";
+		reCAPTCHA.instance.execute();
+		let token = "";
 
 		// the recaptcha API doesn't play nice with Vue
-		while (!(token = (self as any).grecaptcha.getResponse())) {
+		while (!(token = reCAPTCHA.instance.getResponse())) {
 			await this.sleep(1000);
 		}
 
@@ -408,10 +409,10 @@ export default class Recovery extends Vue {
 			}),
 		});
 
-		const raw_response = await fetch(req);
-		const response: string = await raw_response.text();
+		const rawResponse = await fetch(req);
+		//const response: string = await rawResponse.text();
 
-		switch (raw_response.status) {
+		switch (rawResponse.status) {
 			// TODO: don't use alerts: embed the error message on the page
 			case 200:
 			case 201:
@@ -445,7 +446,7 @@ export default class Recovery extends Vue {
 				document.location.reload();
 				break;
 			default:
-				self.alert(`Unknown error: ${raw_response.status}`);
+				self.alert(`Unknown error: ${rawResponse.status}`);
 				document.location.reload();
 				break;
 		}

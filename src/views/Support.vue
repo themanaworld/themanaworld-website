@@ -39,10 +39,9 @@ address {
 </style>
 
 <script lang="ts">
-import Vue from "vue"
-import Component from "vue-class-component"
+import { Options, Vue } from "vue-class-component";
 
-@Component
+@Options({})
 export default class Copyright extends Vue {
 	PGP = process.env.VUE_APP_PGP;
 }

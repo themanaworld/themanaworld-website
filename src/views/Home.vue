@@ -7,7 +7,7 @@
 		</div>
 
 		<h1>Recent News</h1>
-		<News count="1"/>
+		<News :count="1"/>
 		<div class="read-more">
 			<router-link :to="{ name: 'news' }">More News >></router-link>
 		</div>
@@ -33,10 +33,10 @@
 </style>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Options, Vue } from "vue-class-component";
 import News from "@/components/News.vue";
 
-@Component({
+@Options({
 	components: {
 		News,
 	},

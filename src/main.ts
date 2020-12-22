@@ -1,13 +1,8 @@
-import Vue from "vue"
-import App from "./App.vue"
-import router from "./router"
-import VS2 from "vue-script2"
-import "normalize.css"
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import "normalize.css";
 
-Vue.config.productionTip = false
-Vue.use(VS2)
+// TODO: vue-script2
 
-new Vue({
-	router,
-	render: h => h(App)
-}).$mount("#app")
+createApp(App).use(router).mount("#app");

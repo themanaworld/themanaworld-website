@@ -1,7 +1,5 @@
-declare module "*.vue" {
-	import Vue from "vue"
-	export default Vue
+declare module '*.vue' {
+  import type { DefineComponent } from 'vue'
+  const component: DefineComponent<{}, {}, any>
+  export default component
 }
-
-// vue-script2 has no types!
-declare module "vue-script2"

@@ -2,7 +2,7 @@
 	<aside>
 		<a v-if="Online && Players" target="_blank" rel="noopener" href="https://server.themanaworld.org">Online: {{Players}} players</a>
 		<a v-if="Online && !Players" target="_blank" rel="noopener" href="https://server.themanaworld.org">Online</a>
-		<a v-if="!Online" class="offline" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ILVfzx5Pe-A">Offline</a>
+		<a v-if="!Online" class="offline" target="_blank" rel="noopener" href="https://www.youtube-nocookie.com/embed/ILVfzx5Pe-A?autoplay=1&amp;modestbranding=1">Offline</a>
 	</aside>
 </template>
 
@@ -21,15 +21,14 @@ aside :any-link {
 </style>
 
 <script lang="ts">
-import Vue from "vue"
-import Component from "vue-class-component"
+import { Options, Vue } from "vue-class-component";
 
 interface StatusResponse {
 	serverStatus: string;
 	playersOnline?: number;
 }
 
-@Component
+@Options({})
 export default class ServerStatus extends Vue {
 	Players = 0;
 	Online = true;
@@ -41,8 +40,8 @@ export default class ServerStatus extends Vue {
 		});
 
 		try {
-			const raw_response = await fetch(req);
-			const data: StatusResponse = await raw_response.json();
+			const rawResponse = await fetch(req);
+			const data: StatusResponse = await rawResponse.json();
 
 			this.Online = data.serverStatus === "Online";
 			this.Players = data.playersOnline || 0;

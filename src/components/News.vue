@@ -2,11 +2,16 @@
 	<div class="news" v-if="count">
 		<span v-if="!entries.length">(no news entries)</span>
 
-		<article class="entry" v-for="entry in entries" :id="entry.id">
+		<article class="entry" v-for="entry in entries" :id="entry.id" v-bind:key="entry.id">
 			<a :href="'#' + entry.id">{{ entry.title }}</a>
 			<time :datetime="entry.date" class="date">{{ entry.date }}</time>
 			<section class="body" v-html="entry.html"></section>
 			<q>{{entry.author}}</q>
+		</article>
+		<article v-if="count > 1 && !fullyLoaded" class="entry loading">
+			<section class="body">
+				Loading... Please wait.
+			</section>
 		</article>
 	</div>
 </template>
@@ -55,7 +60,7 @@
 	& .body {
 		margin-top: 2ex;
 
-		&::v-deep > b {
+		&:deep(b) {
 			display: block;
 			margin-bottom: 1ex;
 		}
@@ -95,7 +100,7 @@
 </style>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Options, Vue } from "vue-class-component";
 import newsEntries from "@/assets/news.json";
 
 interface NewsEntry {
@@ -106,34 +111,55 @@ interface NewsEntry {
 	html: string;
 }
 
-@Component
+@Options({
+	props: {
+		count: Number,
+		from: Number,
+	}
+})
 export default class News extends Vue {
-	@Prop({ default: Infinity }) private count!: number;
-	@Prop({ default: 0 }) private from!: number;
+	private count = Infinity;
+	private from = 0;
 	private entries: NewsEntry[] = (newsEntries as NewsEntry[]).slice(this.from, this.count);
+	private fullyLoaded = false;
 
 	beautify () {
 		this.entries.forEach(entry => {
 			// FIXME: weird Vue bug
 			entry.html = entry.html.replace(/<br\/>/g,"<br></br>");
+
+			// compare the entry title with its first line:
+			const compare = `<b>${entry.title}</b><br></br>`;
+
+			if (entry.html.startsWith(compare)) {
+				// duplicate title: remove the extra one
+				entry.html = entry.html.slice(compare.length);
+			}
 		});
 	}
 
 	mounted () {
 		if (!process.env.VUE_APP_NEWS_JSON || !process.env.VUE_APP_NEWS_JSON.startsWith("https")) {
-			// TODO: allow arbitrary paths (no hardcoded news.json)
 			this.beautify();
+			// no extra news to load so end here
 			return;
 		}
 
 		// restore from cache while we're loading a fresh copy
 		if (Reflect.has(self, "localStorage")) {
-			let newsCache = localStorage.getItem("newsCache");
+			const newsCache = localStorage.getItem("newsCache");
 
 			if (newsCache !== null) {
 				this.entries = (JSON.parse(newsCache) as NewsEntry[]).slice(this.from, this.count);
-				this.beautify();
 			}
+		}
+
+		// initial rendering
+		this.beautify();
+
+		if (this.count === 1 && this.entries.length >= 1) {
+			// don't loaad extra news unprompted
+			return;
 		}
 
 		const req = new Request(process.env.VUE_APP_NEWS_JSON, {
@@ -145,13 +171,14 @@ export default class News extends Vue {
 		.then(data => data.json())
 		.then(data => {
 			this.entries = (data as NewsEntry[]).slice(this.from, this.count);
+			this.fullyLoaded = true;
 			this.beautify();
 
 			if (Reflect.has(self, "localStorage")) {
 				localStorage.setItem("newsCache", JSON.stringify(data));
 			}
 		})
-		.catch(e => {
+		.catch(() => {
 			// no news (will use cache, if any)
 		})
 	}

@@ -1,40 +1,39 @@
 {
   "name": "themanaworld-website",
-  "version": "5.0.0",
-  "engines": {
-    "node": ">=11.7.0"
-  },
+  "version": "6.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "news": "node tools/news.js",
     "build": "vue-cli-service build --modern",
-    "build:dev": "vue-cli-service build --mode development",
-    "test:unit": "vue-cli-service test:unit",
-    "test:accessibility": "npm run webhint",
+    "build:dev": "vue-cli-service build --modern --mode development",
+    "deploy": "yarn news && yarn build",
+    "test:lint": "vue-cli-service lint",
+    "test:accessibility": "yarn webhint",
     "webhint": "npx hint -c ./.hintrc http://127.0.0.1:8080/"
   },
   "dependencies": {
+    "core-js": "^3.6.5",
     "normalize.css": "^8.0.1",
-    "vue": "^2.6.12",
-    "vue-class-component": "^7.0.2",
-    "vue-property-decorator": "^8.1.0",
-    "vue-router": "^3.1.2",
-    "vue-script2": "^2.1.0"
+    "vue": "^3.0.0",
+    "vue-class-component": "^8.0.0-0",
+    "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
-    "@gfx/zopfli": "^1.0.14",
-    "@hint/configuration-web-recommended": "^8.0.7",
-    "@types/chai": "^4.2.0",
-    "@types/mocha": "^5.2.4",
-    "@vue/cli-plugin-typescript": "^4.5.6",
-    "@vue/cli-plugin-unit-mocha": "^4.5.6",
-    "@vue/cli-service": "^4.5.6",
-    "@vue/test-utils": "1.0.0-beta.29",
-    "chai": "^4.1.2",
-    "compression-webpack-plugin": "^6.0.2",
-    "hint": "^6.1.0",
+    "@gfx/zopfli": "^1.0.15",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "compression-webpack-plugin": "^6.1.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0-0",
     "postcss-preset-env": "^6.7.0",
-    "typescript": "^3.5.3",
-    "vue-template-compiler": "^2.6.12"
+    "typescript": "~3.9.3"
   }
 }

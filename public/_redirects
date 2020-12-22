@@ -1,4 +1,0 @@
-# Netlify redirects
-
-# routes everything to the single-page app
-/* /index.html 200

@@ -1,23 +1,22 @@
+
 <template>
 	<main class="main-content">
 		<h1>News archive</h1>
-		<News count="Infinity"/>
+		<News :count="Infinity"/>
 	</main>
 </template>
 
 <style scoped>
-.main-content {
-	& h1 {
-		margin-bottom: 0;
-	}
+.main-content h1 {
+	margin-bottom: 0;
 }
 </style>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Options, Vue } from "vue-class-component";
 import News from "@/components/News.vue";
 
-@Component({
+@Options({
 	components: {
 		News,
 	},
