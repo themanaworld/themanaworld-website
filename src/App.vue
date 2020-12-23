@@ -1,10 +1,8 @@
 <template>
-	<div id="app">
-		<Logo class="header"/>
-		<Navigation class="nav"/>
-		<router-view class="content"/>
-		<Copyright class="footer"/>
-	</div>
+	<Logo class="header"/>
+	<Navigation class="nav"/>
+	<router-view class="content"/>
+	<Copyright class="footer"/>
 </template>
 
 <style>
