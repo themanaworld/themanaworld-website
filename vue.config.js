@@ -1,4 +1,5 @@
 // see https://cli.vuejs.org/config
+/* eslint-disable @typescript-eslint/no-var-requires */
 const CompressionPlugin = require("compression-webpack-plugin");
 const zopfli = require("@gfx/zopfli");
 const zlib = require("zlib");
