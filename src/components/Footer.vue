@@ -1,6 +1,6 @@
 <template>
 	<footer class="footer">
-		&copy; 2004&ndash;{{ year }} The Mana World
+		&copy; 2004&ndash;{{ (new Date()).getFullYear() }} The Mana World
 	</footer>
 </template>
 
@@ -11,12 +11,3 @@
 	padding: 5px;
 }
 </style>
-
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
-
-@Options({})
-export default class Copyright extends Vue {
-	year = Reflect.construct(Date, []).getFullYear();
-}
-</script>
