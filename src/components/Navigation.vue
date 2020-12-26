@@ -93,7 +93,7 @@
 			border: solid 1px #CBA083;
 			padding: 1ch;
 
-			&:hover, &.router-link-exact-active, &.custom-active {
+			&:is(:hover, :focus), &.router-link-exact-active, &.custom-active {
 				background-color: rgba(255,255,255,0.4);
 				border: solid 1px #2f2e32;
 			}

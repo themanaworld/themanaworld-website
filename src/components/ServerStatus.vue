@@ -9,13 +9,24 @@
 <style scoped>
 aside :any-link {
 	text-decoration: none;
-	text-shadow: 0 0 1ch #e1d6cf;
-	color: green;
+	color: #0E490B;
 	display: block;
 	padding: 8px;
 
 	&.offline {
-		color: #d42424;
+		color: #810909;
+
+		&:is(:hover, :focus)::before {
+			content: "⚠️";
+			padding-right: 1em;
+			opacity: .6;
+		}
+
+		&:is(:hover, :focus):after {
+			content: "⚠️";
+			padding-left: 1em;
+			opacity: .6;
+		}
 	}
 }
 </style>

@@ -24,7 +24,7 @@
 		border-radius: 30%;
 		opacity: .6;
 
-		&:hover {
+		&:is(:hover, :focus) {
 			background: orange;
 			color: #fff;
 			opacity: 1;
