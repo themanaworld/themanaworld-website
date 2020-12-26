@@ -49,6 +49,11 @@ const router = createRouter({
 	routes,
 });
 
+router.beforeResolve((to, from, next) => {
+	self.dispatchEvent(new Event("initial-load"));
+	next();
+});
+
 router.afterEach((to,) => {
 	const mainTitle = document.querySelector("#app > .content > h1");
 

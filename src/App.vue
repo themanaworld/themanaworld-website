@@ -1,7 +1,11 @@
 <template>
 	<Logo class="header"/>
 	<Navigation class="nav"/>
-	<router-view class="content"/>
+	<router-view v-if="loaded" class="content"/>
+	<main v-else class="content" role="alert" aria-busy="true">
+		<h1>&nbsp;</h1>
+		<p>Loading...</p>
+	</main>
 	<Copyright class="footer"/>
 </template>
 
@@ -84,5 +88,13 @@ import Copyright from "@/components/Footer.vue";
 		Copyright,
 	},
 })
-export default class AppV extends Vue {}
+export default class AppV extends Vue {
+	loaded = false;
+
+	mounted () {
+		self.addEventListener("initial-load", () => {
+			this.loaded = true;
+		});
+	}
+}
 </script>
