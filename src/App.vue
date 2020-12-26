@@ -1,5 +1,6 @@
 <template>
-	<Logo class="header"/>
+	<div v-if="globalStatus" class="dialog" v-html="globalStatus"></div>
+	<Logo v-else class="header"/>
 	<Navigation class="nav"/>
 	<router-view v-if="loaded" class="content"/>
 	<main v-else class="content" role="alert" aria-busy="true">
@@ -41,6 +42,19 @@
 	& > .footer {
 		grid-area: footer;
 	}
+
+	& .dialog {
+		background: #ff0000;
+		color: #fff;
+		padding: 2em 1em 2em 1em;
+		display: block;
+		font-size: 1.5rem;
+		margin: 1rem;
+		z-index: 10000;
+		grid-area: logo;
+		border: 5px gray(95) dotted;
+	}
+
 	font-family: sans-serif;
 	color: #2c3e50;
 	width: 100%;
@@ -90,6 +104,8 @@ import Copyright from "@/components/Footer.vue";
 })
 export default class AppV extends Vue {
 	loaded = false;
+
+	globalStatus = process.env.VUE_APP_STATUS?.trim() ?? "";
 
 	mounted () {
 		self.addEventListener("initial-load", () => {

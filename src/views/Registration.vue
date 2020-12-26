@@ -4,9 +4,7 @@
 		<p>Welcome to The Mana World! With this form you can register for a new game account.</p>
 		<p>Please note that you will also need to download and install <a href="https://wiki.themanaworld.org/index.php/Downloads" target="_blank">ManaPlus</a>, our official game client.</p>
 		<br>
-		<div class="specialEvent">
-			<b>The apocalypse is upon us.</b> Due the Doomsday Event, whole towns may vanish from the map temporarily. <a href="https://forums.themanaworld.org/viewtopic.php?p=161550#p161550">Read more details here &#xffeb;</a>
-		</div>
+		<div class="specialEvent" v-if="specialEvent" v-html="specialEvent"></div>
 		<button v-if="!step" @click="isRecaptchaAccepted ? start() : step = -2">Begin!</button>
 
 		<div v-if="step == -2">
@@ -161,6 +159,8 @@ export default class Registration extends Vue {
 	};
 
 	recaptcha_key = process.env.VUE_APP_RECAPTCHA;
+
+	specialEvent = process.env.VUE_APP_EVENT?.trim() ?? ""; // special in-game events
 
 	async mounted () {
 		// already loaded (user returned to this page)
