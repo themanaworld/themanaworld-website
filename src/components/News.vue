@@ -1,12 +1,12 @@
 <template>
-	<div class="news" v-if="count">
+	<div role="feed" aria-label="TMW news" :aria-busy="count > 1 && !fullyLoaded" class="news" v-if="count">
 		<span v-if="!entries.length">(no news entries)</span>
 
-		<article class="entry" v-for="entry in entries" :id="entry.id" v-bind:key="entry.id">
-			<a :href="'#' + entry.id">{{ entry.title }}</a>
-			<time :datetime="entry.date" class="date">{{ entry.date }}</time>
-			<section class="body" v-html="entry.html"></section>
-			<q>{{entry.author}}</q>
+		<article tabindex="0" class="entry" v-for="(entry, index) in entries" :aria-posinset="index + 1" :aria-setsize="entries.length" :id="entry.id" :aria-labelledby="entry.id + '-title'" :aria-describedby="`${entry.id}-body ${entry.id}-date ${entry.id}-author`" :key="entry.id">
+			<header><a tabindex="-1" :id="entry.id + '-title'" :href="'#' + entry.id">{{ entry.title }}</a></header>
+			<time :id="entry.id + '-date'" aria-label="publication date" :datetime="entry.date" class="date">{{ entry.date }}</time>
+			<section :id="entry.id + '-body'" class="body" v-html="entry.html"></section>
+			<q :id="entry.id + '-author'" aria-label="author">{{entry.author}}</q>
 		</article>
 		<article v-if="count > 1 && !fullyLoaded" class="entry loading">
 			<section class="body">
@@ -37,20 +37,33 @@
 	}
 
 	&:nth-of-type(1n + 2), &:not(:only-child) {
-		&:hover, &:target {
+		&:hover, &:target, &:focus-within {
 			border-color: #0000FF;
 			background-color: rgba(220,220,220,0.5);
 
-			& > .date, & > a {
+			& > .date, & header > a {
 				color: #0000FF;
 			}
 		}
 	}
 
-	& > a {
-		text-decoration: none;
-		color: inherit;
-		font-weight: bold;
+	& header {
+		display: inline-block;
+		position: relative;
+
+		&> a {
+			text-decoration: none;
+			color: inherit;
+			font-weight: bold;
+
+			&:hover::before {
+				content: "⚓";
+				filter: grayscale(1) brightness(0);
+				position: absolute;
+				top: 0;
+				left: -1.6em;
+			}
+		}
 	}
 
 	& > .date {
@@ -81,7 +94,7 @@
 	}
 
 	& q {
-		color: #009000;
+		color: #136E18;
 		margin-top: 2ex;
 		display: inline-block;
 
@@ -173,6 +186,14 @@ export default class News extends Vue {
 			this.entries = (data as NewsEntry[]).slice(this.from, this.count);
 			this.fullyLoaded = true;
 			this.beautify();
+
+			if (document.location.hash) {
+				let el = null;
+
+				if ((el = document.getElementById(document.location.hash.slice(1))) !== null) {
+					el.scrollIntoView(true);
+				}
+			}
 
 			if (Reflect.has(self, "localStorage")) {
 				localStorage.setItem("newsCache", JSON.stringify(data));

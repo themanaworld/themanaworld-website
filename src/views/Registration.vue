@@ -94,12 +94,12 @@
 				<div class="pass-box">
 					<label for="password">Choose a unique password:</label>
 					<input v-model="user.pwd" :type="visible ? 'text' : 'password'" id="password" ref="_password" placeholder="type your password here" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" required>
-					<span @click="visible = !visible"></span>
+					<span role="button" :title="(visible ? 'hide' : 'show') + ' password'" aria-label="toggle password visibility" :aria-pressed="visible" @click="visible = !visible"></span>
 				</div>
 				<div class="pass-box">
 					<label for="password2">Confirm your password:</label>
 					<input v-model="user.pwd2" :type="visible ? 'text' : 'password'" id="password2" ref="_password2" placeholder="type your password again" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" required>
-					<span @click="visible = !visible"></span>
+					<span role="button" :title="(visible ? 'hide' : 'show') + ' password'" aria-label="toggle password visibility" :aria-pressed="visible" @click="visible = !visible"></span>
 				</div>
 				<button type="submit" v-if="user.pwd && user.pwd === user.pwd2">Next step &rarr;</button>
 			</form>
@@ -116,7 +116,7 @@
 			<div class="pass-box">
 				<label for="c-pass">Password:</label>
 				<input id="c-pass" disabled readonly :type="visible ? 'text' : 'password'" :value="user.pwd">
-				<span @click="visible = !visible"></span>
+				<span role="button" :title="(visible ? 'hide' : 'show') + ' password'" aria-label="toggle password visibility" :aria-pressed="visible" @click="visible = !visible"></span>
 			</div>
 			<button @click="create">Create account</button>
 		</div>
