@@ -12,7 +12,7 @@
 		</ul>
 
 		<h1 id="contact">Contact us</h1>
-		<p>On IRC: <a href="https://forums.themanaworld.org/viewforum.php?f=41" target="_blank" rel="noopener">#themanaworld on Freenode</a></p>
+		<p>On IRC: <a href="https://forums.themanaworld.org/viewforum.php?f=41" target="_blank" rel="noopener">#themanaworld on Libera Chat</a></p>
 		<p>On Discord: <a href="https://forums.themanaworld.org/viewforum.php?f=65" target="_blank" rel="noopener">The Mana World server</a></p>
 		<p>On the forums: <a href="https://forums.themanaworld.org/viewforum.php?f=3">Support and Bug reports</a></p>
 
