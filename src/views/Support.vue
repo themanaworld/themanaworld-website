@@ -25,6 +25,7 @@
 			security@themanaworld.org
 			<span v-if="PGP">(PGP: <a :href="`http://pgp.mit.edu/pks/lookup?op=get&search=${PGP}`" rel="noopener">{{PGP}}</a>)</span>
 		</address>
+		<br/>
 		<span style="font-size: smaller;"><i>The Mana World does <b>not</b> provide legal advise.</i></span>
 	</main>
 </template>
