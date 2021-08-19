@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "news": "node tools/news.js",
     "build": "vue-cli-service build --modern",
-    "build:dev": "vue-cli-service build --modern --mode development",
     "deploy": "yarn news && yarn build",
-    "test:lint": "vue-cli-service lint",
+    "build:dev": "vue-cli-service build --modern --mode development",
+    "news": "node tools/news.js",
     "test:accessibility": "yarn webhint",
+    "test:lint": "vue-cli-service lint",
     "webhint": "npx hint -c ./.hintrc http://127.0.0.1:8080/"
   },
   "dependencies": {
@@ -21,19 +21,19 @@
   },
   "devDependencies": {
     "@gfx/zopfli": "^1.0.15",
-    "@typescript-eslint/eslint-plugin": "^2.33.0",
-    "@typescript-eslint/parser": "^2.33.0",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
-    "@vue/eslint-config-typescript": "^5.0.2",
+    "@vue/eslint-config-typescript": "^7.0.0",
     "compression-webpack-plugin": "^6.1.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
     "postcss-preset-env": "^6.7.0",
-    "typescript": "~3.9.3"
+    "typescript": "~4.1.5"
   }
 }
