@@ -179,7 +179,7 @@ export default class Recovery extends Vue {
 	emailToken = "";
 	recaptcha_key = process.env.VUE_APP_RECAPTCHA;
 
-	async mounted () {
+	async mounted (): Promise<void> {
 		let token: string = document.location.hash.slice(1) as string;
 
 		if (Reflect.has(this.$route.params, "emailToken")) {
@@ -221,7 +221,7 @@ export default class Recovery extends Vue {
 		}
 	}
 
-	async start () {
+	async start (): Promise<void> {
 		this.step = -4;
 
 		try {
@@ -239,16 +239,16 @@ export default class Recovery extends Vue {
 		}
 	}
 
-	async checkEmail () {
+	async checkEmail (): Promise<void> {
 		this.step = reCAPTCHA.isReady ? 2 : -1;
 		// XXX: any actual checks needed here?
 	}
 
-	private sleep (milliseconds: number) {
+	private sleep (milliseconds: number): Promise<number> {
 		return new Promise(resolve => setTimeout(resolve, milliseconds));
 	}
 
-	async confirm () {
+	async confirm (): Promise<void> {
 		reCAPTCHA.instance.execute();
 		let token = "";
 
@@ -323,7 +323,7 @@ export default class Recovery extends Vue {
 		}
 	}
 
-	async checkUser () {
+	async checkUser (): Promise<void> {
 		// TODO: check if the token is valid for this username
 		this.step = reCAPTCHA.isReady ? 5 : -1;
 		await this.$nextTick();
@@ -347,7 +347,7 @@ export default class Recovery extends Vue {
 		return hexCodes.join("");
 	}
 
-	async checkPassword () {
+	async checkPassword (): Promise<void> {
 		const fullHash = await this.sha1(this.user.pwd);
 		const hashPrefix = fullHash.substring(0, 5);
 		const hashSuffix = fullHash.substring(5);
@@ -382,7 +382,7 @@ export default class Recovery extends Vue {
 		}
 	}
 
-	async confirm2 () {
+	async confirm2 (): Promise<void> {
 		reCAPTCHA.instance.execute();
 		let token = "";
 

@@ -3,13 +3,16 @@
 const loadHandler = "onRecaptchaLoad";
 const script = `https://www.google.com/recaptcha/api.js?onload=${loadHandler}`;
 
+// @ts-ignore
+type gRecaptchaInstance = any;
+
 export default class ReCaptchaLoader {
 	/**
 	 * asynchronously injects reCAPTCHA and resolves once fully loaded
 	 *
-	 * @return {Promise<Object>} the grecaptcha inferface
+	 * @return {Promise<gRecaptchaInstance>} the grecaptcha inferface
 	 */
-	static load () {
+	static load (): Promise<gRecaptchaInstance> {
 		return new Promise((resolve, reject) => {
 			if (Reflect.has(self, "grecaptcha")) {
 				// we already have it loaded: reset it
@@ -48,11 +51,11 @@ export default class ReCaptchaLoader {
 	/**
 	 * checks whether reCAPTCHA is ready to use
 	 */
-	static get isReady () {
+	static get isReady (): boolean {
 		return Reflect.has(self, "grecaptcha");
 	}
 
-	static get instance () {
+	static get instance (): gRecaptchaInstance {
 		return this.isReady ? Reflect.get(self, "grecaptcha"): null;
 	}
 }

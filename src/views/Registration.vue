@@ -162,7 +162,7 @@ export default class Registration extends Vue {
 
 	specialEvent = process.env.VUE_APP_EVENT?.trim() ?? ""; // special in-game events
 
-	async mounted () {
+	async mounted (): Promise<void> {
 		// already loaded (user returned to this page)
 		if (reCAPTCHA.isReady) {
 			await this.$nextTick();
@@ -174,7 +174,7 @@ export default class Registration extends Vue {
 		}
 	}
 
-	async start () {
+	async start (): Promise<void> {
 		this.step = -3;
 
 		try {
@@ -187,13 +187,13 @@ export default class Registration extends Vue {
 		}
 	}
 
-	async checkEmail () {
+	async checkEmail (): Promise<void> {
 		this.step = 2;
 		await this.$nextTick();
 		(this.$refs._user as HTMLInputElement).focus();
 	}
 
-	async checkUser () {
+	async checkUser (): Promise<void> {
 		// TODO: check here whether the username is taken
 		this.step = 3;
 		await this.$nextTick();
@@ -217,7 +217,7 @@ export default class Registration extends Vue {
 		return hexCodes.join("");
 	}
 
-	async checkPassword () {
+	async checkPassword (): Promise<void> {
 		const fullHash = await this.sha1(this.user.pwd);
 		const hashPrefix = fullHash.substring(0, 5);
 		const hashSuffix = fullHash.substring(5);
@@ -252,11 +252,11 @@ export default class Registration extends Vue {
 		}
 	}
 
-	sleep (milliseconds: number) {
+	sleep (milliseconds: number): Promise<number> {
 		return new Promise(resolve => setTimeout(resolve, milliseconds));
 	}
 
-	async create () {
+	async create (): Promise<void> {
 		reCAPTCHA.instance.execute();
 		let token = "";
 

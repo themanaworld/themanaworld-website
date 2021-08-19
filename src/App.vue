@@ -107,7 +107,7 @@ export default class AppV extends Vue {
 
 	globalStatus = process.env.VUE_APP_STATUS?.trim() ?? "";
 
-	mounted () {
+	mounted (): void {
 		self.addEventListener("initial-load", () => {
 			this.loaded = true;
 		});

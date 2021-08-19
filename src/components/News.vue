@@ -136,7 +136,7 @@ export default class News extends Vue {
 	private entries: NewsEntry[] = (newsEntries as NewsEntry[]).slice(this.from, this.count);
 	private fullyLoaded = false;
 
-	beautify () {
+	beautify (): void {
 		this.entries.forEach(entry => {
 			// FIXME: weird Vue bug
 			entry.html = entry.html.replace(/<br\/>/g,"<br></br>");
@@ -151,7 +151,7 @@ export default class News extends Vue {
 		});
 	}
 
-	mounted () {
+	mounted (): void {
 		if (!process.env.VUE_APP_NEWS_JSON || !process.env.VUE_APP_NEWS_JSON.startsWith("https")) {
 			this.beautify();
 			// no extra news to load so end here

@@ -69,7 +69,7 @@ export default class ServerStatus extends Vue {
 		setTimeout(this.getStatus, 8000);
 	}
 
-	mounted () {
+	mounted (): void {
 		// use the last cached value to populate prior to first fetch:
 		if (Reflect.has(self, "localStorage")) {
 			this.Players = +(localStorage.getItem("onlinePlayers") || 99);
