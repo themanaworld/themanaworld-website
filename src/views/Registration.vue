@@ -124,7 +124,7 @@
 			<p>Your account has been successfully created.</p>
 
 			<h1>Next steps</h1>
-			<p>To start playing, <a href="https://wiki.themanaworld.org/index.php/Downloads">download ManaPlus</a> and select the server <i>The Mana World</i>.</p>
+			<p>To start playing, <a href="https://manaplus.themanaworld.org/">download ManaPlus</a> and select the server <i>The Mana World</i>.</p>
 		</div>
 
 		<div class="g-recaptcha" id="recaptcha-container"
