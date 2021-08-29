@@ -168,7 +168,7 @@ export default class Recovery extends Vue {
 
 		// ${process.env.VUE_APP_API}
 		// https://api.tmw2.org:13370/
-		const req = new Request(`http://localhost:13370/tmwa_auth`, {
+		const req = new Request(`${process.env.VUE_APP_PYAPI}/tmwa_auth`, {
 			method: "POST",
 			mode: "no-cors",
 			cache: "no-cache",
