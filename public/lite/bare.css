@@ -6,3 +6,7 @@
 	color: darkblue;
 	contain: content;
 }
+
+none {
+	display: none;
+}
