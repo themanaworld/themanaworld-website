@@ -2,7 +2,7 @@
 	<main class="registration">
 		<h1>Account creation</h1>
 		<p>Welcome to The Mana World! With this form you can register for a new game account.</p>
-		<p>Please note that you will also need to download and install <a href="https://manaplus.themanaworld.org/" target="_blank">ManaPlus</a>, our official game client.</p>
+		<p>Please note that you will also need to download and install <a href="https://manaplus.germantmw.de/" target="_blank">ManaPlus</a>, our official game client.</p>
 		<br>
 		<div class="specialEvent" v-if="specialEvent" v-html="specialEvent"></div>
 		<button v-if="!step" @click="isRecaptchaAccepted ? start() : step = -2">Begin!</button>
@@ -124,7 +124,7 @@
 			<p>Your account has been successfully created.</p>
 
 			<h1>Next steps</h1>
-			<p>To start playing, <a href="https://manaplus.themanaworld.org/">download ManaPlus</a> and select the server <i>The Mana World</i>.</p>
+			<p>To start playing, <a href="https://manaplus.germantmw.de/">download ManaPlus</a> and select the server <i>The Mana World</i>.</p>
 
 			<h1>Troubleshooting</h1>
 			<p>Sometimes, you may get an error if you try to login right after registering. Common messages include "Password Incorrect" and "Account not found".</p>

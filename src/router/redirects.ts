@@ -20,7 +20,7 @@ const redirects = [
 	{
 		path: "/downloads.php",
 		redirect: (): void => {
-			self.location.href = "https://manaplus.themanaworld.org/";
+			self.location.href = "https://manaplus.germantmw.de/";
 		}
 	},
 	{
