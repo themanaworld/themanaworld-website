@@ -16,8 +16,9 @@
 		</ul>
 
 		<h1 id="contact">Contact us</h1>
-		<p>On IRC: <a href="https://forums.themanaworld.org/viewforum.php?f=41" target="_blank" rel="noopener">#themanaworld on Libera Chat</a></p>
-		<p>On Discord: <a href="https://forums.themanaworld.org/viewforum.php?f=65" target="_blank" rel="noopener">The Mana World server</a></p>
+		<p>On IRC: <a href="https://web.libera.chat/?channels=#themanaworld" target="_blank" rel="noopener nofollow">#themanaworld on Libera Chat</a></p>
+		<p>On Discord: <a href="https://discord.com/invite/UnY77dR" target="_blank" rel="noopener nofollow">The Mana World server</a></p>
+		<p>On Matrix: <a href="https://matrix.to/#/#tmw:matrix.org" target="_blank" rel="noopener nofollow">TMW Matrix server</a></p>
 		<p>On the forums: <a href="https://forums.themanaworld.org/viewforum.php?f=3">Support and Bug reports</a></p>
 
 		<h1>Technical contacts</h1>
