@@ -11,6 +11,7 @@
 				<li><router-link :class="{ 'custom-active': isSupport }" :to="{ name: 'support' }">Support</router-link></li>
 				<li><a href="https://wiki.themanaworld.org/">Wiki</a></li>
 				<li><a href="https://forums.themanaworld.org/">Forums</a></li>
+				<li><a href="https://policies.themanaworld.org/">Privacy, Policy & Rules</a></li>
 			</ul>
 		</div>
 		<div class="server">
