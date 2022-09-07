@@ -5,6 +5,10 @@
                 <b>NOTICE:</b> Due the crescent escalation in the conflict between Russia, Europe and US, some email-based features may eventually not work.<br/>
                 Please contact us on IRC, Matrix, Discord or ingame if you're unable to reset your password on the web portal, or if GDPR request emails fail to be delivered.
         </div>
+        <div class="dialog">
+                <b>NOTICE:</b> We are currently facing techinical issues on the backend, which may prevent you from filling the CAPTCHA.<br/>
+                Password recovery and account creation may not be working from the web interface.
+        </div>
 		<p>Please select your issue below. If you cannot find your issue, contact us.</p>
 
 		<h1>Account problems</h1>
