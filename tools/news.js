@@ -6,7 +6,7 @@
 const https = require("https");
 const fs = require("fs");
 
-const source = "https://themanaworld.github.io/tmwa-server-data/news.json";
+const source = "https://updates.tmw2.org/legacy/news.json";
 
 console.info("Acquiring news from static site...");
 
