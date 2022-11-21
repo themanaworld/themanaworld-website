@@ -24,9 +24,7 @@
 		<div>
 			<span>Source Code</span>
 			<ul>
-				<li><a href="https://github.com/themanaworld" aria-label="source code for The Mana World">The Mana World</a></li>
-				<li><a href="https://gitlab.com/evol" aria-label="source code for Evol Online">Evol Online</a></li>
-				<li><a href="https://gitlab.com/manaplus" aria-label="source code for ManaPlus">ManaPlus</a></li>
+				<li><a href="https://git.themanaworld.org/explore/groups" aria-label="source code for The Mana World">The Mana World</a></li>
 				<li><a href="https://github.com/bjorn/tiled" aria-label="source code for Tiled">Tiled</a></li>
 			</ul>
 		</div>
