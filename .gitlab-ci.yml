@@ -10,7 +10,9 @@ pages: # the job must be named pages
   script:
     - npm install yarn
     - yarn deploy
-    - mv dist public # rename the dist folder (result of npm run build)
+    - rm -rf public
+    - mkdir -p public
+    - mv dist/* public # rename the dist folder (result of npm run build)
     - find public/
   artifacts:
     paths:
