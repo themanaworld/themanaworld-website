@@ -17,7 +17,7 @@ pages: # the job must be named pages
     - yarn global add @vue/cli
     - yarn install
     - vue --version
-    - npm i @vue/cli-service
+    - npm i -g @vue/cli-service
     - yarn build
     - yarn deploy
     - rm -rf public
