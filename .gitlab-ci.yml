@@ -1,9 +1,9 @@
 before_script:
   - uname -a
-image: node:15-buster
+image: node:16-buster
 
 pages: # the job must be named pages
-  image: node:15-buster
+  image: node:16-buster
   stage: deploy
   tags:
   - linux
