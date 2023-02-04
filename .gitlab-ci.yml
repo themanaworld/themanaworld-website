@@ -9,6 +9,11 @@ pages: # the job must be named pages
   - linux
   script:
     - npm install yarn
+    - echo $PATH
+    - export PATH="$(yarn global bin):$PATH"
+    - echo $PATH
+    - yarn install
+    - yarn build
     - yarn deploy
     - rm -rf public
     - mkdir -p public
