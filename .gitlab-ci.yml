@@ -12,8 +12,10 @@ pages: # the job must be named pages
     - echo $PATH
     - export PATH="$(yarn global bin):$PATH"
     - echo $PATH
+    - yarn global add @vue/cli
     - yarn install
     - yarn build
+    - vue --version
     - yarn deploy
     - rm -rf public
     - mkdir -p public
