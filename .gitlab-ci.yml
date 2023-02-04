@@ -8,6 +8,8 @@ pages: # the job must be named pages
   tags:
   - linux
   script:
+    - rm -rf node_modules
+    - rm -rf */node_modules
     - npm install yarn
     - echo $PATH
     - export PATH="$(yarn global bin):$PATH"
