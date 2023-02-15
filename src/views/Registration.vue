@@ -5,8 +5,7 @@
 		<p>Please note that you will also need to download and install <a href="https://manaplus.germantmw.de/" target="_blank">ManaPlus</a>, our official game client.</p>
 		<br>
         <div class="dialog">
-                <b>NOTICE:</b> We are currently facing techinical issues on the backend, which may prevent you from filling the CAPTCHA.<br/>
-                You'll be able to register from the game client on the meanwhile, but conservative limits have been put in place: registering multiple accounts at once from game client may cause you to be unable to login. Please wait a hour between registrations or contact staff for assistance.
+                <b>NOTICE:</b> Accounts may take up to 15 minutes for automatic activation. No email confirmation is necessary.
         </div>
 		<div class="specialEvent" v-if="specialEvent" v-html="specialEvent"></div>
 		<button v-if="!step" @click="isRecaptchaAccepted ? start() : step = -2">Begin!</button>
