@@ -3,7 +3,7 @@
 const loadHandler = "onRecaptchaLoad";
 const script = `https://www.google.com/recaptcha/api.js?onload=${loadHandler}`;
 
-// @ts-ignore
+// eslint-disable-next-line
 type gRecaptchaInstance = any;
 
 export default class ReCaptchaLoader {
