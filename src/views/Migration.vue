@@ -167,7 +167,7 @@ export default class Recovery extends Vue {
 		console.log("Captcha OK")
 
 		// ${process.env.VUE_APP_API}
-		// https://api.tmw2.org:13370/
+		// https://api.themanaworld.org/api
 		const req = new Request(`${process.env.VUE_APP_PYAPI}/tmwa_auth`, {
 			method: "POST",
 			mode: "no-cors",
