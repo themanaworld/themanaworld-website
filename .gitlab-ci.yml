@@ -5,8 +5,6 @@ image: node:16-buster
 pages: # the job must be named pages
   image: node:16-buster
   stage: deploy
-  tags:
-  - linux
   script:
     - rm -rf node_modules
     - rm -rf */node_modules
