@@ -1,30 +1,16 @@
 before_script:
   - uname -a
-image: node:16-buster
 
 pages: # the job must be named pages
-  image: node:16-buster
+  image: node:12-buster
   stage: deploy
   script:
-    - rm -rf node_modules
-    - rm -rf */node_modules
-    - npm install yarn
-    - echo $PATH
-    - export PATH="$(yarn global bin):$PATH"
-    - echo $PATH
-    - yarn global add @vue/cli
+    - npm install --no-package-lock yarn
     - yarn install
-    - vue --version
-    - npm i -g @vue/cli-service
-    - yarn build
     - yarn deploy
     - rm -rf public
-    - mkdir -p public
-    - mv dist/* public # rename the dist folder (result of npm run build)
-    - find public/
+    - mv dist public
+    - find public
   artifacts:
     paths:
       - public # artifact path must be /public for GitLab Pages to pick it up
-  only:
-    - master
-
