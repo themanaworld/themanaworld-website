@@ -1,10 +1,6 @@
 <template>
 	<main class="support">
 		<h1>Support</h1>
-        <div class="dialog">
-                <b>NOTICE:</b> We have recently migrated our email services from Yandex 360 to Microsoft 365.<br/>
-                Please contact us on IRC, Matrix, Discord or ingame if you're unable to reset your password on the web portal, or if GDPR request emails fail to be delivered.
-        </div>
 		<p>Please select your issue below. If you cannot find your issue, contact us.</p>
 
 		<h1>Account problems</h1>
