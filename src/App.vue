@@ -26,8 +26,9 @@
 		grid-area: page;
 		background: #E1D6CF;
 		padding: 15px 15px 30px 15px;
-		border-radius: 15px 15px 0 0;
+		border-top: 1px solid #2f2e32;
 		text-align: justify;
+		line-height: 1.5em;
 		& h1 {
 			margin: 20px 0 0 0 0;
 			font-weight: bold;
@@ -46,7 +47,7 @@
 	& .dialog {
 		background: #ff0000;
 		color: #fff;
-		padding: 2em 1em 2em 1em;
+		padding: 1em;
 		display: block;
 		font-size: 1.5rem;
 		margin: 1rem;
@@ -80,9 +81,12 @@
 			background: url(assets/page_footer.webp) no-repeat left bottom #E1D6CF;
 			min-width: 890px;
 			padding-bottom: 200px;
-			border-radius: 15px 0 0 15px;
+			border: 1px solid #2f2e32;
+			border-right: none;
+			border-radius: 0 0 0 2.5ch;
 			& p {
-				margin: 0px 40px 5px 30px;
+				margin-left: 30px;
+				margin-right: 40px;
 			}
 		}
 	}
