@@ -13,9 +13,9 @@
 		<p>We are volunteer driven and encourage player participation in development. We have a long history of contributors. We try to make contributing to the game easy.</p>
 		<p>
 			<ul>
-				<li><a href="https://wiki.themanaworld.org/index.php/TMW_Team">TMW Team</a></li>
+				<li><a href="https://wiki.themanaworld.org/wiki/TMW_Team">TMW Team</a></li>
 				<li><a href="https://gitlab.com/groups/evol/-/group_members">Current contributors</a></li>
-				<li><a href="https://wiki.themanaworld.org/index.php/Dev:Contributors">Past contributors</a></li>
+				<li><a href="https://wiki.themanaworld.org/wiki/Development:Contributors">Past contributors</a></li>
 			</ul>
 		</p>
 	</main>

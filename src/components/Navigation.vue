@@ -5,9 +5,9 @@
 			<ul>
 				<li><router-link :class="{ 'custom-active': isHome }" :to="{ name: 'home' }">Home</router-link></li>
 				<li><router-link :to="{ name: 'registration' }">Create Account</router-link></li>
-				<li><a href="https://wiki.themanaworld.org/index.php/Downloads">Download</a></li>
+				<li><a href="https://wiki.themanaworld.org/wiki/Downloads">Download</a></li>
 				<li><router-link :to="{ name: 'about' }">About</router-link></li>
-				<li><a href="https://wiki.themanaworld.org/index.php/FAQ">FAQ</a></li> <!-- we might want to put FAQ under About, or put About on the wiki -->
+				<li><a href="https://wiki.themanaworld.org/wiki/FAQ">FAQ</a></li> <!-- we might want to put FAQ under About, or put About on the wiki -->
 				<li><router-link :class="{ 'custom-active': isSupport }" :to="{ name: 'support' }">Support</router-link></li>
 				<li><a href="https://wiki.themanaworld.org/">Wiki</a></li>
 				<li><a href="https://forums.themanaworld.org/">Forums</a></li>
@@ -19,7 +19,7 @@
 			<ServerStatus class="status"/>
 		</div>
 		<div class="screenshots">
-			<a href="https://wiki.themanaworld.org/index.php/Screenshots" title="Screenshots" aria-label="view screenshots">Screenshots</a>
+			<a href="https://wiki.themanaworld.org/wiki/Screenshots" title="Screenshots" aria-label="view screenshots">Screenshots</a>
 		</div>
 		<div>
 			<span>Source Code</span>
