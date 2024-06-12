@@ -5,13 +5,13 @@
 			<ul>
 				<li><router-link :class="{ 'custom-active': isHome }" :to="{ name: 'home' }">Home</router-link></li>
 				<li><router-link :to="{ name: 'registration' }">Create Account</router-link></li>
-				<li><a href="https://wiki.themanaworld.org/index.php/Downloads">Download</a></li>
+				<li><a href="https://wiki.themanaworld.org/wiki/Downloads">Download</a></li>
 				<li><router-link :to="{ name: 'about' }">About</router-link></li>
-				<li><a href="https://wiki.themanaworld.org/index.php/FAQ">FAQ</a></li> <!-- we might want to put FAQ under About, or put About on the wiki -->
+				<li><a href="https://wiki.themanaworld.org/wiki/FAQ">FAQ</a></li> <!-- we might want to put FAQ under About, or put About on the wiki -->
 				<li><router-link :class="{ 'custom-active': isSupport }" :to="{ name: 'support' }">Support</router-link></li>
 				<li><a href="https://wiki.themanaworld.org/">Wiki</a></li>
 				<li><a href="https://forums.themanaworld.org/">Forums</a></li>
-				<li><a href="https://policies.themanaworld.org/">Privacy, Policy & Rules</a></li>
+				<li><a href="https://policies.themanaworld.org/">Policies & Rules</a></li>
 			</ul>
 		</div>
 		<div class="server">
@@ -19,13 +19,13 @@
 			<ServerStatus class="status"/>
 		</div>
 		<div class="screenshots">
-			<a href="https://wiki.themanaworld.org/index.php/Screenshots" title="Screenshots" aria-label="view screenshots">Screenshots</a>
+			<a href="https://wiki.themanaworld.org/wiki/Screenshots" title="Screenshots" aria-label="view screenshots">Screenshots</a>
 		</div>
 		<div>
 			<span>Source Code</span>
 			<ul>
 				<li><a href="https://git.themanaworld.org/explore/groups" aria-label="source code for The Mana World">The Mana World</a></li>
-				<li><a href="https://github.com/bjorn/tiled" aria-label="source code for Tiled">Tiled</a></li>
+				<li><a href="https://github.com/mapeditor/tiled" aria-label="source code for Tiled">Tiled</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -35,9 +35,8 @@
 .nav {
 	background: #BA7A58;
 	color: #2f2e32;
-	border-radius: 0 0 15px 15px;
-	padding: 15px;
-	font-size: 14px;
+	border-bottom: 1px solid #2f2e32;
+	padding: 1.25ch;
 
 	& .hamburger {
 		position: absolute;
@@ -54,34 +53,22 @@
 		background: #CBA083;
 		margin: 0;
 		padding: 0;
-		border-radius: 5px;
+		border-radius: 1.25ch;
 		border: solid 1px #2f2e32;
-		margin-bottom: 13px;
+		margin-bottom: 1.25ch;
 		min-width: max(160px, 17ch);
 
 		& ul {
 			list-style: none;
 			margin: 0;
-			padding: 0;
-
-			& li {
-				margin-left: 0.8ch;
-				margin-right: 0.8ch;
-
-				&:first-of-type {
-					margin-top: 0.8ch;
-				}
-
-				&:last-of-type {
-					margin-bottom: 0.8ch;
-				}
-			}
+			padding: 0.75ch;
 		}
 
 		& span {
 			text-align: center;
+			font-size: 0.9em;
 			display: block;
-			padding: 5px;
+			padding: 0.5ch;
 			border-bottom: solid 1px #2f2e32;
 		}
 
@@ -90,7 +77,8 @@
 			text-decoration: none;
 			display: block;
 			border: solid 1px #CBA083;
-			padding: 1ch;
+			border-radius: 0.5ch;
+			padding: 0.75ch 1ch;
 
 			&:is(:hover, :focus), &.router-link-exact-active, &.custom-active {
 				background-color: rgba(255,255,255,0.4);
@@ -103,7 +91,7 @@
 		text-align: center;
 		font-weight: bolder;
 		border: 0;
-		border-radius: 0 0 5px 5px;
+		border-radius: 0 0 1.25ch 1.25ch;
 
 		&:hover {
 			background-color: rgba(255,255,255,0.4);
@@ -129,7 +117,8 @@
 
 @media (min-width: 1100px) {
 	.nav {
-		border-radius: 0 15px 15px 0;
+		border-radius: 0 2.5ch 2.5ch 0;
+		border: 1px solid #2f2e32;
 
 		& .hamburger {
 			display: none;

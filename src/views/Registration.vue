@@ -2,7 +2,7 @@
 	<main class="registration">
 		<h1>Account creation</h1>
 		<p>Welcome to The Mana World! With this form you can register for a new game account.</p>
-		<p>Please note that you will also need to download and install <a href="https://manaplus.germantmw.de/" target="_blank">ManaPlus</a>, our official game client.</p>
+		<p>Please note that you will also need to <a href="https://wiki.themanaworld.org/wiki/Downloads" target="_blank">install a suitable client</a> to play this game.</p>
 		<br>
         <div class="dialog">
                 <b>NOTICE:</b> Accounts may take up to 15 minutes for automatic activation. No email confirmation is necessary.
