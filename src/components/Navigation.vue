@@ -25,7 +25,7 @@
 			<span>Source Code</span>
 			<ul>
 				<li><a href="https://git.themanaworld.org/explore/groups" aria-label="source code for The Mana World">The Mana World</a></li>
-				<li><a href="https://github.com/bjorn/tiled" aria-label="source code for Tiled">Tiled</a></li>
+				<li><a href="https://github.com/mapeditor/tiled" aria-label="source code for Tiled">Tiled</a></li>
 			</ul>
 		</div>
 	</nav>
