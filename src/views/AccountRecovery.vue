@@ -152,7 +152,7 @@
 			<p>The password of account <q>{{user.name}}</q> has been reset.</p>
 
 			<h1>Next steps</h1>
-			<p>To start playing, <a href="https://manaplus.germantmw.de/">download ManaPlus</a> and select the server <i>The Mana World</i>.</p>
+			<p>To start playing, <a href="https://wiki.themanaworld.org/wiki/Downloads" target="_blank">install a suitable client</a> and select the server <i>The Mana World</i>.</p>
 		</div>
 
 		<div class="g-recaptcha" id="recaptcha-container"
