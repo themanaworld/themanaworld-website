@@ -6,10 +6,6 @@
 			<p>If it matches any account we have on file you will receive a message containing the list of your account usernames
 			along with a password reset link, should you wish to reset your password.</p>
 		</div>
-        <div class="dialog">
-                <b>NOTICE:</b> We are currently facing techinical issues on the backend, which may prevent you from filling the CAPTCHA.<br/>
-                Please refer to <a href="https://forums.themanaworld.org/viewtopic.php?t=21445">this forum post</a> for instructions about manually recovering accounts.
-        </div>
 
 		<div v-if="step == -3">
 			<h1>reCAPTCHA privacy notice</h1>
@@ -152,7 +148,7 @@
 			<p>The password of account <q>{{user.name}}</q> has been reset.</p>
 
 			<h1>Next steps</h1>
-			<p>To start playing, <a href="https://manaplus.germantmw.de/">download ManaPlus</a> and select the server <i>The Mana World</i>.</p>
+			<p>To start playing, <a href="https://wiki.themanaworld.org/wiki/Downloads" target="_blank">install a suitable client</a> and select the server <i>The Mana World</i>.</p>
 		</div>
 
 		<div class="g-recaptcha" id="recaptcha-container"
