@@ -79,7 +79,7 @@
 			"footer footer";
 		& > .content {
 			background: url(assets/page_footer.webp) no-repeat left bottom #E1D6CF;
-			min-width: 890px;
+			min-width: 870px;
 			padding-bottom: 200px;
 			border: 1px solid #2f2e32;
 			border-right: none;
