@@ -1,16 +1,20 @@
-before_script:
-  - uname -a
+stages:
+  - build
 
-pages: # the job must be named pages
+build:
   image: node:12-buster
-  stage: deploy
+  stage: build
+  tags:
+    - trusted
   script:
     - npm install --no-package-lock yarn
     - yarn install
     - yarn deploy
-    - rm -rf public
-    - mv dist public
-    - find public
   artifacts:
     paths:
-      - public # artifact path must be /public for GitLab Pages to pick it up
+      - dist
+    # Keep the latest successful build available indefinitely so the
+    # ansible deploy on the new server can pull from
+    # /jobs/artifacts/master/download?job=build without the build
+    # going stale and 404'ing.
+    expire_in: never
