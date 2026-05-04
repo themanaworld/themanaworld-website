@@ -158,13 +158,11 @@ export default class Recovery extends Vue {
 	async confirm () {
 		reCAPTCHA.instance.execute();
 		let token = "";
-		console.log("Confirmed")
 
 		// the recaptcha API doesn't play nice with Vue
 		while (!(token = reCAPTCHA.instance.getResponse())) {
 			await this.sleep(1000);
 		}
-		console.log("Captcha OK")
 
 		const req = new Request(`${process.env.VUE_APP_PYAPI}/tmwa_auth`, {
 			method: "POST",
@@ -184,11 +182,9 @@ export default class Recovery extends Vue {
 				totp: this.user.totp,
 			}),
 		});
-		console.log("Req OK")
 
 		const rawResponse = await fetch(req);
 		//const response: string = await rawResponse.text();
-		console.log("Reply obtained")
 
 		// FIXME: Not caught, always cause error 0
 		switch (rawResponse.status) {
