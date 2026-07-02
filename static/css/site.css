@@ -363,6 +363,17 @@
 .news .entry .body {
 	margin-top: 2ex;
 }
+#app > .content .news .body p {
+	/* the entry already carries the indent via its own padding */
+	margin-left: 0;
+	margin-right: 0;
+}
+.news .entry .body p:first-child {
+	margin-top: 0;
+}
+.news .entry .body p:last-child {
+	margin-bottom: 0;
+}
 .news .entry .body b {
 	display: block;
 	margin-bottom: 1ex;

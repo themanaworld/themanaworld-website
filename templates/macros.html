@@ -13,7 +13,21 @@
 	<article tabindex="0" class="entry" aria-posinset="{{ loop.index }}" aria-setsize="{{ entries | length }}" id="{{ entry.id }}" aria-labelledby="{{ entry.id }}-title" aria-describedby="{{ entry.id }}-body {{ entry.id }}-date {{ entry.id }}-author">
 		<header><a tabindex="-1" id="{{ entry.id }}-title" href="#{{ entry.id }}">{{ entry.title }}</a></header>
 		<time id="{{ entry.id }}-date" aria-label="publication date" datetime="{{ entry.date }}" class="date">{{ entry.date }}</time>
-		<section id="{{ entry.id }}-body" class="body">{{ body | safe }}</section>
+		{#- the feed separates paragraphs with <br/>; turn them into real
+		    paragraphs, except for segments holding a list, which may not
+		    be nested inside <p> #}
+		<section id="{{ entry.id }}-body" class="body">
+			{%- for segment in body | split(pat="<br/>") %}
+			{%- set segment = segment | trim %}
+			{%- if segment %}
+			{%- if segment is matching("<(ul|ol)[ >]") %}
+			{{ segment | safe }}
+			{%- else %}
+			<p>{{ segment | safe }}</p>
+			{%- endif %}
+			{%- endif %}
+			{%- endfor %}
+		</section>
 		<q id="{{ entry.id }}-author" aria-label="author">{{ entry.author }}</q>
 	</article>
 	{%- endfor %}
