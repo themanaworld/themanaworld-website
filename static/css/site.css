@@ -19,6 +19,11 @@
 :root {
 	background: #f1f1f1;
 }
+[hidden] {
+	/* keep the hidden attribute working on elements that set their own
+	   display (e.g. the flex form layouts) */
+	display: none !important;
+}
 
 /* Layout */
 #app {
@@ -442,6 +447,15 @@
 .recovery form,
 .migration form {
 	margin-top: 20px;
+	max-width: 36rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	text-align: left;
+}
+#app > .content form p {
+	/* cancel the global content paragraph indent inside forms */
+	margin: 0;
 }
 .specialEvent {
 	background-color: #FFAAAA;
@@ -451,93 +465,144 @@
 	padding: 5px;
 	color: #843732;
 }
-.registration label,
-.recovery label,
-.migration label {
-	display: block;
+
+#app > .content .dialog {
+	font-size: 1rem;
+	margin: 1em 0;
 }
-.registration label:nth-of-type(1n + 2),
-.recovery label:nth-of-type(1n + 2),
-.migration label:nth-of-type(1n + 2) {
-	margin-top: 1em;
+
+/* Form fields */
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
 }
-.registration .pass-box,
-.recovery .pass-box {
+.field label {
+	font-weight: 600;
+}
+.field .optional {
+	font-weight: normal;
+	opacity: 0.7;
+}
+.hint {
+	font-size: 0.85em;
+	line-height: 1.4;
+	color: #55524e;
+}
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"] {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+	padding: 0.6em 0.75em;
+	font: inherit;
+	color: #2c3e50;
+	background: #fff;
+	border: 1px solid #6f6a64;
+	border-radius: 4px;
+}
+.field input:focus-visible,
+.toggle-password:focus-visible,
+.checkbox-field input:focus-visible {
+	outline: 2px solid #2F9E33;
+	outline-offset: 1px;
+}
+.field input[aria-invalid="true"] {
+	border-color: #810909;
+}
+.field-error {
+	font-size: 0.9em;
+	font-weight: 600;
+	color: #810909;
+}
+
+/* Password fields */
+.password-box {
 	position: relative;
 }
-.registration .pass-box:nth-of-type(1n + 2),
-.recovery .pass-box:nth-of-type(1n + 2) {
-	margin-top: 1em;
+.password-box input {
+	padding-right: 3em;
 }
-.registration input,
-.recovery input,
-.migration input {
-	width: calc(100% - 2ch);
-	border: 1px solid #2f2e32;
-	font-size: 15px;
-	padding: 1ch;
-	margin-top: 0.6ch;
-}
-.registration input + .pass-box,
-.recovery input + .pass-box {
-	margin-top: 1em;
-}
-.registration input + span,
-.recovery input + span {
+.toggle-password {
 	position: absolute;
-	right: -1px;
-	top: auto;
+	top: 0;
+	right: 0;
 	bottom: 0;
-	font-size: 1.9em;
+	width: 2.6em;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none;
+	border-radius: 0 4px 4px 0;
+	font-size: 1em;
+	cursor: pointer;
+	opacity: 0.6;
+}
+.toggle-password:hover {
+	opacity: 1;
+}
+.toggle-password[aria-pressed="true"] {
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.12);
+}
+
+/* Checkboxes */
+.checkbox-field {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 0.6rem;
+	row-gap: 0.35rem;
+	align-items: start;
+	text-align: left;
+}
+.checkbox-field input[type="checkbox"] {
+	width: 1.1em;
+	height: 1.1em;
+	margin: 0.15em 0 0;
+	accent-color: #34B039;
 	cursor: pointer;
 }
-.registration input + span::after,
-.recovery input + span::after {
-	content: "👁";
-	font-family: monospace;
-	padding: 0 0.5ch 0 0.5ch;
-}
-.registration input[type="text"] + span,
-.recovery input[type="text"] + span {
-	background: rgba(0, 0, 0, 0.2);
-}
-.registration button,
-.recovery button,
-.migration button {
-	margin-top: 1em;
-	width: 100%;
-	background-color: #34B039;
-	border: 1px solid #2f2e32;
-	display: inline-block;
+.checkbox-field label {
+	font-weight: 600;
 	cursor: pointer;
-	color: #ffffff;
-	font-size: 15px;
-	font-weight: bold;
-	padding: 1ch;
-	text-decoration: none;
 }
-.registration button:hover,
-.recovery button:hover,
-.migration button:hover {
-	background-color: #2F9E33;
+.checkbox-field .hint {
+	grid-column: 2;
 }
-.registration button[disabled],
-.recovery button[disabled],
-.migration button[disabled] {
-	opacity: .5;
-	cursor: not-allowed;
+
+/* reCAPTCHA opt-in */
+.recaptcha-optin {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	padding: 0.75rem 1rem;
+	background: rgba(255, 255, 255, 0.35);
+	border: 1px solid #a99f96;
+	border-radius: 4px;
 }
-.registration > div:nth-of-type(1n + 2),
-.recovery > div:nth-of-type(1n + 2),
-.migration > div:nth-of-type(1n + 2) {
-	margin-top: 30px;
+
+/* Error and warning blocks */
+.registration .error,
+.recovery .error,
+.migration .error {
+	padding: 0.75rem 1rem;
+	background: rgba(129, 9, 9, 0.08);
+	border: 1px solid #810909;
+	border-radius: 4px;
+	color: #810909;
+	text-align: left;
+}
+.form-error {
+	white-space: pre-line;
+	font-weight: 600;
 }
 .registration .exposed,
 .recovery .exposed {
 	background: rgba(255, 0, 0, 0.1);
 	border: dashed 6px rgba(255, 0, 0, 0.9);
 	padding: 1em;
-	margin: 1em;
+	text-align: left;
 	animation-name: scary;
 	animation-duration: 2s;
 }
@@ -545,11 +610,6 @@
 .recovery .exposed a {
 	display: block;
 	margin-top: 0.7em;
-}
-.registration .error,
-.recovery .error,
-.migration .error {
-	padding: 1em;
 }
 @keyframes scary {
 	from {
@@ -561,22 +621,71 @@
 		border-color: rgba(255, 0, 0, 0.9);
 	}
 }
-
-/* reCAPTCHA opt-in */
-.recaptcha-optin input[type="checkbox"] {
-	width: auto;
-	margin-right: 1ch;
-	padding: 0;
+@media (prefers-reduced-motion: reduce) {
+	.registration .exposed,
+	.recovery .exposed {
+		animation: none;
+	}
 }
-.recaptcha-optin .consent label {
-	display: inline-block;
+
+/* result sections focused from script for screen reader announcement */
+.content div[tabindex="-1"]:focus {
+	outline: none;
+}
+
+/* Submit buttons */
+.registration button[type="submit"],
+.recovery button[type="submit"],
+.migration button[type="submit"] {
+	margin: 0;
+	width: 100%;
+	padding: 0.75em 1.2em;
+	background-color: #34B039;
+	border: 1px solid #2f2e32;
+	border-radius: 4px;
+	color: #ffffff;
+	font: inherit;
 	font-weight: bold;
 	cursor: pointer;
 }
-.form-error {
-	white-space: pre-line;
-	color: #810909;
-	font-weight: bold;
+.registration button[type="submit"]:hover:not([disabled]),
+.recovery button[type="submit"]:hover:not([disabled]),
+.migration button[type="submit"]:hover:not([disabled]) {
+	background-color: #2F9E33;
+}
+.registration button[type="submit"][disabled],
+.recovery button[type="submit"][disabled],
+.migration button[type="submit"][disabled] {
+	opacity: .5;
+	cursor: not-allowed;
+}
+
+/* Page section spacing */
+.registration > div:nth-of-type(1n + 2),
+.recovery > div:nth-of-type(1n + 2),
+.migration > div:nth-of-type(1n + 2) {
+	margin-top: 30px;
+}
+
+@media (min-width: 1100px) {
+	/* align the form and contact address with the indented paragraphs */
+	.registration form,
+	.recovery form,
+	.migration form {
+		margin-left: 30px;
+		margin-right: 40px;
+	}
+	.registration address,
+	.recovery address,
+	.migration address {
+		margin-left: 30px;
+	}
+	.registration .dialog,
+	.recovery .dialog,
+	.migration .dialog {
+		margin-left: 30px;
+		margin-right: 40px;
+	}
 }
 
 /* Not found (404) */

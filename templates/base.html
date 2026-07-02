@@ -32,8 +32,8 @@
 			{%- endif %}
 
 			{%- set path = current_path | default(value="/404.html") %}
-			<nav class="nav" id="nav">
-				<a href="#nav" class="hamburger">☰</a>
+			<nav class="nav" id="nav" aria-label="Primary">
+				<a href="#nav" class="hamburger" aria-label="jump to the navigation menu">☰</a>
 				<div>
 					<ul>
 						<li><a href="{{ get_url(path='@/_index.md') }}"{% if path == "/" or path is starting_with("/news") %} class="active"{% endif %}>Home</a></li>

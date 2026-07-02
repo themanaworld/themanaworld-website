@@ -15,27 +15,40 @@ account_form = true
 </div>
 
 <form id="migration-form" novalidate>
-<h1>TMW Legacy Data</h1>
-<p>Do note it validates the username, email and password.</p>
-<p>Your Vault Password will be set to the same password you've used in TMW Legacy. Your Vault Username is your email.</p>
-<p>If you opt for 2 Factor Authentication, you'll receive by email the secret to configure an authentication app e.g. Google Authenticator.</p>
-<p>Once enabled, you will not be able to login without it.</p>
-<label for="email">Enter your email address:</label>
-<input name="email" type="email" maxlength="39" id="email" placeholder="you@mail.com" autocomplete="email" required>
-<label for="user">Enter your username:</label>
-<input name="user" type="text" maxlength="39" id="user" placeholder="username" autocomplete="username" required>
-<label for="password">Enter your password:</label>
-<input name="pass" type="password" maxlength="39" id="password" placeholder="password" autocomplete="current-password" required>
-<label for="totp">Enable 2FA?</label>
-<input name="totp" type="checkbox" id="totp">
+<div class="field">
+<label for="email">Email address</label>
+<p class="hint" id="email-hint">The email address of your TMW Legacy account. It will become your Vault username.</p>
+<input name="email" type="email" maxlength="39" id="email" autocomplete="email" autocapitalize="none" spellcheck="false" aria-describedby="email-hint" required>
+</div>
 
-{{ recaptcha_optin() }}
+<div class="field">
+<label for="user">Username</label>
+<p class="hint" id="user-hint">Your TMW Legacy username.</p>
+<input name="user" type="text" maxlength="39" id="user" autocomplete="username" autocapitalize="none" spellcheck="false" aria-describedby="user-hint" required>
+</div>
+
+<div class="field">
+<label for="password">Password</label>
+<p class="hint" id="password-hint">Your TMW Legacy password. Your Vault password will be set to the same password.</p>
+<div class="password-box">
+<input name="pass" type="password" maxlength="39" id="password" autocomplete="current-password" aria-describedby="password-hint" required>
+<button type="button" class="toggle-password" aria-pressed="false" aria-label="show password">👁</button>
+</div>
+</div>
+
+<div class="checkbox-field">
+<input name="totp" type="checkbox" id="totp">
+<label for="totp">Enable two-factor authentication (2FA)</label>
+<p class="hint">You'll receive by email the secret to configure an authentication app, e.g. Google Authenticator. Once enabled, you will not be able to login without it.</p>
+</div>
+
+{{ recaptcha_optin(id="migration-consent") }}
 
 <div class="error form-error" role="alert" hidden></div>
-<button type="submit" disabled>Submit &rarr;</button>
+<button type="submit" disabled>Migrate account</button>
 </form>
 
-<div id="migration-success" hidden>
+<div id="migration-success" tabindex="-1" hidden>
 <h1>Migration process started</h1>
 <p>Your account migration has been requested.</p>
 <h1>Next steps</h1>

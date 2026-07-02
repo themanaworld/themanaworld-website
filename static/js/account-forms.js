@@ -158,25 +158,17 @@
 
 	/* ---------- shared form helpers ---------- */
 
-	// password visibility toggles (shared state per form, like the old site)
+	// password visibility toggles
 	function setupEyeToggles(form) {
-		var visible = false;
-		var boxes = form.querySelectorAll(".pass-box");
+		form.querySelectorAll(".password-box").forEach(function (box) {
+			var input = box.querySelector("input");
+			var toggle = box.querySelector(".toggle-password");
 
-		function update() {
-			boxes.forEach(function (box) {
-				var input = box.querySelector("input");
-				var toggle = box.querySelector("span[role=button]");
+			toggle.addEventListener("click", function () {
+				var visible = input.type === "password";
 				input.type = visible ? "text" : "password";
-				toggle.title = (visible ? "hide" : "show") + " password";
 				toggle.setAttribute("aria-pressed", String(visible));
-			});
-		}
-
-		boxes.forEach(function (box) {
-			box.querySelector("span[role=button]").addEventListener("click", function () {
-				visible = !visible;
-				update();
+				toggle.setAttribute("aria-label", (visible ? "hide" : "show") + " password");
 			});
 		});
 	}
@@ -216,6 +208,14 @@
 		document.getElementById(id).hidden = false;
 	}
 
+	// show a result section and move focus to it, so that the outcome is
+	// announced to assistive technology and in view
+	function reveal(id) {
+		var el = document.getElementById(id);
+		el.hidden = false;
+		el.focus();
+	}
+
 	function hide(id) {
 		document.getElementById(id).hidden = true;
 	}
@@ -231,6 +231,7 @@
 		var takenBox = document.getElementById("username-taken");
 		registerForm.elements.username.addEventListener("input", function () {
 			takenBox.hidden = true;
+			registerForm.elements.username.removeAttribute("aria-invalid");
 		});
 
 		registerForm.addEventListener("submit", async function (event) {
@@ -279,11 +280,11 @@
 			switch (response.status) {
 				case 201:
 					registerForm.hidden = true;
-					show("register-success");
-					document.getElementById("register-success").scrollIntoView({ block: "nearest", behavior: "smooth" });
+					reveal("register-success");
 					break;
 				case 409:
 					takenBox.hidden = false;
+					registerForm.elements.username.setAttribute("aria-invalid", "true");
 					captchaReset(registerCaptcha);
 					registerForm.elements.username.focus();
 					break;
@@ -334,6 +335,7 @@
 		var notFoundBox = document.getElementById("email-not-found");
 		recoveryForm.elements.email.addEventListener("input", function () {
 			notFoundBox.hidden = true;
+			recoveryForm.elements.email.removeAttribute("aria-invalid");
 		});
 
 		recoveryForm.addEventListener("submit", async function (event) {
@@ -375,16 +377,17 @@
 				case 200:
 				case 201:
 					recoveryForm.hidden = true;
-					show("recovery-sent");
+					reveal("recovery-sent");
 					break;
 				case 404:
 					notFoundBox.hidden = false;
+					recoveryForm.elements.email.setAttribute("aria-invalid", "true");
 					captchaReset(recoveryCaptcha);
 					recoveryForm.elements.email.focus();
 					break;
 				case 408:
 					recoveryForm.hidden = true;
-					show("reset-expired");
+					reveal("reset-expired");
 					break;
 				default:
 					showError(recoveryForm, apiError(response.status));
@@ -448,7 +451,7 @@
 				case 201:
 					document.getElementById("reset-account").textContent = resetForm.elements.username.value;
 					hide("reset-section");
-					show("reset-success");
+					reveal("reset-success");
 					break;
 				case 404:
 					showError(resetForm, "You are unauthorized to reset the password of this account.\nOnly accounts listed in the email you received can be reset.");
@@ -456,7 +459,7 @@
 					break;
 				case 408:
 					hide("reset-section");
-					show("reset-expired");
+					reveal("reset-expired");
 					break;
 				default:
 					showError(resetForm, apiError(response.status));
@@ -472,6 +475,7 @@
 
 	if (migrationForm) {
 		var migrationCaptcha = setupConsent(migrationForm);
+		setupEyeToggles(migrationForm);
 
 		migrationForm.addEventListener("submit", async function (event) {
 			event.preventDefault();
@@ -518,7 +522,7 @@
 				case 200:
 				case 201:
 					migrationForm.hidden = true;
-					show("migration-success");
+					reveal("migration-success");
 					break;
 				default:
 					showError(migrationForm, apiError(response.status));

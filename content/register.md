@@ -14,55 +14,54 @@ Welcome to The Mana World! With this form you can register for a new game accoun
 
 Please note that you will also need to <a href="https://wiki.themanaworld.org/wiki/Downloads" target="_blank">install a suitable client</a> to play this game.
 
-<br>
 <div class="dialog"><b>NOTICE:</b> Accounts may take up to 15 minutes for automatic activation. No email confirmation is necessary.</div>
 
 {{ event_notice() }}
 
 <form id="register-form" novalidate>
-<h1>Email address</h1>
-<p>We will never give your email address to someone else or send you spam.</p>
-<p>Providing an email address is entirely optional but it is the only way to request a password reset, should you loose access to your account.
-If you did not provide an email address you will be unable to perform password resets.</p>
-<label for="email">Enter your email (optional):</label>
-<input name="email" type="email" maxlength="39" id="email" placeholder="your@email.com" autocomplete="email">
-
-<h1>Username</h1>
-<p>Your username is used to log in to the game server. It is never shared with other players: only you see this name.</p>
-<p>It must contain between 4 and 23 characters. Letters and numbers only.</p>
-<div class="error taken" id="username-taken" hidden>
-<h2>Username taken</h2>
-<p>Please choose another username.</p>
+<div class="field">
+<label for="email">Email address <span class="optional">(optional)</span></label>
+<p class="hint" id="email-hint">Only used to reset your password, should you lose access to your account. We will never give it to someone else or send you spam.</p>
+<input name="email" type="email" maxlength="39" id="email" autocomplete="email" autocapitalize="none" spellcheck="false" aria-describedby="email-hint">
 </div>
-<label for="user">Choose a username:</label>
-<input name="username" type="text" id="user" placeholder="type your username here" minlength="4" maxlength="23" pattern="^[a-zA-Z0-9]{4,23}$" title="4-23 characters, alphanumeric" autocomplete="username" required>
 
-<h1>Password</h1>
-<p>Please choose a hard-to-guess password.</p>
-<p>It must contain between 8 and 23 characters. Letters and numbers only. Case-sensitive.</p>
-<div class="exposed" hidden>
-<h2>WARNING: This password is compromised</h2>
+<div class="field">
+<label for="user">Username</label>
+<p class="hint" id="user-hint">4 to 23 characters, letters and numbers only. It is used to log in to the game server and never shown to other players.</p>
+<input name="username" type="text" id="user" minlength="4" maxlength="23" pattern="^[a-zA-Z0-9]{4,23}$" title="4-23 characters, alphanumeric" autocomplete="username" autocapitalize="none" spellcheck="false" aria-describedby="user-hint" required>
+<p class="field-error" id="username-taken" role="alert" hidden>This username is already taken. Please choose another username.</p>
+</div>
+
+<div class="exposed" role="alert" hidden>
+<strong>WARNING: This password is compromised.</strong>
 This password has previously appeared in a data breach. Please use a more secure alternative.
 <a href="https://haveibeenpwned.com/Passwords" target="_blank" rel="noopener">verified by haveibeenpwned.com</a>
 </div>
-<div class="pass-box">
-<label for="password">Choose a unique password:</label>
-<input name="password" type="password" id="password" placeholder="type your password here" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" autocomplete="new-password" required>
-<span role="button" title="show password" aria-label="toggle password visibility" aria-pressed="false"></span>
+
+<div class="field">
+<label for="password">Password</label>
+<p class="hint" id="password-hint">8 to 23 characters, letters and numbers only. Case-sensitive. Please choose a hard-to-guess, unique password.</p>
+<div class="password-box">
+<input name="password" type="password" id="password" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" autocomplete="new-password" aria-describedby="password-hint" required>
+<button type="button" class="toggle-password" aria-pressed="false" aria-label="show password">👁</button>
 </div>
-<div class="pass-box">
-<label for="password2">Confirm your password:</label>
-<input name="password2" type="password" id="password2" placeholder="type your password again" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" autocomplete="new-password" required>
-<span role="button" title="show password" aria-label="toggle password visibility" aria-pressed="false"></span>
 </div>
 
-{{ recaptcha_optin() }}
+<div class="field">
+<label for="password2">Confirm password</label>
+<div class="password-box">
+<input name="password2" type="password" id="password2" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" autocomplete="new-password" required>
+<button type="button" class="toggle-password" aria-pressed="false" aria-label="show password">👁</button>
+</div>
+</div>
+
+{{ recaptcha_optin(id="register-consent") }}
 
 <div class="error form-error" role="alert" hidden></div>
 <button type="submit" disabled>Create account</button>
 </form>
 
-<div id="register-success" hidden>
+<div id="register-success" tabindex="-1" hidden>
 <h1>Thank you</h1>
 <p>Your account has been successfully created.</p>
 <h1>Next steps</h1>
