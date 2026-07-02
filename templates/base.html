@@ -4,7 +4,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<meta name="description" content="{% if page.description %}{{ page.description }}{% elif section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}"/>
-		<link rel="icon" href="{{ get_url(path='favicon.ico') }}">
+		<link rel="icon" href="{{ get_url(path='favicon.ico') }}" sizes="16x16">
+		<link rel="icon" href="{{ get_url(path='favicon.svg') }}" type="image/svg+xml">
 		<link rel="stylesheet" href="{{ get_url(path='css/normalize.css') }}">
 		<link rel="stylesheet" href="{{ get_url(path='css/site.css') }}">
 		<script defer data-domain="themanaworld.org" src="https://plausible.io/js/script.js"></script>
