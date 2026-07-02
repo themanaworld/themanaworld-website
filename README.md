@@ -61,9 +61,10 @@ configuration):
 
 - Legacy paths: `/index.php` (to the wiki), `/about.php`, `/news-feed.php`,
   `/registration.php`, `/downloads.php` (to the wiki downloads page).
-- `/recover` to `/support/`, and `/recover/username` to `/recover/password/`.
+- The SPA-era recovery URLs `/recover/password` and `/recover/username` to
+  `/recover/`, which is one page now.
 - Emailed password reset links of the form `/recover/password/<token>` (the
-  token was a path parameter in the SPA era) to `/recover/password/#<token>`,
-  the fragment the recovery page reads.
+  token was a path parameter in the SPA era) to `/recover/#<token>`, the
+  fragment the recovery page reads.
 
 [Zola]: https://www.getzola.org/

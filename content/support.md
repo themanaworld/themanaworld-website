@@ -12,7 +12,7 @@ Please select your issue below. If you cannot find your issue, contact us.
 
 # Account problems
 
-- [I forgot my username or password](/recover/password/)
+- [I forgot my username or password](/recover/)
 - [My account is banned](https://forums.themanaworld.org/viewtopic.php?f=20&t=7559)
 - [My account was compromised](https://forums.themanaworld.org/viewtopic.php?f=20&t=6472)
 

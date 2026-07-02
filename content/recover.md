@@ -94,7 +94,7 @@ This password has previously appeared in a data breach. Please use a more secure
 <p>This password reset link has expired or is invalid.</p>
 <p>Keep in mind that emailed links are only valid for 60 minutes.</p>
 <h1>Start over</h1>
-<p>You may try again in 5 minutes: <a href="/recover/password/">account recovery</a></p>
+<p>You may try again in 5 minutes: <a href="/recover/">account recovery</a></p>
 </div>
 
 <h1>Proceeding without reCAPTCHA</h1>
