@@ -1,0 +1,10 @@
++++
+sort_by = "none"
+aliases = ["index.php"]
++++
+
+# The Mana World Project
+
+The Mana World (TMW) is a serious effort to create an innovative free and open source MMORPG. TMW uses 2D graphics and aims to create a large and diverse interactive world. It is licensed under the GPL, making sure this game can't ever run away from you.
+
+<div class="read-more"><a href="/about/">Read More &raquo;</a></div>

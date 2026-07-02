@@ -1,0 +1,38 @@
+# Zola configuration
+# https://www.getzola.org/documentation/getting-started/configuration/
+
+base_url = "https://www.themanaworld.org"
+title = "The Mana World"
+description = "The Mana World is a free MMORPG game for Linux, MacOS and Windows"
+default_language = "en"
+
+# The deploy pipeline publishes this directory (see .gitlab-ci.yml)
+output_dir = "dist"
+
+compile_sass = false
+build_search_index = false
+generate_feeds = false # the news feed is published by updates.themanaworld.org
+
+[extra]
+# These values replace the VUE_APP_* environment variables of the Vue site.
+
+# Account API (former VUE_APP_API)
+api = "https://api.themanaworld.org/api"
+
+# Vault API used by the account migration form (former VUE_APP_PYAPI).
+# Note that the migration flow is currently non-functional: the Vault has
+# TMWA auth disabled and does not validate the reCAPTCHA token yet.
+pyapi = "https://api.themanaworld.org:13370"
+
+# News source (former VUE_APP_NEWS_JSON), fetched at build time
+news_json = "https://updates.themanaworld.org/news.json"
+news_rss = "https://updates.themanaworld.org/news.rss"
+
+# reCAPTCHA site key (former VUE_APP_RECAPTCHA)
+recaptcha = "6LeqvgIrAAAAAHe5xvklui6wI1NXx9xoiMJ-Tqbo"
+
+# Special event to display on the registration page (former VUE_APP_EVENT, HTML)
+event = ""
+
+# Special message to display prominently on all pages (former VUE_APP_STATUS, HTML)
+status = ""

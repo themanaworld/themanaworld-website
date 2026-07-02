@@ -1,0 +1,8 @@
+
+User-agent: *
+disallow: /api/
+allow: /
+
+sitemap: https://www.themanaworld.org/sitemap.xml
+host: themanaworld.org
+host: www.themanaworld.org

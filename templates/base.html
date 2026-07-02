@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="description" content="{% if page.description %}{{ page.description }}{% elif section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}"/>
+		<link rel="icon" href="{{ get_url(path='favicon.ico') }}">
+		<link rel="stylesheet" href="{{ get_url(path='css/normalize.css') }}">
+		<link rel="stylesheet" href="{{ get_url(path='css/site.css') }}">
+		<script defer data-domain="themanaworld.org" src="https://plausible.io/js/script.js"></script>
+		<script>
+			self.tmwConfig = {
+				api: "{{ config.extra.api | safe }}",
+				pyapi: "{{ config.extra.pyapi | safe }}",
+				recaptcha: "{{ config.extra.recaptcha | safe }}",
+			};
+		</script>
+		<script defer src="{{ get_url(path='js/server-status.js') }}"></script>
+		{%- block extra_head %}{% endblock extra_head %}
+		<title>{% block title %}{% if page.title %}{{ config.title }} - {{ page.title }}{% elif section.title %}{{ config.title }} - {{ section.title }}{% else %}{{ config.title }}{% endif %}{% endblock title %}</title>
+	</head>
+	<body>
+		<div id="app">
+			{%- set status = config.extra.status | trim %}
+			{%- if status %}
+			<div class="dialog">{{ status | safe }}</div>
+			{%- else %}
+			<a role="banner" href="{{ get_url(path='@/_index.md') }}" class="header logo" title="Go to home page" aria-label="go back to the home page">
+				<span>The </span>Mana World
+				<span>A free open source 2D MMORPG in development</span>
+			</a>
+			{%- endif %}
+
+			{%- set path = current_path | default(value="/404.html") %}
+			<nav class="nav" id="nav">
+				<a href="#nav" class="hamburger">☰</a>
+				<div>
+					<ul>
+						<li><a href="{{ get_url(path='@/_index.md') }}"{% if path == "/" or path is starting_with("/news") %} class="active"{% endif %}>Home</a></li>
+						<li><a href="{{ get_url(path='@/register.md') }}"{% if path is starting_with("/register") %} class="active"{% endif %}>Create Account</a></li>
+						<li><a href="https://wiki.themanaworld.org/wiki/Downloads">Download</a></li>
+						<li><a href="{{ get_url(path='@/about.md') }}"{% if path is starting_with("/about") %} class="active"{% endif %}>About</a></li>
+						<li><a href="https://wiki.themanaworld.org/wiki/FAQ">FAQ</a></li>
+						<li><a href="{{ get_url(path='@/support.md') }}"{% if path is starting_with("/support") or path is starting_with("/recover") %} class="active"{% endif %}>Support</a></li>
+						<li><a href="https://wiki.themanaworld.org/">Wiki</a></li>
+						<li><a href="https://forums.themanaworld.org/">Forums</a></li>
+						<li><a href="https://policies.themanaworld.org/">Policies &amp; Rules</a></li>
+					</ul>
+				</div>
+				<div class="server">
+					<span>Server Status</span>
+					<aside class="status">
+						<a id="server-status" title="View List" aria-label="view list of online players" target="_blank" rel="noopener" href="https://server.themanaworld.org">Online</a>
+					</aside>
+				</div>
+				<div class="screenshots">
+					<a href="https://wiki.themanaworld.org/wiki/Screenshots" title="Screenshots" aria-label="view screenshots">Screenshots</a>
+				</div>
+				<div>
+					<span>Source Code</span>
+					<ul>
+						<li><a href="https://git.themanaworld.org/explore/groups" aria-label="source code for The Mana World">The Mana World</a></li>
+						<li><a href="https://github.com/mapeditor/tiled" aria-label="source code for Tiled">Tiled</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			{%- block content %}{% endblock content %}
+
+			<footer class="footer">
+				&copy; 2004&ndash;{{ now() | date(format="%Y") }} The Mana World
+			</footer>
+		</div>
+		{%- block extra_js %}{% endblock extra_js %}
+	</body>
+</html>

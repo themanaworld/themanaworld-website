@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="content{% if page.extra.main_class %} {{ page.extra.main_class }}{% endif %}">
+	{{ page.content | safe }}
+</main>
+{% endblock content %}
+
+{% block extra_js %}
+{%- if page.extra.account_form %}
+<script defer src="{{ get_url(path='js/account-forms.js') }}"></script>
+{%- endif %}
+{% endblock extra_js %}

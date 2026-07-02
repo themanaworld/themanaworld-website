@@ -1,0 +1,21 @@
+{% macro news_entries(entries) %}
+<div role="feed" aria-label="TMW news" class="news">
+	{%- if entries | length == 0 %}
+	<span>(no news entries)</span>
+	{%- endif %}
+	{%- for entry in entries %}
+	{%- set body = entry.html %}
+	{#- when the entry body starts with a copy of its title, remove the extra one #}
+	{%- set compare = "<b>" ~ entry.title ~ "</b><br/>" %}
+	{%- if body is starting_with(compare) %}
+		{%- set body = body | trim_start_matches(pat=compare) %}
+	{%- endif %}
+	<article tabindex="0" class="entry" aria-posinset="{{ loop.index }}" aria-setsize="{{ entries | length }}" id="{{ entry.id }}" aria-labelledby="{{ entry.id }}-title" aria-describedby="{{ entry.id }}-body {{ entry.id }}-date {{ entry.id }}-author">
+		<header><a tabindex="-1" id="{{ entry.id }}-title" href="#{{ entry.id }}">{{ entry.title }}</a></header>
+		<time id="{{ entry.id }}-date" aria-label="publication date" datetime="{{ entry.date }}" class="date">{{ entry.date }}</time>
+		<section id="{{ entry.id }}-body" class="body">{{ body | safe }}</section>
+		<q id="{{ entry.id }}-author" aria-label="author">{{ entry.author }}</q>
+	</article>
+	{%- endfor %}
+</div>
+{% endmacro news_entries %}

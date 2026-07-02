@@ -2,14 +2,18 @@ stages:
   - build
 
 build:
-  image: node:12-buster
+  # The official ghcr.io/getzola/zola image only contains the zola binary
+  # (no shell), which the GitLab docker executor cannot run scripts in, so
+  # install a pinned zola release into a plain alpine image instead.
+  image: alpine:3.22
   stage: build
   tags:
     - trusted
+  variables:
+    ZOLA_VERSION: v0.22.1
   script:
-    - npm install --no-package-lock yarn
-    - yarn install
-    - yarn deploy
+    - wget -qO- "https://github.com/getzola/zola/releases/download/${ZOLA_VERSION}/zola-${ZOLA_VERSION}-x86_64-unknown-linux-musl.tar.gz" | tar xz -C /usr/local/bin zola
+    - zola build
   artifacts:
     paths:
       - dist

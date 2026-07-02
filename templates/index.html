@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block content %}
+<main class="content home">
+	{{ section.content | safe }}
+
+	<h1>Recent News</h1>
+	{%- set news = load_data(url=config.extra.news_json, format="json") %}
+	{{ macros::news_entries(entries=news | slice(end=1)) }}
+	<div class="read-more">
+		<a href="{{ get_url(path='@/news.md') }}">More News &raquo;</a>
+	</div>
+</main>
+{% endblock content %}

@@ -1,18 +1,10 @@
 This website is built with the following third-party projects:
 
-- [TypeScript] (Microsoft)
-- [Node.js] (Node.js Foundation, Joyent)
-	- [npm] (npm Inc.)
-- [Vue.js] (Evan You)
-	- [Vue CLI] (Evan You)
-- [PostCSS] (Evil Martians)
+- [Zola]
+- [normalize.css] (Nicolas Gallagher, Jonathan Neal)
 - [Albertus] (Berthold Wolpe, Miles Inc, Hewlett-Packard, ElseWare)
 
 
-[TypeScript]: http://www.typescriptlang.org/
-[Node.js]: https://nodejs.org/
-[npm]: https://www.npmjs.com/
-[Vue.js]: https://vuejs.org/
-[Vue CLI]: https://cli.vuejs.org/
-[PostCSS]: https://postcss.org/
+[Zola]: https://www.getzola.org/
+[normalize.css]: https://necolas.github.io/normalize.css/
 [Albertus]: https://github.com/greyscalepress/font-specimens/tree/master/fonts/encore_des_fontes_manu/A028
