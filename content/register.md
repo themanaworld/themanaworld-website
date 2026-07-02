@@ -1,7 +1,6 @@
 +++
 title = "Registration"
 template = "page.html"
-aliases = ["registration.php"]
 
 [extra]
 main_class = "registration"

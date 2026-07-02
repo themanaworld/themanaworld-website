@@ -1,7 +1,6 @@
 +++
 title = "About"
 template = "page.html"
-aliases = ["about.php"]
 
 [extra]
 main_class = "about"

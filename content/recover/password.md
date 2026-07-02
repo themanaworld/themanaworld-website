@@ -1,7 +1,6 @@
 +++
 title = "Account recovery"
 template = "page.html"
-aliases = ["recover/username"]
 
 [extra]
 main_class = "recovery"

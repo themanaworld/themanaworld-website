@@ -303,14 +303,9 @@
 	var emailToken = "";
 
 	if (recoveryForm) {
-		// an emailed reset link carries a token, either in the fragment or,
-		// on the old site, in the path (the 404 page forwards the latter)
+		// an emailed reset link carries a token in the fragment (the
+		// webserver forwards SPA-era path tokens here)
 		var token = self.location.hash.slice(1);
-		var match = self.location.pathname.match(/^\/recover\/(?:password|username)\/(.+)$/);
-
-		if (match) {
-			token = decodeURIComponent(match[1]);
-		}
 
 		if (token.startsWith("/")) {
 			token = token.slice(1);

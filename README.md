@@ -53,22 +53,17 @@ an artifact, which the ansible deploy pulls from
 `/jobs/artifacts/master/download?job=build`.
 
 The site can be served by any static file server. Unlike the previous Vue
-single-page app, no rewrite of all routes to `index.html` is needed. Two
-things are worth configuring on the server:
+single-page app, no rewrite of all routes to `index.html` is needed; the
+server should serve `404.html` for unknown paths instead. Redirects are
+deliberately not part of the generated site and are expected from the
+webserver (see the website-www role in the ansible repository for the live
+configuration):
 
-- Serve `404.html` for unknown paths. Emailed password reset links of the
-  form `/recover/password/<token>` rely on this: the 404 page forwards the
-  token to `/recover/password/#<token>`. Alternatively, rewrite those paths
-  directly:
-
-  ```nginx
-  location ~ ^/recover/(password|username)/(?<token>[0-9a-f-]+)$ {
-      return 302 /recover/$1/#$token;
-  }
-  ```
-
-- Legacy `.php` paths (`/index.php`, `/about.php`, `/news-feed.php`,
-  `/registration.php`, `/downloads.php`) are covered by generated redirect
-  pages, but make sure the server does not try to interpret them as PHP.
+- Legacy paths: `/index.php` (to the wiki), `/about.php`, `/news-feed.php`,
+  `/registration.php`, `/downloads.php` (to the wiki downloads page).
+- `/recover` to `/support/`, and `/recover/username` to `/recover/password/`.
+- Emailed password reset links of the form `/recover/password/<token>` (the
+  token was a path parameter in the SPA era) to `/recover/password/#<token>`,
+  the fragment the recovery page reads.
 
 [Zola]: https://www.getzola.org/

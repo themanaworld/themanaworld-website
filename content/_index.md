@@ -1,6 +1,5 @@
 +++
 sort_by = "none"
-aliases = ["index.php"]
 +++
 
 # The Mana World Project

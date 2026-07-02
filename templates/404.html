@@ -9,17 +9,3 @@
 	<p><a href="{{ get_url(path='@/_index.md') }}">back to home page</a></p>
 </main>
 {% endblock content %}
-
-{% block extra_js %}
-<script>
-	// Password reset emails link to /recover/password/<token>, a path that
-	// only existed by virtue of the old SPA rewriting. Forward the token to
-	// the static recovery page as a fragment.
-	(function () {
-		var match = self.location.pathname.match(/^\/recover\/(password|username)\/(.+)$/);
-		if (match) {
-			self.location.replace("/recover/" + match[1] + "/#" + match[2]);
-		}
-	})();
-</script>
-{% endblock extra_js %}
