@@ -38,7 +38,6 @@ along with a password reset link, should you wish to reset your password.</p>
 <h1>Next steps</h1>
 <p>If you wish to reset the password of your accounts, click the provided link in the email you received.</p>
 <p>This link is only valid once: if you wish to reset more than one password you will have to repeat the process.</p>
-<br><br><br>
 <h1>Can't find the account you were looking for?</h1>
 <p>Double-check the email address you entered; You might have used a different address when you created the account or you might have omitted to provide an email address.</p>
 <h1>Still need help?</h1>
@@ -56,12 +55,6 @@ along with a password reset link, should you wish to reset your password.</p>
 <input name="username" type="text" id="user" minlength="4" maxlength="23" pattern="^[a-zA-Z0-9]{4,23}$" title="4-23 characters, alphanumeric" autocomplete="username" autocapitalize="none" spellcheck="false" aria-describedby="user-hint" required>
 </div>
 
-<div class="exposed" role="alert" hidden>
-<strong>WARNING: This password is compromised.</strong>
-This password has previously appeared in a data breach. Please use a more secure alternative.
-<a href="https://haveibeenpwned.com/Passwords" target="_blank" rel="noopener">verified by haveibeenpwned.com</a>
-</div>
-
 <div class="field">
 <label for="password">New password</label>
 <p class="hint" id="password-hint">8 to 23 characters, letters and numbers only. Case-sensitive. Please choose a hard-to-guess, unique password.</p>
@@ -69,6 +62,12 @@ This password has previously appeared in a data breach. Please use a more secure
 <input name="password" type="password" id="password" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" autocomplete="new-password" aria-describedby="password-hint" required>
 <button type="button" class="toggle-password" aria-pressed="false" aria-label="show password">👁</button>
 </div>
+</div>
+
+<div class="exposed" role="alert" hidden>
+<strong>WARNING: This password is compromised.</strong>
+This password has previously appeared in a data breach. Please use a more secure alternative.
+<a href="https://haveibeenpwned.com/Passwords" target="_blank" rel="noopener">verified by haveibeenpwned.com</a>
 </div>
 
 {{ recaptcha_optin(id="reset-consent") }}

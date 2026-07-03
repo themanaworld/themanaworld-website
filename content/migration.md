@@ -58,7 +58,6 @@ account_form = true
 <h1>Next steps</h1>
 <p>If everything went well, you'll be able to login on Mana Launcher using the provided email and password.</p>
 <p>If you enabled 2FA, you'll also need the token which has been sent to your email.</p>
-<br><br><br>
 <h1>Can't find the account you were looking for?</h1>
 <p>If data inserted here is incorrect or a Vault account already exists bound to that email, the migration will not happen.</p>
 <h1>Still need help?</h1>

@@ -51,7 +51,6 @@
 	background: #E1D6CF;
 	padding: 15px 15px 30px 15px;
 	border-top: 1px solid #2f2e32;
-	text-align: justify;
 	line-height: 1.5em;
 }
 #app > .content h1 {
@@ -458,7 +457,6 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1.25rem;
-	text-align: left;
 }
 #app > .content form p {
 	/* cancel the global content paragraph indent inside forms */
@@ -556,7 +554,6 @@
 	column-gap: 0.6rem;
 	row-gap: 0.35rem;
 	align-items: start;
-	text-align: left;
 }
 .checkbox-field input[type="checkbox"] {
 	width: 1.1em;
@@ -593,7 +590,6 @@
 	border: 1px solid #810909;
 	border-radius: 4px;
 	color: #810909;
-	text-align: left;
 }
 .form-error {
 	white-space: pre-line;
@@ -602,9 +598,9 @@
 .registration .exposed,
 .recovery .exposed {
 	background: rgba(255, 0, 0, 0.1);
-	border: dashed 6px rgba(255, 0, 0, 0.9);
+	border: solid 2px rgba(255, 0, 0, 0.9);
+	border-radius: 4px;
 	padding: 1em;
-	text-align: left;
 	animation-name: scary;
 	animation-duration: 2s;
 }

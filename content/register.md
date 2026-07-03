@@ -30,12 +30,6 @@ account_form = true
 <p class="field-error" id="username-taken" role="alert" hidden>This username is already taken. Please choose another username.</p>
 </div>
 
-<div class="exposed" role="alert" hidden>
-<strong>WARNING: This password is compromised.</strong>
-This password has previously appeared in a data breach. Please use a more secure alternative.
-<a href="https://haveibeenpwned.com/Passwords" target="_blank" rel="noopener">verified by haveibeenpwned.com</a>
-</div>
-
 <div class="field">
 <label for="password">Password</label>
 <p class="hint" id="password-hint">8 to 23 characters, letters and numbers only. Case-sensitive. Please choose a hard-to-guess, unique password.</p>
@@ -43,6 +37,12 @@ This password has previously appeared in a data breach. Please use a more secure
 <input name="password" type="password" id="password" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" autocomplete="new-password" aria-describedby="password-hint" required>
 <button type="button" class="toggle-password" aria-pressed="false" aria-label="show password">👁</button>
 </div>
+</div>
+
+<div class="exposed" role="alert" hidden>
+<strong>WARNING: This password is compromised.</strong>
+This password has previously appeared in a data breach. Please use a more secure alternative.
+<a href="https://haveibeenpwned.com/Passwords" target="_blank" rel="noopener">verified by haveibeenpwned.com</a>
 </div>
 
 {{ recaptcha_optin(id="register-consent") }}
