@@ -45,14 +45,6 @@ This password has previously appeared in a data breach. Please use a more secure
 </div>
 </div>
 
-<div class="field">
-<label for="password2">Confirm password</label>
-<div class="password-box">
-<input name="password2" type="password" id="password2" minlength="8" maxlength="23" pattern="^[a-zA-Z0-9]{8,23}$" title="8-23 characters, alphanumeric" autocomplete="new-password" required>
-<button type="button" class="toggle-password" aria-pressed="false" aria-label="show password">👁</button>
-</div>
-</div>
-
 {{ recaptcha_optin(id="register-consent") }}
 
 <div class="error form-error" role="alert" hidden></div>

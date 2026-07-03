@@ -170,13 +170,6 @@
 		form.querySelector("input[name=password]").focus();
 	}
 
-	function passwordsMatch(form) {
-		var password2 = form.querySelector("input[name=password2]");
-		var matches = form.querySelector("input[name=password]").value === password2.value;
-		password2.setCustomValidity(matches ? "" : "The passwords do not match.");
-		return matches;
-	}
-
 	/* ---------- shared form helpers ---------- */
 
 	// password visibility toggles
@@ -219,9 +212,6 @@
 			event.preventDefault();
 			clearError(form);
 
-			if (form.elements.password2) {
-				passwordsMatch(form);
-			}
 			if (!form.reportValidity()) {
 				return;
 			}
