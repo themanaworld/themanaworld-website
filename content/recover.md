@@ -38,7 +38,6 @@ along with a password reset link, should you wish to reset your password.</p>
 <h1>Next steps</h1>
 <p>If you wish to reset the password of your accounts, click the provided link in the email you received.</p>
 <p>This link is only valid once: if you wish to reset more than one password you will have to repeat the process.</p>
-<br><br><br>
 <h1>Can't find the account you were looking for?</h1>
 <p>Double-check the email address you entered; You might have used a different address when you created the account or you might have omitted to provide an email address.</p>
 <h1>Still need help?</h1>
