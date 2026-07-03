@@ -54,12 +54,12 @@
 			});
 	}
 
-	// use the last cached value to populate prior to first fetch:
-	if (hasStorage) {
+	// use the last cached value to populate prior to the first fetch;
+	// without a cached value, keep the static "Checking…" text until
+	// the first response settles it
+	if (hasStorage && localStorage.getItem("serverOnline") !== null) {
 		render(localStorage.getItem("serverOnline") !== "false",
-			+(localStorage.getItem("onlinePlayers") || 99));
-	} else {
-		render(true, 99);
+			+(localStorage.getItem("onlinePlayers") || 0));
 	}
 
 	getStatus();
