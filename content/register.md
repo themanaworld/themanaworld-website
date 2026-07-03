@@ -13,7 +13,7 @@ Welcome to The Mana World! With this form you can register for a new game accoun
 
 Please note that you will also need to <a href="https://wiki.themanaworld.org/wiki/Downloads" target="_blank">install a suitable client</a> to play this game.
 
-<div class="dialog"><b>NOTICE:</b> Accounts may take up to 15 minutes for automatic activation. No email confirmation is necessary.</div>
+<div class="dialog"><b>NOTICE:</b> No email confirmation is necessary; you can log in to the game as soon as your account has been created.</div>
 
 {{ event_notice() }}
 
