@@ -7,12 +7,11 @@ main_class = "migration"
 account_form = true
 +++
 
-<div id="migration-intro">
+<div id="migration-section">
 <h1>Account Migration</h1>
 <p>Use this form to migrate a TMW Legacy account to Vault.</p>
 <p>Please note you may only have <b>one</b> Vault account.</p>
 <p>Once complete, you'll need the Mana Launcher to login.</p>
-</div>
 
 <form id="migration-form" novalidate>
 <div class="field">
@@ -48,6 +47,11 @@ account_form = true
 <button type="submit" disabled>Migrate account</button>
 </form>
 
+<h1>Proceeding without reCAPTCHA</h1>
+<p>If you would rather not use reCAPTCHA, you may recover your account by contacting us by email.</p>
+<address>support@themanaworld.org</address>
+</div>
+
 <div id="migration-success" tabindex="-1" hidden>
 <h1>Migration process started</h1>
 <p>Your account migration has been requested.</p>
@@ -60,12 +64,6 @@ account_form = true
 <h1>Still need help?</h1>
 <p>Feel free to <a href="/support/">contact us</a> for further assistance.</p>
 </div>
-
-<h1>Proceeding without reCAPTCHA</h1>
-
-If you would rather not use reCAPTCHA, you may recover your account by contacting us by email.
-
-<address>support@themanaworld.org</address>
 
 <noscript>
 <div class="dialog">JavaScript is required for account migration (reCAPTCHA and form submission). You may also contact us by email as described above.</div>

@@ -7,11 +7,10 @@ main_class = "registration"
 account_form = true
 +++
 
-# Account creation
-
-Welcome to The Mana World! With this form you can register for a new game account.
-
-Please note that you will also need to <a href="https://wiki.themanaworld.org/wiki/Downloads" target="_blank">install a suitable client</a> to play this game.
+<div id="register-section">
+<h1>Account creation</h1>
+<p>Welcome to The Mana World! With this form you can register for a new game account.</p>
+<p>Please note that you will also need to <a href="https://wiki.themanaworld.org/wiki/Downloads" target="_blank">install a suitable client</a> to play this game.</p>
 
 <div class="dialog"><b>NOTICE:</b> No email confirmation is necessary; you can log in to the game as soon as your account has been created.</div>
 
@@ -60,6 +59,12 @@ This password has previously appeared in a data breach. Please use a more secure
 <button type="submit" disabled>Create account</button>
 </form>
 
+<h1>Registering without reCAPTCHA</h1>
+<p>If you would rather not use reCAPTCHA, you may register by contacting us by email.</p>
+<p>We will create a new account for you and associate it with the email address that you used to contact us.</p>
+<address>registration@themanaworld.org</address>
+</div>
+
 <div id="register-success" tabindex="-1" hidden>
 <h1>Thank you</h1>
 <p>Your account has been successfully created.</p>
@@ -69,14 +74,6 @@ This password has previously appeared in a data breach. Please use a more secure
 <p>Sometimes, you may get an error if you try to login right after registering. Common messages include "Password Incorrect" and "Account not found".</p>
 <p>Just allow the system a little longer to synchronize; doing a password reset is NOT necessary.</p>
 </div>
-
-<h1>Registering without reCAPTCHA</h1>
-
-If you would rather not use reCAPTCHA, you may register by contacting us by email.
-
-We will create a new account for you and associate it with the email address that you used to contact us.
-
-<address>registration@themanaworld.org</address>
 
 <noscript>
 <div class="dialog">JavaScript is required to complete registration (reCAPTCHA and form submission). You may also register by email as described above.</div>

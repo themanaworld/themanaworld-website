@@ -43,7 +43,16 @@
 		var container = form.querySelector(".g-recaptcha");
 		var submit = form.querySelector("button[type=submit]");
 		var failure = form.querySelector(".recaptcha-error");
-		var state = { widget: null };
+		var state = { widget: null, pending: null };
+
+		// deliver the widget's verdict to a waiting captchaToken()
+		function settle(token) {
+			var resolve = state.pending;
+			state.pending = null;
+			if (resolve) {
+				resolve(token);
+			}
+		}
 
 		consent.addEventListener("change", function () {
 			if (!consent.checked) {
@@ -61,8 +70,17 @@
 					state.widget = grecaptcha.render(container, {
 						sitekey: config.recaptcha,
 						size: "invisible",
+						callback: settle,
+						"error-callback": function () {
+							settle(null);
+						},
 					});
 					submit.disabled = false;
+
+					// start verification right away so the token is
+					// usually ready by the time the form is submitted
+					// (captchaToken() re-runs it when it has expired)
+					grecaptcha.execute(state.widget);
 				});
 			}).catch(function () {
 				failure.hidden = false;
@@ -73,20 +91,23 @@
 		return state;
 	}
 
-	function sleep(milliseconds) {
-		return new Promise(function (resolve) {
-			setTimeout(resolve, milliseconds);
-		});
-	}
-
-	async function captchaToken(state) {
+	// runs the invisible widget; resolves with a token as soon as the
+	// widget callback delivers one, or with null after reporting a
+	// failed verification on the form
+	async function captchaToken(form, state) {
 		var grecaptcha = await loadRecaptcha();
-		grecaptcha.execute(state.widget);
-		var token = "";
 
-		// the recaptcha API does not signal completion: poll for the token
-		while (!(token = grecaptcha.getResponse(state.widget))) {
-			await sleep(1000);
+		var token = grecaptcha.getResponse(state.widget);
+		if (!token) {
+			token = await new Promise(function (resolve) {
+				state.pending = resolve;
+				grecaptcha.execute(state.widget);
+			});
+		}
+
+		if (!token) {
+			showError(form, "reCAPTCHA verification failed.\nPlease try again");
+			captchaReset(state);
 		}
 
 		return token;
@@ -173,6 +194,47 @@
 		});
 	}
 
+	// disable the submit button while a submission is in flight, so the
+	// form reacts immediately and cannot be submitted twice
+	function setBusy(form, busy) {
+		var submit = form.querySelector("button[type=submit]");
+
+		if (busy) {
+			submit.dataset.label = submit.textContent;
+			submit.textContent = "Please wait…";
+			submit.disabled = true;
+			form.setAttribute("aria-busy", "true");
+		} else {
+			submit.textContent = submit.dataset.label || submit.textContent;
+			submit.disabled = false;
+			form.removeAttribute("aria-busy");
+		}
+	}
+
+	// shared submit flow: validate, then show the busy state while the
+	// handler runs (a handler that succeeds hides the form, so always
+	// re-enabling it afterwards only matters on error paths)
+	function handleSubmit(form, handler) {
+		form.addEventListener("submit", async function (event) {
+			event.preventDefault();
+			clearError(form);
+
+			if (form.elements.password2) {
+				passwordsMatch(form);
+			}
+			if (!form.reportValidity()) {
+				return;
+			}
+
+			setBusy(form, true);
+			try {
+				await handler();
+			} finally {
+				setBusy(form, false);
+			}
+		});
+	}
+
 	function showError(form, message) {
 		var box = form.querySelector(".form-error");
 		box.textContent = message;
@@ -201,6 +263,18 @@
 				return "Couldn't reach the server.\nPlease try again later";
 			default:
 				return "Unknown error: " + status;
+		}
+	}
+
+	// sends the request; a network failure is reported on the form and
+	// yields null
+	async function sendRequest(form, state, req) {
+		try {
+			return await fetch(req);
+		} catch (err) {
+			showError(form, apiError(502));
+			captchaReset(state);
+			return null;
 		}
 	}
 
@@ -234,21 +308,16 @@
 			registerForm.elements.username.removeAttribute("aria-invalid");
 		});
 
-		registerForm.addEventListener("submit", async function (event) {
-			event.preventDefault();
-			clearError(registerForm);
-
-			passwordsMatch(registerForm);
-			if (!registerForm.reportValidity()) {
-				return;
-			}
-
+		handleSubmit(registerForm, async function () {
 			if (await isPasswordExposed(registerForm.elements.password.value)) {
 				showExposed(registerForm);
 				return;
 			}
 
-			var token = await captchaToken(registerCaptcha);
+			var token = await captchaToken(registerForm, registerCaptcha);
+			if (!token) {
+				return;
+			}
 
 			var req = new Request(config.api + "/tmwa/account", {
 				method: "POST",
@@ -268,18 +337,14 @@
 				}),
 			});
 
-			var response;
-			try {
-				response = await fetch(req);
-			} catch (err) {
-				showError(registerForm, apiError(502));
-				captchaReset(registerCaptcha);
+			var response = await sendRequest(registerForm, registerCaptcha, req);
+			if (!response) {
 				return;
 			}
 
 			switch (response.status) {
 				case 201:
-					registerForm.hidden = true;
+					hide("register-section");
 					reveal("register-success");
 					break;
 				case 409:
@@ -298,6 +363,7 @@
 
 	/* ---------- account recovery ---------- */
 
+	var recoverySection = document.getElementById("recovery-section");
 	var recoveryForm = document.getElementById("recovery-form");
 	var resetForm = document.getElementById("reset-form");
 	var emailToken = "";
@@ -312,19 +378,18 @@
 		}
 
 		if (token.length > 1) {
+			hide("recovery-section");
+
 			if (/^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$/i.test(token)) {
 				emailToken = token;
-				hide("recovery-intro");
-				recoveryForm.hidden = true;
 				show("reset-section");
 			} else {
-				recoveryForm.hidden = true;
 				show("reset-expired");
 			}
 		}
 	}
 
-	if (recoveryForm && !recoveryForm.hidden) {
+	if (recoveryForm && !recoverySection.hidden) {
 		var recoveryCaptcha = setupConsent(recoveryForm);
 
 		var notFoundBox = document.getElementById("email-not-found");
@@ -333,15 +398,11 @@
 			recoveryForm.elements.email.removeAttribute("aria-invalid");
 		});
 
-		recoveryForm.addEventListener("submit", async function (event) {
-			event.preventDefault();
-			clearError(recoveryForm);
-
-			if (!recoveryForm.reportValidity()) {
+		handleSubmit(recoveryForm, async function () {
+			var token = await captchaToken(recoveryForm, recoveryCaptcha);
+			if (!token) {
 				return;
 			}
-
-			var token = await captchaToken(recoveryCaptcha);
 
 			var req = new Request(config.api + "/tmwa/account", {
 				method: "PUT",
@@ -359,19 +420,15 @@
 				}),
 			});
 
-			var response;
-			try {
-				response = await fetch(req);
-			} catch (err) {
-				showError(recoveryForm, apiError(502));
-				captchaReset(recoveryCaptcha);
+			var response = await sendRequest(recoveryForm, recoveryCaptcha, req);
+			if (!response) {
 				return;
 			}
 
 			switch (response.status) {
 				case 200:
 				case 201:
-					recoveryForm.hidden = true;
+					hide("recovery-section");
 					reveal("recovery-sent");
 					break;
 				case 404:
@@ -381,7 +438,7 @@
 					recoveryForm.elements.email.focus();
 					break;
 				case 408:
-					recoveryForm.hidden = true;
+					hide("recovery-section");
 					reveal("reset-expired");
 					break;
 				default:
@@ -398,21 +455,16 @@
 		var resetCaptcha = setupConsent(resetForm);
 		setupEyeToggles(resetForm);
 
-		resetForm.addEventListener("submit", async function (event) {
-			event.preventDefault();
-			clearError(resetForm);
-
-			passwordsMatch(resetForm);
-			if (!resetForm.reportValidity()) {
-				return;
-			}
-
+		handleSubmit(resetForm, async function () {
 			if (await isPasswordExposed(resetForm.elements.password.value)) {
 				showExposed(resetForm);
 				return;
 			}
 
-			var token = await captchaToken(resetCaptcha);
+			var token = await captchaToken(resetForm, resetCaptcha);
+			if (!token) {
+				return;
+			}
 
 			var req = new Request(config.api + "/tmwa/account", {
 				method: "PUT",
@@ -432,12 +484,8 @@
 				}),
 			});
 
-			var response;
-			try {
-				response = await fetch(req);
-			} catch (err) {
-				showError(resetForm, apiError(502));
-				captchaReset(resetCaptcha);
+			var response = await sendRequest(resetForm, resetCaptcha, req);
+			if (!response) {
 				return;
 			}
 
@@ -472,15 +520,11 @@
 		var migrationCaptcha = setupConsent(migrationForm);
 		setupEyeToggles(migrationForm);
 
-		migrationForm.addEventListener("submit", async function (event) {
-			event.preventDefault();
-			clearError(migrationForm);
-
-			if (!migrationForm.reportValidity()) {
+		handleSubmit(migrationForm, async function () {
+			var token = await captchaToken(migrationForm, migrationCaptcha);
+			if (!token) {
 				return;
 			}
-
-			var token = await captchaToken(migrationCaptcha);
 
 			var req = new Request(config.pyapi + "/tmwa_auth", {
 				method: "POST",
@@ -501,12 +545,8 @@
 				}),
 			});
 
-			var response;
-			try {
-				response = await fetch(req);
-			} catch (err) {
-				showError(migrationForm, apiError(502));
-				captchaReset(migrationCaptcha);
+			var response = await sendRequest(migrationForm, migrationCaptcha, req);
+			if (!response) {
 				return;
 			}
 
@@ -516,7 +556,7 @@
 				case 0:
 				case 200:
 				case 201:
-					migrationForm.hidden = true;
+					hide("migration-section");
 					reveal("migration-success");
 					break;
 				default:

@@ -661,6 +661,11 @@
 	opacity: .5;
 	cursor: not-allowed;
 }
+.registration form[aria-busy="true"] button[type="submit"],
+.recovery form[aria-busy="true"] button[type="submit"],
+.migration form[aria-busy="true"] button[type="submit"] {
+	cursor: progress;
+}
 
 /* Page section spacing */
 .registration > div:nth-of-type(1n + 2),

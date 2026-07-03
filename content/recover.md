@@ -7,12 +7,11 @@ main_class = "recovery"
 account_form = true
 +++
 
-<div id="recovery-intro">
+<div id="recovery-section">
 <h1>Account Recovery</h1>
 <p>Use this form if you forgot your username or password.</p>
 <p>If it matches any account we have on file you will receive a message containing the list of your account usernames
 along with a password reset link, should you wish to reset your password.</p>
-</div>
 
 <form id="recovery-form" novalidate>
 <div class="field">
@@ -27,6 +26,11 @@ along with a password reset link, should you wish to reset your password.</p>
 <div class="error form-error" role="alert" hidden></div>
 <button type="submit" disabled>Recover account</button>
 </form>
+
+<h1>Proceeding without reCAPTCHA</h1>
+<p>If you would rather not use reCAPTCHA, you may recover your account by contacting us by email.</p>
+<address>support@themanaworld.org</address>
+</div>
 
 <div id="recovery-sent" tabindex="-1" hidden>
 <h1>Recovery process started</h1>
@@ -80,6 +84,10 @@ This password has previously appeared in a data breach. Please use a more secure
 <div class="error form-error" role="alert" hidden></div>
 <button type="submit" disabled>Reset my password</button>
 </form>
+
+<h1>Proceeding without reCAPTCHA</h1>
+<p>If you would rather not use reCAPTCHA, you may recover your account by contacting us by email.</p>
+<address>support@themanaworld.org</address>
 </div>
 
 <div id="reset-success" tabindex="-1" hidden>
@@ -96,12 +104,6 @@ This password has previously appeared in a data breach. Please use a more secure
 <h1>Start over</h1>
 <p>You may try again in 5 minutes: <a href="/recover/">account recovery</a></p>
 </div>
-
-<h1>Proceeding without reCAPTCHA</h1>
-
-If you would rather not use reCAPTCHA, you may recover your account by contacting us by email.
-
-<address>support@themanaworld.org</address>
 
 <noscript>
 <div class="dialog">JavaScript is required for account recovery (reCAPTCHA and form submission). You may also contact us by email as described above.</div>
