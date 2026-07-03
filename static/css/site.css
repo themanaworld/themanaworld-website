@@ -598,7 +598,8 @@
 .registration .exposed,
 .recovery .exposed {
 	background: rgba(255, 0, 0, 0.1);
-	border: dashed 6px rgba(255, 0, 0, 0.9);
+	border: solid 2px rgba(255, 0, 0, 0.9);
+	border-radius: 4px;
 	padding: 1em;
 	animation-name: scary;
 	animation-duration: 2s;
