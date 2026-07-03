@@ -149,13 +149,6 @@
 		form.querySelector("input[name=password]").focus();
 	}
 
-	function passwordsMatch(form) {
-		var password2 = form.querySelector("input[name=password2]");
-		var matches = form.querySelector("input[name=password]").value === password2.value;
-		password2.setCustomValidity(matches ? "" : "The passwords do not match.");
-		return matches;
-	}
-
 	/* ---------- shared form helpers ---------- */
 
 	// password visibility toggles
@@ -238,7 +231,6 @@
 			event.preventDefault();
 			clearError(registerForm);
 
-			passwordsMatch(registerForm);
 			if (!registerForm.reportValidity()) {
 				return;
 			}
@@ -402,7 +394,6 @@
 			event.preventDefault();
 			clearError(resetForm);
 
-			passwordsMatch(resetForm);
 			if (!resetForm.reportValidity()) {
 				return;
 			}
