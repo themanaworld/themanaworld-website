@@ -9,6 +9,8 @@ build:
   stage: build
   tags:
     - trusted
+    # The zola release used below is an x86_64 binary
+    - amd64
   variables:
     ZOLA_VERSION: v0.23.6
   script:
