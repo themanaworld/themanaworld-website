@@ -14,7 +14,7 @@ account_form = true
 
 <div class="dialog"><b>NOTICE:</b> No email confirmation is necessary; you can log in to the game as soon as your account has been created.</div>
 
-{{ event_notice() }}
+{{ <event_notice event={config.extra.event} /> }}
 
 <form id="register-form" novalidate>
 <div class="field">
@@ -45,7 +45,7 @@ This password has previously appeared in a data breach. Please use a more secure
 <a href="https://haveibeenpwned.com/Passwords" target="_blank" rel="noopener">verified by haveibeenpwned.com</a>
 </div>
 
-{{ recaptcha_optin(id="register-consent") }}
+{{ <recaptcha_optin id="register-consent" /> }}
 
 <div class="error form-error" role="alert" hidden></div>
 <button type="submit" disabled>Create account</button>

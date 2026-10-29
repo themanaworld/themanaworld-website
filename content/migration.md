@@ -41,7 +41,7 @@ account_form = true
 <p class="hint">You'll receive by email the secret to configure an authentication app, e.g. Google Authenticator. Once enabled, you will not be able to login without it.</p>
 </div>
 
-{{ recaptcha_optin(id="migration-consent") }}
+{{ <recaptcha_optin id="migration-consent" /> }}
 
 <div class="error form-error" role="alert" hidden></div>
 <button type="submit" disabled>Migrate account</button>

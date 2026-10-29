@@ -21,7 +21,7 @@ along with a password reset link, should you wish to reset your password.</p>
 <p class="field-error" id="email-not-found" role="alert" hidden>We were not able to find any accounts associated with this email address.</p>
 </div>
 
-{{ recaptcha_optin(id="recovery-consent") }}
+{{ <recaptcha_optin id="recovery-consent" /> }}
 
 <div class="error form-error" role="alert" hidden></div>
 <button type="submit" disabled>Recover account</button>
@@ -70,7 +70,7 @@ This password has previously appeared in a data breach. Please use a more secure
 <a href="https://haveibeenpwned.com/Passwords" target="_blank" rel="noopener">verified by haveibeenpwned.com</a>
 </div>
 
-{{ recaptcha_optin(id="reset-consent") }}
+{{ <recaptcha_optin id="reset-consent" /> }}
 
 <div class="error form-error" role="alert" hidden></div>
 <button type="submit" disabled>Reset my password</button>

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<meta name="description" content="{% if page.description %}{{ page.description }}{% elif section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}"/>
+		<meta name="description" content="{% if page?.description %}{{ page?.description }}{% elif section?.description %}{{ section?.description }}{% else %}{{ config.description }}{% endif %}"/>
 		<link rel="icon" href="{{ get_url(path='favicon.ico') }}" sizes="16x16">
 		<link rel="icon" href="{{ get_url(path='favicon.svg') }}" type="image/svg+xml">
 		<link rel="stylesheet" href="{{ get_url(path='css/normalize.css') }}">
@@ -18,7 +18,7 @@
 		</script>
 		<script defer src="{{ get_url(path='js/server-status.js') }}"></script>
 		{%- block extra_head %}{% endblock extra_head %}
-		<title>{% block title %}{% if page.title %}{{ config.title }} - {{ page.title }}{% elif section.title %}{{ config.title }} - {{ section.title }}{% else %}{{ config.title }}{% endif %}{% endblock title %}</title>
+		<title>{% block title %}{% if page?.title %}{{ config.title }} - {{ page?.title }}{% elif section?.title %}{{ config.title }} - {{ section?.title }}{% else %}{{ config.title }}{% endif %}{% endblock title %}</title>
 	</head>
 	<body>
 		<div id="app">
@@ -32,17 +32,17 @@
 			</a>
 			{%- endif %}
 
-			{%- set path = current_path | default(value="/404.html") %}
+			{%- set path = current_path or "/404.html" %}
 			<nav class="nav" id="nav" aria-label="Primary">
 				<a href="#nav" class="hamburger" aria-label="jump to the navigation menu">☰</a>
 				<div>
 					<ul>
-						<li><a href="{{ get_url(path='@/_index.md') }}"{% if path == "/" or path is starting_with("/news") %} class="active"{% endif %}>Home</a></li>
-						<li><a href="{{ get_url(path='@/register.md') }}"{% if path is starting_with("/register") %} class="active"{% endif %}>Create Account</a></li>
+						<li><a href="{{ get_url(path='@/_index.md') }}"{% if path == "/" or path is starting_with(pat="/news") %} class="active"{% endif %}>Home</a></li>
+						<li><a href="{{ get_url(path='@/register.md') }}"{% if path is starting_with(pat="/register") %} class="active"{% endif %}>Create Account</a></li>
 						<li><a href="https://wiki.themanaworld.org/wiki/Downloads">Download</a></li>
-						<li><a href="{{ get_url(path='@/about.md') }}"{% if path is starting_with("/about") %} class="active"{% endif %}>About</a></li>
+						<li><a href="{{ get_url(path='@/about.md') }}"{% if path is starting_with(pat="/about") %} class="active"{% endif %}>About</a></li>
 						<li><a href="https://wiki.themanaworld.org/wiki/FAQ">FAQ</a></li>
-						<li><a href="{{ get_url(path='@/support.md') }}"{% if path is starting_with("/support") or path is starting_with("/recover") %} class="active"{% endif %}>Support</a></li>
+						<li><a href="{{ get_url(path='@/support.md') }}"{% if path is starting_with(pat="/support") or path is starting_with(pat="/recover") %} class="active"{% endif %}>Support</a></li>
 						<li><a href="https://wiki.themanaworld.org/">Wiki</a></li>
 						<li><a href="https://forums.themanaworld.org/">Forums</a></li>
 						<li><a href="https://policies.themanaworld.org/">Policies &amp; Rules</a></li>

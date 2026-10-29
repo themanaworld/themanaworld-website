@@ -1,4 +1,4 @@
-{% macro news_entries(entries) %}
+{% component news_entries(entries) %}
 <div role="feed" aria-label="TMW news" class="news">
 	{%- if entries | length == 0 %}
 	<span>(no news entries)</span>
@@ -7,8 +7,8 @@
 	{%- set body = entry.html %}
 	{#- when the entry body starts with a copy of its title, remove the extra one #}
 	{%- set compare = "<b>" ~ entry.title ~ "</b><br/>" %}
-	{%- if body is starting_with(compare) %}
-		{%- set body = body | trim_start_matches(pat=compare) %}
+	{%- if body is starting_with(pat=compare) %}
+		{%- set body = body | trim_start(pat=compare) %}
 	{%- endif %}
 	<article tabindex="0" class="entry" aria-posinset="{{ loop.index }}" aria-setsize="{{ entries | length }}" id="{{ entry.id }}" aria-labelledby="{{ entry.id }}-title" aria-describedby="{{ entry.id }}-body {{ entry.id }}-date {{ entry.id }}-author">
 		<header><a tabindex="-1" id="{{ entry.id }}-title" href="#{{ entry.id }}">{{ entry.title }}</a></header>
@@ -20,7 +20,7 @@
 			{%- for segment in body | split(pat="<br/>") %}
 			{%- set segment = segment | trim %}
 			{%- if segment %}
-			{%- if segment is matching("<(ul|ol)[ >]") %}
+			{%- if segment is matching(pat="<(ul|ol)[ >]") %}
 			{{ segment | safe }}
 			{%- else %}
 			<p>{{ segment | safe }}</p>
@@ -32,4 +32,26 @@
 	</article>
 	{%- endfor %}
 </div>
-{% endmacro news_entries %}
+{% endcomponent news_entries %}
+
+{% component recaptcha_optin(id) %}
+<div class="recaptcha-optin">
+	<div class="checkbox-field">
+		<input type="checkbox" class="recaptcha-consent" id="{{ id }}" autocomplete="off">
+		<label for="{{ id }}">I agree to the use of Google reCAPTCHA</label>
+		<p class="hint">This protects the form against abuse. Google may register tracking cookies in your browser; see the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. If you would rather not use reCAPTCHA, you can contact us by email instead (see below).</p>
+	</div>
+	<div class="g-recaptcha" data-size="invisible"></div>
+	<div class="error recaptcha-error" hidden>
+		<strong>reCAPTCHA could not be loaded.</strong>
+		If you are using an ad blocker or tracker blocker please whitelist this page and refresh to continue.
+	</div>
+</div>
+{% endcomponent recaptcha_optin %}
+
+{% component event_notice(event) %}
+{%- set event = event | trim -%}
+{%- if event -%}
+<div class="specialEvent">{{ event | safe }}</div>
+{%- endif -%}
+{% endcomponent event_notice %}
